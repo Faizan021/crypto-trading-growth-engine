@@ -222,60 +222,64 @@ if "1. Executive Performance Dashboard" in nav_choice:
         
     st.markdown("<br>", unsafe_allow_html=True)
     
-    col_left, col_right = st.columns([1.3, 1])
+    col_left, col_right = st.columns([1.25, 1])
     with col_left:
-        st.markdown("#### Onboarding Throughput Funnel (Per 10,000 Signups)")
-        if not df_funnel.empty:
-            funnel_display = df_funnel.copy()
-            funnel_display['lift_pct'] = ((funnel_display['variant_b_users'] - funnel_display['baseline_users']) / funnel_display['baseline_users'] * 100).round(1)
-            funnel_display['lift_str'] = funnel_display['lift_pct'].apply(lambda x: f"+{x}%" if x > 0 else f"{x}%")
-            
-            st.dataframe(
-                funnel_display[['funnel_stage', 'baseline_users', 'variant_b_users', 'lift_str']].rename(columns={
-                    'funnel_stage': 'Funnel Stage',
-                    'baseline_users': 'Control (Baseline)',
-                    'variant_b_users': 'Variant B (Optimized)',
-                    'lift_str': 'Throughput Lift'
-                }),
-                use_container_width=True,
-                hide_index=True
-            )
-            
-            fig = go.Figure()
-            fig.add_trace(go.Bar(
-                y=df_funnel['funnel_stage'],
-                x=df_funnel['baseline_users'],
-                name='Control (Baseline)',
-                orientation='h',
-                marker=dict(color='#475569')
-            ))
-            fig.add_trace(go.Bar(
-                y=df_funnel['funnel_stage'],
-                x=df_funnel['variant_b_users'],
-                name='Variant B (Friction-Breaker)',
-                orientation='h',
-                marker=dict(color='#0ea5e9')
-            ))
-            fig.update_layout(
-                barmode='group',
-                height=300,
-                margin=dict(l=10, r=10, t=10, b=10),
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                font=dict(color='#94a3b8', size=11),
-                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
-            )
-            st.plotly_chart(fig, use_container_width=True)
+        st.markdown("#### ⚡ Real-Time Onboarding Funnel (Per 10,000 Signups)")
+        
+        stages = [
+            {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#38bdf8"},
+            {"step": "02", "name": "Email Address Confirmed (Case 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#38bdf8"},
+            {"step": "03", "name": "Video-Ident Call Initiated (Case 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#10b981"},
+            {"step": "04", "name": "KYC Verification Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#10b981"},
+            {"step": "05", "name": "First Bank / SEPA Deposit (Case 7)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#f59e0b"},
+            {"step": "06", "name": "First Trade Executed (Activated)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#a855f7"}
+        ]
+        
+        for s in stages:
+            st.markdown(f'''
+            <div style="background:#0b1120; border:1px solid #1e293b; border-radius:8px; padding:10px 14px; margin-bottom:8px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                    <div>
+                        <span style="background:#1e293b; color:#38bdf8; padding:2px 6px; border-radius:4px; font-size:0.72rem; font-weight:700; margin-right:6px;">{s['step']}</span>
+                        <strong style="color:#f8fafc; font-size:0.88rem;">{s['name']}</strong>
+                    </div>
+                    <div>
+                        <span style="font-size:0.85rem; font-weight:700; color:{s['color']};">{s['variant']} Users</span>
+                        <span style="background:rgba(16,185,129,0.15); color:#34d399; padding:2px 6px; border-radius:4px; font-size:0.72rem; font-weight:600; margin-left:6px;">{s['lift']}</span>
+                    </div>
+                </div>
+                <div style="background:#1e293b; border-radius:4px; height:6px; width:100%; overflow:hidden;">
+                    <div style="background:{s['color']}; height:100%; width:{s['pct']}%;"></div>
+                </div>
+            </div>
+            ''', unsafe_allow_html=True)
             
     with col_right:
-        st.markdown("#### Retail Assets Under Custody (AUC) Distribution")
-        auc_table = pd.DataFrame({
-            "Asset Class": ["Bitcoin (BTC)", "Ethereum (ETH)", "DAX & European ETFs", "Top Altcoins (SOL, ADA)", "Cash / EUR Reserve"],
-            "Custody Share": ["42.0%", "24.0%", "18.0%", "11.0%", "5.0%"],
-            "Primary CRM Focus": ["DCA Sparplan Accumulation", "Staking Rewards & Yield", "Portfolio Diversification", "Volatility & Limit Alerts", "Instant Dip-Buy Readiness"]
-        })
-        st.dataframe(auc_table, use_container_width=True, hide_index=True)
-        st.caption("ℹ️ **Data Benchmark:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and DACH multi-asset exchange portfolio distributions.")
+        st.markdown("#### 🪙 Retail Assets Under Custody (AUC) Allocation")
+        
+        assets = [
+            {"name": "Bitcoin (BTC)", "share": "42%", "pct": 42, "color": "#f59e0b", "action": "Automated DCA Sparplan Focus"},
+            {"name": "Ethereum (ETH)", "share": "24%", "pct": 24, "color": "#6366f1", "action": "Staking Rewards & Yield Activation"},
+            {"name": "DAX 40 & European Equity ETFs", "share": "18%", "pct": 18, "color": "#10b981", "action": "Multi-Asset Long-Term Wealth"},
+            {"name": "Top Altcoins (SOL, ADA)", "share": "11%", "pct": 11, "color": "#38bdf8", "action": "Volatility & Limit Order Alerts"},
+            {"name": "Cash / EUR Reserve", "share": "5%", "pct": 5, "color": "#94a3b8", "action": "Instant Dip-Buy Readiness"}
+        ]
+        
+        for a in assets:
+            st.markdown(f'''
+            <div style="background:#0b1120; border:1px solid #1e293b; border-radius:8px; padding:10px 14px; margin-bottom:8px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                    <strong style="color:#f8fafc; font-size:0.88rem;">{a['name']}</strong>
+                    <span style="font-size:0.95rem; font-weight:800; color:{a['color']};">{a['share']}</span>
+                </div>
+                <div style="background:#1e293b; border-radius:4px; height:6px; width:100%; margin-bottom:4px; overflow:hidden;">
+                    <div style="background:{a['color']}; height:100%; width:{a['pct']}%;"></div>
+                </div>
+                <div style="font-size:0.75rem; color:#94a3b8;">🎯 Lifecycle Focus: <span style="color:#cbd5e1;">{a['action']}</span></div>
+            </div>
+            ''', unsafe_allow_html=True)
+            
+        st.caption("ℹ️ **Data Benchmark Source:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and DACH multi-asset exchange distributions.")
 
 # ==========================================
 # MODULE 2: CASE 1
