@@ -876,10 +876,10 @@ elif nav_choice == NAV_MODULES[10]:
     st.success("📈 **Quantified Impact:** +3.4x Staking Product Adoption Rate (27.8% Conversion).")
 
 # ==========================================
-# MODULE 12: CASE 11 - INTERACTIVE QUIZZES, SURVEYS & NPS (NEW!)
+# MODULE 12: CASE 11 - INTERACTIVE QUIZZES, SURVEYS & NPS
 # ==========================================
 elif nav_choice == NAV_MODULES[11]:
-    st.markdown("### 💡 Case 11: Interactive 'Learn & Earn' Quizzes, Micro-Surveys & NPS Engine")
+    st.markdown("### 💡 Case 11: Interactive Learn & Earn Quizzes, Micro-Surveys & NPS Engine")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -889,7 +889,7 @@ elif nav_choice == NAV_MODULES[11]:
     """, unsafe_allow_html=True)
     
     tab1, tab2, tab3 = st.tabs([
-        "🎓 1. Interactive 'Learn & Earn' Quiz",
+        "🎓 1. Interactive Learn & Earn Quiz",
         "🎯 2. 1-Click Trading Risk & Persona Survey",
         "⭐ 3. In-App NPS & CSAT Feedback Loop"
     ])
@@ -1022,4 +1022,72 @@ elif nav_choice == NAV_MODULES[12]:
     st.markdown("### 🛠️ Case 12: CRM Automation Architecture & State Machine")
     st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
     
-    st.code(
+    st.code("""
+def dispatch_with_idempotency(campaign_id, user_id, payload):
+    # Generate unique idempotency key: campaign_id:user_id:date
+    idempotency_key = hashlib.sha256(f"{campaign_id}:{user_id}:2026_09_01".encode()).hexdigest()
+    existing_log = db.get_log(idempotency_key)
+    if existing_log and existing_log.status == "DISPATCHED":
+        return "SKIPPED_ALREADY_SENT"
+        
+    db.create_log(idempotency_key, status="PENDING")
+    status = esp_provider.send_push(user_id, payload)
+    db.update_log(idempotency_key, status="DISPATCHED" if status else "FAILED")
+    return "SENT"
+    """, language="python")
+    st.success("📈 **Quantified Impact:** 100% Crash-Resilient Delivery (Zero Duplicate Broadcast Sends).")
+
+# ==========================================
+# MODULE 14: CASE 13 - CROSS-FUNCTIONAL
+# ==========================================
+elif nav_choice == NAV_MODULES[13]:
+    st.markdown("### 👥 Case 13: Cross-Functional Collaboration & Delivery Framework")
+    st.markdown("""
+    | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
+    |---|---|---|
+    | **BI / Analytics Team** | Event tracking, Cohort schemas, SQL queries | Standardizing event naming dictionaries (`kyc_step_reached`, `sparplan_created`). |
+    | **Product & Mobile** | In-App message triggers, App deep-links | Testing custom URI schemes (`faizex://verify/video-ident`) across native app releases. |
+    | **UX / UI Design** | Responsive HTML templates & design tokens | Accessible dark/light mode compatibility and 48px mobile touch targets. |
+    | **Legal & BaFin** | Regulatory compliance & Double-Opt-In (DOI) | Audit-proof DOI consent ledgers and crypto risk disclaimers. |
+    """, unsafe_allow_html=True)
+
+# ==========================================
+# MODULE 15: CASE 14 - TECHNICAL STACK
+# ==========================================
+elif nav_choice == NAV_MODULES[14]:
+    st.markdown("### 💻 Case 14: Production Liquid & SQL Schemas")
+    st.markdown("##### 1. Braze Liquid Conditional Block")
+    st.code("""
+{% if user.kyc_status != 'approved' %}
+  <!-- Unverified Onboarding Flow -->
+  <div class="action-banner kyc-reminder">
+    <a href="faizex://verify/video-ident">Complete 3-Min Verification &rarr;</a>
+  </div>
+{% elsif user.active_sparplans == 0 %}
+  <!-- Sparplan Accumulation Flow -->
+  <div class="action-banner sparplan">
+    <a href="faizex://sparplan/new">Set Up €25 Sparplan &rarr;</a>
+  </div>
+{% endif %}
+    """, language="liquid")
+    
+    st.markdown("##### 2. Snowflake SQL Cohort Extraction Query")
+    st.code("""
+SELECT 
+    u.user_id,
+    u.email,
+    u.preferred_language,
+    MAX(t.created_at) AS last_trade_timestamp,
+    COUNT(DISTINCT sp.sparplan_id) AS active_sparplans,
+    SUM(w.balance_eur) AS total_custody_balance_eur
+FROM users u
+JOIN kyc_records k ON u.user_id = k.user_id AND k.status = 'APPROVED'
+LEFT JOIN trades t ON u.user_id = t.user_id
+LEFT JOIN sparplans sp ON u.user_id = sp.user_id AND sp.status = 'ACTIVE'
+LEFT JOIN wallets w ON u.user_id = w.user_id
+GROUP BY 1, 2, 3
+HAVING 
+    MAX(t.created_at) < CURRENT_DATE - INTERVAL '60 days'
+    AND COUNT(DISTINCT sp.sparplan_id) = 0
+    AND SUM(w.balance_eur) > 10;
+    """, language="sql")
