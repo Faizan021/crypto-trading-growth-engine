@@ -33,11 +33,11 @@ st.markdown("""
         gap: 4px !important;
     }
     section[data-testid="stSidebar"] .stRadio label {
-        font-size: 0.86rem !important;
+        font-size: 0.85rem !important;
         font-weight: 500 !important;
         padding: 4px 8px !important;
         margin-bottom: 2px !important;
-        line-height: 1.28 !important;
+        line-height: 1.25 !important;
     }
     
     /* Executive Top Header */
@@ -161,48 +161,48 @@ st.caption("🔒 **PORTFOLIO NOTICE:** Faizex Digital is an independent portfoli
 st.markdown("""
 <div class="exec-header">
     <div style="margin-bottom: 8px;">
-        <span class="badge-reg">BaFin & MiCA Framework</span>
-        <span class="badge-crm">Braze Customer Journey Architecture</span>
+        <span class="badge-reg">BaFin & MiCA Regulatory Framework</span>
+        <span class="badge-crm">Enterprise Lifecycle & Retention Architecture</span>
     </div>
-    <div class="exec-title">Faizex Digital — Retail CRM & Retention Engine</div>
+    <div class="exec-title">Faizex Digital — Retail CRM Marketing & Retention Engine</div>
     <p class="exec-sub">
-        End-to-End Customer Lifecycle Journey: Onboarding Funnels, In-App Conversion, Learn & Earn Gamification, Sparplan DCA Models, and Real-Time Volatility Triggers.
+        Full-Funnel Lifecycle Marketing: Double Opt-In (DOI) Activation, Video-Ident KYC Funnel Optimization, Zero-Party Data Profiling, Payday Recurring DCA Engines, and Real-Time Volatility Push Reactivation.
     </p>
 </div>
 """, unsafe_allow_html=True)
 
-# Master Navigation Menu Array (Customer Lifecycle Sequence)
+# Master Navigation Menu Array (Enterprise CRM Marketing Nomenclature)
 NAV_MODULES = [
-    "📊 1. Executive Performance Dashboard",
-    "✉️ 2. Stage 1: Double Opt-In (DOI) Activation Momentum",
-    "🛡️ 3. Stage 2: Onboarding & KYC Friction Breaker",
-    "🏦 4. Stage 3: Stalled-Deposit Recovery Flow",
-    "💡 5. Stage 4: Learn & Earn Quizzes, Surveys & NPS",
-    "📱 6. Stage 5: In-App Message (IAM) Conversion Suite",
-    "📈 7. Stage 6: 5-Year Sparplan (DCA) Cohort Model",
-    "📲 8. Stage 7: Mobile Push & Volatility Engine (4 Scenarios)",
-    "🪙 9. Stage 8: Idle Asset Staking Yield Nudge",
-    "🏆 10. Stage 9: Milestone Habit Gamification",
-    "📰 11. Stage 10: Editorial Newsletter Personalization",
-    "🎯 12. Stage 11: Exchange CRM & Retention KPIs",
-    "🛠️ 13. Stage 12: CRM Automation Architecture",
-    "👥 14. Stage 13: Cross-Functional Alignment Framework",
-    "💻 15. Stage 14: Production Liquid & SQL Schemas"
+    "📊 1. Executive CRM Scorecard & Cohort Unit Economics",
+    "✉️ 2. Stage 1: Double Opt-In (DOI) & Activation Velocity",
+    "🛡️ 3. Stage 2: Regulated KYC Onboarding & Funnel Optimization",
+    "🏦 4. Stage 3: High-Intent Deposit Abandonment & Recovery Journey",
+    "💡 5. Stage 4: Zero-Party Data Collection, 'Learn & Earn' & In-App NPS",
+    "📱 6. Stage 5: Contextual In-App Messaging (IAM) & Conversion Modals",
+    "📈 7. Stage 6: Recurring Dollar-Cost Averaging (DCA Sparplan) Retention Engine",
+    "📲 8. Stage 7: Event-Triggered Mobile Push & Volatility Reactivation Engine",
+    "🪙 9. Stage 8: Cross-Sell Staking Yield & Idle Capital Monetization",
+    "🏆 10. Stage 9: Milestone-Based Retention Loops & Goal-Gradient Rewards",
+    "📰 11. Stage 10: Dynamic 1:1 Personalized Newsletter (Liquid Content Blocks)",
+    "🎯 12. Stage 11: Quantitative CRM Metrics, LTV/CAC & AUC Forecasting",
+    "🛠️ 13. Stage 12: Event-Driven CRM Infrastructure & Idempotent Dispatcher",
+    "👥 14. Stage 13: Cross-Functional Growth Squad Matrix (BI, Product, Compliance)",
+    "💻 15. Stage 14: Production Liquid Templates & Snowflake Cohort Schemas"
 ]
 
 # Sidebar Navigation
 st.sidebar.title("Faizex CRM Platform")
-st.sidebar.markdown("**Customer Journey Stages**")
-nav_choice = st.sidebar.radio("Select Lifecycle Stage:", NAV_MODULES)
+st.sidebar.markdown("**Lifecycle Marketing Framework**")
+nav_choice = st.sidebar.radio("Select Operational Stage:", NAV_MODULES)
 
 st.sidebar.markdown("---")
 st.sidebar.caption("Portfolio Project | Faizan Ahmed")
 
 # ==========================================
-# MODULE 1: EXECUTIVE DASHBOARD
+# MODULE 1: EXECUTIVE CRM SCORECARD
 # ==========================================
 if nav_choice == NAV_MODULES[0]:
-    st.markdown("### Executive Summary — Monthly Retail Throughput & Custody Metrics")
+    st.markdown("### Executive Scorecard — Monthly Retail Throughput, Retention & Custody Metrics")
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -240,33 +240,33 @@ if nav_choice == NAV_MODULES[0]:
         
     st.markdown("""
     <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 18px; margin: 12px 0 16px 0; font-size:0.9rem; color:#1e293b; line-height:1.6; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
-        <strong style="color:#0284c7; font-size:0.95rem;">Executive Narrative — What This Summary Proves:</strong><br>
-        This executive scorecard demonstrates how our CRM strategy transforms unit economics across the entire lifecycle:
+        <strong style="color:#0284c7; font-size:0.95rem;">Executive Narrative — Strategic Unit Economics & Retention Mechanics:</strong><br>
+        This executive scorecard illustrates how a disciplined, event-driven CRM lifecycle strategy transforms customer lifetime value (LTV) and CAC efficiency:
         <ul style="margin:6px 0 0 0; padding-left:20px;">
-            <li><strong>Fixing Acquisition Leaks:</strong> By breaking Video-Ident friction, we converted <strong>39.4% of signups into verified active traders</strong> (vs. 28.4% industry baseline), directly reducing wasted paid ad spend.</li>
-            <li><strong>Creating Predictable Revenue:</strong> Shifting retail users from erratic manual trading into automated monthly <strong>Sparplans (DCA)</strong> increased 12-month customer retention from <strong>22.8% to 59.2% (a 2.6x improvement)</strong>.</li>
-            <li><strong>Building Institutional Custodial Depth:</strong> Long-term recurring accumulators reach an average of <strong>€9,850 in Assets Under Custody (AUC)</strong> within 24 months, providing stable trading spread and staking yield revenue.</li>
+            <li><strong>Acquisition Throughput & Friction Reduction:</strong> By streamlining the BaFin Video-Ident verification flow, we increased through-funnel conversion to <strong>39.4% first-trade activation</strong> (vs. 28.4% industry benchmark), substantially amortizing paid customer acquisition cost (CAC).</li>
+            <li><strong>Recurring Inflow Cadence & Churn Mitigation:</strong> Transitioning retail traders from manual, market-sensitive spot trading to automated monthly <strong>Sparplans (DCA)</strong> shifted 12-month retention from <strong>22.8% to 59.2% (a 2.6x improvement)</strong>, creating resilient baseline trading revenue during market downturns.</li>
+            <li><strong>Assets Under Custody (AUC) Accumulation:</strong> Disciplined recurring accumulators compound to an average of <strong>€9,850 in Assets Under Custody (AUC)</strong> within 24 months, maximizing custodial spread monetization and staking product adoption.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
     
     col_left, col_right = st.columns([1.25, 1])
     with col_left:
-        st.markdown("#### ⚡ Onboarding Conversion Funnel (Per 10,000 Signups)")
+        st.markdown("#### ⚡ Through-Funnel Onboarding Conversion (Per 10,000 Signups)")
         st.markdown("""
         <div class="expl-box-blue">
-            <strong style="color:#0284c7; font-size:0.92rem;">💡 Why this Funnel matters for CRM:</strong><br>
-            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
+            <strong style="color:#0284c7; font-size:0.92rem;">💡 Lifecycle Stage Drop-off Analysis:</strong><br>
+            Industry benchmarks show >60% drop-off between registration and KYC completion. Our automated multi-channel lifecycle journeys eliminate drop-offs across each critical gating milestone—delivering a <strong>+76.7% cumulative throughput lift (22.3% → 39.4% first-trade activation)</strong>.
         </div>
         """, unsafe_allow_html=True)
         
         stages = [
             {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#0284c7"},
-            {"step": "02", "name": "Email Address Confirmed (Stage 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7"},
-            {"step": "03", "name": "Video-Ident Call Initiated (Stage 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669"},
-            {"step": "04", "name": "KYC Verification Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#059669"},
-            {"step": "05", "name": "First Bank / SEPA Deposit (Stage 3)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
-            {"step": "06", "name": "First Trade Executed (Activated)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#7c3aed"}
+            {"step": "02", "name": "Double Opt-In (DOI) Confirmed (Stage 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7"},
+            {"step": "03", "name": "Video-Ident Verification Initiated (Stage 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669"},
+            {"step": "04", "name": "Identity Verification (KYC) Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#059669"},
+            {"step": "05", "name": "Initial Fiat / SEPA Deposit Completed (Stage 3)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
+            {"step": "06", "name": "First Trade Executed (Activated Account)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#7c3aed"}
         ]
         
         for s in stages:
@@ -289,11 +289,11 @@ if nav_choice == NAV_MODULES[0]:
             """, unsafe_allow_html=True)
             
     with col_right:
-        st.markdown("#### 🪙 Assets Under Custody (AUC) Segmentation")
+        st.markdown("#### 🪙 Assets Under Custody (AUC) Asset Mix & Segmentation")
         st.markdown("""
         <div class="expl-box-green">
-            <strong style="color:#059669; font-size:0.92rem;">💡 How Custody Distribution Drives CRM Personalization:</strong><br>
-            Retention is maximized when CRM messaging matches what the user holds. We use automated Braze segments to trigger tailored next steps: <strong>DCA Sparplans for BTC</strong>, <strong>Staking Rewards for ETH</strong>, and <strong>Limit Alerts for Cash</strong>.
+            <strong style="color:#059669; font-size:0.92rem;">💡 Behavioral Segmentation Strategy:</strong><br>
+            Retention velocity increases when messaging dynamically aligns with portfolio composition. Automated Braze dynamic segments trigger context-aware lifecycle streams: <strong>DCA Accumulation for BTC</strong>, <strong>Staking Yield Activation for ETH</strong>, and <strong>Limit Buy Alerts for Idle Cash</strong>.
         </div>
         """, unsafe_allow_html=True)
         
@@ -322,7 +322,7 @@ if nav_choice == NAV_MODULES[0]:
         st.caption("ℹ️ **Data Benchmark Source:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and DACH multi-asset exchange distributions.")
 
 # ==========================================
-# MODULE 2: STAGE 1 - TRANSACTIONAL MOMENTUM
+# MODULE 2: STAGE 1 - DOUBLE OPT-IN (DOI)
 # ==========================================
 elif nav_choice == NAV_MODULES[1]:
     st.markdown("### ✉️ Stage 1: Double Opt-In (DOI) Confirmation & Activation Momentum")
@@ -383,7 +383,7 @@ elif nav_choice == NAV_MODULES[1]:
 # MODULE 3: STAGE 2 - ONBOARDING / KYC
 # ==========================================
 elif nav_choice == NAV_MODULES[2]:
-    st.markdown("### 🛡️ Stage 2: Onboarding & Video-Ident Friction Breaker")
+    st.markdown("### 🛡️ Stage 2: Regulated Identity Verification (KYC) Funnel Optimization")
     st.markdown("**Executive Context:** In regulated European markets (BaFin & MiCA), identity verification creates a major cognitive barrier. Our hypothesis replaces dense paragraphs with a 3-step time-stamped checklist and mobile deep-linking.")
     
     colA, colB = st.columns(2)
@@ -441,7 +441,7 @@ elif nav_choice == NAV_MODULES[2]:
 # MODULE 4: STAGE 3 - STALLED DEPOSIT RECOVERY
 # ==========================================
 elif nav_choice == NAV_MODULES[3]:
-    st.markdown("### 🏦 Stage 3: Stalled-Deposit Recovery Flow (High-Intent Capital Rescue)")
+    st.markdown("### 🏦 Stage 3: High-Intent Deposit Abandonment & Recovery Journey")
     st.markdown("**Executive Context:** Recovers verified users who stalled before initiating their first bank transfer using a 15-minute in-app slide-up and a 24-hour supportive care email.")
     
     c1, c2 = st.columns(2)
@@ -477,7 +477,7 @@ elif nav_choice == NAV_MODULES[3]:
 # MODULE 5: STAGE 4 - LEARN & EARN, SURVEYS & NPS
 # ==========================================
 elif nav_choice == NAV_MODULES[4]:
-    st.markdown("### 💡 Stage 4: Interactive 'Learn & Earn' Quizzes, Micro-Surveys & NPS Engine")
+    st.markdown("### 💡 Stage 4: Zero-Party Data Collection, 'Learn & Earn' Gamification & In-App NPS")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -617,7 +617,7 @@ elif nav_choice == NAV_MODULES[4]:
 # MODULE 6: STAGE 5 - IN-APP MESSAGE SUITE
 # ==========================================
 elif nav_choice == NAV_MODULES[5]:
-    st.markdown("### 📱 Stage 5: In-App Message (IAM) Contextual Conversion Suite")
+    st.markdown("### 📱 Stage 5: Contextual In-App Messaging (IAM) & Conversion Modals")
     
     st.markdown("""
     <div class="expl-box-green">
@@ -697,7 +697,7 @@ elif nav_choice == NAV_MODULES[5]:
 # MODULE 7: STAGE 6 - SPARPLAN LTV COHORT MODEL
 # ==========================================
 elif nav_choice == NAV_MODULES[6]:
-    st.markdown("### 📈 Stage 6: The Sparplan (DCA) Retention Engine — Core Growth Lever")
+    st.markdown("### 📈 Stage 6: Recurring Dollar-Cost Averaging (DCA Sparplan) Retention Engine")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -773,11 +773,11 @@ elif nav_choice == NAV_MODULES[6]:
 # MODULE 8: STAGE 7 - MOBILE PUSH SCENARIOS
 # ==========================================
 elif nav_choice == NAV_MODULES[7]:
-    st.markdown("### 📲 Stage 7: Real-Time Mobile Push & Volatility Engine (4 Scenarios)")
+    st.markdown("### 📲 Stage 7: Event-Triggered Mobile Push & Volatility Reactivation Engine")
     
     st.markdown("""
     <div class="expl-box-blue">
-        <strong style="color:#0284c7; font-size:1rem;">💡 Why Mobile Push is Crucial for Trading Platforms:</strong><br>
+        <strong style="color:#0284c7; font-size:1rem;">💡 Real-Time Event-Triggered Messaging Architecture:</strong><br>
         In financial trading, mobile push notifications drive instant engagement during critical market moves. However, aggressive or misleading spam creates push fatigue (users turn off notifications). Our <strong>Braze Push Engine</strong> pairs factual market movements with <strong>smart execution tools (Limit Orders) and a strict 24-hour frequency cap</strong>.
     </div>
     """, unsafe_allow_html=True)
@@ -847,7 +847,7 @@ elif nav_choice == NAV_MODULES[7]:
 # MODULE 9: STAGE 8 - IDLE STAKING YIELD
 # ==========================================
 elif nav_choice == NAV_MODULES[8]:
-    st.markdown("### 🪙 Stage 8: Idle Asset Staking Yield Nudge")
+    st.markdown("### 🪙 Stage 8: Cross-Sell Staking Yield & Idle Capital Monetization")
     st.markdown("**Executive Context:** Translates un-staked crypto holdings into concrete annual EUR rewards to overcome user inertia.")
     
     tok = st.selectbox("Asset Held in Custody:", ["Ethereum (ETH)", "Solana (SOL)", "Cardano (ADA)"])
@@ -880,7 +880,7 @@ elif nav_choice == NAV_MODULES[8]:
 # MODULE 10: STAGE 9 - MILESTONE GAMIFICATION
 # ==========================================
 elif nav_choice == NAV_MODULES[9]:
-    st.markdown("### 🏆 Stage 9: Milestone Habit Gamification (Goal Gradient DCA)")
+    st.markdown("### 🏆 Stage 9: Milestone-Based Retention Loops & Goal-Gradient Rewards")
     st.markdown("**Executive Context:** Based on the Goal Gradient Effect: celebrates users reaching €500, €1,000, or €5,000 AUC milestones to drive Sparplan retention.")
     
     st.markdown("""
@@ -901,7 +901,7 @@ elif nav_choice == NAV_MODULES[9]:
 # MODULE 11: STAGE 10 - EDITORIAL NEWSLETTER
 # ==========================================
 elif nav_choice == NAV_MODULES[10]:
-    st.markdown("### 📰 Stage 10: Monthly Market Newsletter Personalization")
+    st.markdown("### 📰 Stage 10: Dynamic 1:1 Personalized Newsletter (Liquid Content Blocks)")
     st.markdown("**Executive Context:** Preserves 100% of high-quality macro storytelling, but uses **Liquid logic** to dynamically adapt the Call-to-Action module based on real-time subscriber lifecycle state.")
     
     col1, col2 = st.columns(2)
@@ -977,7 +977,7 @@ elif nav_choice == NAV_MODULES[10]:
 # MODULE 12: STAGE 11 - KPIS & FORECAST
 # ==========================================
 elif nav_choice == NAV_MODULES[11]:
-    st.markdown("### 🎯 Stage 11: Exchange CRM & Retention KPI Framework")
+    st.markdown("### 🎯 Stage 11: Quantitative CRM Metrics, LTV/CAC & AUC Forecasting")
     
     kpis = [
         {"name": "1. KYC Throughput Rate", "formula": "(Approved Verified Users / Total Registrations) * 100", "target": "> 40% (Industry avg ~28%)", "why": "Directly reduces paid Customer Acquisition Cost (CAC) waste."},
@@ -1019,7 +1019,7 @@ elif nav_choice == NAV_MODULES[11]:
 # MODULE 13: STAGE 12 - CRM ARCHITECTURE
 # ==========================================
 elif nav_choice == NAV_MODULES[12]:
-    st.markdown("### 🛠️ Stage 12: CRM Automation Architecture & State Machine")
+    st.markdown("### 🛠️ Stage 12: Event-Driven CRM Infrastructure & Idempotent Dispatcher")
     st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
     
     st.code("""
@@ -1041,7 +1041,7 @@ def dispatch_with_idempotency(campaign_id, user_id, payload):
 # MODULE 14: STAGE 13 - CROSS-FUNCTIONAL
 # ==========================================
 elif nav_choice == NAV_MODULES[13]:
-    st.markdown("### 👥 Stage 13: Cross-Functional Collaboration & Delivery Framework")
+    st.markdown("### 👥 Stage 13: Cross-Functional Growth Squad Matrix (BI, Product, Compliance)")
     st.markdown("""
     | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
     |---|---|---|
@@ -1055,7 +1055,7 @@ elif nav_choice == NAV_MODULES[13]:
 # MODULE 15: STAGE 14 - TECHNICAL STACK
 # ==========================================
 elif nav_choice == NAV_MODULES[14]:
-    st.markdown("### 💻 Stage 14: Production Liquid & SQL Schemas")
+    st.markdown("### 💻 Stage 14: Production Liquid Templates & Snowflake Cohort Schemas")
     st.markdown("##### 1. Braze Liquid Conditional Block")
     st.code("""
 {% if user.kyc_status != 'approved' %}
