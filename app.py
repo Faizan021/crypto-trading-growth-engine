@@ -213,7 +213,7 @@ st.sidebar.caption("Portfolio Project | Faizan Ahmed")
 # ==========================================
 # MODULE 1: EXECUTIVE DASHBOARD
 # ==========================================
-if "1. Executive Performance Dashboard" in nav_choice:
+if "1. Executive" in nav_choice:
     st.markdown("### Executive Summary — Monthly Retail Throughput & Custody Metrics")
     
     col1, col2, col3, col4 = st.columns(4)
@@ -336,7 +336,7 @@ if "1. Executive Performance Dashboard" in nav_choice:
 # ==========================================
 # MODULE 2: CASE 1
 # ==========================================
-elif "2. Case 1: Transactional Activation" in nav_choice:
+elif "2. Case 1" in nav_choice:
     st.markdown("### Case 1: Transactional Confirmation & Activation Momentum")
     st.markdown("**Executive Context:** Transactional confirmation emails command a **68.2% open rate** (the highest in the customer lifecycle). Treating this email as a plain administrative stop wastes peak customer motivation.")
     
@@ -394,7 +394,7 @@ elif "2. Case 1: Transactional Activation" in nav_choice:
 # ==========================================
 # MODULE 3: CASE 2
 # ==========================================
-elif "3. Case 2: Onboarding" in nav_choice:
+elif "3. Case 2" in nav_choice:
     st.markdown("### Case 2: Onboarding & Video-Ident Friction Breaker")
     st.markdown("**Executive Context:** In regulated European markets (BaFin & MiCA), identity verification creates a major cognitive barrier. Our hypothesis replaces dense paragraphs with a 3-step time-stamped checklist and mobile deep-linking.")
     
@@ -452,7 +452,7 @@ elif "3. Case 2: Onboarding" in nav_choice:
 # ==========================================
 # MODULE 4: CASE 3
 # ==========================================
-elif "4. Case 3: Engagement" in nav_choice:
+elif "4. Case 3" in nav_choice:
     st.markdown("### Case 3: Monthly Market Newsletter Personalization")
     st.markdown("**Executive Context:** Preserves 100% of high-quality macro storytelling, but uses **Liquid logic** to dynamically adapt the Call-to-Action module based on real-time subscriber lifecycle state.")
     
@@ -528,7 +528,7 @@ elif "4. Case 3: Engagement" in nav_choice:
 # ==========================================
 # MODULE 5: CASE 4 - KPIS
 # ==========================================
-elif "5. Case 4: Exchange CRM" in nav_choice:
+elif "5. Case 4" in nav_choice:
     st.markdown("### Case 4: Exchange CRM & Retention KPI Framework")
     
     kpis = [
@@ -570,7 +570,7 @@ elif "5. Case 4: Exchange CRM" in nav_choice:
 # ==========================================
 # MODULE 6: CASE 5 - SPARPLAN LTV
 # ==========================================
-elif "6. Case 5: Retention" in nav_choice:
+elif "6. Case 5" in nav_choice:
     st.markdown("### Case 5: 5-Year Sparplan (DCA) Cohort Retention Model")
     st.markdown("Comparing long-term retention decay and Assets Under Custody (AUC) between **Manual Spot Traders** vs. **Automated Recurring Sparplan Accumulators**.")
     
@@ -603,7 +603,7 @@ elif "6. Case 5: Retention" in nav_choice:
 # ==========================================
 # MODULE 7: CASE 6 - VOLATILITY PUSH
 # ==========================================
-elif "7. Case 6: Push & In-App" in nav_choice:
+elif "7. Case 6" in nav_choice:
     st.markdown("### Case 6: Real-Time Market Volatility Push Engine")
     st.markdown("**Executive Context:** High market volatility generates trading volume, but spammy messaging leads to push opt-outs. We enforce an objective, factual notification structure with a **strict 24h frequency cap**.")
     
