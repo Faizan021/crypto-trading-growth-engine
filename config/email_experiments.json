@@ -64,12 +64,12 @@
       }
     }
   },
-  "case_3_editorial_bisonews": {
+  "case_3_editorial_misonews": {
     "name": "Case 3: Monthly Market Newsletter & Dynamic Lifecycle CTAs",
-    "email_name": "Hi, here's your BISONews for August \ud83d\udcf0 / \ud83d\ude4c",
+    "email_name": "Hi, here's your Misonews for August \ud83d\udcf0 / \ud83d\ude4c",
     "trigger": "Monthly broadcast sent to all registered platform users",
     "received_email": {
-      "subject": "Hi, here's your BISONews for August \ud83d\udcf0",
+      "subject": "Hi, here's your Misonews for August \ud83d\udcf0",
       "preheader": "Bitcoin has woken up and pulled the market out of hibernation",
       "sections": [
         {

@@ -141,6 +141,11 @@ with open(exp_path, 'r', encoding='utf-8') as f:
     experiments = json.load(f)
 
 # Hero Header
+
+# Disclaimer Banner
+st.warning("⚠️ **PORTFOLIO CASE STUDY DISCLAIMER:** **Mison** is a fictional case study name used exclusively for technical CRM demonstration, educational analysis, and open-source system design. It does not represent any real commercial company or trademark. All data and examples are synthetic simulations.")
+
+
 st.markdown("""
 <div class="terminal-hero">
     <div>
@@ -369,7 +374,7 @@ elif nav_choice == "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker":
 # MODULE 4: CASE 3 - MONTHLY NEWSLETTER
 # ==========================================
 elif nav_choice == "📰 4. Case 3: Editorial Newsletter A/B Test (August Edition)":
-    c3 = experiments["case_3_editorial_bisonews"]
+    c3 = experiments["case_3_editorial_misonews"]
     st.subheader("📰 Case 3: Monthly Newsletter A/B Test (August Market News)")
     st.info("**Strategic Context:** Monthly market reviews offer great educational value. The August edition clearly breaks down the US debt spiral, Nvidia earnings, and Bitcoin rally. Our hypothesis keeps this high-quality editorial, but tests replacing the single static 'Trade Bitcoin' button with dynamic lifecycle-segmented CTAs.")
     
@@ -380,7 +385,7 @@ elif nav_choice == "📰 4. Case 3: Editorial Newsletter A/B Test (August Editio
         st.markdown("""
         <div class="email-box" style="border-left: 4px solid #64748b;">
             <div class="email-header">
-                <strong>Subject:</strong> <code>Hi, here's your BISONews for August 📰</code><br>
+                <strong>Subject:</strong> <code>Hi, here's your Misonews for August 📰</code><br>
                 <strong>Preheader:</strong> <code>Bitcoin has woken up and pulled the market out of hibernation</code>
             </div>
             <div style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">

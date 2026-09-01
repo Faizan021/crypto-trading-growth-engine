@@ -1,46 +1,56 @@
-# ⚡ Digital Asset & Trading Growth OS
-### Quantitative CRM Lifecycle Intelligence, Email & Push A/B Testing, and Multi-Asset Sparplan Retention for Regulated European Exchanges
+# ⚡ Mison | Digital Asset & Trading Growth OS
+### Enterprise CRM Lifecycle Intelligence, Open-Source Architectural Design Patterns, and Multi-Asset Sparplan Retention for Regulated European Exchanges
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-trading-growth-engine.streamlit.app)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Compliance: BaFin & MiCA](https://img.shields.io/badge/Compliance-BaFin%20%7C%20MiCA-green.svg)](https://www.bafin.de/)
 
-> **Executive Scope:** An enterprise-grade quantitative growth and CRM lifecycle engine built in Python and Streamlit. Designed for regulated European multi-asset trading ecosystems (Equities, ETFs, Structured Securities, and Digital Assets/Crypto). It optimizes onboarding friction, benchmarks transactional email momentum, models 60-month recurring Sparplan retention, triggers real-time market volatility re-engagement alerts, and provides production-ready Braze/Liquid architectures.
+> [!IMPORTANT]
+> **LEGAL & PORTFOLIO DISCLAIMER:**  
+> **"Mison"** is a **fictional, simulated platform name** created solely for independent portfolio research, educational analysis, and open-source system design demonstration. It does **not** represent, reference, or affiliate with any real-world commercial company, financial institution, or registered trademark. All trading data, metrics, and email copy examples shown are synthetic simulations.
 
 ---
 
-# 🧠 Master Case Studies & Lifecycle Impact Matrix
-
-| # | Real Exchange & Trading Challenge | Quantitative Engine Solution | Quantified Business Impact |
-| :--- | :--- | :--- | :--- |
-| **Case 1** | **Transactional Confirmation Dead-End** (High 68%+ open rates wasted on static plain text) | **Momentum-Building Activation Hook** previewing live market movers and automated accumulation options upon confirmation. | **+30.6% Activation Velocity** ($z = 2.89, p = 0.0039$) |
-| **Case 2** | **Video-Ident & KYC Drop-Off** (Users register but drop before ID verification due to paperwork fear) | **3-Step Friction-Relief Checklist & Mobile App Deep-Linking** (`app://verify/video-ident`) resolving cognitive anxiety. | **+38.7% KYC $\to$ First-Trade Rate** ($z = 3.12, p = 0.0018$) |
-| **Case 3** | **Generic Newsletter CTA Fatigue** (Static "Trade Bitcoin" buttons underperform across cohorts) | **Dynamic Lifecycle Liquid Payloads** adapting CTAs: Unverified $\to$ KYC; Spot Buyer $\to$ Sparplan; Active $\to$ Portfolio. | **+86.3% Click-to-Open (CTOR) Lift** ($z = 4.15, p < 0.0001$) |
-| **Case 4** | **Fragmented Trading KPIs & Attribution** (Teams lack unified LTV/CAC & cohort metrics) | **Comprehensive 5-Metric Exchange KPI Engine** tracking KYC Throughput, Time-to-First-Trade, and AUC Growth. | **Predictable €9,850 2-Year AUC / Active Member** |
-| **Case 5** | **Bear Market Inactivity Churn** (Manual spot buyers stop trading during low volatility) | **60-Month Compound LTV & Sparplan Cohort Forecaster**, proving why DCA accumulation sustains **59.2% 1-year loyalty**. | **-47.2% Inactivity Churn Rate** |
-| **Case 6** | **Push Over-Saturation & Churn** (Users opt out due to spammy alerts) | **Programmatic Volatility Anomaly Detection** ($Z$-score $> 2.5\sigma$) enforcing strict 24h cross-channel cooling periods. | **-62.3% Push Unsubscribe Rate** |
-| **Case 7** | **Cross-Functional Silos** (Disconnect between CRM, BI, Product & Compliance) | **Unified Stakeholder Delivery Blueprint** mapping event tracking schemas, native app triggers, and BaFin/MiCA audit trails. | **100% Audit-Ready & Rapid Go-Live** |
-| **Case 8** | **Manual Campaign Execution Bottlenecks** (Slow email builds & static copy) | **Production-Ready Braze, Liquid & SQL Schemas** enabling automated segmentation and dynamic personalizations. | **Automated Multi-Touch Orchestration** |
-
----
-
-# 📚 System Architecture & Event Orchestration
+# 🛠️ Dual-Engine Overview: Creative Campaigns & Open-Source Engineering
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    participant App as Mobile Trading App / Web Client
-    participant Engine as Growth & Retention Engine (This Repo)
-    participant CRM as CRM Automation (Braze / Klaviyo)
-    participant Trader as Retail Investor (Push / Email / In-App)
+flowchart TD
+    subgraph Signal_Layer [1. Real-Time Market & Event Ingestion]
+        A[Live Crypto/Equity WebSockets] -->|Price Spike / Dip| B[Webhook Event Router (Frappe Pattern)]
+    end
 
-    App->>Engine: Ingests User Lifecycle Events (kyc_pending, spot_order_filled, sparplan_paused)
-    Engine->>Engine: 1. Evaluates Trader Lifecycle Persona<br>2. Computes Volatility & Friction Regimes<br>3. Generates Dynamic Liquid Payload
-    Engine->>CRM: Dispatches Segment-Aware Event Payload & Deep-Link URLs
-    CRM->>Trader: Delivers Friction-Relief KYC Guide / DCA Milestone Push / Market Surge Alert
-    Trader->>App: Executes In-App Verification or Sparplan Setup via Deep Link
+    subgraph Data_Layer [2. Dynamic Segmentation & Caching]
+        C[(User Trading Database)] -->|Scheduled Batching| D[Async Segment Cache (Mautic Pattern)]
+        B -->|Check Active Segments| D
+    end
+
+    subgraph Execution_Layer [3. Fault-Tolerant Dispatcher]
+        D --> E[Idempotent Campaign Engine (EspoCRM Pattern)]
+        E -->|Check Idempotency Key & Fatigue Cooldown| F{Channel Router}
+    end
+
+    subgraph Touchpoints [4. Multichannel Delivery]
+        F -->|Sub-Second| G[Mobile Push Notification]
+        F -->|In-Session| H[In-App Message / Banner]
+        F -->|Educational| I[Segmented HTML Email]
+    end
 ```
+
+---
+
+# 🏛️ Master Case Studies Matrix
+
+| # | Master Case Study | Business / Technical Challenge | Quantitative & Architectural Solution | Inspired By / Impact |
+| :--- | :--- | :--- | :--- | :--- |
+| **01** | **Async Dynamic Segmentation** | Heavy DB load filtering 500k+ retail accounts during high volatility | **Redis-cached background batch worker** evaluating multi-attribute filters asynchronously | **Mautic Core** (`mautic:segments:update`) |
+| **02** | **Fault-Tolerant Idempotent Dispatcher** | Server crashes during large 100k email/push broadcasts causing duplicate sends | **Idempotent Campaign Log State Machine** (`PENDING`, `DISPATCHED`, `FAILED`, `SUPPRESSED`) | **EspoCRM / Krayin** (Zero Duplicate Sends) |
+| **03** | **Real-Time Webhook Volatility Alerts** | Static cron schedules miss rapid $\pm 5\%$ intraday market breakouts | **Event-driven Webhook Router** firing sub-second multichannel alerts with 24h fatigue guards | **Frappe Hooks** (Sub-Second Latency) |
+| **04** | **Transactional Confirmation Momentum** | High 68%+ open rates wasted on static confirmation links | **Momentum-Building Activation Hook** previewing live market movers upon confirmation | **+30.6% Activation Velocity** ($z = 2.89, p = 0.0039$) |
+| **05** | **Video-Ident & KYC Friction Breaker** | Users register but drop before ID verification due to paperwork anxiety | **3-Step Friction-Relief Checklist & App Deep-Linking** (`misonapp://verify/video-ident`) | **+38.7% KYC $\to$ First-Trade Rate** ($z = 3.12, p = 0.0018$) |
+| **06** | **Editorial Newsletter Lifecycle Personalization** | Static "Trade Bitcoin" buttons underperform across different user stages | **Dynamic Liquid Payloads** adapting CTAs: Unverified $\to$ KYC; Spot Buyer $\to$ Sparplan; Active $\to$ Portfolio | **+86.3% Click-to-Open (CTOR) Lift** ($z = 4.15, p < 0.0001$) |
+| **07** | **5-Year Sparplan (DCA) LTV & Retention** | Manual spot buyers stop trading during bear markets (~6.5% monthly churn) | **60-Month Compound LTV Forecaster**, proving why DCA accumulation sustains 59.2% loyalty | **€9,850 Avg. 2-Year AUC / Member** |
+| **08** | **Comprehensive Exchange KPI Engine** | Fragmented metrics and ad-hoc attribution across growth teams | **5-Metric Framework** (KYC Throughput, TTFT, Sparplan Rate, AUC Depth, Reactivation Velocity) | **Audit-Ready Growth Governance** |
 
 ---
 
@@ -58,20 +68,20 @@ sequenceDiagram
 ---
 
 ### 🛡️ Case 2: Onboarding & Video-Ident Friction Breaker
-* **Email Analyzed:** *"Welcome to the Trading App 👋"*
+* **Email Analyzed:** *"Welcome to Mison 👋"*
 * **👍 What We Appreciate:** Strong trust anchor (exchange backing), clear *"no wallet complexity or paperwork"* value proposition.
 * **💡 The Opportunity:** Dense paragraphs create cognitive friction. Users hesitate because they fear a long video call or needing physical documents.
 * **🟢 Our Hypothesis (Variant B):** Replace paragraphs with a visual, time-stamped **3-Step Checklist**:
   1. *Step 1: Have your ID card ready (1 min)*
   2. *Step 2: Quick 2-minute Video-Ident call*
   3. *Step 3: Instant trading access (0€ deposit fee)*
-  * *Paired with a direct mobile deep link (`app://verify/video-ident`).*
+  * *Paired with a direct mobile deep link (`misonapp://verify/video-ident`).*
 * **📈 Measurable Impact:** **+38.7% Relative Lift in KYC Completion** (28.4% → 39.4%, $z = 3.12, p = 0.0018$).
 
 ---
 
 ### 📰 Case 3: Monthly Market Newsletter A/B Test (August Edition)
-* **Email Analyzed:** *"Hi, here’s your BISONews for August 📰 / 🙌"*
+* **Email Analyzed:** *"Hi, here’s your Misonews for August 📰 / 🙌"*
 * **👍 What We Appreciate:** Superb editorial quality, approachable breakdown of macro topics (US $35T debt, Nvidia earnings, Bitcoin rally), engaging 3D visuals.
 * **💡 The Opportunity:** A single static `[ Trade Bitcoin ]` button underperforms across different customer stages (non-holders feel unready to buy spot; active accumulators prefer automated DCA).
 * **🟢 Our Hypothesis (Variant B):** Keep the entire high-quality editorial intact, but **dynamically adapt the CTA module** based on the user's lifecycle stage:
@@ -83,7 +93,7 @@ sequenceDiagram
 
 ---
 
-### 🎯 Case 4: The 5 Essential Exchange KPIs (How & Why)
+### 🎯 Case 4: Key KPIs to Calculate (How & Why)
 
 1. **KYC Verification Throughput Rate (%)**:
    $$\text{KYC Rate} = \left(\frac{\text{Approved Verified Users}}{\text{Total Registrations}}\right) \times 100$$
@@ -129,7 +139,7 @@ sequenceDiagram
 
 ### 👥 Case 7: Cross-Functional Alignment Framework
 * **BI / Analytics:** Standardized event taxonomies (`kyc_step_reached`, `sparplan_created`).
-* **Product & Engineering:** Direct app deep-links (`bisonapp://verify/video-ident`) and SDK webhook reliability.
+* **Product & Engineering:** Direct app deep-links (`misonapp://verify/video-ident`) and SDK webhook reliability.
 * **UX/UI Design:** Dark/light mode accessibility, responsive HTML email templates.
 * **Legal & Compliance:** BaFin/MiCA regulatory disclaimers and strict Double-Opt-In (DOI) verification records.
 
@@ -160,4 +170,4 @@ python -m unittest test_engine.py
 ---
 
 ### 🛡️ Disclaimer
-This project is an independent quantitative growth engineering prototype. All company-specific trade names have been anonymized into an enterprise multi-asset exchange framework.
+This project is an independent quantitative growth engineering prototype. "Mison" is a fictional entity used exclusively for portfolio and technical simulation purposes.
