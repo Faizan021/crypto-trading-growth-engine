@@ -173,30 +173,38 @@ st.markdown("""
 
 # Master Navigation Menu Array (Enterprise CRM Marketing Nomenclature)
 NAV_MODULES = [
-    "📊 1. Executive CRM Scorecard & Cohort Unit Economics",
-    "✉️ 2. Stage 1: Double Opt-In (DOI) & Activation Velocity",
-    "🛡️ 3. Stage 2: Regulated KYC Onboarding & Funnel Optimization",
-    "🏦 4. Stage 3: High-Intent Deposit Abandonment & Recovery Journey",
-    "💡 5. Stage 4: Zero-Party Data Collection, 'Learn & Earn' & In-App NPS",
-    "📱 6. Stage 5: Contextual In-App Messaging (IAM) & Conversion Modals",
-    "📈 7. Stage 6: Recurring Dollar-Cost Averaging (DCA Sparplan) Retention Engine",
-    "📲 8. Stage 7: Event-Triggered Mobile Push & Volatility Reactivation Engine",
-    "🪙 9. Stage 8: Cross-Sell Staking Yield & Idle Capital Monetization",
-    "🏆 10. Stage 9: Milestone-Based Retention Loops & Goal-Gradient Rewards",
-    "📰 11. Stage 10: Dynamic 1:1 Personalized Newsletter (Liquid Content Blocks)",
-    "🎯 12. Stage 11: Quantitative CRM Metrics, LTV/CAC & AUC Forecasting",
-    "🛠️ 13. Stage 12: Event-Driven CRM Infrastructure & Idempotent Dispatcher",
-    "👥 14. Stage 13: Cross-Functional Growth Squad Matrix (BI, Product, Compliance)",
-    "💻 15. Stage 14: Production Liquid Templates & Snowflake Cohort Schemas"
+    "📊 Executive Summary: Strategy & Scorecard",
+    "✉️ Stage 1: Double Opt-In (DOI) Email Redesign",
+    "🛡️ Stage 2: Breaking the KYC Drop-off",
+    "🏦 Stage 3: High-Intent Deposit Recovery",
+    "🎓 Stage 4: 'Learn & Earn' Quiz & Risk Profiling",
+    "📱 Stage 5: Contextual In-App Conversion Nudges",
+    "📈 Stage 6: The 5-Year Sparplan (DCA) Retention Engine",
+    "📲 Stage 7: Event-Triggered Mobile Push (4 Scenarios)",
+    "🪙 Stage 8: Idle Staking Yield & Cash Activation",
+    "🏆 Stage 9: Milestone Habit Loops & Goal Gradient",
+    "📰 Stage 10: Dynamic 1:1 Lifecycle Newsletter",
+    "🎯 Stage 11: Retention Metrics, Unit Economics & AUC Forecast",
+    "🛠️ Stage 12: Event-Driven Infrastructure & Idempotency",
+    "👥 Stage 13: Cross-Functional Squad Execution Matrix",
+    "💻 Stage 14: Production Liquid & Snowflake SQL Schemas"
 ]
 
 # Sidebar Navigation
-st.sidebar.title("Faizex CRM Platform")
-st.sidebar.markdown("**Lifecycle Marketing Framework**")
-nav_choice = st.sidebar.radio("Select Operational Stage:", NAV_MODULES)
+st.sidebar.title("Faizex CRM Case Study")
+st.sidebar.markdown("**Customer Lifecycle Stages**")
+nav_choice = st.sidebar.radio("Select Lifecycle Stage:", NAV_MODULES)
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Portfolio Project | Faizan Ahmed")
+st.sidebar.markdown("""
+<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 12px; font-size:0.8rem; color:#334155; line-height:1.45; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
+    <strong style="color:#0f172a; font-size:0.85rem;">Faizan Ahmed</strong><br>
+    <span style="color:#0284c7; font-weight:600;">CRM Marketing & Lifecycle Lead</span>
+    <div style="margin-top:6px; padding-top:6px; border-top:1px solid #f1f5f9;">
+        <a href="https://github.com/Faizan021/crypto-trading-growth-engine" target="_blank" style="color:#059669; text-decoration:none; font-weight:700;">📂 GitHub Repository &rarr;</a>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # ==========================================
 # MODULE 1: EXECUTIVE CRM SCORECARD

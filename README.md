@@ -47,21 +47,21 @@ flowchart TD
 
 | Operational Stage | Lifecycle Marketing Phase | Core Quantitative Problem | CRM Multi-Channel Solution | Quantified Benchmark Lift |
 |---|---|---|---|---|
-| **#01** | **Executive CRM Scorecard** | Macro Throughput & Custody Overview | Live Onboarding Funnel & AUC Distribution | **39.4% KYC Activation / 59.2% 12-Mo Retention** |
-| **#02** | **Stage 1: Double Opt-In (DOI)** | 58.8% users delay KYC after confirming email | Live BTC/ETH market movers embedded in DOI verification | **+30.6% Click Velocity** ($z = 2.89, p = 0.0039$) |
-| **#03** | **Stage 2: Regulated KYC Funnel** | BaFin Video-Ident creates cognitive friction | 3-step time-stamped checklist + mobile deep-linking | **+38.7% Relative KYC Lift** ($z = 3.12, p = 0.0018$) |
-| **#04** | **Stage 3: Deposit Abandonment Flow** | Verified users stall before first bank transfer | T+15m IBAN copy slide-up + T+24h SEPA care email | **+20.3% First-Deposit Recovery** (+64% Email CTR) |
-| **#05** | **Stage 4: Zero-Party Data & Learn/Earn** | Beginners hesitate to deploy initial funds | 2-min quiz unlocking €5 bonus + 1-click risk profiling | **74.2% Completion** $	o$ **+52.4% 7-Day Trading Lift** |
-| **#06** | **Stage 5: Contextual In-App (IAM)** | Post-deposit drop-off and login friction | Post-deposit Sparplan upsell, FaceID, 3.2% cash yield | **+31.4% Sparplan Upsell / +42% Open Frequency** |
-| **#07** | **Stage 6: Recurring DCA Retention** | 77% manual spot traders churn in bear markets | Automated Payday recurring Sparplan from €25/month | **2.6x Higher 12-Mo Retention (59.2% vs 22.8%)** |
-| **#08** | **Stage 7: Event-Triggered Mobile Push** | Push fatigue and opt-outs during market swings | 4 factual trading triggers + Limit Orders + 24h cap | **+44.1% Volume Lift** (-62.3% Opt-Outs) |
-| **#09** | **Stage 8: Cross-Sell Staking Yield** | Un-staked crypto sits dormant in custody | Dynamic annual reward calculator (+€72/yr ETH/SOL) | **+3.4x Staking Adoption (27.8% Conversion)** |
-| **#10** | **Stage 9: Milestone Habit Loops** | Long-term savers lose motivation | €1,000 AUC milestone celebration + +€25/mo upgrade | **+52.4% Sparplan Upgrade Velocity** |
-| **#11** | **Stage 10: Dynamic 1:1 Newsletter** | Generic static CTA underperforms | Dynamic Liquid tags matching user lifecycle persona | **+86.3% CTOR Lift** ($z = 4.15, p < 0.0001$) |
-| **#12** | **Stage 11: CRM Metrics & LTV/CAC** | Lack of long-term unit economic models | Quantitative forecasting (TTFT, AUC / Account, LTV) | **Institutional Custodial Compounding** |
-| **#13** | **Stage 12: Event-Driven Infrastructure** | Duplicate sends during 100k+ broadcasts | Redis caching (4.2ms) + SHA-256 idempotency keys | **100% Crash-Resilient Delivery** |
-| **#14** | **Stage 13: Cross-Functional Squad** | Siloed delivery between Engineering and CRM | Unified growth squad (BI, Mobile, UI, BaFin) | **Zero-Disruption Production Deployments** |
-| **#15** | **Stage 14: Liquid & SQL Schemas** | Manual cohort extraction bottlenecks | Production-ready Liquid blocks and Snowflake SQL | **100% Automated Lifecycle Synchronization** |
+| **#01** | **Executive Summary: Strategy & Scorecard** | Macro Throughput & Custody Overview | Live Onboarding Funnel & AUC Distribution | **39.4% KYC Activation / 59.2% 12-Mo Retention** |
+| **#02** | **Stage 1: Double Opt-In (DOI) Email Redesign** | 58.8% users delay KYC after confirming email | Live BTC/ETH market movers embedded in DOI verification | **+30.6% Click Velocity** ($z = 2.89, p = 0.0039$) |
+| **#03** | **Stage 2: Breaking the KYC Drop-off** | BaFin Video-Ident creates cognitive friction | 3-step time-stamped checklist + mobile deep-linking | **+38.7% Relative KYC Lift** ($z = 3.12, p = 0.0018$) |
+| **#04** | **Stage 3: High-Intent Deposit Recovery** | Verified users stall before first bank transfer | T+15m IBAN copy slide-up + T+24h SEPA care email | **+20.3% First-Deposit Recovery** (+64% Email CTR) |
+| **#05** | **Stage 4: 'Learn & Earn' Quiz & Risk Profiling** | Beginners hesitate to deploy initial funds | 2-min quiz unlocking €5 bonus + 1-click risk profiling | **74.2% Completion** $	o$ **+52.4% 7-Day Trading Lift** |
+| **#06** | **Stage 5: Contextual In-App Conversion Nudges** | Post-deposit drop-off and login friction | Post-deposit Sparplan upsell, FaceID, 3.2% cash yield | **+31.4% Sparplan Upsell / +42% Open Frequency** |
+| **#07** | **Stage 6: The 5-Year Sparplan (DCA) Retention Engine** | 77% manual spot traders churn in bear markets | Automated Payday recurring Sparplan from €25/month | **2.6x Higher 12-Mo Retention (59.2% vs 22.8%)** |
+| **#08** | **Stage 7: Event-Triggered Mobile Push (4 Scenarios)** | Push fatigue and opt-outs during market swings | 4 factual trading triggers + Limit Orders + 24h cap | **+44.1% Volume Lift** (-62.3% Opt-Outs) |
+| **#09** | **Stage 8: Idle Staking Yield & Cash Activation** | Un-staked crypto sits dormant in custody | Dynamic annual reward calculator (+€72/yr ETH/SOL) | **+3.4x Staking Adoption (27.8% Conversion)** |
+| **#10** | **Stage 9: Milestone Habit Loops & Goal Gradient** | Long-term savers lose motivation | €1,000 AUC milestone celebration + +€25/mo upgrade | **+52.4% Sparplan Upgrade Velocity** |
+| **#11** | **Stage 10: Dynamic 1:1 Lifecycle Newsletter** | Generic static CTA underperforms | Dynamic Liquid tags matching user lifecycle persona | **+86.3% CTOR Lift** ($z = 4.15, p < 0.0001$) |
+| **#12** | **Stage 11: Retention Metrics, Unit Economics & AUC Forecast** | Lack of long-term unit economic models | Quantitative forecasting (TTFT, AUC / Account, LTV) | **Institutional Custodial Compounding** |
+| **#13** | **Stage 12: Event-Driven Infrastructure & Idempotency** | Duplicate sends during 100k+ broadcasts | Redis caching (4.2ms) + SHA-256 idempotency keys | **100% Crash-Resilient Delivery** |
+| **#14** | **Stage 13: Cross-Functional Squad Execution Matrix** | Siloed delivery between Engineering and CRM | Unified growth squad (BI, Mobile, UI, BaFin) | **Zero-Disruption Production Deployments** |
+| **#15** | **Stage 14: Production Liquid & Snowflake SQL Schemas** | Manual cohort extraction bottlenecks | Production-ready Liquid blocks and Snowflake SQL | **100% Automated Lifecycle Synchronization** |
 
 ---
 
