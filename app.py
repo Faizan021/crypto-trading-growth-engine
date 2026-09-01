@@ -447,7 +447,7 @@ elif nav_choice == NAV_MODULES[1]:
             </div>
             
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
-                <strong style="color:#059669; font-size:0.95rem;">2. Scaling BISON Sparpläne (Savings Plans) 📈</strong>
+                <strong style="color:#059669; font-size:0.95rem;">2. Scaling BISON Sparplans (Savings Plans) 📈</strong>
                 <p style="color:#334155; font-size:0.86rem; line-height:1.5; margin:6px 0 0 0;">
                     <strong>The BISON Challenge:</strong> Spot trading volume drops heavily during crypto bear markets, causing trading fee churn.<br>
                     <strong>The CRM Fix:</strong> Automated Payday (1st of month) Sparplan nudges from €25/mo. Increases 12-month retention to <strong>59.2% (2.6x higher than spot traders)</strong> and builds steady recurring trading spreads.
