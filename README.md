@@ -15,7 +15,7 @@
 ```mermaid
 flowchart TD
     subgraph S1["1. Acquisition & Verification"]
-        A["App Download & Registration"] --> B["Stage 1: Transactional Confirmation<br>(Live Market Movers Hook)"]
+        A["App Download & Registration"] --> B["Stage 1: Double Opt-In (DOI) Confirmation<br>(Live Market Movers Hook)"]
         B --> C["Stage 2: Video-Ident Friction Breaker<br>(3-Step 3-Min Checklist)"]
     end
 
@@ -45,7 +45,7 @@ flowchart TD
 | Stage # | Customer Lifecycle Phase | Core Quantitative Problem | CRM Multi-Channel Solution | Quantified Benchmark Lift |
 |---|---|---|---|---|
 | **#01** | **Executive Scorecard** | Macro Throughput & Custody Overview | Live Onboarding Funnel & AUC Distribution | **39.4% KYC Activation / 59.2% 12-Mo Retention** |
-| **#02** | **Stage 1: Transactional Momentum** | 58.8% users delay KYC after confirming email | Live BTC/ETH market movers embedded in verification | **+30.6% Click Velocity** ($z = 2.89, p = 0.0039$) |
+| **#02** | **Stage 1: Double Opt-In (DOI) Momentum** | 58.8% users delay KYC after confirming email | Live BTC/ETH market movers embedded in verification | **+30.6% Click Velocity** ($z = 2.89, p = 0.0039$) |
 | **#03** | **Stage 2: Onboarding & Video-Ident** | BaFin Video-Ident creates cognitive hesitation | 3-step time-stamped checklist + mobile deep-linking | **+38.7% Relative KYC Lift** ($z = 3.12, p = 0.0018$) |
 | **#04** | **Stage 3: Stalled-Deposit Recovery** | Verified users stall before first bank transfer | T+15m IBAN copy slide-up + T+24h SEPA reassurance email | **+20.3% First-Deposit Recovery** (+64% Email CTR) |
 | **#05** | **Stage 4: Learn & Earn & Risk Survey** | Beginners hesitate to deploy initial funds | 2-min quiz unlocking €5 bonus + 1-click risk profiling | **74.2% Completion** $	o$ **+52.4% 7-Day Trading Lift** |

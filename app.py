@@ -174,7 +174,7 @@ st.markdown("""
 # Master Navigation Menu Array (Customer Lifecycle Sequence)
 NAV_MODULES = [
     "📊 1. Executive Performance Dashboard",
-    "✉️ 2. Stage 1: Transactional Activation Momentum",
+    "✉️ 2. Stage 1: Double Opt-In (DOI) Activation Momentum",
     "🛡️ 3. Stage 2: Onboarding & KYC Friction Breaker",
     "🏦 4. Stage 3: Stalled-Deposit Recovery Flow",
     "💡 5. Stage 4: Learn & Earn Quizzes, Surveys & NPS",
@@ -325,8 +325,8 @@ if nav_choice == NAV_MODULES[0]:
 # MODULE 2: STAGE 1 - TRANSACTIONAL MOMENTUM
 # ==========================================
 elif nav_choice == NAV_MODULES[1]:
-    st.markdown("### ✉️ Stage 1: Transactional Activation Momentum (Signup Email)")
-    st.markdown("**Executive Context:** Transactional confirmation emails command a **68.2% open rate** (the highest in the customer lifecycle). Treating this email as a plain administrative stop wastes peak customer motivation.")
+    st.markdown("### ✉️ Stage 1: Double Opt-In (DOI) Confirmation & Activation Momentum")
+    st.markdown("**Executive Context:** Under European GDPR and German UWG regulations, **Double Opt-In (DOI)** confirmation is legally mandatory before sending marketing communications. With an outstanding **68.2% open rate** (the highest in the customer lifecycle), treating the DOI email as a dry legal stop wastes peak customer motivation. Our hypothesis embeds live market movers directly into the DOI confirmation to drive immediate momentum into Video-Ident (KYC).")
     
     col1, col2 = st.columns(2)
     with col1:
