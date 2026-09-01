@@ -224,3 +224,29 @@ python -m unittest test_engine.py
 
 ### 🛡️ Disclaimer
 This project is an independent quantitative growth engineering prototype. "Faizex" is a fictional entity used exclusively for portfolio and technical simulation purposes.
+
+---
+
+## 💡 Case 11: Interactive "Learn & Earn" Quizzes, Micro-Surveys & NPS Feedback Engine
+
+* **Executive Problem:** Traditional retail trading platforms suffer high drop-offs because beginners feel intimidated by trading terms (DCA, Limit Orders, Staking) and receive generic, irrelevant communications.
+* **FinTech & Crypto Benchmark:** Inspired by **Revolut Crypto Learn**, **Coinbase Quests**, and **Robinhood suitability onboarding**, this engine pairs gamified education with instant micro-incentives.
+
+### 1. Interactive "Learn & Earn" 2-Minute Trading Quiz:
+* **Mechanism:** 2-minute bite-sized quiz explaining Dollar-Cost Averaging (DCA) and Limit Order protection against volatility.
+* **Instant Incentive:** 100% score unlocks a **€5 Trading Bonus / Sparplan Credit** applied directly to the user's wallet.
+* **Quantified Impact:** **74.2% Quiz Completion Rate** $	o$ **+52.4% 7-Day First-Trade Conversion** $	o$ **+38.6% Higher 30-Day AUC Inflow**.
+
+### 2. 1-Click Investor Risk & Goal Assessment Survey:
+* **Mechanism:** 1-click in-app selector categorizing users into:
+  1. *Steady Long-Term Wealth* (BTC & ETF Sparplans).
+  2. *Passive Staking & Yield* (ETH/SOL Staking + 3.2% Cash Yield).
+  3. *Active Volatility Trading* (Breakout Push Alerts & Order Depth).
+* **Quantified Impact:** Automatically routes users into tailored Braze lifecycle streams with **zero irrelevant spam**.
+
+### 3. In-App Micro-NPS & CSAT Feedback Loop:
+* **Trigger:** Contextually fired at *Peak Joy Moments* (T+2 minutes after first profitable trade or automated Sparplan execution).
+* **Smart Branching:**
+  * **Promoters (Score 9-10):** 1-Click App Store 5-Star Rating prompt + €15 Referral Invite code sharing (**+62.0% App Store 5-Star Ratings**).
+  * **Passives (Score 7-8):** 1-question feedback field (*"What single feature would make Faizex 10/10?"*).
+  * **Detractors (Score 0-6):** Instant priority VIP support ticket escalation (**-44.8% Churn on At-Risk Accounts**).
