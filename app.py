@@ -571,10 +571,50 @@ elif "5. Case 4" in nav_choice:
 # MODULE 6: CASE 5 - SPARPLAN LTV
 # ==========================================
 elif "6. Case 5" in nav_choice:
-    st.markdown("### Case 5: 5-Year Sparplan (DCA) Cohort Retention Model")
-    st.markdown("Comparing long-term retention decay and Assets Under Custody (AUC) between **Manual Spot Traders** vs. **Automated Recurring Sparplan Accumulators**.")
+    st.markdown("### 📈 Case 5: The Sparplan (DCA) Retention Engine — Why it Matters in CRM")
     
-    m_dep = st.slider("Monthly Sparplan Contribution (€/month):", 25, 500, 100, 25)
+    st.markdown('''
+    <div class="expl-box-blue">
+        <strong style="color:#0284c7; font-size:1rem;">💡 The CRM Strategy in Simple Words:</strong><br>
+        <strong>1. The Problem in Trading Apps:</strong> When users buy crypto manually, they check the price every day. When the market goes down or sideways, they get scared, stop trading, and <strong>77% leave the app within 12 months</strong>.<br>
+        <strong>2. What We Did (CRM Campaign):</strong> Instead of telling them to "Trade Today", our automated lifecycle emails & in-app nudges pitch <strong>Automated Monthly Sparpläne (DCA) from €25/month</strong> right on European payday (1st of each month).<br>
+        <strong>3. The 5-Year Result:</strong> Because their deposit is automatic, users stay active for years—increasing 12-month retention from <strong>22.8% to 59.2% (2.6x higher loyalty)</strong> and accumulating over <strong>€9,850 in Assets Under Custody (AUC)</strong>.
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    st.markdown("#### ✉️ The Automated CRM Campaign We Deployed:")
+    col_c1, col_c2 = st.columns(2)
+    with col_c1:
+        st.markdown('''
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: 1st of Month (Payday Cycle) • EMAIL</div>
+            <strong style="color:#0f172a; font-size:0.95rem;">Stress-Free Wealth: Automate your Bitcoin & ETF Sparplan 📈</strong>
+            <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
+                Hi [First Name], stop timing daily price swings. Set up a €25/month Sparplan today and let compound accumulation work automatically in the background. 0€ setup fee.
+            </p>
+            <div style="margin-top:10px;">
+                <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Set Up 1-Click Sparplan &rarr;</span>
+            </div>
+        </div>
+        ''', unsafe_allow_html=True)
+    with col_c2:
+        st.markdown('''
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: €500 Milestone Crossed • IN-APP MODAL</div>
+            <strong style="color:#0f172a; font-size:0.95rem;">🎉 Milestone Reached: You're in the Top 25% of Disciplined Savers!</strong>
+            <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
+                Your Sparplan has steadily accumulated €500. Increase by +€25/mo to reach your €2,500 goal 4 months faster.
+            </p>
+            <div style="margin-top:10px;">
+                <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
+            </div>
+        </div>
+        ''', unsafe_allow_html=True)
+        
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("#### 📊 The Quantified 5-Year Impact on Customer Loyalty & Assets:")
+    
+    m_dep = st.slider("Simulate Monthly Sparplan Amount (€/month):", 25, 500, 100, 25)
     months = np.arange(1, 61)
     df_dca_calc = pd.DataFrame({
         'Month': months,
@@ -586,19 +626,22 @@ elif "6. Case 5" in nav_choice:
     
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("##### 1. Cohort Retention Decay Curve")
+        st.markdown("##### 1. Customer Retention Over 5 Years (%)")
         fig1 = go.Figure()
-        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan Retention (%)'], name='Sparplan Accumulator (59.2% at M12)', line=dict(color='#059669', width=2.5)))
-        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader Retention (%)'], name='Manual Spot Trader (22.8% at M12)', line=dict(color='#ef4444', width=2, dash='dot')))
-        fig1.update_layout(height=300, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
+        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan Retention (%)'], name='Sparplan Savers (59.2% at Yr 1)', line=dict(color='#059669', width=2.5)))
+        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader Retention (%)'], name='Manual Spot Traders (22.8% at Yr 1)', line=dict(color='#ef4444', width=2, dash='dot')))
+        fig1.update_layout(height=280, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
         st.plotly_chart(fig1, use_container_width=True)
+        st.caption("🟢 **Why the green line stays high:** Because the savings plan is automated, users don't panic-sell during bear markets and stay active for years.")
+        
     with col2:
-        st.markdown("##### 2. Assets Under Custody (AUC) Accumulation (€)")
+        st.markdown("##### 2. Total Money Saved per User (€ AUC)")
         fig2 = go.Figure()
-        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan AUC (€)'], name='Sparplan Portfolio', line=dict(color='#0284c7', width=2.5), fill='tozeroy'))
-        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader AUC (€)'], name='Spot Trader Portfolio', line=dict(color='#64748b', width=1.5)))
-        fig2.update_layout(height=300, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
+        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan AUC (€)'], name='Sparplan User Portfolio', line=dict(color='#0284c7', width=2.5), fill='tozeroy'))
+        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader AUC (€)'], name='Manual Spot Trader Balance', line=dict(color='#64748b', width=1.5)))
+        fig2.update_layout(height=280, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
         st.plotly_chart(fig2, use_container_width=True)
+        st.caption("🔵 **Why the blue area grows huge:** Small monthly deposits compound into thousands of euros, creating high-value customer lifetime value (LTV).")
 
 # ==========================================
 # MODULE 7: CASE 6 - VOLATILITY PUSH
