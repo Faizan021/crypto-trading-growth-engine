@@ -5,11 +5,13 @@ import numpy as np
 import json
 import os
 import math
+import hashlib
+import time
 import plotly.express as px
 import plotly.graph_objects as go
 
 st.set_page_config(
-    page_title="FinTech & Digital Asset CRM Lifecycle OS | Exchange Retention Architecture",
+    page_title="FinTech CRM Lifecycle & Architecture OS | Exchange Retention Engine",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -127,20 +129,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Hero Header
-st.markdown("""
-<div class="terminal-hero">
-    <div>
-        <span class="badge-bafin">🛡️ Regulated European Exchange Framework</span>
-        <span class="badge-mica">⚡ Multi-Channel Braze Lifecycle Architecture</span>
-    </div>
-    <h1 class="terminal-title">FinTech & Digital Asset CRM Growth OS</h1>
-    <p class="terminal-sub">
-        End-to-End Multichannel Journeys (Email, Push, In-App, Banners), KYC Friction Diagnostics, Dynamic Sparplan Retention Models, and Cross-Functional Delivery.
-    </p>
-</div>
-""", unsafe_allow_html=True)
-
 # Load data assets
 base_dir = os.path.dirname(os.path.abspath(__file__))
 funnel_path = os.path.join(base_dir, 'data', 'kyc_funnel_dropoffs.csv')
@@ -152,10 +140,24 @@ df_dca = pd.read_csv(dca_path) if os.path.exists(dca_path) else pd.DataFrame()
 with open(exp_path, 'r', encoding='utf-8') as f:
     experiments = json.load(f)
 
+# Hero Header
+st.markdown("""
+<div class="terminal-hero">
+    <div>
+        <span class="badge-bafin">🛡️ Regulated European Exchange Framework</span>
+        <span class="badge-mica">⚡ Multi-Channel Lifecycle & Open-Source Architecture</span>
+    </div>
+    <h1 class="terminal-title">FinTech CRM Lifecycle & Architecture OS</h1>
+    <p class="terminal-sub">
+        Creative CRM Campaigns (Friction Relief & Sparplan Models) + Production Open-Source Engineering (Async Caching, Idempotent Dispatching & Webhook Triggers).
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
 # Sidebar Navigation
 st.sidebar.image("https://img.icons8.com/fluency/96/bullish.png", width=54)
 st.sidebar.title("CRM Master Navigator")
-st.sidebar.markdown("**Lifecycle Pillars (Job Specs)**")
+st.sidebar.markdown("**Dual-Engine Architecture**")
 
 nav_choice = st.sidebar.radio(
     "Select Strategic Module:",
@@ -167,8 +169,9 @@ nav_choice = st.sidebar.radio(
         "🎯 5. Case 4: Complete Exchange KPI Framework",
         "📈 6. Case 5: 5-Year Sparplan (DCA) LTV & Retention",
         "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard",
-        "👥 8. Case 7: Cross-Functional Alignment (Product/BI/Compliance)",
-        "💻 9. Technical Stack (Braze, Liquid & SQL Schemas)"
+        "🛠️ 8. Open-Source Architecture Studio (Mautic / EspoCRM / Frappe)",
+        "👥 9. Cross-Functional Alignment (Product/BI/Compliance)",
+        "💻 10. Technical Stack (Braze, Liquid & SQL Schemas)"
     ]
 )
 
@@ -472,7 +475,7 @@ elif nav_choice == "📰 4. Case 3: Editorial Newsletter A/B Test (August Editio
         """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 5: CASE 4 - KEY KPIS TO CALCULATE
+# MODULE 5: CASE 4 - KEY KPIS
 # ==========================================
 elif nav_choice == "🎯 5. Case 4: Complete Exchange KPI Framework":
     st.subheader("🎯 Case 4: The 5 Essential KPIs for a Regulated Trading Platform")
@@ -607,10 +610,92 @@ elif nav_choice == "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard":
     """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 8: CROSS-FUNCTIONAL ALIGNMENT
+# MODULE 8: OPEN-SOURCE ARCHITECTURE STUDIO
 # ==========================================
-elif nav_choice == "👥 8. Case 7: Cross-Functional Alignment (Product/BI/Compliance)":
-    st.subheader("👥 Case 7: Cross-Functional Collaboration & Delivery Framework")
+elif nav_choice == "🛠️ 8. Open-Source Architecture Studio (Mautic / EspoCRM / Frappe)":
+    st.subheader("🛠️ Open-Source CRM Architecture & Microservices Studio")
+    st.markdown("Demonstrating how open-source CRM architectural patterns (**Mautic**, **EspoCRM**, **Frappe / ERPNext**) solve enterprise-scale FinTech marketing challenges.")
+    
+    arch_tab1, arch_tab2, arch_tab3 = st.tabs([
+        "⚙️ Async Segment Batcher (Mautic Pattern)",
+        "🛡️ Idempotent Dispatcher (EspoCRM Pattern)",
+        "⚡ Webhook Market Router (Frappe Pattern)"
+    ])
+    
+    with arch_tab1:
+        st.markdown("#### 1. Mautic-Inspired Async Segment Batching")
+        st.markdown("Instead of querying 500,000 rows live during campaign send, an asynchronous background task pre-computes dynamic audience memberships into a fast-lookup Redis cache.")
+        
+        col_c1, col_c2 = st.columns(2)
+        with col_c1:
+            st.code("""
+# Background Segment Updater (Mautic Pattern)
+def update_segment_cache(db_conn, segment_id, criteria):
+    query = """
+        SELECT user_id FROM users 
+        WHERE kyc_status = %s 
+          AND custody_balance >= %s 
+          AND last_trade_days >= %s
+    """
+    matched_ids = db_conn.execute(query, (criteria['kyc'], criteria['balance'], criteria['days'])).fetchall()
+    redis_client.set(f"segment:{segment_id}", json.dumps(matched_ids), ex=900)
+    return len(matched_ids)
+            """, language="python")
+        with col_c2:
+            st.markdown("##### 🚀 Test Live Segment Extraction:")
+            sim_kyc = st.selectbox("Filter: KYC Status", ["APPROVED", "PENDING_VERIFICATION", "ALL"])
+            sim_bal = st.slider("Filter: Min Custody Balance (€)", 0, 5000, 500, 100)
+            if st.button("Run Async Batch Cache Simulation"):
+                sim_count = int(10000 * (0.4 if sim_kyc=="APPROVED" else 0.28) * (1 - sim_bal/6000))
+                st.success(f"✅ Pre-calculated Segment in 4.2ms! Cached {sim_count:,} User IDs to Redis key `segment:active_traders` (TTL: 15m)")
+                
+    with arch_tab2:
+        st.markdown("#### 2. EspoCRM-Inspired Idempotent Dispatcher (Crash Recovery)")
+        st.markdown("Uses unique idempotency keys (`campaign:user:date`) to guarantee **zero duplicate messages** even if the broadcast server crashes halfway through a 100k blast.")
+        
+        st.code("""
+# Idempotency Key Verification (EspoCRM MassEmail Pattern)
+def dispatch_with_idempotency(campaign_id, user_id, payload):
+    idempotency_key = hashlib.sha256(f"{campaign_id}:{user_id}:2026_09_01".encode()).hexdigest()
+    
+    # Check if already sent or in flight
+    existing_log = db.get_log(idempotency_key)
+    if existing_log and existing_log.status == "DISPATCHED":
+        return "SKIPPED_ALREADY_SENT"
+        
+    db.create_log(idempotency_key, status="PENDING")
+    status = esp_provider.send_push(user_id, payload)
+    db.update_log(idempotency_key, status="DISPATCHED" if status else "FAILED")
+    return "SENT"
+        """, language="python")
+        
+        if st.button("Simulate Server Crash & Resume Execution"):
+            st.warning("⚠️ Worker crashed after sending to 50 / 100 users! Restarting worker...")
+            time.sleep(0.5)
+            st.success("✅ Worker resumed safely! Skipped 50 already-sent records via Idempotency Log. Dispatched remaining 50 records. Total duplicates: 0.")
+            
+    with arch_tab3:
+        st.markdown("#### 3. Frappe-Inspired Real-Time Webhook Market Event Router")
+        st.markdown("Exchange order-book tickers emit a webhook to `/api/v1/market-events`. The engine evaluates volatility anomalies ($Z > 2.5\sigma$), queries pre-computed watcher segments, validates the 24-hour cross-channel fatigue rule, and dispatches targeted push notifications.")
+        
+        st.code("""
+# Webhook Event Router (Frappe Hooks Pattern)
+@app.post("/api/v1/market-events")
+def handle_market_webhook(payload):
+    # e.g., payload = {"ticker": "BTC/EUR", "price_change_4h_pct": 5.4}
+    if abs(payload['price_change_4h_pct']) >= 5.0:
+        target_users = redis_client.get("segment:btc_watchers")
+        for user_id in target_users:
+            if not fatigue_guard.has_received_push_in_24h(user_id):
+                braze_client.send_push(user_id, title=f"Bitcoin moved {payload['price_change_4h_pct']}% ⚡")
+        return {"status": "dispatched", "users_targeted": len(target_users)}
+        """, language="python")
+
+# ==========================================
+# MODULE 9: CROSS-FUNCTIONAL ALIGNMENT
+# ==========================================
+elif nav_choice == "👥 9. Cross-Functional Alignment (Product/BI/Compliance)":
+    st.subheader("👥 Cross-Functional Collaboration & Delivery Framework")
     st.markdown("How the CRM Manager coordinates end-to-end campaign execution across BI, Product, UX/UI, and Compliance.")
     
     st.markdown("""
@@ -623,9 +708,9 @@ elif nav_choice == "👥 8. Case 7: Cross-Functional Alignment (Product/BI/Compl
     """)
 
 # ==========================================
-# MODULE 9: TECHNICAL STACK & LIQUID
+# MODULE 10: TECHNICAL STACK & LIQUID
 # ==========================================
-elif nav_choice == "💻 9. Technical Stack (Braze, Liquid & SQL Schemas)":
+elif nav_choice == "💻 10. Technical Stack (Braze, Liquid & SQL Schemas)":
     st.subheader("💻 Technical Execution: Braze Event Architecture & Liquid Logic")
     st.markdown("Production-ready schemas and dynamic templates demonstrating technical CRM proficiency.")
     
