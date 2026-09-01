@@ -47,8 +47,8 @@ flowchart TD
 | **02** | **Fault-Tolerant Idempotent Dispatcher** | Server crashes during large 100k email/push broadcasts causing duplicate sends | **Idempotent Campaign Log State Machine** (`PENDING`, `DISPATCHED`, `FAILED`, `SUPPRESSED`) | **100% Crash-Resilient** (Zero Duplicate Broadcast Sends) |
 | **03** | **Real-Time Webhook Volatility Alerts** | Static cron schedules miss rapid $\pm 5\%$ intraday market breakouts | **Event-driven Webhook Router** firing sub-second multichannel alerts with 24h fatigue guards | **< 500ms Execution Latency** (Real-Time Price Reaction) |
 | **04** | **Transactional Confirmation Momentum** | High 68%+ open rates wasted on static confirmation links | **Momentum-Building Activation Hook** previewing live market movers upon confirmation | **+30.6% Activation Velocity** ($z = 2.89, p = 0.0039$) |
-| **05** | **Video-Ident & KYC Friction Breaker** | Users register but drop before ID verification due to paperwork anxiety | **3-Step Friction-Relief Checklist & App Deep-Linking** (`misonapp://verify/video-ident`) | **+38.7% KYC $\to$ First-Trade Rate** ($z = 3.12, p = 0.0018$) |
-| **06** | **Editorial Newsletter Lifecycle Personalization** | Static "Trade Bitcoin" buttons underperform across different user stages | **Dynamic Liquid Payloads** adapting CTAs: Unverified $\to$ KYC; Spot Buyer $\to$ Sparplan; Active $\to$ Portfolio | **+86.3% Click-to-Open (CTOR) Lift** ($z = 4.15, p < 0.0001$) |
+| **05** | **Video-Ident & KYC Friction Breaker** | Users register but drop before ID verification due to paperwork anxiety | **3-Step Friction-Relief Checklist & App Deep-Linking** (`misonapp://verify/video-ident`) | **+38.7% KYC → First-Trade Rate** ($z = 3.12, p = 0.0018$) |
+| **06** | **Editorial Newsletter Lifecycle Personalization** | Static "Trade Bitcoin" buttons underperform across different user stages | **Dynamic Liquid Payloads** adapting CTAs: Unverified → KYC; Spot Buyer → Sparplan; Active → Portfolio | **+86.3% Click-to-Open (CTOR) Lift** ($z = 4.15, p < 0.0001$) |
 | **07** | **5-Year Sparplan (DCA) LTV & Retention** | Manual spot buyers stop trading during bear markets (~6.5% monthly churn) | **60-Month Compound LTV Forecaster**, proving why DCA accumulation sustains 59.2% loyalty | **€9,850 Avg. 2-Year AUC / Member** |
 | **08** | **Comprehensive Exchange KPI Engine** | Fragmented metrics and ad-hoc attribution across growth teams | **5-Metric Framework** (KYC Throughput, TTFT, Sparplan Rate, AUC Depth, Reactivation Velocity) | **Audit-Ready Growth Governance** |
 
@@ -111,9 +111,9 @@ flowchart TD
    * **Target:** $> 35\%$ of active trading accounts.
 
 4. **Assets Under Custody (AUC) per Active Member**:
-   $$\text{Avg AUC} = \frac{\text{Total Portfolio Assets in Custody (\euro)}}{\text{Total Active Traders}}$$
+   $$\text{Avg AUC} = \frac{\text{Total Portfolio Assets in Custody (€)}}{\text{Total Active Traders}}$$
    * **Why it matters:** Direct driver of trading fee volume and staking revenue potential.
-   * **Target:** $> \text{\euro}7,500$ at Year 1 $\to > \text{\euro}12,000$ at Year 3.
+   * **Target:** $> \text{€}7,500$ at Year 1 $→ > \text{€}12,000$ at Year 3.
 
 5. **Inactivity Churn Rate & Volatility Reactivation Velocity**:
    $$\text{Churn Rate} = \left(\frac{\text{Users with 0 Trades in 60 Days}}{\text{Total Verified Users}}\right) \times 100$$
