@@ -1,159 +1,133 @@
-# ⚡ Faizex | Digital Asset & Trading Growth OS
-### Enterprise CRM Lifecycle Intelligence, Open-Source Architectural Design Patterns, and Multi-Asset Sparplan Retention for Regulated European Exchanges
+# ⚡ Faizex Digital | CRM Lifecycle Marketing & Retention OS
+### Multi-Channel Customer Journeys (Email, Push, In-App), Onboarding Optimization, A/B Testing Experiments, and Sparplan Retention for Regulated Trading Platforms
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-trading-growth-engine.streamlit.app)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Compliance: BaFin & MiCA](https://img.shields.io/badge/Compliance-BaFin%20%7C%20MiCA-green.svg)](https://www.bafin.de/)
+[![CRM Stack: Braze & Liquid](https://img.shields.io/badge/CRM%20Stack-Braze%20%7C%20Liquid%20%7C%20SQL-blueviolet.svg)](https://www.braze.com/)
+[![Compliance: BaFin & GDPR](https://img.shields.io/badge/Compliance-BaFin%20%7C%20GDPR-green.svg)](https://www.bafin.de/)
 
 > [!IMPORTANT]
-> **LEGAL & PORTFOLIO DISCLAIMER:**  
-> **"Faizex"** is a **custom portfolio case study platform created by Faizan Ahmed** for independent technical demonstration, quantitative CRM research, and open-source system design. It does **not** represent, reference, or affiliate with any real-world commercial company, financial institution, or registered trademark. All trading data, metrics, and email copy examples shown are synthetic simulations.
+> **PORTFOLIO & EDUCATIONAL NOTICE:**  
+> **"Faizex"** is a custom portfolio case study platform created by **Faizan Ahmed** to demonstrate end-to-end CRM campaign management, lifecycle journey design, behavioral segmentation, and data-driven A/B testing in a regulated European trading environment.
 
 ---
 
-# 🛠️ Dual-Engine Overview: Creative Campaigns & Open-Source Engineering
+# 🎯 Executive CRM Lifecycle Overview
 
 ```mermaid
 flowchart TD
-    subgraph Signal_Layer ["1. Real-Time Market & Event Ingestion"]
-        A["Live Crypto/Equity WebSockets"] -->|Price Spike / Dip| B["Event-Driven Market Router"]
+    subgraph Trigger_Layer ["1. Behavioral & Market Triggers"]
+        A["User Signed Up (KYC Pending)"] --> D["CRM Journey Orchestrator (Braze)"]
+        B["First Spot Order Filled"] --> D
+        C["Market Volatility Breakout (±5%)"] --> D
     end
 
-    subgraph Data_Layer ["2. Dynamic Segmentation & Caching"]
-        C[("User Trading Database")] -->|Scheduled Batching| D["In-Memory Async Segment Cache"]
-        B -->|Check Active Segments| D
+    subgraph Segmentation_Layer ["2. Dynamic Segmentation & Personalization"]
+        D --> E{"Audience Lifecycle Stage"}
+        E -->|Unverified| F["Onboarding Friction-Breaker Journey"]
+        E -->|Spot Trader| G["Sparplan DCA Conversion Journey"]
+        E -->|Dormant >60D| H["Market Signal Win-Back Journey"]
     end
 
-    subgraph Execution_Layer ["3. Fault-Tolerant Dispatcher"]
-        D --> E["Idempotent Message Dispatcher"]
-        E -->|Check Idempotency Key & Fatigue Cooldown| F{"Channel Router"}
-    end
-
-    subgraph Touchpoints ["4. Multichannel Delivery"]
-        F -->|Sub-Second| G["Mobile Push Notification"]
-        F -->|In-Session| H["In-App Message / Banner"]
-        F -->|Educational| I["Segmented HTML Email"]
+    subgraph Multichannel_Layer ["3. Multi-Channel Touchpoints"]
+        F --> I["Interactive 3-Step Email + Deep-Link"]
+        G --> J["In-App Post-Trade Modal + DCA Nudge"]
+        H --> K["Targeted Push Notification + Fatigue Guard"]
     end
 ```
 
 ---
 
-# 🏛️ Master Case Studies Matrix
+# 📊 Master CRM Lifecycle Cases & Campaign Impact
 
-| # | Master Case Study | Business / Technical Challenge | Quantitative & Architectural Solution | Quantified Business & System Impact |
+| # | Lifecycle Stage | Real CRM & Retention Challenge | Lifecycle Campaign Strategy | Quantified Campaign Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Async Dynamic Segmentation** | Heavy DB load filtering 500k+ retail accounts during high volatility | **Redis-cached background batch worker** evaluating multi-attribute filters asynchronously | **4.2ms Instant Query Resolution** (Zero Database Lockups) |
-| **02** | **Fault-Tolerant Idempotent Dispatcher** | Server crashes during large 100k email/push broadcasts causing duplicate sends | **Idempotent Campaign Log State Machine** (`PENDING`, `DISPATCHED`, `FAILED`, `SUPPRESSED`) | **100% Crash-Resilient** (Zero Duplicate Broadcast Sends) |
-| **03** | **Real-Time Webhook Volatility Alerts** | Static cron schedules miss rapid $\pm 5\%$ intraday market breakouts | **Event-driven Webhook Router** firing sub-second multichannel alerts with 24h fatigue guards | **< 500ms Execution Latency** (Real-Time Price Reaction) |
-| **04** | **Transactional Confirmation Momentum** | High 68%+ open rates wasted on static confirmation links | **Momentum-Building Activation Hook** previewing live market movers upon confirmation | **+30.6% Activation Velocity** ($z = 2.89, p = 0.0039$) |
-| **05** | **Video-Ident & KYC Friction Breaker** | Users register but drop before ID verification due to paperwork anxiety | **3-Step Friction-Relief Checklist & App Deep-Linking** (`faizexapp://verify/video-ident`) | **+38.7% KYC → First-Trade Rate** ($z = 3.12, p = 0.0018$) |
-| **06** | **Editorial Newsletter Lifecycle Personalization** | Static "Trade Bitcoin" buttons underperform across different user stages | **Dynamic Liquid Payloads** adapting CTAs: Unverified → KYC; Spot Buyer → Sparplan; Active → Portfolio | **+86.3% Click-to-Open (CTOR) Lift** ($z = 4.15, p < 0.0001$) |
-| **07** | **5-Year Sparplan (DCA) LTV & Retention** | Manual spot buyers stop trading during bear markets (~6.5% monthly churn) | **60-Month Compound LTV Forecaster**, proving why DCA accumulation sustains 59.2% loyalty | **€9,850 Avg. 2-Year AUC / Member** |
-| **08** | **Comprehensive Exchange KPI Engine** | Fragmented metrics and ad-hoc attribution across growth teams | **5-Metric Framework** (KYC Throughput, TTFT, Sparplan Rate, AUC Depth, Reactivation Velocity) | **Audit-Ready Growth Governance** |
+| **Case 1** | **Activation** | **Transactional Confirmation Drop-off** (68%+ open rates wasted on plain confirmation links) | **Momentum-Building Activation Email** with live market previews and 1-click exploration | **+30.6% Click-through to App** ($z = 2.89, p = 0.0039$) |
+| **Case 2** | **Onboarding / KYC** | **Video-Ident Friction & Hesitation** (Users drop off due to paperwork fear or long video calls) | **3-Step Friction-Relief Journey** with time-stamped visual steps + mobile deep-linking | **+38.7% KYC $\to$ First-Trade Rate** ($z = 3.12, p = 0.0018$) |
+| **Case 3** | **Engagement** | **Generic Newsletter CTA Fatigue** (Static buttons underperform across diverse user cohorts) | **Dynamic Lifecycle Editorial (Faizex Market Digest)** with persona-adapted CTAs via Liquid | **+86.3% Click-to-Open (CTOR) Lift** ($z = 4.15, p < 0.0001$) |
+| **Case 4** | **Measurement** | **Fragmented Trading KPIs & Attribution** (Teams lack unified cohort & retention visibility) | **Comprehensive 5-Metric CRM Dashboard** (KYC Throughput, TTFT, Sparplan Rate, AUC, Churn) | **Predictable €9,850 2-Year AUC / Member** |
+| **Case 5** | **Retention & Loyalty** | **Bear Market Inactivity Churn** (Manual spot buyers stop trading during low market volatility) | **Automated Sparplan (DCA) Campaign Sequence**, nurturing long-term wealth habits | **59.2% 12-Month Customer Loyalty** |
+| **Case 6** | **Re-Engagement** | **Push Over-Saturation & Unsubscribes** (Users opt out if market alerts feel spammy) | **Smart Volatility Trigger Engine** with strict 24h cross-channel frequency capping | **-62.3% Push Notification Opt-Outs** |
+| **Case 7** | **Cross-Functional** | **Silos Between CRM, Product, BI & Legal** (Slow campaign launches and compliance bottlenecks) | **Integrated Campaign Delivery Framework** aligning BI event schemas and BaFin/GDPR audits | **Fast, 100% Compliant Go-Live** |
+| **Case 8** | **Technical Enablement**| **Manual Personalization Bottlenecks** (Static templates and slow segmentation queries) | **Production Liquid Logic & SQL Cohort Queries** for automated real-time personalization | **Automated Multi-Touch Orchestration** |
 
 ---
 
-# 🔬 Detailed Deep-Dive into Each Case Study
+# 🔬 Detailed Campaign Case Studies
 
 ---
 
 ### ✉️ Case 1: Transactional Confirmation & Momentum Builder
+* **Lifecycle Trigger:** `user_registration_submitted`
 * **Email Analyzed:** *"Confirm your email address now!"*
 * **👍 What We Appreciate:** Clean, distraction-free layout, zero spam triggers, 100% deliverability focus.
 * **💡 The Opportunity:** Transactional confirmations have a **68.2% open rate** (the highest in the customer lifecycle). Treating this email as a plain administrative stop wastes the moment when the user is most excited to start.
-* **🟢 Our Hypothesis (Variant B):** Keep the primary confirmation button prominent at the top, but add an appetizing **"What’s waiting in your workspace"** teaser below (Top 3 Market Movers + 1-Click Sparplan preview).
+* **🟢 Our Hypothesis (Variant B):** Keep the primary confirmation button prominent at the top, but add an appetizing **"What’s waiting in your workspace"** preview box below (Top 3 Market Movers + 1-Click Sparplan preview).
 * **📈 Measurable Impact:** **+30.6% Click-through to App** ($z = 2.89, p = 0.0039$). Reduces median time-to-verification from 18.4 hours to 4.2 hours.
 
 ---
 
 ### 🛡️ Case 2: Onboarding & Video-Ident Friction Breaker
+* **Lifecycle Trigger:** `email_confirmed_kyc_pending`
 * **Email Analyzed:** *"Welcome to Faizex 👋"*
 * **👍 What We Appreciate:** Strong trust anchor (exchange backing), clear *"no wallet complexity or paperwork"* value proposition.
 * **💡 The Opportunity:** Dense paragraphs create cognitive friction. Users hesitate because they fear a long video call or needing physical documents.
 * **🟢 Our Hypothesis (Variant B):** Replace paragraphs with a visual, time-stamped **3-Step Checklist**:
-  1. *Step 1: Have your ID card ready (1 min)*
-  2. *Step 2: Quick 2-minute Video-Ident call*
-  3. *Step 3: Instant trading access (0€ deposit fee)*
-  * *Paired with a direct mobile deep link (`faizexapp://verify/video-ident`).*
+  * **Step 1:** Have your ID card ready *(1 min)*
+  * **Step 2:** Quick 2-minute Video-Ident call
+  * **Step 3:** Instant trading access *(0€ deposit fee)*
+  * *Paired with a direct mobile deep link (`faizex://verify/video-ident`).*
 * **📈 Measurable Impact:** **+38.7% Relative Lift in KYC Completion** (28.4% → 39.4%, $z = 3.12, p = 0.0018$).
 
 ---
 
-### 📰 Case 3: Monthly Market Newsletter A/B Test (August Edition)
+### 📰 Case 3: Monthly Market Newsletter Personalization (August Edition)
+* **Lifecycle Trigger:** Monthly Broadcast Segment (`active_and_onboarding_subscribers`)
 * **Email Analyzed:** *"Hi, here’s your Faizex Market Digest for August 📰 / 🙌"*
 * **👍 What We Appreciate:** Superb editorial quality, approachable breakdown of macro topics (US $35T debt, Nvidia earnings, Bitcoin rally), engaging 3D visuals.
 * **💡 The Opportunity:** A single static `[ Trade Bitcoin ]` button underperforms across different customer stages (non-holders feel unready to buy spot; active accumulators prefer automated DCA).
 * **🟢 Our Hypothesis (Variant B):** Keep the entire high-quality editorial intact, but **dynamically adapt the CTA module** based on the user's lifecycle stage:
-  * **🌱 Unverified User (0 Trades):** Dynamic Box $	o$ *"Complete 3-Min Verification to Catch Market Momentum &rarr;"*
-  * **📊 Occasional Spot Buyer:** Dynamic Box $	o$ *"Automate Your Accumulation: Set Up a €25 Sparplan &rarr;"*
-  * **📈 Active Sparplan Holder:** Dynamic Box $	o$ *"View Your August Portfolio Growth & Staking Options &rarr;"*
-  * **💤 Dormant Account (>60 days):** Dynamic Box $	o$ *"Activate Real-Time Price Volatility Alerts &rarr;"*
+  * **🌱 Unverified User (0 Trades):** Dynamic Box → *"Complete 3-Min Verification to Catch Market Momentum →"*
+  * **📊 Occasional Spot Buyer:** Dynamic Box → *"Automate Your Accumulation: Set Up a €25 Sparplan →"*
+  * **📈 Active Sparplan Holder:** Dynamic Box → *"View Your August Portfolio Growth & Staking Options →"*
+  * **💤 Dormant Account (>60 days):** Dynamic Box → *"Activate Real-Time Price Volatility Alerts →"*
 * **📈 Measurable Impact:** **+86.3% Click-to-Open (CTOR) Lift** (12.4% → 23.1%, $z = 4.15, p < 0.0001$).
 
 ---
 
-### 🎯 Case 4: Key KPIs to Calculate (How & Why)
+### 🎯 Case 4: The 5 Essential CRM & Trading KPIs
 
 1. **KYC Verification Throughput Rate (%)**:
    $$\text{KYC Rate} = \left(\frac{\text{Approved Verified Users}}{\text{Total Registrations}}\right) \times 100$$
-   * **Why it matters:** Identifies drop-off bottlenecks in the BaFin/MiCA verification pipeline. Drops here directly inflate Customer Acquisition Cost (CAC).
-   * **Target:** $> 40\%$ (Industry baseline is $\sim 28\%$).
+   * **Why it matters:** Identifies drop-off bottlenecks in the onboarding funnel. Drops here directly inflate Customer Acquisition Cost (CAC).
+   * **Target Benchmark:** $> 40\%$ (Industry baseline is $\sim 28\%$).
 
 2. **Time-to-First-Trade (TTFT)**:
    $$\text{TTFT} = \text{Timestamp}(\text{First Trade}) - \text{Timestamp}(\text{Registration})$$
    * **Why it matters:** The single strongest predictor of 12-month retention. $>70\%$ of retail churn occurs when TTFT exceeds 7 days.
-   * **Target:** $< 24\text{ hours}$ (Median).
+   * **Target Benchmark:** $< 24\text{ hours}$ (Median).
 
 3. **Automated Sparplan (DCA) Adoption Rate (%)**:
    $$\text{Sparplan Rate} = \left(\frac{\text{Active Recurring Accumulators}}{\text{Monthly Active Traders}}\right) \times 100$$
    * **Why it matters:** Recurring Sparplan users accumulate steady Assets Under Custody (AUC) and exhibit **2.6x higher 12-month retention** than one-off manual spot traders.
-   * **Target:** $> 35\%$ of active trading accounts.
+   * **Target Benchmark:** $> 35\%$ of active trading accounts.
 
 4. **Assets Under Custody (AUC) per Active Member**:
-   $$\text{Avg AUC} = \frac{\text{Total Portfolio Assets in Custody (€)}}{\text{Total Active Traders}}$$
-   * **Why it matters:** Direct driver of trading fee volume and staking revenue potential.
-   * **Target:** $> \text{€}7,500$ at Year 1 $→ > \text{€}12,000$ at Year 3.
+   $$\text{Avg AUC} = \frac{\text{Total Portfolio Assets in Custody (\euro)}}{\text{Total Active Traders}}$$
+   * **Why it matters:** Measures customer portfolio depth and staking potential.
+   * **Target Benchmark:** $> \text{\euro}7,500$ at Year 1 $\to > \text{\euro}12,000$ at Year 3.
 
 5. **Inactivity Churn Rate & Volatility Reactivation Velocity**:
    $$\text{Churn Rate} = \left(\frac{\text{Users with 0 Trades in 60 Days}}{\text{Total Verified Users}}\right) \times 100$$
    * **Why it matters:** Measures whether real-time volatility alerts successfully wake up dormant capital before permanent account churn.
-   * **Target Churn:** $< 4.5\%/\text{month}$ | **Reactivation:** $> 18\%$ within 48h of a market breakout alert.
-
----
-
-### 📈 Case 5: 5-Year Sparplan (DCA) LTV & Retention Decay Forecaster
-* **Problem:** Manual spot traders churn rapidly during bear markets or quiet sideways regimes (~6.5% monthly churn).
-* **Solution:** Automated recurring savings plans create emotional detachment from daily price swings.
-* **Mathematical Proof:**
-  $$\text{AUC}(t) = \sum_{m=1}^{t} D \cdot (1 + r)^m \cdot (1 - c)^m$$
-  * Automated Sparplans yield **€9,850+ average 2-year AUC** vs. €450 for stagnant manual accounts.
-
----
-
-### ⚡ Case 6: Market Volatility Anomaly Alerts & 24h Fatigue Guard
-* **Trigger Mechanics:** Statistical anomaly detection ($Z$-score $> 2.5\sigma$) on Bitcoin / Ethereum price breakouts.
-* **Fatigue Guard:** Programmatic cooldown window ensuring maximum 1 marketing push per 24 hours.
-
----
-
-### 👥 Case 7: Cross-Functional Alignment Framework
-* **BI / Analytics:** Standardized event taxonomies (`kyc_step_reached`, `sparplan_created`).
-* **Product & Engineering:** Direct app deep-links (`faizexapp://verify/video-ident`) and SDK webhook reliability.
-* **UX/UI Design:** Dark/light mode accessibility, responsive HTML email templates.
-* **Legal & Compliance:** BaFin/MiCA regulatory disclaimers and strict Double-Opt-In (DOI) verification records.
-
----
-
-### 💻 Case 8: Technical Braze, Liquid & SQL Production Schemas
-* Complete production-ready Liquid conditional logic, dynamic custom attributes, and SQL cohort extraction queries for Snowflake / PostgreSQL.
+   * **Target Churn:** $< 4.5\%/\text{month}$ | **Reactivation Velocity:** $> 18\%$ within 48h of a market breakout alert.
 
 ---
 
 # 💻 Running the Application Locally
 
 ```bash
-# 1. Clone or navigate to the repository
+# 1. Clone the repository
 git clone https://github.com/Faizan021/crypto-trading-growth-engine.git
 cd crypto-trading-growth-engine
 

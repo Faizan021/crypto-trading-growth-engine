@@ -165,18 +165,18 @@ st.sidebar.title("CRM Master Navigator")
 st.sidebar.markdown("**Dual-Engine Architecture**")
 
 nav_choice = st.sidebar.radio(
-    "Select Strategic Module:",
+    "Select Lifecycle Pillar:",
     [
         "📊 1. Executive CRM Dashboard & KPIs",
-        "✉️ 2. Case 1: Transactional Confirmation Momentum",
-        "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker",
-        "📰 4. Case 3: Editorial Newsletter A/B Test (August Edition)",
-        "🎯 5. Case 4: Complete Exchange KPI Framework",
-        "📈 6. Case 5: 5-Year Sparplan (DCA) LTV & Retention",
-        "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard",
-        "🛠️ 8. Enterprise Architecture & Systems Design Studio",
-        "👥 9. Cross-Functional Alignment (Product/BI/Compliance)",
-        "💻 10. Technical Stack (Braze, Liquid & SQL Schemas)"
+        "✉️ 2. Case 1: Activation (Transactional Confirmation Momentum)",
+        "🛡️ 3. Case 2: Onboarding (KYC Friction-Breaker Journey)",
+        "📰 4. Case 3: Engagement (Newsletter A/B Test & Liquid CTAs)",
+        "🎯 5. Case 4: Exchange CRM & Retention KPIs",
+        "📈 6. Case 5: Retention & Loyalty (5-Year Sparplan Model)",
+        "⚡ 7. Case 6: Push & In-App Triggers (Market Volatility Engine)",
+        "🛠️ 8. CRM Automation Architecture (Dynamic Segmentation & Triggers)",
+        "👥 9. Cross-Functional Alignment (Product, BI & Compliance)",
+        "💻 10. Technical CRM Stack (Braze, Liquid & SQL Schemas)"
     ]
 )
 
@@ -186,7 +186,7 @@ st.sidebar.caption("🔒 **Anonymized Portfolio Project**\nDesigned for enterpri
 # ==========================================
 # MODULE 1: EXECUTIVE CRM DASHBOARD
 # ==========================================
-if nav_choice == "📊 1. Executive CRM Dashboard & KPIs":
+if "1. Executive CRM Dashboard" in nav_choice:
     st.subheader("🏛️ Executive CRM Dashboard & Exchange Pulse")
     st.markdown("End-to-end view of retail trading velocity, onboarding throughput, automated accumulation (Sparplan) cohorts, and customer lifetime value.")
     
@@ -248,7 +248,7 @@ if nav_choice == "📊 1. Executive CRM Dashboard & KPIs":
 # ==========================================
 # MODULE 2: CASE 1 - TRANSACTIONAL CONFIRMATION
 # ==========================================
-elif nav_choice == "✉️ 2. Case 1: Transactional Confirmation Momentum":
+elif "2. Case 1: Activation" in nav_choice:
     c1 = experiments["case_1_transactional_confirmation"]
     st.subheader("✉️ Case 1: Transactional Email Confirmation & Momentum Builder")
     st.info("**Strategic Context:** Transactional confirmation emails consistently command the highest open rates across the entire lifecycle (65%–75%). Instead of treating this email as a plain administrative stop, our hypothesis tests using the high-intent moment to build momentum directly into app download and verification.")
@@ -309,7 +309,7 @@ elif nav_choice == "✉️ 2. Case 1: Transactional Confirmation Momentum":
 # ==========================================
 # MODULE 3: CASE 2 - ONBOARDING & KYC
 # ==========================================
-elif nav_choice == "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker":
+elif "3. Case 2: Onboarding" in nav_choice:
     c2 = experiments["case_2_welcome_verification"]
     st.subheader("🛡️ Case 2: Onboarding & Video-Ident Friction Breaker")
     st.info("**Strategic Context:** In German & European regulated digital asset exchanges, users sign up eagerly but often hesitate at Video-Ident due to fear of complicated paperwork or long video calls. Our hypothesis replaces dense paragraphs with an empowering 3-step checklist + mobile deep-linking.")
@@ -373,7 +373,7 @@ elif nav_choice == "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker":
 # ==========================================
 # MODULE 4: CASE 3 - MONTHLY NEWSLETTER
 # ==========================================
-elif nav_choice == "📰 4. Case 3: Editorial Newsletter A/B Test (August Edition)":
+elif "4. Case 3: Engagement" in nav_choice:
     c3 = experiments["case_3_editorial_faizex_market_digest"]
     st.subheader("📰 Case 3: Monthly Newsletter A/B Test (August Market News)")
     st.info("**Strategic Context:** Monthly market reviews offer great educational value. The August edition clearly breaks down the US debt spiral, Nvidia earnings, and Bitcoin rally. Our hypothesis keeps this high-quality editorial, but tests replacing the single static 'Trade Bitcoin' button with dynamic lifecycle-segmented CTAs.")
@@ -482,7 +482,7 @@ elif nav_choice == "📰 4. Case 3: Editorial Newsletter A/B Test (August Editio
 # ==========================================
 # MODULE 5: CASE 4 - KEY KPIS
 # ==========================================
-elif nav_choice == "🎯 5. Case 4: Complete Exchange KPI Framework":
+elif "5. Case 4: Exchange CRM" in nav_choice:
     st.subheader("🎯 Case 4: The 5 Essential KPIs for a Regulated Trading Platform")
     st.markdown("A complete quantitative framework for evaluating customer acquisition, onboarding velocity, retention economics, and lifetime portfolio value.")
     
@@ -563,7 +563,7 @@ elif nav_choice == "🎯 5. Case 4: Complete Exchange KPI Framework":
 # ==========================================
 # MODULE 6: 5-YEAR SPARPLAN FORECASTER
 # ==========================================
-elif nav_choice == "📈 6. Case 5: 5-Year Sparplan (DCA) LTV & Retention":
+elif "6. Case 5: Retention" in nav_choice:
     st.subheader("📈 Case 5: 5-Year Sparplan (DCA) Customer Lifetime Value & Retention Model")
     st.markdown("Comparing long-term retention decay and Assets Under Custody (AUC) between **Manual One-Off Spot Traders** vs. **Automated Recurring Sparplan Accumulators**.")
     
@@ -598,7 +598,7 @@ elif nav_choice == "📈 6. Case 5: 5-Year Sparplan (DCA) LTV & Retention":
 # ==========================================
 # MODULE 7: VOLATILITY ALERT GENERATOR
 # ==========================================
-elif nav_choice == "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard":
+elif "7. Case 6: Push & In-App" in nav_choice:
     st.subheader("⚡ Case 6: Market Volatility & Push Trigger Simulator")
     st.markdown("Simulating programmatic trigger alerts dispatched via Braze / Push Notifications when market volatility surges past standard statistical deviations.")
     
@@ -617,7 +617,7 @@ elif nav_choice == "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard":
 # ==========================================
 # MODULE 8: OPEN-SOURCE ARCHITECTURE STUDIO
 # ==========================================
-elif nav_choice == "🛠️ 8. Enterprise Architecture & Systems Design Studio":
+elif "8. CRM Automation Architecture" in nav_choice:
     st.subheader("🛠️ Open-Source CRM Architecture & Microservices Studio")
     st.markdown("Demonstrating how open-source CRM architectural patterns (**Mautic**, **EspoCRM**, **Frappe / ERPNext**) solve enterprise-scale FinTech marketing challenges.")
     
@@ -699,7 +699,7 @@ def handle_market_webhook(payload):
 # ==========================================
 # MODULE 9: CROSS-FUNCTIONAL ALIGNMENT
 # ==========================================
-elif nav_choice == "👥 9. Cross-Functional Alignment (Product/BI/Compliance)":
+elif "9. Cross-Functional" in nav_choice:
     st.subheader("👥 Cross-Functional Collaboration & Delivery Framework")
     st.markdown("How the CRM Manager coordinates end-to-end campaign execution across BI, Product, UX/UI, and Compliance.")
     
@@ -715,7 +715,7 @@ elif nav_choice == "👥 9. Cross-Functional Alignment (Product/BI/Compliance)":
 # ==========================================
 # MODULE 10: TECHNICAL STACK & LIQUID
 # ==========================================
-elif nav_choice == "💻 10. Technical Stack (Braze, Liquid & SQL Schemas)":
+elif "10. Technical CRM Stack" in nav_choice:
     st.subheader("💻 Technical Execution: Braze Event Architecture & Liquid Logic")
     st.markdown("Production-ready schemas and dynamic templates demonstrating technical CRM proficiency.")
     
