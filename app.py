@@ -10,7 +10,7 @@ import time
 import plotly.graph_objects as go
 
 st.set_page_config(
-    page_title="Faizex Digital | Regulated Exchange CRM & Retention Engine",
+    page_title="Faizan Ahmed | Regulated Crypto & Retail CRM Portfolio",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -158,7 +158,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.03);
 """, unsafe_allow_html=True)
 
 # Top Disclaimer Notice
-st.caption("🔒 **PORTFOLIO NOTICE:** Faizex Digital is an independent portfolio case study platform created by Faizan Ahmed for technical and quantitative CRM demonstration. All trading and customer metrics are synthetic simulations.")
+st.caption("🔒 **PORTFOLIO NOTICE:** This is an independent CRM Lifecycle Marketing & Retention case study portfolio created by **Faizan Ahmed** for technical and quantitative CRM demonstration. All trading and customer metrics are synthetic simulations.")
 
 # Executive Header
 st.markdown("""
@@ -170,7 +170,7 @@ st.markdown("""
 <span class="badge-reg">PORTFOLIO CASE STUDY</span>
 <span class="badge-crm">LIFECYCLE MARKETING & RETENTION STRATEGY</span>
 </div>
-<div class="exec-title">Faizex Digital — CRM Lifecycle & Retention Strategy</div>
+<div class="exec-title">Faizan Ahmed — CRM Lifecycle & Retention Portfolio</div>
 <p class="exec-sub">
 <em>A simulated case study in retail fintech CRM: turning first-time signups into long-term, high-value customers through activation funnel redesign, behavioral segmentation, and recurring-revenue product strategy. All data synthetic.</em>
 </p>
@@ -198,7 +198,7 @@ NAV_MODULES = [
 ]
 
 # Sidebar Navigation
-st.sidebar.title("Faizex CRM Case Study")
+st.sidebar.title("Faizan Ahmed — CRM Portfolio")
 st.sidebar.markdown("**Customer Lifecycle Stages**")
 nav_choice = st.sidebar.radio("Select Lifecycle Stage:", NAV_MODULES)
 
@@ -1471,7 +1471,7 @@ Traditional ads tell users to deposit money before they understand the product. 
         st.caption("Benchmark: Robinhood & Trade Republic suitability and profile onboarding.")
         
         survey_style = st.selectbox(
-            "What is your primary investment goal on Faizex?",
+            "What is your primary investment goal in your trading app?",
             [
                 "🛡️ Steady Long-Term Wealth Accumulation (Automate BTC & ETF Sparplans)",
                 "🪙 Passive Staking Rewards & Yield (Earn 4.8% on ETH/SOL + 3.2% on EUR Cash)",
@@ -1510,7 +1510,7 @@ Assigned Lifecycle Stream: <strong>{recommended_journey}</strong>
         st.markdown("#### ⭐ In-App Micro-NPS (Net Promoter Score) Feedback Engine")
         st.caption("Benchmark: Triggered at Peak-Joy moments (e.g., T+2 minutes after first profitable trade or Sparplan execution).")
         
-        nps_score = st.slider("How likely are you to recommend Faizex to a colleague or friend? (0 = Not likely, 10 = Extremely likely)", 0, 10, 9)
+        nps_score = st.slider("How likely are you to recommend this trading platform to a colleague or friend? (0 = Not likely, 10 = Extremely likely)", 0, 10, 9)
         
         if nps_score >= 9:
             st.markdown("""
@@ -1535,7 +1535,7 @@ Thank you for the amazing score! Would you take 10 seconds to rate us on the App
 <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem; margin-top:10px;">
 <strong style="color:#0284c7; font-size:0.95rem;">💬 Passive Feedback Prompt (Score 7-8):</strong>
 <p style="color:#0f172a; font-size:0.86rem; margin:6px 0 10px 0;">
-Thank you for trading with us! What single feature or asset would make Faizex a 10/10 for you?
+Thank you for trading with us! What single feature or asset would make this app a 10/10 for you?
 </p>
 <input type="text" placeholder="e.g. Add Solana staking, lower spreads, recurring SEPA..." style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;">
 </div>
@@ -1782,28 +1782,28 @@ In financial trading, mobile push notifications drive instant engagement during 
         push_title = "Bitcoin moved +6.5% to €61,400 ⚡"
         push_body = "High European buying volume detected across major order books. Tap to view depth & set a limit order."
         push_tag = "BULLISH BREAKOUT TRIGGER"
-        deep_link = "faizex://markets/btc?tab=limit_order"
+        deep_link = "bison://markets/btc?tab=limit_order"
         impact_note = "+44.1% 24h Trading Volume Lift with -62.3% Push Opt-Outs."
         badge_color = "#0284c7"
     elif "Scenario 2" in push_scenario:
         push_title = "Market Pullback Detected (-5.8%) 📉"
         push_body = "Top 10 crypto assets reaching 30-day support levels. You have €450 uninvested cash ready for 1-click orders."
         push_tag = "FLASH DIP / CASH WAKE-UP"
-        deep_link = "faizex://portfolio/cash?action=buy_dip"
+        deep_link = "bison://portfolio/cash?action=buy_dip"
         impact_note = "+32.8% Cash Balance Deployment within 6 hours of notification."
         badge_color = "#d97706"
     elif "Scenario 3" in push_scenario:
         push_title = "Ethereum Staking Yield Updated: 5.2% p.a. 🪙"
         push_body = "Your 2.4 ETH in custody can generate ~€12.50/month in passive rewards. 100% BaFin-regulated custody."
         push_tag = "PRODUCT YIELD ACTIVATION"
-        deep_link = "faizex://staking/eth"
+        deep_link = "bison://staking/eth"
         impact_note = "+3.4x Staking Adoption across eligible token holders."
         badge_color = "#059669"
     else:
         push_title = "Tomorrow: Your €50 Bitcoin Sparplan Executes ⏱️"
         push_body = "Your scheduled monthly DCA accumulation will run automatically at 08:00 CET with 0€ setup fees."
         push_tag = "DCA LIFECYCLE PREVIEW"
-        deep_link = "faizex://sparplan/details"
+        deep_link = "bison://sparplan/details"
         impact_note = "Reduces failed bank direct-debits by 38.2% via advance balance awareness."
         badge_color = "#7c3aed"
         
@@ -1814,7 +1814,7 @@ In financial trading, mobile push notifications drive instant engagement during 
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.4rem; max-width:650px; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:1rem;">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
 <div style="display:flex; align-items:center; gap:8px;">
-<span style="background:{badge_color}; color:#fff; border-radius:6px; padding:3px 8px; font-size:0.72rem; font-weight:800;">FAIZEX DIGITAL</span>
+<span style="background:{badge_color}; color:#fff; border-radius:6px; padding:3px 8px; font-size:0.72rem; font-weight:800;">RETAIL CRM PORTFOLIO</span>
 <span style="font-size:0.75rem; color:#64748b; font-weight:600;">{push_tag}</span>
 </div>
 <span style="font-size:0.75rem; color:#94a3b8;">Just now</span>
@@ -1884,7 +1884,7 @@ elif nav_choice == NAV_MODULES[10]:
 <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">IN-APP MILESTONE CELEBRATION (AUC CROSSED €1,000)</div>
 <strong style="color:#0f172a; font-size:1rem;">🎉 Congratulations! You Crossed the €1,000 Savings Milestone!</strong>
 <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
-You are now in the top 25% of disciplined long-term accumulators on Faizex. Increase your Sparplan by +€25/month to reach your €2,500 goal 4 months faster.
+You are now in the top 25% of disciplined long-term accumulators in our platform. Increase your Sparplan by +€25/month to reach your €2,500 goal 4 months faster.
 </p>
 <div style="margin-top:10px;">
 <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
@@ -1909,7 +1909,7 @@ elif nav_choice == NAV_MODULES[11]:
 
 
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-<p style="color:#64748b; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Faizex Market Digest for August 📰</p>
+<p style="color:#64748b; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Weekly Market Digest for August 📰</p>
 <p style="color:#1e293b; font-size:0.88rem; line-height:1.5;">
 Bitcoin has woken up—and pulled the entire crypto market out of hibernation. The wake-up call came from Washington, where the US debt pile is spiraling out of control...
 </p>
@@ -2262,7 +2262,7 @@ elif nav_choice == NAV_MODULES[14]:
     | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
     |---|---|---|
     | **BI / Analytics Team** | Event tracking, Cohort schemas, SQL queries | Standardizing event naming dictionaries (`kyc_step_reached`, `sparplan_created`). |
-    | **Product & Mobile** | In-App message triggers, App deep-links | Testing custom URI schemes (`faizex://verify/video-ident`) across native app releases. |
+    | **Product & Mobile** | In-App message triggers, App deep-links | Testing custom URI schemes (`bison://verify/video-ident`) across native app releases. |
     | **UX / UI Design** | Responsive HTML templates & design tokens | Accessible dark/light mode compatibility and 48px mobile touch targets. |
     | **Legal & BaFin** | Regulatory compliance & Double-Opt-In (DOI) | Audit-proof DOI consent ledgers and crypto risk disclaimers. |
     """, unsafe_allow_html=True)

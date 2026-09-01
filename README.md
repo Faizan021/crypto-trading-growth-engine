@@ -1,4 +1,4 @@
-# Faizex Digital — Regulated Retail CRM Marketing & Retention Engine
+# Faizan Ahmed — Regulated Retail CRM Marketing & Retention Portfolio
 ### 🦬 1:1 Application Blueprint for BISON (Boerse Stuttgart Digital) CRM-Manager
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-trading-growth-engine.streamlit.app/)
@@ -7,7 +7,7 @@
 [![Statistical Rigor](https://img.shields.io/badge/A%2FB%20Testing-Two--Proportion%20Z--Test-success.svg)]()
 [![Compliance](https://img.shields.io/badge/Compliance-BaFin%20%26%20MiCA%20%26%20GDPR-green.svg)]()
 
-> 🔒 **PORTFOLIO NOTICE:** Faizex Digital is an independent portfolio project and strategic CRM case study platform created by **Faizan Ahmed** for technical, product, and quantitative CRM demonstration. All customer, trading, and custodial metrics are synthetic simulations.
+> 🔒 **PORTFOLIO NOTICE:** This is an independent portfolio project and strategic CRM case study platform created by **Faizan Ahmed** and strategic CRM case study platform created by **Faizan Ahmed** for technical, product, and quantitative CRM demonstration. All customer, trading, and custodial metrics are synthetic simulations.
 
 ---
 
@@ -26,7 +26,7 @@ flowchart TD
         T6["6. Cross-Functional & QA<br>(BI, Product, UX & Compliance)"]
     end
 
-    subgraph ENGINE["Live Faizex Engine Implementation"]
+    subgraph ENGINE["Live Faizan CRM Engine Implementation"]
         T1 --> E1["14 Full-Lifecycle Cases<br>(39.4% KYC / 59.2% Retention)"]
         T2 --> E2["4-Channel Interactive Canvas<br>(Push Caps, IAM Modals, Feed Banners)"]
         T3 --> E3["Event-Driven Trigger State Machine<br>(T+15m Stalled SEPA, Payday DCA)"]
