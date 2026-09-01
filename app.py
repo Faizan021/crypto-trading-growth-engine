@@ -228,7 +228,13 @@ if "1. Executive Performance Dashboard" in nav_choice:
     
     col_left, col_right = st.columns([1.25, 1])
     with col_left:
-        st.markdown("#### ⚡ Real-Time Onboarding Funnel (Per 10,000 Signups)")
+        st.markdown("#### ⚡ Onboarding Conversion Funnel (Per 10,000 Signups)")
+        st.markdown('''
+        <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:8px; padding:10px 14px; margin-bottom:12px; font-size:0.84rem; color:#cbd5e1; line-height:1.5;">
+            <strong style="color:#38bdf8;">💡 Why this Funnel matters for CRM:</strong><br>
+            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys (Cases 1, 2, and 7) eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% relative lift)</strong>.
+        </div>
+        ''', unsafe_allow_html=True)
         
         stages = [
             {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#38bdf8"},
@@ -259,7 +265,13 @@ if "1. Executive Performance Dashboard" in nav_choice:
             ''', unsafe_allow_html=True)
             
     with col_right:
-        st.markdown("#### 🪙 Retail Assets Under Custody (AUC) Allocation")
+        st.markdown("#### 🪙 Assets Under Custody (AUC) Segmentation")
+        st.markdown('''
+        <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.25); border-radius:8px; padding:10px 14px; margin-bottom:12px; font-size:0.84rem; color:#cbd5e1; line-height:1.5;">
+            <strong style="color:#34d399;">💡 How Asset Distribution Drives CRM Campaigns:</strong><br>
+            Retention is maximized when CRM messaging matches what the user holds. We use automated Braze segments to trigger tailored next steps (e.g. DCA Sparplan for BTC, Staking rewards for ETH, Limit alerts for Cash).
+        </div>
+        ''', unsafe_allow_html=True)
         
         assets = [
             {"name": "Bitcoin (BTC)", "share": "42%", "pct": 42, "color": "#f59e0b", "action": "Automated DCA Sparplan Focus"},
