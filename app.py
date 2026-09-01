@@ -161,12 +161,12 @@ st.caption("🔒 **PORTFOLIO NOTICE:** Faizex Digital is an independent portfoli
 st.markdown("""
 <div class="exec-header">
     <div style="margin-bottom: 8px;">
-        <span class="badge-reg">BaFin & MiCA Regulatory Framework</span>
-        <span class="badge-crm">Enterprise Lifecycle & Retention Architecture</span>
+        <span class="badge-reg">PORTFOLIO CASE STUDY</span>
+        <span class="badge-crm">LIFECYCLE MARKETING & RETENTION STRATEGY</span>
     </div>
-    <div class="exec-title">Faizex Digital — Retail CRM Marketing & Retention Engine</div>
+    <div class="exec-title">Faizex Digital — CRM Lifecycle & Retention Strategy</div>
     <p class="exec-sub">
-        Full-Funnel Lifecycle Marketing: Double Opt-In (DOI) Activation, Video-Ident KYC Funnel Optimization, Zero-Party Data Profiling, Payday Recurring DCA Engines, and Real-Time Volatility Push Reactivation.
+        <em>A simulated case study in retail fintech CRM: turning first-time signups into long-term, high-value customers through activation funnel redesign, behavioral segmentation, and recurring-revenue product strategy. All data synthetic.</em>
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -204,13 +204,16 @@ st.sidebar.caption("Portfolio Project | Faizan Ahmed")
 if nav_choice == NAV_MODULES[0]:
     st.markdown("### Executive Scorecard — Monthly Retail Throughput, Retention & Custody Metrics")
     
+    # Framing line
+    st.markdown("This is the executive view of a full-funnel CRM strategy — from onboarding friction to retention mechanics to portfolio-level revenue. The short version: we fixed the leaks, made recurring behavior the default, and let segmentation do the heavy lifting on engagement.")
+    
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.markdown("""
         <div class="exec-card">
             <div class="exec-card-lbl" style="min-height:34px;">30-Day Retail<br>Trading Volume</div>
             <div class="exec-card-val">€148.4M</div>
-            <div class="exec-card-sub" style="min-height:32px;">+12.4% vs. Prior Month<br>&nbsp;</div>
+            <div class="exec-card-sub" style="min-height:32px;">+12.4% MoM · compounding off funnel and retention wins below</div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
@@ -218,7 +221,7 @@ if nav_choice == NAV_MODULES[0]:
         <div class="exec-card">
             <div class="exec-card-lbl" style="min-height:34px;">KYC → First-Trade<br>Throughput Rate</div>
             <div class="exec-card-val">39.4%</div>
-            <div class="exec-card-sub" style="min-height:32px;">+11.0% Lift vs. Baseline<br>(28.4% Control)</div>
+            <div class="exec-card-sub" style="min-height:32px;">+11.0pts vs. 28.4% baseline · driven by the Video-Ident redesign</div>
         </div>
         """, unsafe_allow_html=True)
     with col3:
@@ -226,7 +229,7 @@ if nav_choice == NAV_MODULES[0]:
         <div class="exec-card">
             <div class="exec-card-lbl" style="min-height:34px;">12-Month Sparplan<br>Customer Retention</div>
             <div class="exec-card-val">59.2%</div>
-            <div class="exec-card-sub" style="min-height:32px;">2.6x Higher Retention<br>(vs. 22.8% Spot)</div>
+            <div class="exec-card-sub" style="min-height:32px;">2.6x lift vs. 22.8% spot traders · the single biggest lever we pulled</div>
         </div>
         """, unsafe_allow_html=True)
     with col4:
@@ -234,19 +237,21 @@ if nav_choice == NAV_MODULES[0]:
         <div class="exec-card">
             <div class="exec-card-lbl" style="min-height:34px;">Avg 2-Year AUC<br>per Active Account</div>
             <div class="exec-card-val">€9,850</div>
-            <div class="exec-card-sub" style="min-height:32px;">Steady Compound<br>Recurring Inflows</div>
+            <div class="exec-card-sub" style="min-height:32px;">Built almost entirely on recurring, habitual investing behavior</div>
         </div>
         """, unsafe_allow_html=True)
         
     st.markdown("""
     <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 18px; margin: 12px 0 16px 0; font-size:0.9rem; color:#1e293b; line-height:1.6; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
-        <strong style="color:#0284c7; font-size:0.95rem;">Executive Narrative — Strategic Unit Economics & Retention Mechanics:</strong><br>
-        This executive scorecard illustrates how a disciplined, event-driven CRM lifecycle strategy transforms customer lifetime value (LTV) and CAC efficiency:
-        <ul style="margin:6px 0 0 0; padding-left:20px;">
-            <li><strong>Acquisition Throughput & Friction Reduction:</strong> By streamlining the BaFin Video-Ident verification flow, we increased through-funnel conversion to <strong>39.4% first-trade activation</strong> (vs. 28.4% industry benchmark), substantially amortizing paid customer acquisition cost (CAC).</li>
-            <li><strong>Recurring Inflow Cadence & Churn Mitigation:</strong> Transitioning retail traders from manual, market-sensitive spot trading to automated monthly <strong>Sparplans (DCA)</strong> shifted 12-month retention from <strong>22.8% to 59.2% (a 2.6x improvement)</strong>, creating resilient baseline trading revenue during market downturns.</li>
-            <li><strong>Assets Under Custody (AUC) Accumulation:</strong> Disciplined recurring accumulators compound to an average of <strong>€9,850 in Assets Under Custody (AUC)</strong> within 24 months, maximizing custodial spread monetization and staking product adoption.</li>
+        <strong style="color:#0284c7; font-size:0.95rem;">The strategy in three moves:</strong>
+        <ul style="margin:6px 0 10px 0; padding-left:20px;">
+            <li><strong>Fixed the leaky funnel first.</strong> First-trade activation jumped to 39.4% (vs. 28.4% industry baseline) by simplifying the Video-Ident step — the single biggest drop-off point in onboarding.</li>
+            <li><strong>Made retention a product decision, not a re-engagement campaign.</strong> Moving traders from reactive spot trading into automated Sparplans took 12-month retention from 22.8% to 59.2%. Once the behavior is automated, churn stops being emotional.</li>
+            <li><strong>Let portfolio behavior drive the messaging.</strong> Segments built on what people actually hold — not who they are — kept AUC compounding steadily to €9,850 per account over two years.</li>
         </ul>
+        <div style="color:#64748b; font-size:0.86rem; border-top:1px solid #f1f5f9; padding-top:8px;">
+            Full funnel breakdown, segmentation logic, and stage-by-stage execution below.
+        </div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -255,21 +260,22 @@ if nav_choice == NAV_MODULES[0]:
         st.markdown("#### ⚡ Through-Funnel Onboarding Conversion (Per 10,000 Signups)")
         st.markdown("""
         <div class="expl-box-blue">
-            <strong style="color:#0284c7; font-size:0.92rem;">💡 Lifecycle Stage Drop-off Analysis:</strong><br>
-            Industry benchmarks show >60% drop-off between registration and KYC completion. Our automated multi-channel lifecycle journeys eliminate drop-offs across each critical gating milestone—delivering a <strong>+76.7% cumulative throughput lift (22.3% → 39.4% first-trade activation)</strong>.
+            <strong style="color:#0284c7; font-size:0.92rem;">💡 Where We Focused First</strong><br>
+            Most retail platforms lose 60%+ of signups before KYC is even complete — acquisition spend evaporating before a customer ever trades. Rather than spread effort evenly across the funnel, we diagnosed the single biggest leak (Video-Ident) and rebuilt that step first. The result: a 76.7% cumulative lift in first-trade activation, from 22.3% to 39.4%.
         </div>
         """, unsafe_allow_html=True)
         
         stages = [
-            {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#0284c7"},
-            {"step": "02", "name": "Double Opt-In (DOI) Confirmed (Stage 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7"},
-            {"step": "03", "name": "Video-Ident Verification Initiated (Stage 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669"},
-            {"step": "04", "name": "Identity Verification (KYC) Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#059669"},
-            {"step": "05", "name": "Initial Fiat / SEPA Deposit Completed (Stage 3)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
-            {"step": "06", "name": "First Trade Executed (Activated Account)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#7c3aed"}
+            {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#0284c7", "sub": None},
+            {"step": "02", "name": "Double Opt-In (DOI) Confirmed (Stage 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7", "sub": None},
+            {"step": "03", "name": "Video-Ident Verification Initiated (Stage 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669", "sub": "Redesigned this step first — it was the largest single drop-off point."},
+            {"step": "04", "name": "Identity Verification (KYC) Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#059669", "sub": None},
+            {"step": "05", "name": "Initial Fiat / SEPA Deposit Completed (Stage 3)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706", "sub": "Reinforced with automated deposit reminders and progress nudges."},
+            {"step": "06", "name": "First Trade Executed (Activated Account)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#7c3aed", "sub": None}
         ]
         
         for s in stages:
+            sub_html = f'<div style="font-size:0.75rem; color:#64748b; font-style:italic; margin-top:4px;">{s["sub"]}</div>' if s["sub"] else ''
             st.markdown(f"""
             <div class="funnel-card">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
@@ -285,24 +291,27 @@ if nav_choice == NAV_MODULES[0]:
                 <div style="background:#f1f5f9; border-radius:4px; height:6px; width:100%; overflow:hidden;">
                     <div style="background:{s['color']}; height:100%; width:{s['pct']}%;"></div>
                 </div>
+                {sub_html}
             </div>
             """, unsafe_allow_html=True)
+            
+        st.caption("Fixing the entry point paid off downstream — every stage after Video-Ident converts at a higher rate than the industry baseline.")
             
     with col_right:
         st.markdown("#### 🪙 Assets Under Custody (AUC) Asset Mix & Segmentation")
         st.markdown("""
         <div class="expl-box-green">
-            <strong style="color:#059669; font-size:0.92rem;">💡 Behavioral Segmentation Strategy:</strong><br>
-            Retention velocity increases when messaging dynamically aligns with portfolio composition. Automated Braze dynamic segments trigger context-aware lifecycle streams: <strong>DCA Accumulation for BTC</strong>, <strong>Staking Yield Activation for ETH</strong>, and <strong>Limit Buy Alerts for Idle Cash</strong>.
+            <strong style="color:#059669; font-size:0.92rem;">💡 Why Segment by Portfolio, Not Persona</strong><br>
+            Demographic segments tell you who someone is. Portfolio segments tell you what they're about to do next. By triggering messages off actual holdings — not age or signup date — each nudge lands at the moment it's most relevant, which is why retention velocity holds up across every asset class below.
         </div>
         """, unsafe_allow_html=True)
         
         assets = [
-            {"name": "Bitcoin (BTC)", "share": "42%", "pct": 42, "color": "#d97706", "action": "Automated DCA Sparplan Focus"},
-            {"name": "Ethereum (ETH)", "share": "24%", "pct": 24, "color": "#4f46e5", "action": "Staking Rewards & Yield Activation"},
-            {"name": "DAX 40 & European Equity ETFs", "share": "18%", "pct": 18, "color": "#059669", "action": "Multi-Asset Long-Term Wealth"},
-            {"name": "Top Altcoins (SOL, ADA)", "share": "11%", "pct": 11, "color": "#0284c7", "action": "Volatility & Limit Order Alerts"},
-            {"name": "Cash / EUR Reserve", "share": "5%", "pct": 5, "color": "#64748b", "action": "Instant Dip-Buy Readiness"}
+            {"name": "Bitcoin (BTC)", "share": "42%", "pct": 42, "color": "#d97706", "action": "Nudges toward automated DCA — turns BTC's volatility into a habit-building opportunity, not a hesitation point."},
+            {"name": "Ethereum (ETH)", "share": "24%", "pct": 24, "color": "#4f46e5", "action": "Staking activation prompts — converts idle holdings into yield-generating engagement."},
+            {"name": "DAX 40 & European Equity ETFs", "share": "18%", "pct": 18, "color": "#059669", "action": "Positioned as the long-term wealth anchor — messaging shifts from trading cues to portfolio-building."},
+            {"name": "Top Altcoins (SOL, ADA)", "share": "11%", "pct": 11, "color": "#0284c7", "action": "Volatility alerts and limit-order suggestions — meets higher-risk holders where their attention already is."},
+            {"name": "Cash / EUR Reserve", "share": "5%", "pct": 5, "color": "#64748b", "action": "Dip-buy readiness prompts — the highest-intent conversion moment in the whole segment map."}
         ]
         
         for a in assets:
@@ -319,7 +328,7 @@ if nav_choice == NAV_MODULES[0]:
             </div>
             """, unsafe_allow_html=True)
             
-        st.caption("ℹ️ **Data Benchmark Source:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and DACH multi-asset exchange distributions.")
+        st.caption("Same customer, five different conversations — segmentation is what makes that possible at scale.")
 
 # ==========================================
 # MODULE 2: STAGE 1 - DOUBLE OPT-IN (DOI)
