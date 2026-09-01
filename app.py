@@ -9,7 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 st.set_page_config(
-    page_title="Digital Asset & Trading Growth OS | Exchange Retention Engine",
+    page_title="FinTech & Digital Asset CRM Lifecycle OS | Exchange Retention Architecture",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -127,6 +127,20 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# Hero Header
+st.markdown("""
+<div class="terminal-hero">
+    <div>
+        <span class="badge-bafin">🛡️ Regulated European Exchange Framework</span>
+        <span class="badge-mica">⚡ Multi-Channel Braze Lifecycle Architecture</span>
+    </div>
+    <h1 class="terminal-title">FinTech & Digital Asset CRM Growth OS</h1>
+    <p class="terminal-sub">
+        End-to-End Multichannel Journeys (Email, Push, In-App, Banners), KYC Friction Diagnostics, Dynamic Sparplan Retention Models, and Cross-Functional Delivery.
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
 # Load data assets
 base_dir = os.path.dirname(os.path.abspath(__file__))
 funnel_path = os.path.join(base_dir, 'data', 'kyc_funnel_dropoffs.csv')
@@ -138,36 +152,23 @@ df_dca = pd.read_csv(dca_path) if os.path.exists(dca_path) else pd.DataFrame()
 with open(exp_path, 'r', encoding='utf-8') as f:
     experiments = json.load(f)
 
-# Hero Banner
-st.markdown("""
-<div class="terminal-hero">
-    <div>
-        <span class="badge-bafin">🛡️ Regulated European Exchange Framework</span>
-        <span class="badge-mica">⚡ MiCA & Institutional Custody Ready</span>
-    </div>
-    <h1 class="terminal-title">Digital Asset & Trading Growth OS</h1>
-    <p class="terminal-sub">
-        Quantitative Lifecycle Intelligence, Email & Push A/B Testing Case Studies, and Automated Multi-Asset Sparplan Retention for Regulated European Exchanges.
-    </p>
-</div>
-""", unsafe_allow_html=True)
-
 # Sidebar Navigation
 st.sidebar.image("https://img.icons8.com/fluency/96/bullish.png", width=54)
-st.sidebar.title("Trading OS Navigator")
-st.sidebar.markdown("**Lifecycle Case Studies & KPIs**")
+st.sidebar.title("CRM Master Navigator")
+st.sidebar.markdown("**Lifecycle Pillars (Job Specs)**")
 
 nav_choice = st.sidebar.radio(
-    "Select Intelligence Case:",
+    "Select Strategic Module:",
     [
-        "📊 Executive Exchange Pulse",
-        "✉️ Case 1: Transactional Confirmation Momentum",
-        "🛡️ Case 2: Onboarding & KYC Friction Breaker",
-        "📰 Case 3: Monthly Newsletter A/B Test (August Edition)",
-        "🎯 Case 4: Key KPIs to Calculate (How & Why)",
-        "📈 5-Year Sparplan (DCA) Cohort Forecaster",
-        "⚡ Volatility Surge Alert Generator",
-        "🔬 Statistical Z-Test Verification Hub"
+        "📊 1. Executive CRM Dashboard & KPIs",
+        "✉️ 2. Case 1: Transactional Confirmation Momentum",
+        "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker",
+        "📰 4. Case 3: Editorial Newsletter A/B Test (August Edition)",
+        "🎯 5. Case 4: Complete Exchange KPI Framework",
+        "📈 6. Case 5: 5-Year Sparplan (DCA) LTV & Retention",
+        "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard",
+        "👥 8. Case 7: Cross-Functional Alignment (Product/BI/Compliance)",
+        "💻 9. Technical Stack (Braze, Liquid & SQL Schemas)"
     ]
 )
 
@@ -175,11 +176,11 @@ st.sidebar.markdown("---")
 st.sidebar.caption("🔒 **Anonymized Portfolio Project**\nDesigned for enterprise digital asset exchanges & regulated European trading ecosystems.")
 
 # ==========================================
-# MODULE 1: EXECUTIVE EXCHANGE PULSE
+# MODULE 1: EXECUTIVE CRM DASHBOARD
 # ==========================================
-if nav_choice == "📊 Executive Exchange Pulse":
-    st.subheader("🏛️ Executive Exchange Pulse & Growth Metrics")
-    st.markdown("Live operational pulse monitoring retail trading velocity, onboarding throughput, automated savings plan (Sparplan) cohorts, and customer lifetime value.")
+if nav_choice == "📊 1. Executive CRM Dashboard & KPIs":
+    st.subheader("🏛️ Executive CRM Dashboard & Exchange Pulse")
+    st.markdown("End-to-end view of retail trading velocity, onboarding throughput, automated accumulation (Sparplan) cohorts, and customer lifetime value.")
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -239,7 +240,7 @@ if nav_choice == "📊 Executive Exchange Pulse":
 # ==========================================
 # MODULE 2: CASE 1 - TRANSACTIONAL CONFIRMATION
 # ==========================================
-elif nav_choice == "✉️ Case 1: Transactional Confirmation Momentum":
+elif nav_choice == "✉️ 2. Case 1: Transactional Confirmation Momentum":
     c1 = experiments["case_1_transactional_confirmation"]
     st.subheader("✉️ Case 1: Transactional Email Confirmation & Momentum Builder")
     st.info("**Strategic Context:** Transactional confirmation emails consistently command the highest open rates across the entire lifecycle (65%–75%). Instead of treating this email as a plain administrative stop, our hypothesis tests using the high-intent moment to build momentum directly into app download and verification.")
@@ -300,7 +301,7 @@ elif nav_choice == "✉️ Case 1: Transactional Confirmation Momentum":
 # ==========================================
 # MODULE 3: CASE 2 - ONBOARDING & KYC
 # ==========================================
-elif nav_choice == "🛡️ Case 2: Onboarding & KYC Friction Breaker":
+elif nav_choice == "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker":
     c2 = experiments["case_2_welcome_verification"]
     st.subheader("🛡️ Case 2: Onboarding & Video-Ident Friction Breaker")
     st.info("**Strategic Context:** In German & European regulated digital asset exchanges, users sign up eagerly but often hesitate at Video-Ident due to fear of complicated paperwork or long video calls. Our hypothesis replaces dense paragraphs with an empowering 3-step checklist + mobile deep-linking.")
@@ -328,7 +329,7 @@ elif nav_choice == "🛡️ Case 2: Onboarding & KYC Friction Breaker":
                 </div>
             </div>
             <hr style="border-color: rgba(255,255,255,0.1);">
-            <strong style="color:#38bdf8;">👍 What We Appreciate:</strong> Strong trust anchors (Stock Exchange backing), clear 'no wallet complexity' message.<br><br>
+            <strong style="color:#38bdf8;">👍 What We Appreciate:</strong> Strong trust anchor (Stock Exchange backing), clear 'no wallet complexity' message.<br><br>
             <strong style="color:#f87171;">💡 Optimization Opportunity:</strong> Two identical buttons and text-heavy blocks create reading fatigue; 42% drop off before starting Video-Ident.
         </div>
         """, unsafe_allow_html=True)
@@ -360,28 +361,11 @@ elif nav_choice == "🛡️ Case 2: Onboarding & KYC Friction Breaker":
             <strong style="color:#34d399;">📈 Projected Impact:</strong> <strong>+38.7% KYC Completion Lift</strong> (28.4% → 39.4%, $z = 3.12, p = 0.0018$).
         </div>
         """, unsafe_allow_html=True)
-        
-    st.markdown("##### 📱 Direct Mobile Deep-Linking (Liquid / Braze Architecture)")
-    st.code("""
-{% if user.device_os == 'ios' %}
-  <a href="exchangeapp://verify/video-ident?session_id={{ user.kyc_session_id }}" class="btn-cta">
-    Open Video-Ident in iOS App
-  </a>
-{% elsif user.device_os == 'android' %}
-  <a href="intent://verify/#Intent;scheme=exchangeapp;package=de.exchange.trading;end" class="btn-cta">
-    Open Video-Ident in Android App
-  </a>
-{% else %}
-  <a href="https://trade.exchange.eu/web-ident/{{ user.id }}" class="btn-cta">
-    Complete Verification on Desktop
-  </a>
-{% endif %}
-    """, language="liquid")
 
 # ==========================================
 # MODULE 4: CASE 3 - MONTHLY NEWSLETTER
 # ==========================================
-elif nav_choice == "📰 Case 3: Monthly Newsletter A/B Test (August Edition)":
+elif nav_choice == "📰 4. Case 3: Editorial Newsletter A/B Test (August Edition)":
     c3 = experiments["case_3_editorial_bisonews"]
     st.subheader("📰 Case 3: Monthly Newsletter A/B Test (August Market News)")
     st.info("**Strategic Context:** Monthly market reviews offer great educational value. The August edition clearly breaks down the US debt spiral, Nvidia earnings, and Bitcoin rally. Our hypothesis keeps this high-quality editorial, but tests replacing the single static 'Trade Bitcoin' button with dynamic lifecycle-segmented CTAs.")
@@ -490,7 +474,7 @@ elif nav_choice == "📰 Case 3: Monthly Newsletter A/B Test (August Edition)":
 # ==========================================
 # MODULE 5: CASE 4 - KEY KPIS TO CALCULATE
 # ==========================================
-elif nav_choice == "🎯 Case 4: Key KPIs to Calculate (How & Why)":
+elif nav_choice == "🎯 5. Case 4: Complete Exchange KPI Framework":
     st.subheader("🎯 Case 4: The 5 Essential KPIs for a Regulated Trading Platform")
     st.markdown("A complete quantitative framework for evaluating customer acquisition, onboarding velocity, retention economics, and lifetime portfolio value.")
     
@@ -500,7 +484,7 @@ elif nav_choice == "🎯 Case 4: Key KPIs to Calculate (How & Why)":
             "formula": "KYC Rate = (Approved Verified Users / Total Registrations) * 100",
             "target": "Target: > 40% (Industry avg is ~28%)",
             "why": "Identifies the drop-off bottleneck between app registration and Video-Ident. In regulated European markets (BaFin/MiCA), drops here directly inflate paid Customer Acquisition Cost (CAC).",
-            "how": "Tracked via event timestamps (`registration_completed` vs. `kyc_approved`) in amplitude/GA4 & CRM."
+            "how": "Tracked via event timestamps (registration_completed vs. kyc_approved) in amplitude/GA4 & CRM."
         },
         {
             "name": "2. Time-to-First-Trade (TTFT)",
@@ -571,8 +555,8 @@ elif nav_choice == "🎯 Case 4: Key KPIs to Calculate (How & Why)":
 # ==========================================
 # MODULE 6: 5-YEAR SPARPLAN FORECASTER
 # ==========================================
-elif nav_choice == "📈 5-Year Sparplan (DCA) Cohort Forecaster":
-    st.subheader("📈 5-Year Sparplan (DCA) Customer Lifetime Value & Retention Model")
+elif nav_choice == "📈 6. Case 5: 5-Year Sparplan (DCA) LTV & Retention":
+    st.subheader("📈 Case 5: 5-Year Sparplan (DCA) Customer Lifetime Value & Retention Model")
     st.markdown("Comparing long-term retention decay and Assets Under Custody (AUC) between **Manual One-Off Spot Traders** vs. **Automated Recurring Sparplan Accumulators**.")
     
     monthly_deposit = st.slider("Monthly Sparplan Contribution (€/month):", min_value=25, max_value=500, value=100, step=25)
@@ -606,8 +590,8 @@ elif nav_choice == "📈 5-Year Sparplan (DCA) Cohort Forecaster":
 # ==========================================
 # MODULE 7: VOLATILITY ALERT GENERATOR
 # ==========================================
-elif nav_choice == "⚡ Volatility Surge Alert Generator":
-    st.subheader("⚡ Market Volatility & Push Trigger Simulator")
+elif nav_choice == "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard":
+    st.subheader("⚡ Case 6: Market Volatility & Push Trigger Simulator")
     st.markdown("Simulating programmatic trigger alerts dispatched via Braze / Push Notifications when market volatility surges past standard statistical deviations.")
     
     asset = st.selectbox("Select Volatility Instrument:", ["Bitcoin (BTC/EUR)", "Ethereum (ETH/EUR)", "Solana (SOL/EUR)", "DAX 40"])
@@ -623,24 +607,74 @@ elif nav_choice == "⚡ Volatility Surge Alert Generator":
     """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 8: STATISTICAL Z-TEST VERIFICATION
+# MODULE 8: CROSS-FUNCTIONAL ALIGNMENT
 # ==========================================
-elif nav_choice == "🔬 Statistical Z-Test Verification Hub":
-    st.subheader("🔬 Statistical Significance (Two-Proportion Z-Test)")
-    st.markdown("Live computation of sample sizes, conversion variances, Z-scores, and p-values for all CRM experiments.")
+elif nav_choice == "👥 8. Case 7: Cross-Functional Alignment (Product/BI/Compliance)":
+    st.subheader("👥 Case 7: Cross-Functional Collaboration & Delivery Framework")
+    st.markdown("How the CRM Manager coordinates end-to-end campaign execution across BI, Product, UX/UI, and Compliance.")
     
-    st.table(pd.DataFrame({
-        'Case Study': [
-            'Case 1: Confirmation Momentum',
-            'Case 2: KYC Friction Breaker',
-            'Case 3: Dynamic Editorial News'
-        ],
-        'Sample Size (n)': ['8,500 / variant', '10,000 / variant', '25,000 / variant'],
-        'Control Baseline': ['41.2% CTR', '28.4% KYC', '12.4% CTOR'],
-        'Variant B Result': ['53.8% CTR', '39.4% KYC', '23.1% CTOR'],
-        'Absolute Lift': ['+12.6%', '+11.0%', '+10.7%'],
-        'Relative Lift': ['+30.6%', '+38.7%', '+86.3%'],
-        'Z-Score': ['2.89', '3.12', '4.15'],
-        'p-value': ['p = 0.0039 (**)', 'p = 0.0018 (***)', 'p < 0.0001 (****)'],
-        'Statistical Significance': ['Statistically Significant (99.6%)', 'Statistically Significant (99.8%)', 'Statistically Significant (99.99%)']
-    }))
+    st.markdown("""
+    | Stakeholder | Key Collaboration Area | Real Workflow Example |
+    |---|---|---|
+    | **BI / Analytics Team** | Event tracking, Cohort schemas, SQL queries, Amplitude funnels | Defining custom custom event attributes: `sparplan_paused_reason`, `kyc_retry_count`, `last_trade_asset_class`. |
+    | **Product & Engineering** | In-App message triggers, App deep-links, API webhooks | Integrating direct URI schemes (`app://verify/video-ident`, `app://sparplan/create`) to ensure seamless in-app navigation. |
+    | **UX / UI Design** | In-App Banners, Modal layouts, HTML email templates | Ensuring consistent typography, dark/light mode compatibility, and mobile-first tap targets. |
+    | **Legal & Compliance (BaFin/MiCA)** | GDPR consent, Risk disclaimers, Audit trails | Reviewing risk warnings on high-volatility token promotions and ensuring strict double-opt-in (DOI) records. |
+    """)
+
+# ==========================================
+# MODULE 9: TECHNICAL STACK & LIQUID
+# ==========================================
+elif nav_choice == "💻 9. Technical Stack (Braze, Liquid & SQL Schemas)":
+    st.subheader("💻 Technical Execution: Braze Event Architecture & Liquid Logic")
+    st.markdown("Production-ready schemas and dynamic templates demonstrating technical CRM proficiency.")
+    
+    st.markdown("##### 1. Liquid Dynamic Template for Multichannel Campaign")
+    st.code("""
+{% assign user_kyc = {{custom_attribute.${kyc_status}}} %}
+{% assign last_trade = {{custom_attribute.${last_trade_date}}} %}
+{% assign days_dormant = "now" | date: "%s" | minus: last_trade | divided_by: 86400 %}
+
+{% if user_kyc != 'approved' %}
+  <!-- Unverified Onboarding Flow -->
+  <div class="action-banner kyc-reminder">
+    <h3>Complete your 3-minute Video-Ident</h3>
+    <a href="exchangeapp://verify/video-ident">Verify Now &rarr;</a>
+  </div>
+{% elsif days_dormant > 60 %}
+  <!-- Re-Engagement Volatility Flow -->
+  <div class="action-banner winback">
+    <h3>Markets are moving: View {{custom_attribute.${top_watched_coin}}} today</h3>
+    <a href="exchangeapp://markets/{{custom_attribute.${top_watched_coin} | downcase}}">Trade {{custom_attribute.${top_watched_coin}}} &rarr;</a>
+  </div>
+{% else %}
+  <!-- Sparplan Accumulation Flow -->
+  <div class="action-banner sparplan">
+    <h3>Set and forget: Automate your monthly DCA from €25</h3>
+    <a href="exchangeapp://sparplan/new">Set Up Sparplan &rarr;</a>
+  </div>
+{% endif %}
+    """, language="liquid")
+    
+    st.markdown("##### 2. SQL Cohort Extraction Query (Snowflake / PostgreSQL)")
+    st.code("""
+-- Identify At-Risk Verified Traders for Volatility Re-Engagement
+SELECT 
+    u.user_id,
+    u.email,
+    u.preferred_language,
+    u.device_os,
+    MAX(t.created_at) AS last_trade_timestamp,
+    COUNT(DISTINCT sp.sparplan_id) AS active_sparplans,
+    SUM(w.balance_eur) AS total_custody_balance_eur
+FROM users u
+JOIN kyc_records k ON u.user_id = k.user_id AND k.status = 'APPROVED'
+LEFT JOIN trades t ON u.user_id = t.user_id
+LEFT JOIN sparplans sp ON u.user_id = sp.user_id AND sp.status = 'ACTIVE'
+LEFT JOIN wallets w ON u.user_id = w.user_id
+GROUP BY 1, 2, 3, 4
+HAVING 
+    MAX(t.created_at) < CURRENT_DATE - INTERVAL '60 days'
+    AND COUNT(DISTINCT sp.sparplan_id) = 0
+    AND SUM(w.balance_eur) > 10;
+    """, language="sql")
