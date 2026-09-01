@@ -79,18 +79,28 @@
 
 ---
 
-### ⚡ Case 4: Volatility Anomaly Alert Engine (Ethical FOMO & Limit Orders)
-* **Trigger:** `market_volatility_anomaly_detected` (Price move $\ge \pm 5\%$ in 4h) | **Channel:** Mobile Push + In-App Smart Modal
-* **Strategic Context:** Sudden price surges tempt marketing teams into sending spammy, reckless alerts that trigger push opt-outs. Our approach channels market excitement into calm, disciplined limit orders.
+### 📲 Case 4: Real-Time Mobile Push Engine (4 Critical Trading Scenarios)
+* **Trigger:** Programmatic Braze Webhooks (Real-Time Price & Balance Changes) | **Channel:** Mobile Push (iOS / Android)
+* **Strategic Context:** In trading apps, mobile push delivers immediate real-time attention. However, spammy alerts trigger instant uninstalls. Our Braze Push Engine uses **4 distinct behavioral trigger scenarios with strict 24-hour frequency capping**:
 
-| Experiment Dimension | 🔴 Control (Generic Market Blast) | 🟢 Variant B (Disciplined Momentum Strategy) | Strategic CRM Rationale |
+| Trigger Scenario | 🔴 Naive Blast (Spammy) | 🟢 Intelligent Push Payload (Faizex Engine) | Quantified Impact |
 | :--- | :--- | :--- | :--- |
-| **Push Title** | `Bitcoin is pumping! 🚀` | `Bitcoin moved +5.4% today ⚡ High volume detected` | Replaces reckless gambling tone with objective, factual market data |
-| **Push Body** | `Don't miss out, open app and buy now!` | `European order-book depth surging. Tap to view live order flow & set limits.` | Focuses on professional trading execution |
-| **In-App Landing** | Generic app home screen | Smart Modal: *„Market Moving Fast: Set a Limit Order to capture your target price stress-free“* | Empowers retail users with smart execution tools |
-| **Fatigue Window** | Unrestricted (High spam risk) | **Strict 24h Cross-Channel Cooldown** (Max 1 surge push per day) | Protects push opt-in health and builds customer trust |
-| **Target Emotion** | Impulsive FOMO / Panic | Strategic confidence & execution readiness | Long-term customer financial health |
-| **Quantified Impact** | 3.2% Unsubscribe Spike | **+44.1% 24h Volume Lift / -62.3% Push Opt-Outs** | Sustained push retention and higher trade volume |
+| **1. Bullish Breakout (+6.5% in 2h)** | `Bitcoin is pumping! Buy now 🚀` | `⚡ BTC moved +6.5% to €61,400: High European order volume detected. Tap to set limit orders.` | **+44.1% 24h Trading Volume Lift** (-62.3% opt-outs) |
+| **2. Flash Market Dip (-5.8% in 4h)** | `Market crashing! Check your coins` | `📉 Market Pullback Detected: Top 10 assets at 30-day support. You have €450 cash ready for 1-click orders.` | **+32.8% Idle Cash Balance Deployment** |
+| **3. Staking Yield Spike** | `New staking rates live` | `🪙 ETH Staking Rewards Updated (5.2% p.a.): Your 2.4 ETH can generate ~€12.50/mo. BaFin regulated.` | **+3.4x Staking Product Adoption** |
+| **4. Sparplan Pre-Debit Reminder** | None (Surprise bank debit) | `⏱️ Tomorrow: Your €50 Bitcoin Sparplan executes automatically at 08:00 CET with 0€ fees.` | **-38.2% Failed Direct-Debit Rate** |
+
+---
+
+### 📱 Case 4B: In-App Message (IAM) Contextual Conversion Suite
+* **Trigger:** Active In-App Session Events | **Channel:** In-App Modals, Sticky Slide-Ups & Balance Cards
+* **Strategic Context:** In-App Messages (IAM) have **100% deliverability** because the user is already inside the active app session. They require no push permissions and bypass email inbox spam filters.
+
+| IAM Format | Lifecycle Trigger | In-App Copy & Interaction Mechanism | Business Conversion Lift |
+| :--- | :--- | :--- | :--- |
+| **1. Full-Screen Celebration Modal** | `first_deposit_completed` (€100+) | 🎉 *„Erste Einzahlung erfolgreich! Möchtest du diese 100€ jeden Monat automatisch ansparen?“* (1-Click Sparplan toggle) | **+31.4% Immediate Sparplan Adoption** |
+| **2. Sticky Bottom Slide-Up** | User logs in with password 3x | 🔐 *„FaceID / Fingerabdruck aktivieren? Logge dich in 0.5s ein.“* (Reduces authentication drop-off) | **+42.0% 30-Day App Open Frequency** |
+| **3. Contextual Balance Card** | Holding >€200 uninvested cash | 🪙 *„Dein Bargeld arbeitet noch nicht: 3.2% p.a. Zinsen aktivieren oder Limit-Order setzen.“* | **+24.6% Deployment of Idle Balances** |
 
 ---
 

@@ -197,13 +197,14 @@ nav_choice = st.sidebar.radio(
         "📰 4. Case 3: Editorial Newsletter Personalization",
         "🎯 5. Case 4: Exchange CRM & Retention KPIs",
         "📈 6. Case 5: 5-Year Sparplan (DCA) Cohort Model",
-        "⚡ 7. Case 6: Market Volatility Push Engine",
-        "🏦 8. Case 7: Stalled-Deposit Recovery Flow",
-        "🏆 9. Case 8: Milestone Habit Gamification",
-        "🪙 10. Case 9: Idle Asset Staking Yield Nudge",
-        "🛠️ 11. Case 10: CRM Automation Architecture",
-        "👥 12. Case 11: Cross-Functional Alignment Framework",
-        "💻 13. Case 12: Production Liquid & SQL Schemas"
+        "📲 7. Case 6: Mobile Push & Volatility Engine (4 Scenarios)",
+        "📱 8. Case 7: In-App Message (IAM) Contextual Conversion Suite",
+        "🏦 9. Case 8: Stalled-Deposit Recovery Flow",
+        "🏆 10. Case 9: Milestone Habit Gamification",
+        "🪙 11. Case 10: Idle Asset Staking Yield Nudge",
+        "🛠️ 12. Case 11: CRM Automation Architecture",
+        "👥 13. Case 12: Cross-Functional Alignment Framework",
+        "💻 14. Case 13: Production Liquid & SQL Schemas"
     ]
 )
 
@@ -647,23 +648,152 @@ elif "6. Case 5" in nav_choice:
 # MODULE 7: CASE 6 - VOLATILITY PUSH
 # ==========================================
 elif "7. Case 6" in nav_choice:
-    st.markdown("### Case 6: Real-Time Market Volatility Push Engine")
-    st.markdown("**Executive Context:** High market volatility generates trading volume, but spammy messaging leads to push opt-outs. We enforce an objective, factual notification structure with a **strict 24h frequency cap**.")
+    st.markdown("### 📲 Case 6: Real-Time Mobile Push & Volatility Engine (4 Scenarios)")
     
-    asset = st.selectbox("Select Trading Instrument:", ["Bitcoin (BTC/EUR)", "Ethereum (ETH/EUR)", "Solana (SOL/EUR)", "DAX 40 ETF"])
-    vol = st.slider("Trigger Anomaly Threshold (24h Move %):", 3.0, 15.0, 5.4, 0.5)
-    
-    st.markdown(f"""
-    <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px; min-height:auto;">
-        <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">PUSH NOTIFICATION PAYLOAD • {asset.upper()}</div>
-        <strong style="color:#0f172a; font-size:0.95rem;">{asset} moved ±{vol}% in the last 4 hours ⚡</strong>
-        <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.4;">
-            High European volume detected. Tap to view order book depth and set limit orders stress-free.
-        </p>
-        <div style="margin-top:8px; font-size:0.75rem; color:#64748b;">Deep-link: <code>faizex://markets/{asset.split()[0].lower()}?tab=chart</code> • 24h Frequency Cap Enforced</div>
+    st.markdown('''
+    <div class="expl-box-blue">
+        <strong style="color:#0284c7; font-size:1rem;">💡 Why Mobile Push is Crucial for Trading Platforms:</strong><br>
+        In financial trading, mobile push notifications drive instant engagement during critical market moves. However, aggressive or misleading spam creates push fatigue (users turn off notifications). Our <strong>Braze Push Engine</strong> pairs factual market movements with <strong>smart execution tools (Limit Orders) and a strict 24-hour frequency cap</strong>.
     </div>
-    """, unsafe_allow_html=True)
-    st.success("📈 **Quantified Impact:** +44.1% 24h Trade Volume Lift / -62.3% Reduction in Push Opt-Outs.")
+    ''', unsafe_allow_html=True)
+    
+    st.markdown("#### 🎯 Select Real-World Push Scenario to Preview:")
+    push_scenario = st.selectbox(
+        "Choose Trigger Scenario:",
+        [
+            "⚡ Scenario 1: Bullish Market Breakout (+6.5% Move in 2h)",
+            "📉 Scenario 2: Flash Pullback / Dip-Buying Opportunity (-5.8% Move)",
+            "🪙 Scenario 3: Staking Yield Spike Announcement (5.2% p.a.)",
+            "⏱️ Scenario 4: Automated Sparplan Execution Reminder (Pre-Debit)"
+        ]
+    )
+    
+    if "Scenario 1" in push_scenario:
+        push_title = "Bitcoin moved +6.5% to €61,400 ⚡"
+        push_body = "High European buying volume detected across major order books. Tap to view depth & set a limit order."
+        push_tag = "BULLISH BREAKOUT TRIGGER"
+        deep_link = "faizex://markets/btc?tab=limit_order"
+        impact_note = "+44.1% 24h Trading Volume Lift with -62.3% Push Opt-Outs."
+        badge_color = "#0284c7"
+    elif "Scenario 2" in push_scenario:
+        push_title = "Market Pullback Detected (-5.8%) 📉"
+        push_body = "Top 10 crypto assets reaching 30-day support levels. You have €450 uninvested cash ready for 1-click orders."
+        push_tag = "FLASH DIP / CASH WAKE-UP"
+        deep_link = "faizex://portfolio/cash?action=buy_dip"
+        impact_note = "+32.8% Cash Balance Deployment within 6 hours of notification."
+        badge_color = "#d97706"
+    elif "Scenario 3" in push_scenario:
+        push_title = "Ethereum Staking Yield Updated: 5.2% p.a. 🪙"
+        push_body = "Your 2.4 ETH in custody can generate ~€12.50/month in passive rewards. 100% BaFin-regulated custody."
+        push_tag = "PRODUCT YIELD ACTIVATION"
+        deep_link = "faizex://staking/eth"
+        impact_note = "+3.4x Staking Adoption across eligible token holders."
+        badge_color = "#059669"
+    else:
+        push_title = "Tomorrow: Your €50 Bitcoin Sparplan Executes ⏱️"
+        push_body = "Your scheduled monthly DCA accumulation will run automatically at 08:00 CET with 0€ setup fees."
+        push_tag = "DCA LIFECYCLE PREVIEW"
+        deep_link = "faizex://sparplan/details"
+        impact_note = "Reduces failed bank direct-debits by 38.2% via advance balance awareness."
+        badge_color = "#7c3aed"
+        
+    st.markdown(f'''
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.4rem; max-width:650px; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:1rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <span style="background:{badge_color}; color:#fff; border-radius:6px; padding:3px 8px; font-size:0.72rem; font-weight:800;">FAIZEX DIGITAL</span>
+                <span style="font-size:0.75rem; color:#64748b; font-weight:600;">{push_tag}</span>
+            </div>
+            <span style="font-size:0.75rem; color:#94a3b8;">Just now</span>
+        </div>
+        <strong style="color:#0f172a; font-size:1.02rem;">{push_title}</strong>
+        <p style="color:#334155; font-size:0.9rem; margin:6px 0 10px 0; line-height:1.5;">
+            {push_body}
+        </p>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:6px 12px; font-size:0.78rem; color:#475569; display:flex; justify-content:space-between;">
+            <span>📲 Direct App Deep-Link: <code>{deep_link}</code></span>
+            <span style="color:#059669; font-weight:700;">🛡️ 24h Frequency Capped</span>
+        </div>
+    </div>
+    ''', unsafe_allow_html=True)
+    st.success(f"📈 **Quantified Impact:** {impact_note}")
+
+elif "8. Case 7: In-App Message" in nav_choice:
+    st.markdown("### 📱 Case 7: In-App Message (IAM) Contextual Conversion Suite")
+    
+    st.markdown('''
+    <div class="expl-box-green">
+        <strong style="color:#059669; font-size:1rem;">💡 Why In-App Messages (IAM) Deliver the Highest Conversion:</strong><br>
+        Unlike emails (which get lost in inboxes) or push notifications (which require opt-in permissions), <strong>In-App Messages have a 100% delivery rate</strong> because they appear while the user is actively using the app. They guide the user to the exact next lifecycle milestone with zero friction.
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    iam_scenario = st.selectbox(
+        "Select In-App Message (IAM) Campaign Format:",
+        [
+            "🎉 Format A: Full-Screen Modal — Post-Deposit Sparplan Upsell",
+            "🛡️ Format B: Sticky Bottom Slide-Up — Biometric FaceID Activation",
+            "🪙 Format C: Contextual Balance Card — Idle Cash Yield Nudge"
+        ]
+    )
+    
+    if "Format A" in iam_scenario:
+        st.markdown('''
+        <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:14px; padding:2rem; max-width:550px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
+            <div style="font-size:2.8rem; margin-bottom:0.4rem;">🎉 💶 📈</div>
+            <h3 style="color:#38bdf8; margin:0 0 6px 0;">Erste Einzahlung von 100€ erfolgreich!</h3>
+            <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.5; margin:0 0 16px 0;">
+                Dein Guthaben ist sofort handelsbereit. Möchtest du diese Einzahlung jeden Monat automatisch wiederholen und stressfrei Vermögen aufbauen?
+            </p>
+            <div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.84rem; text-align:left;">
+                <strong>✅ Dein Vorteil:</strong> 0€ Gebühren auf automatische Sparpläne • Jederzeit mit 1 Klick pausierbar.
+            </div>
+            <div style="display:flex; gap:10px; justify-content:center;">
+                <span style="background:#0284c7; color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:0.9rem; cursor:pointer;">Als monatlichen Sparplan aktivieren &rarr;</span>
+            </div>
+            <div style="margin-top:10px; font-size:0.75rem; color:#94a3b8; cursor:pointer;">Nein danke, vorerst nur einmalig</div>
+        </div>
+        ''', unsafe_allow_html=True)
+        st.success("📈 **Quantified Impact:** +31.4% Direct Conversion from First Deposit into Recurring Monthly Sparplan.")
+        
+    elif "Format B" in iam_scenario:
+        st.markdown('''
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                <div>
+                    <span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">SICHERHEIT & KOMFORT</span>
+                    <h4 style="color:#0f172a; margin:6px 0 4px 0;">FaceID / Fingerabdruck aktivieren? 🛡️</h4>
+                    <p style="color:#475569; font-size:0.88rem; line-height:1.5; margin:0;">
+                        Logge dich in 0.5 Sekunden ein und schütze dein Konto ohne Passwörter.
+                    </p>
+                </div>
+                <div style="font-size:2rem;">🔐</div>
+            </div>
+            <div style="margin-top:14px; display:flex; gap:8px;">
+                <span style="background:#059669; color:#fff; padding:8px 18px; border-radius:6px; font-weight:700; font-size:0.85rem;">Jetzt 1-Klick aktivieren &rarr;</span>
+                <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:6px; font-weight:600; font-size:0.85rem;">Später</span>
+            </div>
+        </div>
+        ''', unsafe_allow_html=True)
+        st.success("📈 **Quantified Impact:** Reduces authentication friction and increases 30-day App Open Frequency by +42.0%.")
+        
+    else:
+        st.markdown('''
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <strong style="color:#0284c7; font-size:0.95rem;">🪙 Dein EUR-Guthaben arbeitet noch nicht</strong>
+                <span style="background:#0284c7; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:800;">3.2% P.A.</span>
+            </div>
+            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5; margin:0 0 12px 0;">
+                Du hast <strong>€850 uninvestiertes Bargeld</strong> auf deinem Konto. Aktiviere tägliche Zinsausschüttung oder setze einen automatischen Limit-Kauf bei Markt-Dips.
+            </p>
+            <div style="display:flex; gap:8px;">
+                <span style="background:#0284c7; color:#fff; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Zinsen aktivieren &rarr;</span>
+                <span style="background:#ffffff; color:#0284c7; border:1px solid #bae6fd; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Limit Order setzen</span>
+            </div>
+        </div>
+        ''', unsafe_allow_html=True)
+        st.success("📈 **Quantified Impact:** +24.6% Deployment of Idle Cash Reserves into Active Trading and Yield.")
 
 # ==========================================
 # MODULE 8: CASE 7 - STALLED DEPOSIT
