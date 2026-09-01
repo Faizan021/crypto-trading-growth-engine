@@ -179,34 +179,29 @@ exp_path = os.path.join(base_dir, 'config', 'email_experiments.json')
 
 df_funnel = pd.read_csv(funnel_path) if os.path.exists(funnel_path) else pd.DataFrame()
 df_dca = pd.read_csv(dca_path) if os.path.exists(dca_path) else pd.DataFrame()
-experiments = {}
-if os.path.exists(exp_path):
-    with open(exp_path, 'r', encoding='utf-8') as f:
-        experiments = json.load(f)
+
+# Master Navigation Menu Array
+NAV_MODULES = [
+    "📊 1. Executive Performance Dashboard",
+    "✉️ 2. Case 1: Transactional Activation Momentum",
+    "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker",
+    "📰 4. Case 3: Editorial Newsletter Personalization",
+    "🎯 5. Case 4: Exchange CRM & Retention KPIs",
+    "📈 6. Case 5: 5-Year Sparplan (DCA) Cohort Model",
+    "📲 7. Case 6: Mobile Push & Volatility Engine (4 Scenarios)",
+    "📱 8. Case 7: In-App Message (IAM) Contextual Conversion Suite",
+    "🏦 9. Case 8: Stalled-Deposit Recovery Flow",
+    "🏆 10. Case 9: Milestone Habit Gamification",
+    "🪙 11. Case 10: Idle Asset Staking Yield Nudge",
+    "🛠️ 12. Case 11: CRM Automation Architecture",
+    "👥 13. Case 12: Cross-Functional Alignment Framework",
+    "💻 14. Case 13: Production Liquid & SQL Schemas"
+]
 
 # Sidebar Navigation
 st.sidebar.title("Faizex CRM Platform")
 st.sidebar.markdown("**Operational Modules**")
-
-nav_choice = st.sidebar.radio(
-    "Select Strategic Module:",
-    [
-        "📊 1. Executive Performance Dashboard",
-        "✉️ 2. Case 1: Transactional Activation Momentum",
-        "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker",
-        "📰 4. Case 3: Editorial Newsletter Personalization",
-        "🎯 5. Case 4: Exchange CRM & Retention KPIs",
-        "📈 6. Case 5: 5-Year Sparplan (DCA) Cohort Model",
-        "📲 7. Case 6: Mobile Push & Volatility Engine (4 Scenarios)",
-        "📱 8. Case 7: In-App Message (IAM) Contextual Conversion Suite",
-        "🏦 9. Case 8: Stalled-Deposit Recovery Flow",
-        "🏆 10. Case 9: Milestone Habit Gamification",
-        "🪙 11. Case 10: Idle Asset Staking Yield Nudge",
-        "🛠️ 12. Case 11: CRM Automation Architecture",
-        "👥 13. Case 12: Cross-Functional Alignment Framework",
-        "💻 14. Case 13: Production Liquid & SQL Schemas"
-    ]
-)
+nav_choice = st.sidebar.radio("Select Strategic Module:", NAV_MODULES)
 
 st.sidebar.markdown("---")
 st.sidebar.caption("Portfolio Project | Faizan Ahmed")
@@ -214,7 +209,7 @@ st.sidebar.caption("Portfolio Project | Faizan Ahmed")
 # ==========================================
 # MODULE 1: EXECUTIVE DASHBOARD
 # ==========================================
-if "1. Executive" in nav_choice:
+if nav_choice == NAV_MODULES[0]:
     st.markdown("### Executive Summary — Monthly Retail Throughput & Custody Metrics")
     
     col1, col2, col3, col4 = st.columns(4)
@@ -251,17 +246,17 @@ if "1. Executive" in nav_choice:
         </div>
         """, unsafe_allow_html=True)
         
-    st.markdown('''
+    st.markdown("""
     <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 18px; margin: 12px 0 16px 0; font-size:0.9rem; color:#1e293b; line-height:1.6; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
-        <strong style="color:#0284c7; font-size:0.95rem;">📋 Executive Narrative — What This Summary Proves:</strong><br>
-        This executive scorecard shows that our CRM strategy is not just sending emails—it is transforming the exchange's economics:
+        <strong style="color:#0284c7; font-size:0.95rem;">Executive Narrative — What This Summary Proves:</strong><br>
+        This executive scorecard shows that our CRM strategy is transforming the exchange's core unit economics:
         <ul style="margin:6px 0 0 0; padding-left:20px;">
-            <li><strong>Fixing Acquisition Leaks:</strong> By breaking Video-Ident friction, we converted <strong>39.4% of signups into verified active traders</strong> (vs. 28.4% industry baseline), directly reducing wasted marketing ad spend.</li>
-            <li><strong>Creating Predictable Revenue:</strong> Shifting retail users from erratic manual trading into automated monthly <strong>Sparpläne (DCA)</strong> increased 12-month customer retention from <strong>22.8% to 59.2% (a 2.6x improvement)</strong>.</li>
+            <li><strong>Fixing Acquisition Leaks:</strong> By breaking Video-Ident friction, we converted <strong>39.4% of signups into verified active traders</strong> (vs. 28.4% industry baseline), directly reducing wasted paid ad spend.</li>
+            <li><strong>Creating Predictable Revenue:</strong> Shifting retail users from erratic manual trading into automated monthly <strong>Sparplans (DCA)</strong> increased 12-month customer retention from <strong>22.8% to 59.2% (a 2.6x improvement)</strong>.</li>
             <li><strong>Building Institutional Custodial Depth:</strong> Long-term recurring accumulators reach an average of <strong>€9,850 in Assets Under Custody (AUC)</strong> within 24 months, providing stable trading spread and staking yield revenue.</li>
         </ul>
     </div>
-    ''', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     
     col_left, col_right = st.columns([1.25, 1])
     with col_left:
@@ -269,7 +264,7 @@ if "1. Executive" in nav_choice:
         st.markdown("""
         <div class="expl-box-blue">
             <strong style="color:#0284c7; font-size:0.92rem;">💡 Why this Funnel matters for CRM:</strong><br>
-            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys (Cases 1, 2, and 7) eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
+            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys (Cases 1, 2, and 8) eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
         </div>
         """, unsafe_allow_html=True)
         
@@ -278,7 +273,7 @@ if "1. Executive" in nav_choice:
             {"step": "02", "name": "Email Address Confirmed (Case 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7"},
             {"step": "03", "name": "Video-Ident Call Initiated (Case 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669"},
             {"step": "04", "name": "KYC Verification Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#059669"},
-            {"step": "05", "name": "First Bank / SEPA Deposit (Case 7)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
+            {"step": "05", "name": "First Bank / SEPA Deposit (Case 8)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
             {"step": "06", "name": "First Trade Executed (Activated)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#7c3aed"}
         ]
         
@@ -306,7 +301,7 @@ if "1. Executive" in nav_choice:
         st.markdown("""
         <div class="expl-box-green">
             <strong style="color:#059669; font-size:0.92rem;">💡 How Custody Distribution Drives CRM Personalization:</strong><br>
-            Retention is maximized when CRM messaging matches what the user holds. We use automated Braze segments to trigger tailored next steps: <strong>DCA Sparpläne for BTC</strong>, <strong>Staking Rewards for ETH</strong>, and <strong>Limit Alerts for Cash</strong>.
+            Retention is maximized when CRM messaging matches what the user holds. We use automated Braze segments to trigger tailored next steps: <strong>DCA Sparplans for BTC</strong>, <strong>Staking Rewards for ETH</strong>, and <strong>Limit Alerts for Cash</strong>.
         </div>
         """, unsafe_allow_html=True)
         
@@ -335,9 +330,9 @@ if "1. Executive" in nav_choice:
         st.caption("ℹ️ **Data Benchmark Source:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and DACH multi-asset exchange distributions.")
 
 # ==========================================
-# MODULE 2: CASE 1
+# MODULE 2: CASE 1 - TRANSACTIONAL CONFIRMATION
 # ==========================================
-elif "2. Case 1" in nav_choice:
+elif nav_choice == NAV_MODULES[1]:
     st.markdown("### Case 1: Transactional Confirmation & Activation Momentum")
     st.markdown("**Executive Context:** Transactional confirmation emails command a **68.2% open rate** (the highest in the customer lifecycle). Treating this email as a plain administrative stop wastes peak customer motivation.")
     
@@ -393,9 +388,9 @@ elif "2. Case 1" in nav_choice:
         """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 3: CASE 2
+# MODULE 3: CASE 2 - ONBOARDING / KYC
 # ==========================================
-elif "3. Case 2" in nav_choice:
+elif nav_choice == NAV_MODULES[2]:
     st.markdown("### Case 2: Onboarding & Video-Ident Friction Breaker")
     st.markdown("**Executive Context:** In regulated European markets (BaFin & MiCA), identity verification creates a major cognitive barrier. Our hypothesis replaces dense paragraphs with a 3-step time-stamped checklist and mobile deep-linking.")
     
@@ -451,15 +446,14 @@ elif "3. Case 2" in nav_choice:
         """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 4: CASE 3
+# MODULE 4: CASE 3 - NEWSLETTER DYNAMIC CTAS
 # ==========================================
-elif "4. Case 3" in nav_choice:
+elif nav_choice == NAV_MODULES[3]:
     st.markdown("### Case 3: Monthly Market Newsletter Personalization")
     st.markdown("**Executive Context:** Preserves 100% of high-quality macro storytelling, but uses **Liquid logic** to dynamically adapt the Call-to-Action module based on real-time subscriber lifecycle state.")
     
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("##### 🔴 Control (Single Static CTA)")
         st.markdown("""
         <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
             <p style="color:#64748b; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Faizex Market Digest for August 📰</p>
@@ -474,7 +468,14 @@ elif "4. Case 3" in nav_choice:
         """, unsafe_allow_html=True)
         
     with col2:
-        st.markdown("##### 🟢 Variant B (Dynamic Liquid CTAs)")
+        st.markdown("""
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
+            <p style="color:#0284c7; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
+            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5;">
+                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. [Macro Report Preserved in Full]...
+            </p>
+        """, unsafe_allow_html=True)
+        
         selected_persona = st.selectbox(
             "Select Subscriber Lifecycle Persona:",
             [
@@ -484,14 +485,6 @@ elif "4. Case 3" in nav_choice:
                 "Dormant Account (>60 Days Inactive)"
             ]
         )
-        
-        st.markdown("""
-        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
-            <p style="color:#0284c7; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
-            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5;">
-                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. [Macro Report Preserved in Full]...
-            </p>
-        """, unsafe_allow_html=True)
         
         if "Unverified" in selected_persona:
             st.markdown("""
@@ -529,7 +522,7 @@ elif "4. Case 3" in nav_choice:
 # ==========================================
 # MODULE 5: CASE 4 - KPIS
 # ==========================================
-elif "5. Case 4" in nav_choice:
+elif nav_choice == NAV_MODULES[4]:
     st.markdown("### Case 4: Exchange CRM & Retention KPI Framework")
     
     kpis = [
@@ -571,22 +564,22 @@ elif "5. Case 4" in nav_choice:
 # ==========================================
 # MODULE 6: CASE 5 - SPARPLAN LTV
 # ==========================================
-elif "6. Case 5" in nav_choice:
+elif nav_choice == NAV_MODULES[5]:
     st.markdown("### 📈 Case 5: The Sparplan (DCA) Retention Engine — Why it Matters in CRM")
     
-    st.markdown('''
+    st.markdown("""
     <div class="expl-box-blue">
         <strong style="color:#0284c7; font-size:1rem;">💡 The CRM Strategy in Simple Words:</strong><br>
         <strong>1. The Problem in Trading Apps:</strong> When users buy crypto manually, they check the price every day. When the market goes down or sideways, they get scared, stop trading, and <strong>77% leave the app within 12 months</strong>.<br>
-        <strong>2. What We Did (CRM Campaign):</strong> Instead of telling them to "Trade Today", our automated lifecycle emails & in-app nudges pitch <strong>Automated Monthly Sparpläne (DCA) from €25/month</strong> right on European payday (1st of each month).<br>
+        <strong>2. What We Did (CRM Campaign):</strong> Instead of telling them to "Trade Today", our automated lifecycle emails & in-app nudges pitch <strong>Automated Monthly Sparplans (DCA) from €25/month</strong> right on European payday (1st of each month).<br>
         <strong>3. The 5-Year Result:</strong> Because their deposit is automatic, users stay active for years—increasing 12-month retention from <strong>22.8% to 59.2% (2.6x higher loyalty)</strong> and accumulating over <strong>€9,850 in Assets Under Custody (AUC)</strong>.
     </div>
-    ''', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     
     st.markdown("#### ✉️ The Automated CRM Campaign We Deployed:")
     col_c1, col_c2 = st.columns(2)
     with col_c1:
-        st.markdown('''
+        st.markdown("""
         <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
             <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: 1st of Month (Payday Cycle) • EMAIL</div>
             <strong style="color:#0f172a; font-size:0.95rem;">Stress-Free Wealth: Automate your Bitcoin & ETF Sparplan 📈</strong>
@@ -597,9 +590,9 @@ elif "6. Case 5" in nav_choice:
                 <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Set Up 1-Click Sparplan &rarr;</span>
             </div>
         </div>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
     with col_c2:
-        st.markdown('''
+        st.markdown("""
         <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
             <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: €500 Milestone Crossed • IN-APP MODAL</div>
             <strong style="color:#0f172a; font-size:0.95rem;">🎉 Milestone Reached: You're in the Top 25% of Disciplined Savers!</strong>
@@ -610,7 +603,7 @@ elif "6. Case 5" in nav_choice:
                 <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
             </div>
         </div>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
         
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("#### 📊 The Quantified 5-Year Impact on Customer Loyalty & Assets:")
@@ -645,17 +638,17 @@ elif "6. Case 5" in nav_choice:
         st.caption("🔵 **Why the blue area grows huge:** Small monthly deposits compound into thousands of euros, creating high-value customer lifetime value (LTV).")
 
 # ==========================================
-# MODULE 7: CASE 6 - VOLATILITY PUSH
+# MODULE 7: CASE 6 - MOBILE PUSH SCENARIOS
 # ==========================================
-elif "7. Case 6" in nav_choice:
+elif nav_choice == NAV_MODULES[6]:
     st.markdown("### 📲 Case 6: Real-Time Mobile Push & Volatility Engine (4 Scenarios)")
     
-    st.markdown('''
+    st.markdown("""
     <div class="expl-box-blue">
         <strong style="color:#0284c7; font-size:1rem;">💡 Why Mobile Push is Crucial for Trading Platforms:</strong><br>
         In financial trading, mobile push notifications drive instant engagement during critical market moves. However, aggressive or misleading spam creates push fatigue (users turn off notifications). Our <strong>Braze Push Engine</strong> pairs factual market movements with <strong>smart execution tools (Limit Orders) and a strict 24-hour frequency cap</strong>.
     </div>
-    ''', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     
     st.markdown("#### 🎯 Select Real-World Push Scenario to Preview:")
     push_scenario = st.selectbox(
@@ -697,7 +690,7 @@ elif "7. Case 6" in nav_choice:
         impact_note = "Reduces failed bank direct-debits by 38.2% via advance balance awareness."
         badge_color = "#7c3aed"
         
-    st.markdown(f'''
+    st.markdown(f"""
     <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.4rem; max-width:650px; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:1rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
             <div style="display:flex; align-items:center; gap:8px;">
@@ -715,18 +708,21 @@ elif "7. Case 6" in nav_choice:
             <span style="color:#059669; font-weight:700;">🛡️ 24h Frequency Capped</span>
         </div>
     </div>
-    ''', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     st.success(f"📈 **Quantified Impact:** {impact_note}")
 
-elif "8. Case 7: In-App Message" in nav_choice:
+# ==========================================
+# MODULE 8: CASE 7 - IN-APP MESSAGE SUITE
+# ==========================================
+elif nav_choice == NAV_MODULES[7]:
     st.markdown("### 📱 Case 7: In-App Message (IAM) Contextual Conversion Suite")
     
-    st.markdown('''
+    st.markdown("""
     <div class="expl-box-green">
         <strong style="color:#059669; font-size:1rem;">💡 Why In-App Messages (IAM) Deliver the Highest Conversion:</strong><br>
         Unlike emails (which get lost in inboxes) or push notifications (which require opt-in permissions), <strong>In-App Messages have a 100% delivery rate</strong> because they appear while the user is actively using the app. They guide the user to the exact next lifecycle milestone with zero friction.
     </div>
-    ''', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     
     iam_scenario = st.selectbox(
         "Select In-App Message (IAM) Campaign Format:",
@@ -738,7 +734,7 @@ elif "8. Case 7: In-App Message" in nav_choice:
     )
     
     if "Format A" in iam_scenario:
-        st.markdown('''
+        st.markdown("""
         <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:14px; padding:2rem; max-width:550px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
             <div style="font-size:2.8rem; margin-bottom:0.4rem;">🎉 💶 📈</div>
             <h3 style="color:#38bdf8; margin:0 0 6px 0;">First Deposit of €100 Successful!</h3>
@@ -746,18 +742,18 @@ elif "8. Case 7: In-App Message" in nav_choice:
                 Your funds are ready for trading. Would you like to automate this €100 deposit every month to build wealth stress-free?
             </p>
             <div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.84rem; text-align:left;">
-                <strong>✅ Dein Vorteil:</strong> 0€ Gebühren auf automatische Sparpläne • Jederzeit mit 1 Klick pausierbar.
+                <strong>✅ Key Benefit:</strong> 0€ fees on automated Sparplans • Pause or adjust anytime with 1 click.
             </div>
             <div style="display:flex; gap:10px; justify-content:center;">
                 <span style="background:#0284c7; color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:0.9rem; cursor:pointer;">Activate as Monthly Sparplan &rarr;</span>
             </div>
             <div style="margin-top:10px; font-size:0.75rem; color:#94a3b8; cursor:pointer;">No thanks, keep as one-time deposit</div>
         </div>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
         st.success("📈 **Quantified Impact:** +31.4% Direct Conversion from First Deposit into Recurring Monthly Sparplan.")
         
     elif "Format B" in iam_scenario:
-        st.markdown('''
+        st.markdown("""
         <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
             <div style="display:flex; justify-content:space-between; align-items:flex-start;">
                 <div>
@@ -774,11 +770,11 @@ elif "8. Case 7: In-App Message" in nav_choice:
                 <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:6px; font-weight:600; font-size:0.85rem;">Maybe Later</span>
             </div>
         </div>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
         st.success("📈 **Quantified Impact:** Reduces authentication friction and increases 30-day App Open Frequency by +42.0%.")
         
     else:
-        st.markdown('''
+        st.markdown("""
         <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                 <strong style="color:#0284c7; font-size:0.95rem;">🪙 Put Your Idle EUR Cash to Work</strong>
@@ -792,14 +788,14 @@ elif "8. Case 7: In-App Message" in nav_choice:
                 <span style="background:#ffffff; color:#0284c7; border:1px solid #bae6fd; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Set Limit Order</span>
             </div>
         </div>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
         st.success("📈 **Quantified Impact:** +24.6% Deployment of Idle Cash Reserves into Active Trading and Yield.")
 
 # ==========================================
-# MODULE 8: CASE 7 - STALLED DEPOSIT
+# MODULE 9: CASE 8 - STALLED DEPOSIT RECOVERY
 # ==========================================
-elif "8. Case 7: Stalled-Deposit Recovery" in nav_choice:
-    st.markdown("### Case 7: Stalled-Deposit Recovery Flow")
+elif nav_choice == NAV_MODULES[8]:
+    st.markdown("### 🏦 Case 8: Stalled-Deposit Recovery Flow (High-Intent Capital Rescue)")
     st.markdown("**Executive Context:** Recovers verified users who stalled before initiating their first bank transfer using a 15-minute in-app slide-up and a 24-hour supportive care email.")
     
     c1, c2 = st.columns(2)
@@ -811,6 +807,9 @@ elif "8. Case 7: Stalled-Deposit Recovery" in nav_choice:
             <p style="color:#334155; font-size:0.84rem; margin:4px 0 0 0;">
                 Tap below to copy your dedicated IBAN directly into your banking app. 0€ deposit fee, ready in minutes.
             </p>
+            <div style="margin-top:8px;">
+                <span style="background:#d97706; color:#fff; padding:4px 12px; border-radius:4px; font-size:0.75rem; font-weight:700;">Copy IBAN & Finish &rarr;</span>
+            </div>
         </div>
         """, unsafe_allow_html=True)
     with c2:
@@ -821,33 +820,39 @@ elif "8. Case 7: Stalled-Deposit Recovery" in nav_choice:
             <p style="color:#334155; font-size:0.84rem; margin:4px 0 0 0;">
                 Reassuring customer care explaining SEPA instant settlement, zero fees, and European custody security.
             </p>
+            <div style="margin-top:8px;">
+                <span style="background:#059669; color:#fff; padding:4px 12px; border-radius:4px; font-size:0.75rem; font-weight:700;">View 1-Click Guide &rarr;</span>
+            </div>
         </div>
         """, unsafe_allow_html=True)
     st.success("📈 **Quantified Impact:** +20.3% First-Deposit Recovery Rate (+64% Email CTR).")
 
 # ==========================================
-# MODULE 9: CASE 8 - MILESTONE GAMIFICATION
+# MODULE 10: CASE 9 - MILESTONE GAMIFICATION
 # ==========================================
-elif "9. Case 8: Milestone Habit Gamification" in nav_choice:
-    st.markdown("### Case 8: Milestone Habit Gamification (Goal Gradient DCA)")
+elif nav_choice == NAV_MODULES[9]:
+    st.markdown("### 🏆 Case 9: Milestone Habit Gamification (Goal Gradient DCA)")
     st.markdown("**Executive Context:** Based on the Goal Gradient Effect: celebrates users reaching €500, €1,000, or €5,000 AUC milestones to drive Sparplan retention.")
     
     st.markdown("""
     <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px; min-height:auto;">
         <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">IN-APP MILESTONE CELEBRATION (AUC CROSSED €1,000)</div>
         <strong style="color:#0f172a; font-size:1rem;">🎉 Congratulations! You Crossed the €1,000 Savings Milestone!</strong>
-        <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.4;">
+        <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
             You are now in the top 25% of disciplined long-term accumulators on Faizex. Increase your Sparplan by +€25/month to reach your €2,500 goal 4 months faster.
         </p>
+        <div style="margin-top:10px;">
+            <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
+        </div>
     </div>
     """, unsafe_allow_html=True)
     st.success("📈 **Quantified Impact:** 59.2% 12-Month Retention / +52.4% Sparplan Upgrade Velocity.")
 
 # ==========================================
-# MODULE 10: CASE 9 - STAKING
+# MODULE 11: CASE 10 - IDLE STAKING YIELD
 # ==========================================
-elif "10. Case 9: Idle Asset Staking" in nav_choice:
-    st.markdown("### Case 9: Idle Asset Staking Yield Nudge")
+elif nav_choice == NAV_MODULES[10]:
+    st.markdown("### 🪙 Case 10: Idle Asset Staking Yield Nudge")
     st.markdown("**Executive Context:** Translates un-staked crypto holdings into concrete annual EUR rewards to overcome user inertia.")
     
     tok = st.selectbox("Asset Held in Custody:", ["Ethereum (ETH)", "Solana (SOL)", "Cardano (ADA)"])
@@ -865,23 +870,27 @@ elif "10. Case 9: Idle Asset Staking" in nav_choice:
                 <span style="color:#64748b; font-size:0.82rem;">100% Insured European Custody.</span>
             </div>
             <div style="text-align:right;">
-                <span style="color:#059669; font-size:1.2rem; font-weight:700;">+€{ann} / Jahr</span><br>
-                <span style="color:#64748b; font-size:0.75rem;">(~€{mo}/Monat)</span>
+                <span style="color:#059669; font-size:1.2rem; font-weight:700;">+€{ann} / Year</span><br>
+                <span style="color:#64748b; font-size:0.75rem;">(~€{mo}/Month)</span>
             </div>
+        </div>
+        <div style="margin-top:10px;">
+            <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Activate Staking with 1 Click &rarr;</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
     st.success("📈 **Quantified Impact:** +3.4x Staking Product Adoption Rate (27.8% Conversion).")
 
 # ==========================================
-# MODULE 11: CASE 10 - CRM ARCHITECTURE
+# MODULE 12: CASE 11 - CRM ARCHITECTURE
 # ==========================================
-elif "11. Case 10: CRM Automation Architecture" in nav_choice:
-    st.markdown("### Case 10: CRM Automation Architecture & State Machine")
+elif nav_choice == NAV_MODULES[11]:
+    st.markdown("### 🛠️ Case 11: CRM Automation Architecture & State Machine")
     st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
     
     st.code('''
 def dispatch_with_idempotency(campaign_id, user_id, payload):
+    # Generate unique idempotency key: campaign_id:user_id:date
     idempotency_key = hashlib.sha256(f"{campaign_id}:{user_id}:2026_09_01".encode()).hexdigest()
     existing_log = db.get_log(idempotency_key)
     if existing_log and existing_log.status == "DISPATCHED":
@@ -895,10 +904,10 @@ def dispatch_with_idempotency(campaign_id, user_id, payload):
     st.success("📈 **Quantified Impact:** 100% Crash-Resilient Delivery (Zero Duplicate Broadcast Sends).")
 
 # ==========================================
-# MODULE 12: CASE 11 - CROSS FUNCTIONAL
+# MODULE 13: CASE 12 - CROSS-FUNCTIONAL
 # ==========================================
-elif "12. Case 11: Cross-Functional" in nav_choice:
-    st.markdown("### Case 11: Cross-Functional Collaboration & Delivery Framework")
+elif nav_choice == NAV_MODULES[12]:
+    st.markdown("### 👥 Case 12: Cross-Functional Collaboration & Delivery Framework")
     st.markdown("""
     | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
     |---|---|---|
@@ -906,13 +915,13 @@ elif "12. Case 11: Cross-Functional" in nav_choice:
     | **Product & Mobile** | In-App message triggers, App deep-links | Testing custom URI schemes (`faizex://verify/video-ident`) across native app releases. |
     | **UX / UI Design** | Responsive HTML templates & design tokens | Accessible dark/light mode compatibility and 48px mobile touch targets. |
     | **Legal & BaFin** | Regulatory compliance & Double-Opt-In (DOI) | Audit-proof DOI consent ledgers and crypto risk disclaimers. |
-    """)
+    """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 13: CASE 12 - TECHNICAL STACK
+# MODULE 14: CASE 13 - TECHNICAL STACK
 # ==========================================
-elif "13. Case 12: Technical CRM Stack" in nav_choice:
-    st.markdown("### Case 12: Production Liquid & SQL Schemas")
+elif nav_choice == NAV_MODULES[13]:
+    st.markdown("### 💻 Case 13: Production Liquid & SQL Schemas")
     st.markdown("##### 1. Braze Liquid Conditional Block")
     st.code("""
 {% if user.kyc_status != 'approved' %}
