@@ -22,30 +22,55 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
     
     html, body, [class*="css"] {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter', sans-serif !important;
     }
     code, pre {
         font-family: 'JetBrains Mono', monospace !important;
     }
     
+    /* Generous Sidebar Spacing */
+    section[data-testid="stSidebar"] {
+        background-color: #0b0f19 !important;
+    }
+    section[data-testid="stSidebar"] .stRadio > div {
+        gap: 8px !important;
+    }
+    section[data-testid="stSidebar"] .stRadio label {
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        color: #cbd5e1 !important;
+        padding: 8px 12px !important;
+        margin-bottom: 6px !important;
+        background: #0f172a !important;
+        border: 1px solid #1e293b !important;
+        border-radius: 8px !important;
+        transition: all 0.2s ease !important;
+        line-height: 1.45 !important;
+    }
+    section[data-testid="stSidebar"] .stRadio label:hover {
+        border-color: #38bdf8 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Executive Top Hero */
     .exec-header {
         background: #0f172a;
         border: 1px solid #1e293b;
-        border-radius: 8px;
-        padding: 1.5rem 1.8rem;
+        border-radius: 10px;
+        padding: 1.6rem 2rem;
         margin-bottom: 1.5rem;
     }
     .exec-title {
-        font-size: 1.7rem;
-        font-weight: 700;
-        color: #f8fafc;
+        font-size: 1.85rem;
+        font-weight: 800;
+        color: #ffffff;
         letter-spacing: -0.02em;
         margin-bottom: 0.3rem;
     }
     .exec-sub {
-        font-size: 0.92rem;
-        color: #94a3b8;
-        line-height: 1.5;
+        font-size: 0.98rem;
+        color: #cbd5e1;
+        line-height: 1.6;
         margin: 0;
     }
     .badge-reg {
@@ -53,77 +78,94 @@ st.markdown("""
         background: #064e3b;
         color: #6ee7b7;
         border: 1px solid #047857;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.72rem;
-        font-weight: 600;
+        padding: 3px 12px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        margin-right: 6px;
+        margin-right: 8px;
     }
     .badge-crm {
         display: inline-block;
         background: #1e1b4b;
         color: #c7d2fe;
         border: 1px solid #3730a3;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.72rem;
-        font-weight: 600;
+        padding: 3px 12px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
+    
+    /* Metric Cards */
     .exec-card {
-        background: #0f172a;
-        border: 1px solid #1e293b;
-        border-radius: 8px;
-        padding: 1.2rem;
-        text-align: left;
-        min-height: 145px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        background: #0f172a !important;
+        border: 1px solid #1e293b !important;
+        border-radius: 10px !important;
+        padding: 1.3rem !important;
+        text-align: left !important;
+        min-height: 155px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
     }
     .exec-card-val {
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: #38bdf8;
-        margin-bottom: 2px;
+        font-size: 1.9rem !important;
+        font-weight: 800 !important;
+        color: #38bdf8 !important;
+        margin: 4px 0 !important;
     }
     .exec-card-lbl {
-        font-size: 0.75rem;
-        color: #94a3b8;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+        font-size: 0.8rem !important;
+        color: #94a3b8 !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.6px !important;
     }
     .exec-card-sub {
-        font-size: 0.75rem;
-        color: #10b981;
-        margin-top: 4px;
-        font-weight: 500;
+        font-size: 0.8rem !important;
+        color: #34d399 !important;
+        font-weight: 600 !important;
     }
-    .email-container-a {
-        background: #0f172a;
-        border: 1px solid #334155;
-        border-radius: 8px;
-        padding: 1.4rem;
-        margin-bottom: 1rem;
+    
+    /* Explanatory Callout Boxes - Ultra High Contrast */
+    .expl-box-blue {
+        background: #0f172a !important;
+        border: 1px solid #0284c7 !important;
+        border-left: 5px solid #38bdf8 !important;
+        border-radius: 8px !important;
+        padding: 14px 18px !important;
+        margin-bottom: 14px !important;
+        font-size: 0.92rem !important;
+        color: #f1f5f9 !important;
+        line-height: 1.6 !important;
     }
-    .email-container-b {
-        background: #091322;
-        border: 1px solid #0284c7;
-        border-radius: 8px;
-        padding: 1.4rem;
-        margin-bottom: 1rem;
+    .expl-box-green {
+        background: #0f172a !important;
+        border: 1px solid #059669 !important;
+        border-left: 5px solid #10b981 !important;
+        border-radius: 8px !important;
+        padding: 14px 18px !important;
+        margin-bottom: 14px !important;
+        font-size: 0.92rem !important;
+        color: #f1f5f9 !important;
+        line-height: 1.6 !important;
     }
-    .table-header {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: #94a3b8;
-        text-transform: uppercase;
-        border-bottom: 1px solid #1e293b;
-        padding-bottom: 6px;
+    
+    /* Conversion Stage Cards */
+    .funnel-card {
+        background: #0f172a !important;
+        border: 1px solid #1e293b !important;
+        border-radius: 8px !important;
+        padding: 12px 16px !important;
+        margin-bottom: 10px !important;
+        transition: all 0.2s ease !important;
+    }
+    .funnel-card:hover {
+        border-color: #38bdf8 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -230,9 +272,9 @@ if "1. Executive Performance Dashboard" in nav_choice:
     with col_left:
         st.markdown("#### ⚡ Onboarding Conversion Funnel (Per 10,000 Signups)")
         st.markdown('''
-        <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:8px; padding:10px 14px; margin-bottom:12px; font-size:0.84rem; color:#cbd5e1; line-height:1.5;">
-            <strong style="color:#38bdf8;">💡 Why this Funnel matters for CRM:</strong><br>
-            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys (Cases 1, 2, and 7) eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% relative lift)</strong>.
+        <div class="expl-box-blue">
+            <strong style="color:#38bdf8; font-size:0.95rem;">💡 Why this Funnel matters for CRM Strategy:</strong><br>
+            In regulated trading apps, over 60% of signups drop off before finishing ID verification or funding. This live model demonstrates how our multi-channel lifecycle journeys (Cases 1, 2, and 7) rescue drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
         </div>
         ''', unsafe_allow_html=True)
         
@@ -267,9 +309,9 @@ if "1. Executive Performance Dashboard" in nav_choice:
     with col_right:
         st.markdown("#### 🪙 Assets Under Custody (AUC) Segmentation")
         st.markdown('''
-        <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.25); border-radius:8px; padding:10px 14px; margin-bottom:12px; font-size:0.84rem; color:#cbd5e1; line-height:1.5;">
-            <strong style="color:#34d399;">💡 How Asset Distribution Drives CRM Campaigns:</strong><br>
-            Retention is maximized when CRM messaging matches what the user holds. We use automated Braze segments to trigger tailored next steps (e.g. DCA Sparplan for BTC, Staking rewards for ETH, Limit alerts for Cash).
+        <div class="expl-box-green">
+            <strong style="color:#34d399; font-size:0.95rem;">💡 How Custody Distribution Drives CRM Personalization:</strong><br>
+            Retention is maximized when messaging aligns directly with what the user holds. We use real-time Braze segments to trigger tailored next steps: <strong>Automated DCA Sparpläne for BTC</strong>, <strong>Staking Rewards for ETH</strong>, and <strong>Limit Order Alerts for Cash</strong>.
         </div>
         ''', unsafe_allow_html=True)
         
