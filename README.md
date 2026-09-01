@@ -1,4 +1,4 @@
-# Faizan Ahmed — Regulated Retail CRM Marketing & Retention Portfolio
+# Faizan's Portfolio — FinTech & Crypto CRM Marketing & Retention Engine
 ### 🦬 1:1 Application Blueprint for BISON (Boerse Stuttgart Digital) CRM-Manager
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-trading-growth-engine.streamlit.app/)

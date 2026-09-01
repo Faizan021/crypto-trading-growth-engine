@@ -10,7 +10,7 @@ import time
 import plotly.graph_objects as go
 
 st.set_page_config(
-    page_title="Faizan Ahmed | Regulated Crypto & Retail CRM Portfolio",
+    page_title="Faizan Ahmed | FinTech & Crypto CRM Portfolio",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -170,7 +170,7 @@ st.markdown("""
 <span class="badge-reg">PORTFOLIO CASE STUDY</span>
 <span class="badge-crm">LIFECYCLE MARKETING & RETENTION STRATEGY</span>
 </div>
-<div class="exec-title">Faizan Ahmed — CRM Lifecycle & Retention Portfolio</div>
+<div class="exec-title">Faizan's Portfolio — FinTech & Crypto CRM Engine</div>
 <p class="exec-sub">
 <em>A simulated case study in retail fintech CRM: turning first-time signups into long-term, high-value customers through activation funnel redesign, behavioral segmentation, and recurring-revenue product strategy. All data synthetic.</em>
 </p>
@@ -198,7 +198,8 @@ NAV_MODULES = [
 ]
 
 # Sidebar Navigation
-st.sidebar.title("Faizan Ahmed — CRM Portfolio")
+st.sidebar.title("Faizan's CRM Portfolio")
+st.sidebar.caption("FinTech & Crypto Lifecycle Engine")
 st.sidebar.markdown("**Customer Lifecycle Stages**")
 nav_choice = st.sidebar.radio("Select Lifecycle Stage:", NAV_MODULES)
 
