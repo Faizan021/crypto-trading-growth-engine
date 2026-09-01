@@ -262,6 +262,7 @@ if "1. Executive CRM Dashboard" in nav_choice:
             margin=dict(l=10, r=10, t=20, b=20)
         )
         st.plotly_chart(fig_pie, use_container_width=True)
+        st.caption("ℹ️ **Data Benchmark Source:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and published DACH multi-asset exchange portfolio distributions (42% BTC, 24% ETH, 18% ETFs, 11% Altcoins, 5% Cash reserve).")
 
 # ==========================================
 # MODULE 2: CASE 1 - TRANSACTIONAL CONFIRMATION
