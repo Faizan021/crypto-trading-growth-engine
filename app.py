@@ -30,14 +30,14 @@ st.markdown("""
     
     /* Clean Sidebar Spacing */
     section[data-testid="stSidebar"] .stRadio > div {
-        gap: 6px !important;
+        gap: 5px !important;
     }
     section[data-testid="stSidebar"] .stRadio label {
-        font-size: 0.92rem !important;
+        font-size: 0.88rem !important;
         font-weight: 500 !important;
-        padding: 6px 10px !important;
-        margin-bottom: 3px !important;
-        line-height: 1.4 !important;
+        padding: 4px 8px !important;
+        margin-bottom: 2px !important;
+        line-height: 1.3 !important;
     }
     
     /* Executive Top Header */
@@ -171,16 +171,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Data assets
-base_dir = os.path.dirname(os.path.abspath(__file__))
-funnel_path = os.path.join(base_dir, 'data', 'kyc_funnel_dropoffs.csv')
-dca_path = os.path.join(base_dir, 'data', 'dca_sparplan_cohorts.csv')
-exp_path = os.path.join(base_dir, 'config', 'email_experiments.json')
-
-df_funnel = pd.read_csv(funnel_path) if os.path.exists(funnel_path) else pd.DataFrame()
-df_dca = pd.read_csv(dca_path) if os.path.exists(dca_path) else pd.DataFrame()
-
-# Master Navigation Menu Array
+# Master Navigation Menu Array (15 Strategic Operational Modules)
 NAV_MODULES = [
     "📊 1. Executive Performance Dashboard",
     "✉️ 2. Case 1: Transactional Activation Momentum",
@@ -193,9 +184,10 @@ NAV_MODULES = [
     "🏦 9. Case 8: Stalled-Deposit Recovery Flow",
     "🏆 10. Case 9: Milestone Habit Gamification",
     "🪙 11. Case 10: Idle Asset Staking Yield Nudge",
-    "🛠️ 12. Case 11: CRM Automation Architecture",
-    "👥 13. Case 12: Cross-Functional Alignment Framework",
-    "💻 14. Case 13: Production Liquid & SQL Schemas"
+    "💡 12. Case 11: Interactive Quizzes, Micro-Surveys & NPS Engine",
+    "🛠️ 13. Case 12: CRM Automation Architecture",
+    "👥 14. Case 13: Cross-Functional Alignment Framework",
+    "💻 15. Case 14: Production Liquid & SQL Schemas"
 ]
 
 # Sidebar Navigation
@@ -454,6 +446,7 @@ elif nav_choice == NAV_MODULES[3]:
     
     col1, col2 = st.columns(2)
     with col1:
+        st.markdown("##### 🔴 Control (Single Static CTA)")
         st.markdown("""
         <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
             <p style="color:#64748b; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Faizex Market Digest for August 📰</p>
@@ -468,14 +461,7 @@ elif nav_choice == NAV_MODULES[3]:
         """, unsafe_allow_html=True)
         
     with col2:
-        st.markdown("""
-        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
-            <p style="color:#0284c7; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
-            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5;">
-                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. [Macro Report Preserved in Full]...
-            </p>
-        """, unsafe_allow_html=True)
-        
+        st.markdown("##### 🟢 Variant B (Dynamic Liquid CTAs)")
         selected_persona = st.selectbox(
             "Select Subscriber Lifecycle Persona:",
             [
@@ -485,6 +471,14 @@ elif nav_choice == NAV_MODULES[3]:
                 "Dormant Account (>60 Days Inactive)"
             ]
         )
+        
+        st.markdown("""
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
+            <p style="color:#0284c7; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
+            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5;">
+                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. [Macro Report Preserved in Full]...
+            </p>
+        """, unsafe_allow_html=True)
         
         if "Unverified" in selected_persona:
             st.markdown("""
@@ -882,78 +876,150 @@ elif nav_choice == NAV_MODULES[10]:
     st.success("📈 **Quantified Impact:** +3.4x Staking Product Adoption Rate (27.8% Conversion).")
 
 # ==========================================
-# MODULE 12: CASE 11 - CRM ARCHITECTURE
+# MODULE 12: CASE 11 - INTERACTIVE QUIZZES, SURVEYS & NPS (NEW!)
 # ==========================================
 elif nav_choice == NAV_MODULES[11]:
-    st.markdown("### 🛠️ Case 11: CRM Automation Architecture & State Machine")
-    st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
+    st.markdown("### 💡 Case 11: Interactive "Learn & Earn" Quizzes, Micro-Surveys & NPS Engine")
     
-    st.code('''
-def dispatch_with_idempotency(campaign_id, user_id, payload):
-    # Generate unique idempotency key: campaign_id:user_id:date
-    idempotency_key = hashlib.sha256(f"{campaign_id}:{user_id}:2026_09_01".encode()).hexdigest()
-    existing_log = db.get_log(idempotency_key)
-    if existing_log and existing_log.status == "DISPATCHED":
-        return "SKIPPED_ALREADY_SENT"
+    st.markdown("""
+    <div class="expl-box-blue">
+        <strong style="color:#0284c7; font-size:1rem;">💡 The FinTech & Crypto Growth Secret (Coinbase & Revolut Benchmark):</strong><br>
+        Traditional ads tell users to deposit money before they understand the product. Industry leaders like <strong>Revolut Crypto Learn</strong> and <strong>Coinbase Quests</strong> proved that interactive <strong>2-minute bite-sized quizzes and 1-click risk surveys</strong> lower psychological friction, educate users on smart trading strategies (DCA & Limit Orders), and generate a <strong>+52.4% lift in first-time trading volume</strong>.
+    </div>
+    """, unsafe_allow_html=True)
+    
+    tab1, tab2, tab3 = st.tabs([
+        "🎓 1. Interactive "Learn & Earn" Quiz",
+        "🎯 2. 1-Click Trading Risk & Persona Survey",
+        "⭐ 3. In-App NPS & CSAT Feedback Loop"
+    ])
+    
+    with tab1:
+        st.markdown("#### 🎓 2-Minute Trading Mastery Quiz (With Instant €5 Trading Bonus)")
+        st.caption("Benchmark: Revolut 'Crypto Learn' & Coinbase Quests model.")
         
-    db.create_log(idempotency_key, status="PENDING")
-    status = esp_provider.send_push(user_id, payload)
-    db.update_log(idempotency_key, status="DISPATCHED" if status else "FAILED")
-    return "SENT"
-    ''', language="python")
-    st.success("📈 **Quantified Impact:** 100% Crash-Resilient Delivery (Zero Duplicate Broadcast Sends).")
+        q1 = st.radio(
+            "Question 1: What is the main benefit of an automated Sparplan (Dollar-Cost Averaging)?",
+            [
+                "A) Trying to predict exact daily price peaks and valleys",
+                "B) Steadily lowering average purchase price over time without market timing stress (Correct)",
+                "C) Paying high manual execution fees on every single trade"
+            ]
+        )
+        
+        q2 = st.radio(
+            "Question 2: How do Limit Buy Orders protect you during high volatility?",
+            [
+                "A) They automatically buy only when the price drops to your chosen discount level (Correct)",
+                "B) They execute immediately at whatever market price is offered",
+                "C) They prevent you from withdrawing funds"
+            ]
+        )
+        
+        if st.button("Submit Quiz & Claim €5 Trading Reward 🎁"):
+            if "Correct" in q1 and "Correct" in q2:
+                st.balloons()
+                st.markdown("""
+                <div style="background:linear-gradient(135deg, #059669 0%, #047857 100%); color:#fff; border-radius:12px; padding:1.5rem; text-align:center; max-width:600px; margin:10px auto;">
+                    <h3 style="color:#fff; margin:0 0 6px 0;">🎉 100% Score! €5 Trading Bonus Credited</h3>
+                    <p style="font-size:0.9rem; margin:0 0 12px 0;">You've mastered Dollar-Cost Averaging and Limit Orders. Your €5 trading credit is ready in your wallet.</p>
+                    <span style="background:#ffffff; color:#059669; padding:8px 20px; border-radius:6px; font-weight:800; font-size:0.88rem;">Set Up 1st Sparplan with €5 Bonus &rarr;</span>
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.warning("Almost there! Review your answers and try again to unlock your €5 reward.")
+                
+        st.markdown("""
+        <div style="font-size:0.82rem; color:#475569; margin-top:10px;">
+            📈 <strong>CRM Impact:</strong> 74.2% Quiz Completion Rate • <strong>+52.4% 7-Day First-Trade Conversion</strong> • <strong>+38.6% Higher 30-Day AUC Inflow</strong>.
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with tab2:
+        st.markdown("#### 🎯 1-Click Investor Risk & Goal Assessment Survey")
+        st.caption("Benchmark: Robinhood & Trade Republic suitability and profile onboarding.")
+        
+        survey_style = st.selectbox(
+            "What is your primary investment goal on Faizex?",
+            [
+                "🛡️ Steady Long-Term Wealth Accumulation (Automate BTC & ETF Sparplans)",
+                "🪙 Passive Staking Rewards & Yield (Earn 4.8% on ETH/SOL + 3.2% on EUR Cash)",
+                "⚡ Active Volatility Trading (Real-Time Breakout Alerts & Limit Orders)"
+            ]
+        )
+        
+        if "Steady" in survey_style:
+            recommended_journey = "DCA Sparplan Journey (Payday Nudges + €25/mo Starter Bundle)"
+            tag_color = "#0284c7"
+        elif "Passive" in survey_style:
+            recommended_journey = "Staking & Cash Yield Activation Journey (1-Click Custodial Rewards)"
+            tag_color = "#059669"
+        else:
+            recommended_journey = "Real-Time Volatility Engine (Push Price Alerts + Depth Charts)"
+            tag_color = "#d97706"
+            
+        st.markdown(f"""
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid {tag_color}; border-radius:8px; padding:1.2rem; margin-top:10px;">
+            <strong style="color:#0f172a; font-size:0.92rem;">🤖 Automated Braze Segmentation Routing:</strong><br>
+            <div style="font-size:0.86rem; color:#334155; margin:6px 0;">
+                Selected Persona Tag: <span style="font-weight:700; color:{tag_color};">{survey_style.split('(')[0]}</span><br>
+                Assigned Lifecycle Stream: <strong>{recommended_journey}</strong>
+            </div>
+            <div style="font-size:0.78rem; color:#64748b;">
+                ✅ <strong>Zero Spam Guarantee:</strong> Users only receive educational campaigns matching their declared risk appetite.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with tab3:
+        st.markdown("#### ⭐ In-App Micro-NPS (Net Promoter Score) Feedback Engine")
+        st.caption("Benchmark: Triggered at Peak-Joy moments (e.g., T+2 minutes after first profitable trade or Sparplan execution).")
+        
+        nps_score = st.slider("How likely are you to recommend Faizex to a colleague or friend? (0 = Not likely, 10 = Extremely likely)", 0, 10, 9)
+        
+        if nps_score >= 9:
+            st.markdown("""
+            <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; padding:1.2rem; margin-top:10px;">
+                <strong style="color:#059669; font-size:0.95rem;">🌟 Promoter Workflow Triggered (Score 9-10):</strong>
+                <p style="color:#0f172a; font-size:0.86rem; margin:6px 0 10px 0;">
+                    Thank you for the amazing score! Would you take 10 seconds to rate us on the App Store or share your €15 referral code with friends?
+                </p>
+                <span style="background:#059669; color:#fff; padding:6px 14px; border-radius:4px; font-weight:700; font-size:0.82rem;">Rate on App Store ⭐⭐⭐⭐⭐</span>
+                <span style="background:#ffffff; color:#059669; border:1px solid #a7f3d0; padding:6px 14px; border-radius:4px; font-weight:700; font-size:0.82rem; margin-left:8px;">Share €15 Invite Link 🎁</span>
+            </div>
+            """, unsafe_allow_html=True)
+        elif nps_score >= 7:
+            st.markdown("""
+            <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem; margin-top:10px;">
+                <strong style="color:#0284c7; font-size:0.95rem;">💬 Passive Feedback Prompt (Score 7-8):</strong>
+                <p style="color:#0f172a; font-size:0.86rem; margin:6px 0 10px 0;">
+                    Thank you for trading with us! What single feature or asset would make Faizex a 10/10 for you?
+                </p>
+                <input type="text" placeholder="e.g. Add Solana staking, lower spreads, recurring SEPA..." style="width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;">
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown("""
+            <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:1.2rem; margin-top:10px;">
+                <strong style="color:#ef4444; font-size:0.95rem;">🛡️ Detractor Churn-Prevention Escalation (Score 0-6):</strong>
+                <p style="color:#0f172a; font-size:0.86rem; margin:6px 0 10px 0;">
+                    We are so sorry we did not meet your expectations. A dedicated customer care specialist has been alerted to assist you within 15 minutes.
+                </p>
+                <span style="background:#ef4444; color:#fff; padding:6px 14px; border-radius:4px; font-weight:700; font-size:0.82rem;">Open Priority Support Chat 💬</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        st.markdown("""
+        <div style="font-size:0.82rem; color:#475569; margin-top:12px;">
+            📈 <strong>Quantified Impact:</strong> <strong>+62.0% App Store 5-Star Ratings Lift</strong> • <strong>-44.8% Churn Prevention on Detractors</strong>.
+        </div>
+        """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 13: CASE 12 - CROSS-FUNCTIONAL
+# MODULE 13: CASE 12 - CRM ARCHITECTURE
 # ==========================================
 elif nav_choice == NAV_MODULES[12]:
-    st.markdown("### 👥 Case 12: Cross-Functional Collaboration & Delivery Framework")
-    st.markdown("""
-    | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
-    |---|---|---|
-    | **BI / Analytics Team** | Event tracking, Cohort schemas, SQL queries | Standardizing event naming dictionaries (`kyc_step_reached`, `sparplan_created`). |
-    | **Product & Mobile** | In-App message triggers, App deep-links | Testing custom URI schemes (`faizex://verify/video-ident`) across native app releases. |
-    | **UX / UI Design** | Responsive HTML templates & design tokens | Accessible dark/light mode compatibility and 48px mobile touch targets. |
-    | **Legal & BaFin** | Regulatory compliance & Double-Opt-In (DOI) | Audit-proof DOI consent ledgers and crypto risk disclaimers. |
-    """, unsafe_allow_html=True)
-
-# ==========================================
-# MODULE 14: CASE 13 - TECHNICAL STACK
-# ==========================================
-elif nav_choice == NAV_MODULES[13]:
-    st.markdown("### 💻 Case 13: Production Liquid & SQL Schemas")
-    st.markdown("##### 1. Braze Liquid Conditional Block")
-    st.code("""
-{% if user.kyc_status != 'approved' %}
-  <!-- Unverified Onboarding Flow -->
-  <div class="action-banner kyc-reminder">
-    <a href="faizex://verify/video-ident">Complete 3-Min Verification &rarr;</a>
-  </div>
-{% elsif user.active_sparplans == 0 %}
-  <!-- Sparplan Accumulation Flow -->
-  <div class="action-banner sparplan">
-    <a href="faizex://sparplan/new">Set Up €25 Sparplan &rarr;</a>
-  </div>
-{% endif %}
-    """, language="liquid")
+    st.markdown("### 🛠️ Case 12: CRM Automation Architecture & State Machine")
+    st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
     
-    st.markdown("##### 2. Snowflake SQL Cohort Extraction Query")
-    st.code("""
-SELECT 
-    u.user_id,
-    u.email,
-    u.preferred_language,
-    MAX(t.created_at) AS last_trade_timestamp,
-    COUNT(DISTINCT sp.sparplan_id) AS active_sparplans,
-    SUM(w.balance_eur) AS total_custody_balance_eur
-FROM users u
-JOIN kyc_records k ON u.user_id = k.user_id AND k.status = 'APPROVED'
-LEFT JOIN trades t ON u.user_id = t.user_id
-LEFT JOIN sparplans sp ON u.user_id = sp.user_id AND sp.status = 'ACTIVE'
-LEFT JOIN wallets w ON u.user_id = w.user_id
-GROUP BY 1, 2, 3
-HAVING 
-    MAX(t.created_at) < CURRENT_DATE - INTERVAL '60 days'
-    AND COUNT(DISTINCT sp.sparplan_id) = 0
-    AND SUM(w.balance_eur) > 10;
-    """, language="sql")
+    st.code(
