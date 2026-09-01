@@ -176,7 +176,10 @@ nav_choice = st.sidebar.radio(
         "⚡ 7. Case 6: Push & In-App Triggers (Market Volatility Engine)",
         "🛠️ 8. CRM Automation Architecture (Dynamic Segmentation & Triggers)",
         "👥 9. Cross-Functional Alignment (Product, BI & Compliance)",
-        "💻 10. Technical CRM Stack (Braze, Liquid & SQL Schemas)"
+        "💻 10. Technical CRM Stack (Braze, Liquid & SQL Schemas)",
+        "🏦 11. Case 10: Stalled-Deposit Recovery Flow",
+        "🏆 12. Case 11: Milestone Habit Gamification (Goal Gradient DCA)",
+        "🪙 13. Case 12: Idle Capital Staking & Yield Nudge"
     ]
 )
 
