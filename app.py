@@ -16,156 +16,140 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Professional Institutional Styling
+# Clean, Modern, High-Contrast Light & Adaptive Styling
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
     
     html, body, [class*="css"] {
-        font-family: 'Inter', sans-serif !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
     code, pre {
         font-family: 'JetBrains Mono', monospace !important;
     }
     
-    /* Generous Sidebar Spacing */
-    section[data-testid="stSidebar"] {
-        background-color: #0b0f19 !important;
-    }
+    /* Clean Sidebar Spacing */
     section[data-testid="stSidebar"] .stRadio > div {
-        gap: 8px !important;
+        gap: 6px !important;
     }
     section[data-testid="stSidebar"] .stRadio label {
-        font-size: 0.95rem !important;
+        font-size: 0.92rem !important;
         font-weight: 500 !important;
-        color: #cbd5e1 !important;
-        padding: 8px 12px !important;
-        margin-bottom: 6px !important;
-        background: #0f172a !important;
-        border: 1px solid #1e293b !important;
-        border-radius: 8px !important;
-        transition: all 0.2s ease !important;
-        line-height: 1.45 !important;
-    }
-    section[data-testid="stSidebar"] .stRadio label:hover {
-        border-color: #38bdf8 !important;
-        color: #ffffff !important;
+        padding: 6px 10px !important;
+        margin-bottom: 3px !important;
+        line-height: 1.4 !important;
     }
     
-    /* Executive Top Hero */
+    /* Executive Top Header */
     .exec-header {
-        background: #0f172a;
-        border: 1px solid #1e293b;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        border: 1px solid #334155;
         border-radius: 10px;
-        padding: 1.6rem 2rem;
-        margin-bottom: 1.5rem;
+        padding: 1.4rem 1.8rem;
+        color: #ffffff;
+        margin-bottom: 1.2rem;
     }
     .exec-title {
-        font-size: 1.85rem;
+        font-size: 1.75rem;
         font-weight: 800;
         color: #ffffff;
+        margin-bottom: 0.25rem;
         letter-spacing: -0.02em;
-        margin-bottom: 0.3rem;
     }
     .exec-sub {
-        font-size: 0.98rem;
+        font-size: 0.92rem;
         color: #cbd5e1;
-        line-height: 1.6;
+        line-height: 1.5;
         margin: 0;
     }
     .badge-reg {
         display: inline-block;
-        background: #064e3b;
-        color: #6ee7b7;
-        border: 1px solid #047857;
-        padding: 3px 12px;
-        border-radius: 6px;
-        font-size: 0.75rem;
+        background: rgba(16, 185, 129, 0.2);
+        color: #34d399;
+        border: 1px solid #10b981;
+        padding: 2px 10px;
+        border-radius: 4px;
+        font-size: 0.72rem;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-right: 8px;
+        margin-right: 6px;
     }
     .badge-crm {
         display: inline-block;
-        background: #1e1b4b;
-        color: #c7d2fe;
-        border: 1px solid #3730a3;
-        padding: 3px 12px;
-        border-radius: 6px;
-        font-size: 0.75rem;
+        background: rgba(56, 189, 248, 0.2);
+        color: #38bdf8;
+        border: 1px solid #0284c7;
+        padding: 2px 10px;
+        border-radius: 4px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    /* Metric Cards - Clean White / Adaptive */
+    .exec-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 1.2rem;
+        text-align: left;
+        min-height: 145px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .exec-card-val {
+        font-size: 1.85rem;
+        font-weight: 800;
+        color: #0284c7;
+        margin: 2px 0;
+    }
+    .exec-card-lbl {
+        font-size: 0.78rem;
+        color: #475569;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
-    
-    /* Metric Cards */
-    .exec-card {
-        background: #0f172a !important;
-        border: 1px solid #1e293b !important;
-        border-radius: 10px !important;
-        padding: 1.3rem !important;
-        text-align: left !important;
-        min-height: 155px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
-    }
-    .exec-card-val {
-        font-size: 1.9rem !important;
-        font-weight: 800 !important;
-        color: #38bdf8 !important;
-        margin: 4px 0 !important;
-    }
-    .exec-card-lbl {
-        font-size: 0.8rem !important;
-        color: #94a3b8 !important;
-        font-weight: 700 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.6px !important;
-    }
     .exec-card-sub {
-        font-size: 0.8rem !important;
-        color: #34d399 !important;
-        font-weight: 600 !important;
+        font-size: 0.78rem;
+        color: #059669;
+        font-weight: 600;
     }
     
-    /* Explanatory Callout Boxes - Ultra High Contrast */
+    /* Explanatory Callout Boxes - Crisp & Clean Light Mode */
     .expl-box-blue {
-        background: #0f172a !important;
-        border: 1px solid #0284c7 !important;
-        border-left: 5px solid #38bdf8 !important;
-        border-radius: 8px !important;
-        padding: 14px 18px !important;
-        margin-bottom: 14px !important;
-        font-size: 0.92rem !important;
-        color: #f1f5f9 !important;
-        line-height: 1.6 !important;
+        background: #f0f9ff;
+        border: 1px solid #bae6fd;
+        border-left: 4px solid #0284c7;
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 12px;
+        font-size: 0.88rem;
+        color: #0f172a;
+        line-height: 1.5;
     }
     .expl-box-green {
-        background: #0f172a !important;
-        border: 1px solid #059669 !important;
-        border-left: 5px solid #10b981 !important;
-        border-radius: 8px !important;
-        padding: 14px 18px !important;
-        margin-bottom: 14px !important;
-        font-size: 0.92rem !important;
-        color: #f1f5f9 !important;
-        line-height: 1.6 !important;
+        background: #ecfdf5;
+        border: 1px solid #a7f3d0;
+        border-left: 4px solid #059669;
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 12px;
+        font-size: 0.88rem;
+        color: #0f172a;
+        line-height: 1.5;
     }
     
-    /* Conversion Stage Cards */
+    /* Clean Stage Cards */
     .funnel-card {
-        background: #0f172a !important;
-        border: 1px solid #1e293b !important;
-        border-radius: 8px !important;
-        padding: 12px 16px !important;
-        margin-bottom: 10px !important;
-        transition: all 0.2s ease !important;
-    }
-    .funnel-card:hover {
-        border-color: #38bdf8 !important;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 10px 14px;
+        margin-bottom: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -271,71 +255,71 @@ if "1. Executive Performance Dashboard" in nav_choice:
     col_left, col_right = st.columns([1.25, 1])
     with col_left:
         st.markdown("#### ⚡ Onboarding Conversion Funnel (Per 10,000 Signups)")
-        st.markdown('''
+        st.markdown("""
         <div class="expl-box-blue">
-            <strong style="color:#38bdf8; font-size:0.95rem;">💡 Why this Funnel matters for CRM Strategy:</strong><br>
-            In regulated trading apps, over 60% of signups drop off before finishing ID verification or funding. This live model demonstrates how our multi-channel lifecycle journeys (Cases 1, 2, and 7) rescue drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
+            <strong style="color:#0284c7; font-size:0.92rem;">💡 Why this Funnel matters for CRM:</strong><br>
+            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys (Cases 1, 2, and 7) eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
         </div>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
         
         stages = [
-            {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#38bdf8"},
-            {"step": "02", "name": "Email Address Confirmed (Case 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#38bdf8"},
-            {"step": "03", "name": "Video-Ident Call Initiated (Case 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#10b981"},
-            {"step": "04", "name": "KYC Verification Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#10b981"},
-            {"step": "05", "name": "First Bank / SEPA Deposit (Case 7)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#f59e0b"},
-            {"step": "06", "name": "First Trade Executed (Activated)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#a855f7"}
+            {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#0284c7"},
+            {"step": "02", "name": "Email Address Confirmed (Case 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7"},
+            {"step": "03", "name": "Video-Ident Call Initiated (Case 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669"},
+            {"step": "04", "name": "KYC Verification Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#059669"},
+            {"step": "05", "name": "First Bank / SEPA Deposit (Case 7)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
+            {"step": "06", "name": "First Trade Executed (Activated)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#7c3aed"}
         ]
         
         for s in stages:
-            st.markdown(f'''
-            <div style="background:#0b1120; border:1px solid #1e293b; border-radius:8px; padding:10px 14px; margin-bottom:8px;">
+            st.markdown(f"""
+            <div class="funnel-card">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
                     <div>
-                        <span style="background:#1e293b; color:#38bdf8; padding:2px 6px; border-radius:4px; font-size:0.72rem; font-weight:700; margin-right:6px;">{s['step']}</span>
-                        <strong style="color:#f8fafc; font-size:0.88rem;">{s['name']}</strong>
+                        <span style="background:#f1f5f9; color:#0284c7; padding:2px 6px; border-radius:4px; font-size:0.72rem; font-weight:700; margin-right:6px;">{s['step']}</span>
+                        <strong style="color:#0f172a; font-size:0.88rem;">{s['name']}</strong>
                     </div>
                     <div>
                         <span style="font-size:0.85rem; font-weight:700; color:{s['color']};">{s['variant']} Users</span>
-                        <span style="background:rgba(16,185,129,0.15); color:#34d399; padding:2px 6px; border-radius:4px; font-size:0.72rem; font-weight:600; margin-left:6px;">{s['lift']}</span>
+                        <span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; padding:2px 6px; border-radius:4px; font-size:0.72rem; font-weight:600; margin-left:6px;">{s['lift']}</span>
                     </div>
                 </div>
-                <div style="background:#1e293b; border-radius:4px; height:6px; width:100%; overflow:hidden;">
+                <div style="background:#f1f5f9; border-radius:4px; height:6px; width:100%; overflow:hidden;">
                     <div style="background:{s['color']}; height:100%; width:{s['pct']}%;"></div>
                 </div>
             </div>
-            ''', unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
             
     with col_right:
         st.markdown("#### 🪙 Assets Under Custody (AUC) Segmentation")
-        st.markdown('''
+        st.markdown("""
         <div class="expl-box-green">
-            <strong style="color:#34d399; font-size:0.95rem;">💡 How Custody Distribution Drives CRM Personalization:</strong><br>
-            Retention is maximized when messaging aligns directly with what the user holds. We use real-time Braze segments to trigger tailored next steps: <strong>Automated DCA Sparpläne for BTC</strong>, <strong>Staking Rewards for ETH</strong>, and <strong>Limit Order Alerts for Cash</strong>.
+            <strong style="color:#059669; font-size:0.92rem;">💡 How Custody Distribution Drives CRM Personalization:</strong><br>
+            Retention is maximized when CRM messaging matches what the user holds. We use automated Braze segments to trigger tailored next steps: <strong>DCA Sparpläne for BTC</strong>, <strong>Staking Rewards for ETH</strong>, and <strong>Limit Alerts for Cash</strong>.
         </div>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
         
         assets = [
-            {"name": "Bitcoin (BTC)", "share": "42%", "pct": 42, "color": "#f59e0b", "action": "Automated DCA Sparplan Focus"},
-            {"name": "Ethereum (ETH)", "share": "24%", "pct": 24, "color": "#6366f1", "action": "Staking Rewards & Yield Activation"},
-            {"name": "DAX 40 & European Equity ETFs", "share": "18%", "pct": 18, "color": "#10b981", "action": "Multi-Asset Long-Term Wealth"},
-            {"name": "Top Altcoins (SOL, ADA)", "share": "11%", "pct": 11, "color": "#38bdf8", "action": "Volatility & Limit Order Alerts"},
-            {"name": "Cash / EUR Reserve", "share": "5%", "pct": 5, "color": "#94a3b8", "action": "Instant Dip-Buy Readiness"}
+            {"name": "Bitcoin (BTC)", "share": "42%", "pct": 42, "color": "#d97706", "action": "Automated DCA Sparplan Focus"},
+            {"name": "Ethereum (ETH)", "share": "24%", "pct": 24, "color": "#4f46e5", "action": "Staking Rewards & Yield Activation"},
+            {"name": "DAX 40 & European Equity ETFs", "share": "18%", "pct": 18, "color": "#059669", "action": "Multi-Asset Long-Term Wealth"},
+            {"name": "Top Altcoins (SOL, ADA)", "share": "11%", "pct": 11, "color": "#0284c7", "action": "Volatility & Limit Order Alerts"},
+            {"name": "Cash / EUR Reserve", "share": "5%", "pct": 5, "color": "#64748b", "action": "Instant Dip-Buy Readiness"}
         ]
         
         for a in assets:
-            st.markdown(f'''
-            <div style="background:#0b1120; border:1px solid #1e293b; border-radius:8px; padding:10px 14px; margin-bottom:8px;">
+            st.markdown(f"""
+            <div class="funnel-card">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                    <strong style="color:#f8fafc; font-size:0.88rem;">{a['name']}</strong>
+                    <strong style="color:#0f172a; font-size:0.88rem;">{a['name']}</strong>
                     <span style="font-size:0.95rem; font-weight:800; color:{a['color']};">{a['share']}</span>
                 </div>
-                <div style="background:#1e293b; border-radius:4px; height:6px; width:100%; margin-bottom:4px; overflow:hidden;">
+                <div style="background:#f1f5f9; border-radius:4px; height:6px; width:100%; margin-bottom:4px; overflow:hidden;">
                     <div style="background:{a['color']}; height:100%; width:{a['pct']}%;"></div>
                 </div>
-                <div style="font-size:0.75rem; color:#94a3b8;">🎯 Lifecycle Focus: <span style="color:#cbd5e1;">{a['action']}</span></div>
+                <div style="font-size:0.75rem; color:#64748b;">🎯 CRM Action: <span style="color:#0f172a; font-weight:600;">{a['action']}</span></div>
             </div>
-            ''', unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
             
         st.caption("ℹ️ **Data Benchmark Source:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and DACH multi-asset exchange distributions.")
 
@@ -349,23 +333,23 @@ elif "2. Case 1: Transactional Activation" in nav_choice:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
-        <div class="email-container-a">
-            <div style="border-bottom: 1px solid #334155; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#94a3b8;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#64748b;">
                 <strong>Subject:</strong> <code>Confirm your email address now!</code><br>
                 <strong>Preheader:</strong> <code>Before you can register, please confirm your email...</code>
             </div>
-            <div style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+            <div style="color: #1e293b; font-size: 0.92rem; line-height: 1.6;">
                 Hello friend,<br><br>
                 We're delighted that you'd like to become part of our community.<br><br>
                 Before you can register, we would like to ask you to confirm your email address by using the following link:<br><br>
                 <div style="text-align: center; margin: 14px 0;">
-                    <span style="background:#1e293b; color:#f8fafc; border:1px solid #475569; padding:8px 20px; border-radius:4px; font-weight:600; font-size:0.88rem;">Confirm email address</span>
+                    <span style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1; padding:8px 20px; border-radius:4px; font-weight:600; font-size:0.88rem;">Confirm email address</span>
                 </div><br>
                 Thanks and best regards,<br>
                 Your Team
             </div>
-            <hr style="border-color: #334155; margin: 14px 0;">
-            <div style="font-size:0.82rem; color:#94a3b8;">
+            <hr style="border-color: #e2e8f0; margin: 14px 0;">
+            <div style="font-size:0.82rem; color:#64748b;">
                 <strong>Baseline Assessment:</strong> 100% deliverability, but plain text creates an administrative dead-end. 58.8% of users delay KYC by >18 hours.
             </div>
         </div>
@@ -373,25 +357,25 @@ elif "2. Case 1: Transactional Activation" in nav_choice:
         
     with col2:
         st.markdown("""
-        <div class="email-container-b">
-            <div style="border-bottom: 1px solid #0284c7; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#94a3b8;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
+            <div style="border-bottom: 1px solid #bae6fd; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#0284c7;">
                 <strong>Subject:</strong> <code>⚡ 1 click away from your trading workspace (+ market movers inside)</code><br>
                 <strong>Preheader:</strong> <code>Bitcoin +3.8% today • Instant 0€ account setup</code>
             </div>
-            <div style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+            <div style="color: #0f172a; font-size: 0.92rem; line-height: 1.6;">
                 Hi [First Name],<br><br>
                 You're seconds away from your digital trading workspace. Confirm your email below to get started:<br><br>
                 <div style="text-align: center; margin: 14px 0;">
                     <span style="background:#0284c7; color:#ffffff; padding:9px 22px; border-radius:4px; font-weight:700; font-size:0.9rem;">Confirm Email & Start Exploring &rarr;</span>
                 </div><br>
-                <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; border-radius: 6px; padding: 10px 12px; font-size: 0.84rem;">
-                    <strong style="color:#38bdf8;">🔥 Live Market Context:</strong><br>
+                <div style="background: #ffffff; border: 1px solid #bae6fd; border-radius: 6px; padding: 10px 12px; font-size: 0.84rem;">
+                    <strong style="color:#0284c7;">🔥 Live Market Context:</strong><br>
                     • <strong>BTC / EUR:</strong> +3.8% (€58,420) • <strong>ETH / EUR:</strong> +5.1% (€2,480)<br>
                     • <strong>Automated Sparplan:</strong> Set and forget from €25/month
                 </div>
             </div>
-            <hr style="border-color: #0284c7; margin: 14px 0;">
-            <div style="font-size:0.82rem; color:#38bdf8;">
+            <hr style="border-color: #bae6fd; margin: 14px 0;">
+            <div style="font-size:0.82rem; color:#0284c7;">
                 <strong>Performance Impact:</strong> <strong>+30.6% Click-through Velocity</strong> ($z = 2.89, p = 0.0039$). Reduces median time-to-verification from 18.4h to 4.2h.
             </div>
         </div>
@@ -407,20 +391,20 @@ elif "3. Case 2: Onboarding" in nav_choice:
     colA, colB = st.columns(2)
     with colA:
         st.markdown("""
-        <div class="email-container-a">
-            <div style="border-bottom: 1px solid #334155; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#94a3b8;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#64748b;">
                 <strong>Subject:</strong> <code>Welcome to Faizex 👋</code><br>
                 <strong>Preheader:</strong> <code>When it comes to trading, we are a partner you can rely on...</code>
             </div>
-            <div style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+            <div style="color: #1e293b; font-size: 0.92rem; line-height: 1.6;">
                 Hi,<br><br>
                 You've just become part of our community and are now able to use the best crypto app in Germany! When it comes to trading, our exchange-backed platform is a partner you can rely on. Our goal is to make trading as simple as possible for you. There's no need for a wallet, securities account, or even paperwork.<br><br>
                 <div style="text-align: center; margin: 10px 0;">
-                    <span style="background:#1e293b; color:#fff; border:1px solid #475569; padding:7px 18px; border-radius:4px; font-weight:600; font-size:0.85rem;">Verify now</span>
+                    <span style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1; padding:7px 18px; border-radius:4px; font-weight:600; font-size:0.85rem;">Verify now</span>
                 </div><br>
                 Just take a few minutes to verify your identity through a simple video identification process and you'll be ready to go!<br><br>
                 <div style="text-align: center; margin: 10px 0;">
-                    <span style="background:#1e293b; color:#fff; border:1px solid #475569; padding:7px 18px; border-radius:4px; font-weight:600; font-size:0.85rem;">Verify now</span>
+                    <span style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1; padding:7px 18px; border-radius:4px; font-weight:600; font-size:0.85rem;">Verify now</span>
                 </div>
             </div>
         </div>
@@ -428,15 +412,15 @@ elif "3. Case 2: Onboarding" in nav_choice:
         
     with colB:
         st.markdown("""
-        <div class="email-container-b">
-            <div style="border-bottom: 1px solid #0284c7; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#94a3b8;">
+        <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; padding:1.2rem;">
+            <div style="border-bottom: 1px solid #a7f3d0; padding-bottom: 8px; margin-bottom: 12px; font-size: 0.85rem; color:#059669;">
                 <strong>Subject:</strong> <code>Unlock your trading account in 3 minutes 🛡️ (Step 1 ready)</code><br>
                 <strong>Preheader:</strong> <code>ID card ready? 2-min Video-Ident • Insured German custody</code>
             </div>
-            <div style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+            <div style="color: #0f172a; font-size: 0.92rem; line-height: 1.6;">
                 Hi [First Name],<br><br>
                 Welcome to your institutional-grade trading account. Your workspace is 1 step away from activation:<br><br>
-                <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid #059669; border-radius: 6px; padding: 10px 14px; font-size: 0.86rem;">
+                <div style="background: #ffffff; border: 1px solid #a7f3d0; border-radius: 6px; padding: 10px 14px; font-size: 0.86rem;">
                     <strong>Step 1:</strong> Have your ID card or passport ready (1 min)<br>
                     <strong>Step 2:</strong> Quick 2-minute Video-Ident call<br>
                     <strong>Step 3:</strong> Instant account ready for first trade (0€ deposit fee)
@@ -444,12 +428,12 @@ elif "3. Case 2: Onboarding" in nav_choice:
                 <div style="text-align: center; margin: 14px 0;">
                     <span style="background:#059669; color:#ffffff; padding:9px 22px; border-radius:4px; font-weight:700; font-size:0.9rem;">Unlock My Account in App (3 Mins) &rarr;</span>
                 </div>
-                <div style="text-align:center; font-size:0.75rem; color:#94a3b8;">
+                <div style="text-align:center; font-size:0.75rem; color:#64748b;">
                     🔒 BaFin Regulated • Insured European Custody • No Wallet Complexity
                 </div>
             </div>
-            <hr style="border-color: #0284c7; margin: 14px 0;">
-            <div style="font-size:0.82rem; color:#38bdf8;">
+            <hr style="border-color: #a7f3d0; margin: 14px 0;">
+            <div style="font-size:0.82rem; color:#059669;">
                 <strong>Performance Impact:</strong> <strong>+38.7% Relative Lift in KYC</strong> (28.4% → 39.4%, $z = 3.12, p = 0.0018$).
             </div>
         </div>
@@ -466,13 +450,13 @@ elif "4. Case 3: Engagement" in nav_choice:
     with col1:
         st.markdown("##### 🔴 Control (Single Static CTA)")
         st.markdown("""
-        <div class="email-container-a">
-            <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Faizex Market Digest for August 📰</p>
-            <p style="color:#cbd5e1; font-size:0.88rem; line-height:1.5;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <p style="color:#64748b; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Faizex Market Digest for August 📰</p>
+            <p style="color:#1e293b; font-size:0.88rem; line-height:1.5;">
                 Bitcoin has woken up—and pulled the entire crypto market out of hibernation. The wake-up call came from Washington, where the US debt pile is spiraling out of control...
             </p>
             <div style="text-align: center; margin: 16px 0;">
-                <span style="background:#1e293b; color:#fff; border:1px solid #475569; padding:8px 20px; border-radius:4px; font-weight:600; font-size:0.85rem;">Trade Bitcoin</span>
+                <span style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1; padding:8px 20px; border-radius:4px; font-weight:600; font-size:0.85rem;">Trade Bitcoin</span>
             </div>
             <p style="color:#64748b; font-size:0.78rem;">Static button underperforms across unverified users and long-term savers.</p>
         </div>
@@ -491,41 +475,41 @@ elif "4. Case 3: Engagement" in nav_choice:
         )
         
         st.markdown("""
-        <div class="email-container-b">
-            <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
-            <p style="color:#cbd5e1; font-size:0.88rem; line-height:1.5;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
+            <p style="color:#0284c7; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
+            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5;">
                 Bitcoin has woken up—and pulled the entire crypto market out of hibernation. [Macro Report Preserved in Full]...
             </p>
         """, unsafe_allow_html=True)
         
         if "Unverified" in selected_persona:
             st.markdown("""
-                <div style="background:rgba(245,158,11,0.1); border:1px solid #d97706; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#fbbf24; font-weight:600; font-size:0.88rem;">Complete 3-Min Verification to Catch Market Momentum &rarr;</span>
+                <div style="background:#ffffff; border:1px solid #f59e0b; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#d97706; font-weight:700; font-size:0.88rem;">Complete 3-Min Verification to Catch Market Momentum &rarr;</span>
                 </div>
             """, unsafe_allow_html=True)
         elif "Spot Buyer" in selected_persona:
             st.markdown("""
-                <div style="background:rgba(16,185,129,0.1); border:1px solid #059669; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#34d399; font-weight:600; font-size:0.88rem;">Automate Your Accumulation: Set Up a €25 Sparplan &rarr;</span>
+                <div style="background:#ffffff; border:1px solid #059669; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#059669; font-weight:700; font-size:0.88rem;">Automate Your Accumulation: Set Up a €25 Sparplan &rarr;</span>
                 </div>
             """, unsafe_allow_html=True)
         elif "Sparplan" in selected_persona:
             st.markdown("""
-                <div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#38bdf8; font-weight:600; font-size:0.88rem;">View August Portfolio Growth & Staking Rewards &rarr;</span>
+                <div style="background:#ffffff; border:1px solid #0284c7; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#0284c7; font-weight:700; font-size:0.88rem;">View August Portfolio Growth & Staking Rewards &rarr;</span>
                 </div>
             """, unsafe_allow_html=True)
         else:
             st.markdown("""
-                <div style="background:rgba(236,72,153,0.1); border:1px solid #db2777; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#f472b6; font-weight:600; font-size:0.88rem;">Activate Real-Time Price Volatility Alerts &rarr;</span>
+                <div style="background:#ffffff; border:1px solid #db2777; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#db2777; font-weight:700; font-size:0.88rem;">Activate Real-Time Price Volatility Alerts &rarr;</span>
                 </div>
             """, unsafe_allow_html=True)
             
         st.markdown("""
-            <hr style="border-color: #0284c7; margin: 12px 0;">
-            <div style="font-size:0.82rem; color:#38bdf8;">
+            <hr style="border-color: #bae6fd; margin: 12px 0;">
+            <div style="font-size:0.82rem; color:#0284c7;">
                 <strong>Performance Impact:</strong> <strong>+86.3% Click-to-Open (CTOR) Lift</strong> (12.4% → 23.1%, $z = 4.15, p < 0.0001$).
             </div>
         </div>
@@ -547,13 +531,13 @@ elif "5. Case 4: Exchange CRM" in nav_choice:
     
     for k in kpis:
         st.markdown(f"""
-        <div class="exec-card" style="margin-bottom:0.75rem;">
+        <div class="exec-card" style="margin-bottom:0.75rem; min-height:auto;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong style="color:#f8fafc; font-size:0.95rem;">{k['name']}</strong>
-                <span style="background:#1e293b; color:#38bdf8; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:600;">{k['target']}</span>
+                <strong style="color:#0f172a; font-size:0.95rem;">{k['name']}</strong>
+                <span style="background:#f1f5f9; color:#0284c7; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:700;">{k['target']}</span>
             </div>
-            <div style="color:#34d399; font-family:'JetBrains Mono', monospace; font-size:0.84rem; margin:4px 0;">{k['formula']}</div>
-            <div style="color:#94a3b8; font-size:0.82rem;"><strong>Why it Matters:</strong> {k['why']}</div>
+            <div style="color:#059669; font-family:'JetBrains Mono', monospace; font-size:0.84rem; margin:4px 0;">{k['formula']}</div>
+            <div style="color:#475569; font-size:0.82rem;"><strong>Why it Matters:</strong> {k['why']}</div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -594,16 +578,16 @@ elif "6. Case 5: Retention" in nav_choice:
     with col1:
         st.markdown("##### 1. Cohort Retention Decay Curve")
         fig1 = go.Figure()
-        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan Retention (%)'], name='Sparplan Accumulator (59.2% at M12)', line=dict(color='#10b981', width=2.5)))
+        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan Retention (%)'], name='Sparplan Accumulator (59.2% at M12)', line=dict(color='#059669', width=2.5)))
         fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader Retention (%)'], name='Manual Spot Trader (22.8% at M12)', line=dict(color='#ef4444', width=2, dash='dot')))
-        fig1.update_layout(height=300, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#94a3b8', size=11))
+        fig1.update_layout(height=300, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
         st.plotly_chart(fig1, use_container_width=True)
     with col2:
         st.markdown("##### 2. Assets Under Custody (AUC) Accumulation (€)")
         fig2 = go.Figure()
-        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan AUC (€)'], name='Sparplan Portfolio', line=dict(color='#38bdf8', width=2.5), fill='tozeroy'))
+        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan AUC (€)'], name='Sparplan Portfolio', line=dict(color='#0284c7', width=2.5), fill='tozeroy'))
         fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader AUC (€)'], name='Spot Trader Portfolio', line=dict(color='#64748b', width=1.5)))
-        fig2.update_layout(height=300, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#94a3b8', size=11))
+        fig2.update_layout(height=300, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
         st.plotly_chart(fig2, use_container_width=True)
 
 # ==========================================
@@ -617,10 +601,10 @@ elif "7. Case 6: Push & In-App" in nav_choice:
     vol = st.slider("Trigger Anomaly Threshold (24h Move %):", 3.0, 15.0, 5.4, 0.5)
     
     st.markdown(f"""
-    <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px;">
-        <div style="font-size:0.75rem; color:#38bdf8; font-weight:700; margin-bottom:4px;">PUSH NOTIFICATION PAYLOAD • {asset.upper()}</div>
-        <strong style="color:#f8fafc; font-size:0.95rem;">{asset} moved ±{vol}% in the last 4 hours ⚡</strong>
-        <p style="color:#cbd5e1; font-size:0.86rem; margin:6px 0 0 0; line-height:1.4;">
+    <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px; min-height:auto;">
+        <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">PUSH NOTIFICATION PAYLOAD • {asset.upper()}</div>
+        <strong style="color:#0f172a; font-size:0.95rem;">{asset} moved ±{vol}% in the last 4 hours ⚡</strong>
+        <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.4;">
             High European volume detected. Tap to view order book depth and set limit orders stress-free.
         </p>
         <div style="margin-top:8px; font-size:0.75rem; color:#64748b;">Deep-link: <code>faizex://markets/{asset.split()[0].lower()}?tab=chart</code> • 24h Frequency Cap Enforced</div>
@@ -638,20 +622,20 @@ elif "8. Case 7: Stalled-Deposit Recovery" in nav_choice:
     c1, c2 = st.columns(2)
     with c1:
         st.markdown("""
-        <div class="exec-card" style="border-left: 4px solid #f59e0b;">
-            <div style="font-size:0.75rem; color:#fbbf24; font-weight:700;">TOUCHPOINT 1 • IN-APP SLIDE-UP (T + 15 MIN)</div>
-            <strong style="color:#f8fafc; font-size:0.9rem;">Dein 0€ Einzahlungs-Auftrag wartet noch ⏱️</strong>
-            <p style="color:#cbd5e1; font-size:0.84rem; margin:4px 0 0 0;">
+        <div class="exec-card" style="border-left: 4px solid #d97706; min-height:auto;">
+            <div style="font-size:0.75rem; color:#d97706; font-weight:700;">TOUCHPOINT 1 • IN-APP SLIDE-UP (T + 15 MIN)</div>
+            <strong style="color:#0f172a; font-size:0.9rem;">Dein 0€ Einzahlungs-Auftrag wartet noch ⏱️</strong>
+            <p style="color:#334155; font-size:0.84rem; margin:4px 0 0 0;">
                 Tippe unten, um die IBAN direkt in deine Banking-App zu kopieren. Keine Gebühren, sofort startklar.
             </p>
         </div>
         """, unsafe_allow_html=True)
     with c2:
         st.markdown("""
-        <div class="exec-card" style="border-left: 4px solid #10b981;">
-            <div style="font-size:0.75rem; color:#34d399; font-weight:700;">TOUCHPOINT 2 • CUSTOMER CARE EMAIL (T + 24H)</div>
-            <strong style="color:#f8fafc; font-size:0.9rem;">Brauchst du Unterstützung bei deiner ersten Einzahlung? 🛡️</strong>
-            <p style="color:#cbd5e1; font-size:0.84rem; margin:4px 0 0 0;">
+        <div class="exec-card" style="border-left: 4px solid #059669; min-height:auto;">
+            <div style="font-size:0.75rem; color:#059669; font-weight:700;">TOUCHPOINT 2 • CUSTOMER CARE EMAIL (T + 24H)</div>
+            <strong style="color:#0f172a; font-size:0.9rem;">Brauchst du Unterstützung bei deiner ersten Einzahlung? 🛡️</strong>
+            <p style="color:#334155; font-size:0.84rem; margin:4px 0 0 0;">
                 Reassuring guidance explaining SEPA instant settlement, zero deposit fees, and German custody security.
             </p>
         </div>
@@ -666,10 +650,10 @@ elif "9. Case 8: Milestone Habit Gamification" in nav_choice:
     st.markdown("**Executive Context:** Based on the Goal Gradient Effect: celebrates users reaching €500, €1,000, or €5,000 AUC milestones to drive Sparplan retention.")
     
     st.markdown("""
-    <div class="exec-card" style="border-left: 4px solid #38bdf8; max-width:650px;">
-        <div style="font-size:0.75rem; color:#38bdf8; font-weight:700; margin-bottom:4px;">IN-APP MILESTONE CELEBRATION (AUC CROSSED €1,000)</div>
-        <strong style="color:#f8fafc; font-size:1rem;">🎉 Glückwunsch! Du hast die 1.000€ Spar-Marke erreicht!</strong>
-        <p style="color:#cbd5e1; font-size:0.86rem; margin:6px 0 0 0; line-height:1.4;">
+    <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px; min-height:auto;">
+        <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">IN-APP MILESTONE CELEBRATION (AUC CROSSED €1,000)</div>
+        <strong style="color:#0f172a; font-size:1rem;">🎉 Glückwunsch! Du hast die 1.000€ Spar-Marke erreicht!</strong>
+        <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.4;">
             Damit gehörst du zu den Top 25% der disziplinierten Langzeit-Investoren auf Faizex. Erhöhe deinen Sparplan um +25€/Monat, um deinen nächsten Meilenstein (2.500€) 4 Monate schneller zu erreichen.
         </p>
     </div>
@@ -690,16 +674,16 @@ elif "10. Case 9: Idle Asset Staking" in nav_choice:
     mo = round(ann / 12, 2)
     
     st.markdown(f"""
-    <div class="exec-card" style="border-left: 4px solid #10b981; max-width:650px;">
-        <div style="font-size:0.75rem; color:#34d399; font-weight:700; margin-bottom:4px;">IN-APP PORTFOLIO REWARD PROJECTION ({tok})</div>
+    <div class="exec-card" style="border-left: 4px solid #059669; max-width:650px; min-height:auto;">
+        <div style="font-size:0.75rem; color:#059669; font-weight:700; margin-bottom:4px;">IN-APP PORTFOLIO REWARD PROJECTION ({tok})</div>
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <div>
-                <strong style="color:#f8fafc; font-size:0.95rem;">Lass deine {tok.split()[0]} nicht schlafen 🪙</strong><br>
-                <span style="color:#94a3b8; font-size:0.82rem;">100% BaFin-regulierte Verwahrung.</span>
+                <strong style="color:#0f172a; font-size:0.95rem;">Lass deine {tok.split()[0]} nicht schlafen 🪙</strong><br>
+                <span style="color:#64748b; font-size:0.82rem;">100% BaFin-regulierte Verwahrung.</span>
             </div>
             <div style="text-align:right;">
-                <span style="color:#34d399; font-size:1.2rem; font-weight:700;">+€{ann} / Jahr</span><br>
-                <span style="color:#94a3b8; font-size:0.75rem;">(~€{mo}/Monat)</span>
+                <span style="color:#059669; font-size:1.2rem; font-weight:700;">+€{ann} / Jahr</span><br>
+                <span style="color:#64748b; font-size:0.75rem;">(~€{mo}/Monat)</span>
             </div>
         </div>
     </div>
