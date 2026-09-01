@@ -174,7 +174,7 @@ nav_choice = st.sidebar.radio(
         "🎯 5. Case 4: Complete Exchange KPI Framework",
         "📈 6. Case 5: 5-Year Sparplan (DCA) LTV & Retention",
         "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard",
-        "🛠️ 8. Open-Source Architecture Studio (Mautic / EspoCRM / Frappe)",
+        "🛠️ 8. Enterprise Architecture & Systems Design Studio",
         "👥 9. Cross-Functional Alignment (Product/BI/Compliance)",
         "💻 10. Technical Stack (Braze, Liquid & SQL Schemas)"
     ]
@@ -617,14 +617,14 @@ elif nav_choice == "⚡ 7. Case 6: Volatility Alert Generator & Fatigue Guard":
 # ==========================================
 # MODULE 8: OPEN-SOURCE ARCHITECTURE STUDIO
 # ==========================================
-elif nav_choice == "🛠️ 8. Open-Source Architecture Studio (Mautic / EspoCRM / Frappe)":
+elif nav_choice == "🛠️ 8. Enterprise Architecture & Systems Design Studio":
     st.subheader("🛠️ Open-Source CRM Architecture & Microservices Studio")
     st.markdown("Demonstrating how open-source CRM architectural patterns (**Mautic**, **EspoCRM**, **Frappe / ERPNext**) solve enterprise-scale FinTech marketing challenges.")
     
     arch_tab1, arch_tab2, arch_tab3 = st.tabs([
-        "⚙️ Async Segment Batcher (Mautic Pattern)",
-        "🛡️ Idempotent Dispatcher (EspoCRM Pattern)",
-        "⚡ Webhook Market Router (Frappe Pattern)"
+        "⚙️ Async In-Memory Segment Cache",
+        "🛡️ Idempotent Crash-Resilient Dispatcher",
+        "⚡ Real-Time Event-Driven Market Router"
     ])
     
     with arch_tab1:
@@ -634,7 +634,7 @@ elif nav_choice == "🛠️ 8. Open-Source Architecture Studio (Mautic / EspoCRM
         col_c1, col_c2 = st.columns(2)
         with col_c1:
             st.code("""
-# Background Segment Updater (Mautic Pattern)
+# Asynchronous Background Segment Cache Engine
 def update_segment_cache(db_conn, segment_id, criteria):
     query = """
         SELECT user_id FROM users 
@@ -659,7 +659,7 @@ def update_segment_cache(db_conn, segment_id, criteria):
         st.markdown("Uses unique idempotency keys (`campaign:user:date`) to guarantee **zero duplicate messages** even if the broadcast server crashes halfway through a 100k blast.")
         
         st.code("""
-# Idempotency Key Verification (EspoCRM MassEmail Pattern)
+# Idempotency Key & State Machine Verification
 def dispatch_with_idempotency(campaign_id, user_id, payload):
     idempotency_key = hashlib.sha256(f"{campaign_id}:{user_id}:2026_09_01".encode()).hexdigest()
     
@@ -684,7 +684,7 @@ def dispatch_with_idempotency(campaign_id, user_id, payload):
         st.markdown("Exchange order-book tickers emit a webhook to `/api/v1/market-events`. The engine evaluates volatility anomalies ($Z > 2.5\sigma$), queries pre-computed watcher segments, validates the 24-hour cross-channel fatigue rule, and dispatches targeted push notifications.")
         
         st.code("""
-# Webhook Event Router (Frappe Hooks Pattern)
+# Real-Time Event-Driven Market Router
 @app.post("/api/v1/market-events")
 def handle_market_webhook(payload):
     # e.g., payload = {"ticker": "BTC/EUR", "price_change_4h_pct": 5.4}
