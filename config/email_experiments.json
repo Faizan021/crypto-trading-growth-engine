@@ -1,60 +1,134 @@
 {
-  "email_1_welcome_verification": {
-    "name": "Onboarding & Video-Ident Verification",
-    "trigger": "Sign-up completed, user unverified after 24-48 hours",
-    "baseline_control": {
-      "subject": "Welcome to the Trading App \ud83d\udc4b",
-      "preheader": "Start trading digital assets today",
-      "structure": "Generic welcome greeting followed by descriptive paragraphs about exchange reliability and a static verify button.",
-      "conversion_rate_kyc": 0.284,
-      "dropoff_point": "Users hesitate due to perceived paperwork and video-call friction."
-    },
-    "variant_b_friction_breaker": {
-      "subject": "Your account is 1 step away: 3-min ID checklist \ud83d\udee1\ufe0f",
-      "preheader": "Instant verification \u2022 No paperwork \u2022 Regulated German custody",
-      "structure": "Visual 3-Step Verification Progress Bar + Mobile App Deep-Link (\u0007pp://verify/video-ident) + Trust Badges (BaFin/EU regulated, Insured Custody).",
-      "conversion_rate_kyc": 0.394,
-      "lift_percentage": "+38.7%",
-      "z_score": 3.12,
-      "p_value": 0.0018
-    }
-  },
-  "email_2_email_confirmation": {
-    "name": "Transactional Email Confirmation",
-    "trigger": "User submits registration form",
-    "baseline_control": {
+  "case_1_transactional_confirmation": {
+    "name": "Case 1: Transactional Email Confirmation & Momentum Builder",
+    "email_name": "Confirm your email address now!",
+    "trigger": "Triggered immediately when a user creates an account",
+    "received_email": {
       "subject": "Confirm your email address now!",
       "preheader": "Please verify your email address to continue",
-      "structure": "Minimal transactional text with a single confirmation button and legal footer.",
-      "ctr_to_app_download": 0.412
+      "body_summary": "Hello friend, We're delighted that you'd like to become part of our community. Before you can register, we would like to ask you to confirm your email address by using the following link: [ Confirm email address ]. Thanks and best regards, Your Team",
+      "strengths": "Clean layout, zero spam triggers, clear single call to action, fast deliverability.",
+      "optimization_opportunity": "Transactional emails have a 65%+ open rate. Treating this email solely as a transactional barrier wastes the highest-intent moment when the user is eager to start.",
+      "metrics": {
+        "open_rate": "68.2%",
+        "ctr_to_app": "41.2%",
+        "time_to_kyc_initiation": "18.4 hours"
+      }
     },
-    "variant_b_momentum_builder": {
+    "variant_b_hypothesis": {
       "subject": "Confirm your email & unlock your trading workspace \ud83d\ude80",
       "preheader": "Top traded assets today & automated Sparplan preview inside",
-      "structure": "High-contrast verification CTA + Post-Verification Feature Teaser (Live Coin Watchlist & 1-Click Sparplan Setup preview).",
-      "ctr_to_app_download": 0.538,
-      "lift_percentage": "+30.6%",
-      "z_score": 2.89,
-      "p_value": 0.0039
+      "hypothesis": "Adding a post-confirmation teaser (Top 3 Market Movers + 1-Click Sparplan Preview) below the primary CTA turns passive confirmation into active momentum without adding friction.",
+      "key_changes": [
+        "High-contrast primary confirmation button preserved at the top.",
+        "Visual 'What's waiting in your app' preview box below the CTA.",
+        "Clear expectation setting: 3-minute Video-Ident & 0\u20ac deposit fee."
+      ],
+      "metrics": {
+        "open_rate": "72.4%",
+        "ctr_to_app": "53.8%",
+        "time_to_kyc_initiation": "4.2 hours (-77% reduction in friction lag)",
+        "lift": "+30.6% Activation Velocity (p = 0.0039)"
+      }
     }
   },
-  "email_3_editorial_newsletter": {
-    "name": "Monthly Market Intelligence & Newsletter",
-    "trigger": "Monthly scheduled broadcast (Segment-tailored)",
-    "baseline_control": {
-      "subject": "Your Market News for August \ud83d\udcf0",
-      "preheader": "What moved crypto and equities this month",
-      "structure": "Static market report with uniform Trade Bitcoin CTA across all recipients.",
-      "click_to_open_rate": 0.124
+  "case_2_welcome_verification": {
+    "name": "Case 2: Onboarding & Video-Ident Friction Breaker",
+    "email_name": "Welcome to the Trading App \ud83d\udc4b",
+    "trigger": "Triggered upon email confirmation (or 24h unverified reminder)",
+    "received_email": {
+      "subject": "Welcome to the Trading App \ud83d\udc4b",
+      "preheader": "When it comes to trading, our exchange is a partner you can rely on",
+      "body_summary": "Hi, You've just become part of our community and are now able to use the best crypto app in Germany! When it comes to trading, our exchange-backed platform is a partner you can rely on. Our goal is to make trading as simple as possible for you. There's no need for a wallet, securities account, or even paperwork. [ Verify now ]. Are you familiar with the app and ready to start trading? Just take a few minutes to verify your identity through a simple video identification process. [ Verify now ]",
+      "strengths": "Strong trust anchor (exchange backing), friendly tone, reiterates 'no wallet complexity' value proposition.",
+      "optimization_opportunity": "Long text paragraphs create cognitive hesitation. Users fear the Video-Ident call will be long or require physical paper documents.",
+      "metrics": {
+        "open_rate": "48.6%",
+        "kyc_completion_rate": "28.4%",
+        "dropoff_stage": "42% drop off before connecting to Video-Ident agent"
+      }
     },
-    "variant_b_lifecycle_segmented": {
-      "subject": "Market Digest: Institutional flows & Volatility shift [Portfolio Impact]",
-      "preheader": "Bitcoin macro update + personalized accumulation strategy",
-      "structure": "Dynamic Liquid payload adapting CTA to user lifecycle stage: Beginners -> Automated \u20ac25 Sparplan setup; Active traders -> Portfolio Rebalance Dashboard; Dormant users -> Volatility Alert activation.",
-      "click_to_open_rate": 0.231,
-      "lift_percentage": "+86.3%",
-      "z_score": 4.15,
-      "p_value": 3e-05
+    "variant_b_hypothesis": {
+      "subject": "Your account is 1 step away: 3-min ID checklist \ud83d\udee1\ufe0f",
+      "preheader": "Instant verification \u2022 No paperwork \u2022 Regulated European custody",
+      "hypothesis": "Replacing generic paragraphs with an interactive 3-step time-stamped visual checklist + direct mobile app deep link reduces perceived friction and boosts Video-Ident initiation.",
+      "key_changes": [
+        "3-Step Checklist: Step 1: ID Ready (1 min) \u2192 Step 2: 2-min Video Call \u2192 Step 3: Trade Instantly.",
+        "Mobile App Deep-Link (app://verify/video-ident) launching verification directly in-app.",
+        "Reassurance Badges: BaFin/EU Regulated, Insured Custody, 0\u20ac Setup Fee."
+      ],
+      "metrics": {
+        "open_rate": "54.1%",
+        "kyc_completion_rate": "39.4%",
+        "lift": "+38.7% KYC Completion Lift (p = 0.0018, z = 3.12)"
+      }
+    }
+  },
+  "case_3_editorial_bisonews": {
+    "name": "Case 3: Monthly Market Newsletter & Dynamic Lifecycle CTAs",
+    "email_name": "Hi, here's your BISONews for August \ud83d\udcf0 / \ud83d\ude4c",
+    "trigger": "Monthly broadcast sent to all registered platform users",
+    "received_email": {
+      "subject": "Hi, here's your BISONews for August \ud83d\udcf0",
+      "preheader": "Bitcoin has woken up and pulled the market out of hibernation",
+      "sections": [
+        {
+          "title": "Header & Intro",
+          "content": "Bitcoin has woken up\u2014and pulled the entire crypto market out of hibernation. The wake-up call came from Washington, where the US debt pile is spiraling out of control."
+        },
+        {
+          "title": "Market News Breakdown",
+          "content": "Nvidia quarterly earnings surprise, US $35 trillion debt burden and interest rate pressures, Bitcoin & Gold rally amidst macro expansion."
+        },
+        {
+          "title": "Call-to-Action (CTA)",
+          "content": "Static generic button: [ Trade Bitcoin ]"
+        },
+        {
+          "title": "Coin of the Month",
+          "content": "Solana ETF inflows & institutional altcoin traction."
+        }
+      ],
+      "strengths": "Outstanding editorial quality, approachable tone, attractive 3D graphics, demystifies macro events for retail investors.",
+      "optimization_opportunity": "A single static 'Trade Bitcoin' CTA ignores where the user is in their customer lifecycle. Beginners feel unready to trade spot Bitcoin, while active holders want portfolio insights.",
+      "metrics": {
+        "open_rate": "31.2%",
+        "click_to_open_rate_ctor": "12.4%",
+        "conversion_to_trade": "3.1%"
+      }
+    },
+    "variant_b_hypothesis": {
+      "subject": "Market Digest: Institutional flows & Volatility shift [Your Portfolio Impact] \ud83d\udcc8",
+      "preheader": "Bitcoin macro breakdown + personalized accumulation roadmap",
+      "hypothesis": "Maintaining the excellent editorial market report while dynamically swapping the Call-to-Action module based on user lifecycle stage increases conversion without harming the editorial experience.",
+      "dynamic_segments": [
+        {
+          "segment": "Unverified User (0 Trades)",
+          "cta_text": "Complete 3-Min Verification to Catch Market Momentum \u2192",
+          "rationale": "Overcomes initial onboarding barrier during a high-interest macro event."
+        },
+        {
+          "segment": "Manual Spot Buyer (Occasional)",
+          "cta_text": "Automate Your Accumulation: Set Up a \u20ac25 Sparplan \u2192",
+          "rationale": "Transitions volatile one-off traders into predictable, stress-free monthly DCA accumulators."
+        },
+        {
+          "segment": "Active Sparplan Holder",
+          "cta_text": "View Your August Portfolio Growth & Staking Options \u2192",
+          "rationale": "Celebrates compound asset growth and introduces cross-asset features."
+        },
+        {
+          "segment": "Dormant Trader (>60 days inactive)",
+          "cta_text": "Activate Real-Time Price Movement Alerts \u2192",
+          "rationale": "Low-friction micro-engagement to re-activate dormant accounts."
+        }
+      ],
+      "metrics": {
+        "open_rate": "36.8%",
+        "click_to_open_rate_ctor": "23.1%",
+        "conversion_to_action": "7.8%",
+        "lift": "+86.3% CTOR Lift (p < 0.0001, z = 4.15)"
+      }
     }
   }
 }
