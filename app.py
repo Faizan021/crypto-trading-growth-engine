@@ -30,14 +30,14 @@ st.markdown("""
     
     /* Clean Sidebar Spacing */
     section[data-testid="stSidebar"] .stRadio > div {
-        gap: 5px !important;
+        gap: 4px !important;
     }
     section[data-testid="stSidebar"] .stRadio label {
-        font-size: 0.88rem !important;
+        font-size: 0.86rem !important;
         font-weight: 500 !important;
         padding: 4px 8px !important;
         margin-bottom: 2px !important;
-        line-height: 1.3 !important;
+        line-height: 1.28 !important;
     }
     
     /* Executive Top Header */
@@ -162,38 +162,38 @@ st.markdown("""
 <div class="exec-header">
     <div style="margin-bottom: 8px;">
         <span class="badge-reg">BaFin & MiCA Framework</span>
-        <span class="badge-crm">Braze Lifecycle Architecture</span>
+        <span class="badge-crm">Braze Customer Journey Architecture</span>
     </div>
     <div class="exec-title">Faizex Digital — Retail CRM & Retention Engine</div>
     <p class="exec-sub">
-        Quantitative Customer Journeys, Multi-Channel Onboarding Funnels, Sparplan DCA Models, and A/B Testing Infrastructure.
+        End-to-End Customer Lifecycle Journey: Onboarding Funnels, In-App Conversion, Learn & Earn Gamification, Sparplan DCA Models, and Real-Time Volatility Triggers.
     </p>
 </div>
 """, unsafe_allow_html=True)
 
-# Master Navigation Menu Array (15 Strategic Operational Modules)
+# Master Navigation Menu Array (Customer Lifecycle Sequence)
 NAV_MODULES = [
     "📊 1. Executive Performance Dashboard",
-    "✉️ 2. Case 1: Transactional Activation Momentum",
-    "🛡️ 3. Case 2: Onboarding & KYC Friction Breaker",
-    "📰 4. Case 3: Editorial Newsletter Personalization",
-    "🎯 5. Case 4: Exchange CRM & Retention KPIs",
-    "📈 6. Case 5: 5-Year Sparplan (DCA) Cohort Model",
-    "📲 7. Case 6: Mobile Push & Volatility Engine (4 Scenarios)",
-    "📱 8. Case 7: In-App Message (IAM) Contextual Conversion Suite",
-    "🏦 9. Case 8: Stalled-Deposit Recovery Flow",
-    "🏆 10. Case 9: Milestone Habit Gamification",
-    "🪙 11. Case 10: Idle Asset Staking Yield Nudge",
-    "💡 12. Case 11: Interactive Quizzes, Micro-Surveys & NPS Engine",
-    "🛠️ 13. Case 12: CRM Automation Architecture",
-    "👥 14. Case 13: Cross-Functional Alignment Framework",
-    "💻 15. Case 14: Production Liquid & SQL Schemas"
+    "✉️ 2. Stage 1: Transactional Activation Momentum",
+    "🛡️ 3. Stage 2: Onboarding & KYC Friction Breaker",
+    "🏦 4. Stage 3: Stalled-Deposit Recovery Flow",
+    "💡 5. Stage 4: Learn & Earn Quizzes, Surveys & NPS",
+    "📱 6. Stage 5: In-App Message (IAM) Conversion Suite",
+    "📈 7. Stage 6: 5-Year Sparplan (DCA) Cohort Model",
+    "📲 8. Stage 7: Mobile Push & Volatility Engine (4 Scenarios)",
+    "🪙 9. Stage 8: Idle Asset Staking Yield Nudge",
+    "🏆 10. Stage 9: Milestone Habit Gamification",
+    "📰 11. Stage 10: Editorial Newsletter Personalization",
+    "🎯 12. Stage 11: Exchange CRM & Retention KPIs",
+    "🛠️ 13. Stage 12: CRM Automation Architecture",
+    "👥 14. Stage 13: Cross-Functional Alignment Framework",
+    "💻 15. Stage 14: Production Liquid & SQL Schemas"
 ]
 
 # Sidebar Navigation
 st.sidebar.title("Faizex CRM Platform")
-st.sidebar.markdown("**Operational Modules**")
-nav_choice = st.sidebar.radio("Select Strategic Module:", NAV_MODULES)
+st.sidebar.markdown("**Customer Journey Stages**")
+nav_choice = st.sidebar.radio("Select Lifecycle Stage:", NAV_MODULES)
 
 st.sidebar.markdown("---")
 st.sidebar.caption("Portfolio Project | Faizan Ahmed")
@@ -241,7 +241,7 @@ if nav_choice == NAV_MODULES[0]:
     st.markdown("""
     <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 18px; margin: 12px 0 16px 0; font-size:0.9rem; color:#1e293b; line-height:1.6; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
         <strong style="color:#0284c7; font-size:0.95rem;">Executive Narrative — What This Summary Proves:</strong><br>
-        This executive scorecard shows that our CRM strategy is transforming the exchange's core unit economics:
+        This executive scorecard demonstrates how our CRM strategy transforms unit economics across the entire lifecycle:
         <ul style="margin:6px 0 0 0; padding-left:20px;">
             <li><strong>Fixing Acquisition Leaks:</strong> By breaking Video-Ident friction, we converted <strong>39.4% of signups into verified active traders</strong> (vs. 28.4% industry baseline), directly reducing wasted paid ad spend.</li>
             <li><strong>Creating Predictable Revenue:</strong> Shifting retail users from erratic manual trading into automated monthly <strong>Sparplans (DCA)</strong> increased 12-month customer retention from <strong>22.8% to 59.2% (a 2.6x improvement)</strong>.</li>
@@ -256,16 +256,16 @@ if nav_choice == NAV_MODULES[0]:
         st.markdown("""
         <div class="expl-box-blue">
             <strong style="color:#0284c7; font-size:0.92rem;">💡 Why this Funnel matters for CRM:</strong><br>
-            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys (Cases 1, 2, and 8) eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
+            Over 60% of paid ad traffic drops off before completing KYC. This live model shows how our multi-channel lifecycle journeys eliminate drop-offs at each critical gate—lifting final first-trade activation from <strong>22.3% to 39.4% (+76.7% through-funnel lift)</strong>.
         </div>
         """, unsafe_allow_html=True)
         
         stages = [
             {"step": "01", "name": "App Download & Registration", "control": "10,000", "variant": "10,000", "pct": 100, "lift": "Baseline", "color": "#0284c7"},
-            {"step": "02", "name": "Email Address Confirmed (Case 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7"},
-            {"step": "03", "name": "Video-Ident Call Initiated (Case 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669"},
+            {"step": "02", "name": "Email Address Confirmed (Stage 1)", "control": "8,420", "variant": "8,940", "pct": 89.4, "lift": "+6.2% Lift", "color": "#0284c7"},
+            {"step": "03", "name": "Video-Ident Call Initiated (Stage 2)", "control": "4,820", "variant": "6,780", "pct": 67.8, "lift": "+40.7% Lift", "color": "#059669"},
             {"step": "04", "name": "KYC Verification Approved", "control": "3,920", "variant": "5,910", "pct": 59.1, "lift": "+50.8% Lift", "color": "#059669"},
-            {"step": "05", "name": "First Bank / SEPA Deposit (Case 8)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
+            {"step": "05", "name": "First Bank / SEPA Deposit (Stage 3)", "control": "2,850", "variant": "4,790", "pct": 47.9, "lift": "+68.1% Lift", "color": "#d97706"},
             {"step": "06", "name": "First Trade Executed (Activated)", "control": "2,230", "variant": "3,940", "pct": 39.4, "lift": "+76.7% Lift", "color": "#7c3aed"}
         ]
         
@@ -322,10 +322,10 @@ if nav_choice == NAV_MODULES[0]:
         st.caption("ℹ️ **Data Benchmark Source:** Aggregated from European Securities and Markets Authority (ESMA) retail asset reports and DACH multi-asset exchange distributions.")
 
 # ==========================================
-# MODULE 2: CASE 1 - TRANSACTIONAL CONFIRMATION
+# MODULE 2: STAGE 1 - TRANSACTIONAL MOMENTUM
 # ==========================================
 elif nav_choice == NAV_MODULES[1]:
-    st.markdown("### Case 1: Transactional Confirmation & Activation Momentum")
+    st.markdown("### ✉️ Stage 1: Transactional Activation Momentum (Signup Email)")
     st.markdown("**Executive Context:** Transactional confirmation emails command a **68.2% open rate** (the highest in the customer lifecycle). Treating this email as a plain administrative stop wastes peak customer motivation.")
     
     col1, col2 = st.columns(2)
@@ -380,10 +380,10 @@ elif nav_choice == NAV_MODULES[1]:
         """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 3: CASE 2 - ONBOARDING / KYC
+# MODULE 3: STAGE 2 - ONBOARDING / KYC
 # ==========================================
 elif nav_choice == NAV_MODULES[2]:
-    st.markdown("### Case 2: Onboarding & Video-Ident Friction Breaker")
+    st.markdown("### 🛡️ Stage 2: Onboarding & Video-Ident Friction Breaker")
     st.markdown("**Executive Context:** In regulated European markets (BaFin & MiCA), identity verification creates a major cognitive barrier. Our hypothesis replaces dense paragraphs with a 3-step time-stamped checklist and mobile deep-linking.")
     
     colA, colB = st.columns(2)
@@ -438,358 +438,10 @@ elif nav_choice == NAV_MODULES[2]:
         """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 4: CASE 3 - NEWSLETTER DYNAMIC CTAS
+# MODULE 4: STAGE 3 - STALLED DEPOSIT RECOVERY
 # ==========================================
 elif nav_choice == NAV_MODULES[3]:
-    st.markdown("### Case 3: Monthly Market Newsletter Personalization")
-    st.markdown("**Executive Context:** Preserves 100% of high-quality macro storytelling, but uses **Liquid logic** to dynamically adapt the Call-to-Action module based on real-time subscriber lifecycle state.")
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("##### 🔴 Control (Single Static CTA)")
-        st.markdown("""
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-            <p style="color:#64748b; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Faizex Market Digest for August 📰</p>
-            <p style="color:#1e293b; font-size:0.88rem; line-height:1.5;">
-                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. The wake-up call came from Washington, where the US debt pile is spiraling out of control...
-            </p>
-            <div style="text-align: center; margin: 16px 0;">
-                <span style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1; padding:8px 20px; border-radius:4px; font-weight:600; font-size:0.85rem;">Trade Bitcoin</span>
-            </div>
-            <p style="color:#64748b; font-size:0.78rem;">Static button underperforms across unverified users and long-term savers.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        
-    with col2:
-        st.markdown("##### 🟢 Variant B (Dynamic Liquid CTAs)")
-        selected_persona = st.selectbox(
-            "Select Subscriber Lifecycle Persona:",
-            [
-                "Unverified Lead (KYC Pending)",
-                "Manual Spot Buyer (0 Active Sparplans)",
-                "Active Sparplan Accumulator (Monthly DCA)",
-                "Dormant Account (>60 Days Inactive)"
-            ]
-        )
-        
-        st.markdown("""
-        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
-            <p style="color:#0284c7; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
-            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5;">
-                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. [Macro Report Preserved in Full]...
-            </p>
-        """, unsafe_allow_html=True)
-        
-        if "Unverified" in selected_persona:
-            st.markdown("""
-                <div style="background:#ffffff; border:1px solid #f59e0b; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#d97706; font-weight:700; font-size:0.88rem;">Complete 3-Min Verification to Catch Market Momentum &rarr;</span>
-                </div>
-            """, unsafe_allow_html=True)
-        elif "Spot Buyer" in selected_persona:
-            st.markdown("""
-                <div style="background:#ffffff; border:1px solid #059669; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#059669; font-weight:700; font-size:0.88rem;">Automate Your Accumulation: Set Up a €25 Sparplan &rarr;</span>
-                </div>
-            """, unsafe_allow_html=True)
-        elif "Sparplan" in selected_persona:
-            st.markdown("""
-                <div style="background:#ffffff; border:1px solid #0284c7; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#0284c7; font-weight:700; font-size:0.88rem;">View August Portfolio Growth & Staking Rewards &rarr;</span>
-                </div>
-            """, unsafe_allow_html=True)
-        else:
-            st.markdown("""
-                <div style="background:#ffffff; border:1px solid #db2777; border-radius:6px; padding:10px; text-align:center;">
-                    <span style="color:#db2777; font-weight:700; font-size:0.88rem;">Activate Real-Time Price Volatility Alerts &rarr;</span>
-                </div>
-            """, unsafe_allow_html=True)
-            
-        st.markdown("""
-            <hr style="border-color: #bae6fd; margin: 12px 0;">
-            <div style="font-size:0.82rem; color:#0284c7;">
-                <strong>Performance Impact:</strong> <strong>+86.3% Click-to-Open (CTOR) Lift</strong> (12.4% → 23.1%, $z = 4.15, p < 0.0001$).
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-
-# ==========================================
-# MODULE 5: CASE 4 - KPIS
-# ==========================================
-elif nav_choice == NAV_MODULES[4]:
-    st.markdown("### Case 4: Exchange CRM & Retention KPI Framework")
-    
-    kpis = [
-        {"name": "1. KYC Throughput Rate", "formula": "(Approved Verified Users / Total Registrations) * 100", "target": "> 40% (Industry avg ~28%)", "why": "Directly reduces paid Customer Acquisition Cost (CAC) waste."},
-        {"name": "2. Time-to-First-Trade (TTFT)", "formula": "Timestamp(First Trade) - Timestamp(Registration)", "target": "< 24 Hours (Median)", "why": "Single strongest predictor of 12-month customer retention."},
-        {"name": "3. Automated Sparplan Adoption Rate", "formula": "(Active Recurring Accumulators / Monthly Active Traders) * 100", "target": "> 35% of Active Base", "why": "Insulates exchange revenue from bear market trading churn."},
-        {"name": "4. Assets Under Custody (AUC) / Account", "formula": "Total Custodial Balance (€) / Total Active Traders", "target": "> €7,500 Yr 1 → > €12,000 Yr 3", "why": "Directly drives trading spread volume and staking yield potential."},
-        {"name": "5. Volatility Reactivation Velocity", "formula": "(Reactivated Dormant Accounts / Targeted Volatility Segment) * 100", "target": "> 18% within 48 Hours", "why": "Measures whether price alert triggers successfully re-engage dormant balances."}
-    ]
-    
-    for k in kpis:
-        st.markdown(f"""
-        <div class="exec-card" style="margin-bottom:0.75rem; min-height:auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong style="color:#0f172a; font-size:0.95rem;">{k['name']}</strong>
-                <span style="background:#f1f5f9; color:#0284c7; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:700;">{k['target']}</span>
-            </div>
-            <div style="color:#059669; font-family:'JetBrains Mono', monospace; font-size:0.84rem; margin:4px 0;">{k['formula']}</div>
-            <div style="color:#475569; font-size:0.82rem;"><strong>Why it Matters:</strong> {k['why']}</div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-    st.markdown("---")
-    st.markdown("#### Annual Assets Under Custody (AUC) Forecast Calculator")
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        n_reg = st.number_input("Monthly New Registrations:", value=10000, step=1000)
-    with c2:
-        r_kyc = st.slider("KYC Conversion Rate (%):", 20.0, 60.0, 39.4, 0.5)
-    with c3:
-        r_spar = st.slider("Sparplan Adoption Rate (%):", 10.0, 60.0, 35.0, 1.0)
-        
-    annual_verified = int(n_reg * (r_kyc / 100) * 12)
-    annual_spar = int(annual_verified * (r_spar / 100))
-    annual_inflow = annual_spar * 100 * 12 # €100/mo
-    
-    st.success(f"**Annual Forecast Output:** `{annual_verified:,}` Verified Accounts Added/Year | `{annual_spar:,}` Recurring Sparplan Accumulators | **€{annual_inflow:,}** Annual AUC Inflows.")
-
-# ==========================================
-# MODULE 6: CASE 5 - SPARPLAN LTV
-# ==========================================
-elif nav_choice == NAV_MODULES[5]:
-    st.markdown("### 📈 Case 5: The Sparplan (DCA) Retention Engine — Why it Matters in CRM")
-    
-    st.markdown("""
-    <div class="expl-box-blue">
-        <strong style="color:#0284c7; font-size:1rem;">💡 The CRM Strategy in Simple Words:</strong><br>
-        <strong>1. The Problem in Trading Apps:</strong> When users buy crypto manually, they check the price every day. When the market goes down or sideways, they get scared, stop trading, and <strong>77% leave the app within 12 months</strong>.<br>
-        <strong>2. What We Did (CRM Campaign):</strong> Instead of telling them to "Trade Today", our automated lifecycle emails & in-app nudges pitch <strong>Automated Monthly Sparplans (DCA) from €25/month</strong> right on European payday (1st of each month).<br>
-        <strong>3. The 5-Year Result:</strong> Because their deposit is automatic, users stay active for years—increasing 12-month retention from <strong>22.8% to 59.2% (2.6x higher loyalty)</strong> and accumulating over <strong>€9,850 in Assets Under Custody (AUC)</strong>.
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("#### ✉️ The Automated CRM Campaign We Deployed:")
-    col_c1, col_c2 = st.columns(2)
-    with col_c1:
-        st.markdown("""
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-            <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: 1st of Month (Payday Cycle) • EMAIL</div>
-            <strong style="color:#0f172a; font-size:0.95rem;">Stress-Free Wealth: Automate your Bitcoin & ETF Sparplan 📈</strong>
-            <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
-                Hi [First Name], stop timing daily price swings. Set up a €25/month Sparplan today and let compound accumulation work automatically in the background. 0€ setup fee.
-            </p>
-            <div style="margin-top:10px;">
-                <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Set Up 1-Click Sparplan &rarr;</span>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-    with col_c2:
-        st.markdown("""
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-            <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: €500 Milestone Crossed • IN-APP MODAL</div>
-            <strong style="color:#0f172a; font-size:0.95rem;">🎉 Milestone Reached: You're in the Top 25% of Disciplined Savers!</strong>
-            <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
-                Your Sparplan has steadily accumulated €500. Increase by +€25/mo to reach your €2,500 goal 4 months faster.
-            </p>
-            <div style="margin-top:10px;">
-                <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-    st.markdown("<br>", unsafe_allow_html=True)
-    st.markdown("#### 📊 The Quantified 5-Year Impact on Customer Loyalty & Assets:")
-    
-    m_dep = st.slider("Simulate Monthly Sparplan Amount (€/month):", 25, 500, 100, 25)
-    months = np.arange(1, 61)
-    df_dca_calc = pd.DataFrame({
-        'Month': months,
-        'Sparplan Retention (%)': [round(100 * (0.988 ** m), 1) for m in months],
-        'Spot Trader Retention (%)': [round(100 * (0.935 ** m), 1) for m in months],
-        'Sparplan AUC (€)': [round(m_dep * m * (1.006 ** m), 2) for m in months],
-        'Spot Trader AUC (€)': [round(450 * (1 + 0.05 * math.sin(m/3)), 2) for m in months]
-    })
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("##### 1. Customer Retention Over 5 Years (%)")
-        fig1 = go.Figure()
-        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan Retention (%)'], name='Sparplan Savers (59.2% at Yr 1)', line=dict(color='#059669', width=2.5)))
-        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader Retention (%)'], name='Manual Spot Traders (22.8% at Yr 1)', line=dict(color='#ef4444', width=2, dash='dot')))
-        fig1.update_layout(height=280, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
-        st.plotly_chart(fig1, use_container_width=True)
-        st.caption("🟢 **Why the green line stays high:** Because the savings plan is automated, users don't panic-sell during bear markets and stay active for years.")
-        
-    with col2:
-        st.markdown("##### 2. Total Money Saved per User (€ AUC)")
-        fig2 = go.Figure()
-        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan AUC (€)'], name='Sparplan User Portfolio', line=dict(color='#0284c7', width=2.5), fill='tozeroy'))
-        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader AUC (€)'], name='Manual Spot Trader Balance', line=dict(color='#64748b', width=1.5)))
-        fig2.update_layout(height=280, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
-        st.plotly_chart(fig2, use_container_width=True)
-        st.caption("🔵 **Why the blue area grows huge:** Small monthly deposits compound into thousands of euros, creating high-value customer lifetime value (LTV).")
-
-# ==========================================
-# MODULE 7: CASE 6 - MOBILE PUSH SCENARIOS
-# ==========================================
-elif nav_choice == NAV_MODULES[6]:
-    st.markdown("### 📲 Case 6: Real-Time Mobile Push & Volatility Engine (4 Scenarios)")
-    
-    st.markdown("""
-    <div class="expl-box-blue">
-        <strong style="color:#0284c7; font-size:1rem;">💡 Why Mobile Push is Crucial for Trading Platforms:</strong><br>
-        In financial trading, mobile push notifications drive instant engagement during critical market moves. However, aggressive or misleading spam creates push fatigue (users turn off notifications). Our <strong>Braze Push Engine</strong> pairs factual market movements with <strong>smart execution tools (Limit Orders) and a strict 24-hour frequency cap</strong>.
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("#### 🎯 Select Real-World Push Scenario to Preview:")
-    push_scenario = st.selectbox(
-        "Choose Trigger Scenario:",
-        [
-            "⚡ Scenario 1: Bullish Market Breakout (+6.5% Move in 2h)",
-            "📉 Scenario 2: Flash Pullback / Dip-Buying Opportunity (-5.8% Move)",
-            "🪙 Scenario 3: Staking Yield Spike Announcement (5.2% p.a.)",
-            "⏱️ Scenario 4: Automated Sparplan Execution Reminder (Pre-Debit)"
-        ]
-    )
-    
-    if "Scenario 1" in push_scenario:
-        push_title = "Bitcoin moved +6.5% to €61,400 ⚡"
-        push_body = "High European buying volume detected across major order books. Tap to view depth & set a limit order."
-        push_tag = "BULLISH BREAKOUT TRIGGER"
-        deep_link = "faizex://markets/btc?tab=limit_order"
-        impact_note = "+44.1% 24h Trading Volume Lift with -62.3% Push Opt-Outs."
-        badge_color = "#0284c7"
-    elif "Scenario 2" in push_scenario:
-        push_title = "Market Pullback Detected (-5.8%) 📉"
-        push_body = "Top 10 crypto assets reaching 30-day support levels. You have €450 uninvested cash ready for 1-click orders."
-        push_tag = "FLASH DIP / CASH WAKE-UP"
-        deep_link = "faizex://portfolio/cash?action=buy_dip"
-        impact_note = "+32.8% Cash Balance Deployment within 6 hours of notification."
-        badge_color = "#d97706"
-    elif "Scenario 3" in push_scenario:
-        push_title = "Ethereum Staking Yield Updated: 5.2% p.a. 🪙"
-        push_body = "Your 2.4 ETH in custody can generate ~€12.50/month in passive rewards. 100% BaFin-regulated custody."
-        push_tag = "PRODUCT YIELD ACTIVATION"
-        deep_link = "faizex://staking/eth"
-        impact_note = "+3.4x Staking Adoption across eligible token holders."
-        badge_color = "#059669"
-    else:
-        push_title = "Tomorrow: Your €50 Bitcoin Sparplan Executes ⏱️"
-        push_body = "Your scheduled monthly DCA accumulation will run automatically at 08:00 CET with 0€ setup fees."
-        push_tag = "DCA LIFECYCLE PREVIEW"
-        deep_link = "faizex://sparplan/details"
-        impact_note = "Reduces failed bank direct-debits by 38.2% via advance balance awareness."
-        badge_color = "#7c3aed"
-        
-    st.markdown(f"""
-    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.4rem; max-width:650px; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:1rem;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-            <div style="display:flex; align-items:center; gap:8px;">
-                <span style="background:{badge_color}; color:#fff; border-radius:6px; padding:3px 8px; font-size:0.72rem; font-weight:800;">FAIZEX DIGITAL</span>
-                <span style="font-size:0.75rem; color:#64748b; font-weight:600;">{push_tag}</span>
-            </div>
-            <span style="font-size:0.75rem; color:#94a3b8;">Just now</span>
-        </div>
-        <strong style="color:#0f172a; font-size:1.02rem;">{push_title}</strong>
-        <p style="color:#334155; font-size:0.9rem; margin:6px 0 10px 0; line-height:1.5;">
-            {push_body}
-        </p>
-        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:6px 12px; font-size:0.78rem; color:#475569; display:flex; justify-content:space-between;">
-            <span>📲 Direct App Deep-Link: <code>{deep_link}</code></span>
-            <span style="color:#059669; font-weight:700;">🛡️ 24h Frequency Capped</span>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.success(f"📈 **Quantified Impact:** {impact_note}")
-
-# ==========================================
-# MODULE 8: CASE 7 - IN-APP MESSAGE SUITE
-# ==========================================
-elif nav_choice == NAV_MODULES[7]:
-    st.markdown("### 📱 Case 7: In-App Message (IAM) Contextual Conversion Suite")
-    
-    st.markdown("""
-    <div class="expl-box-green">
-        <strong style="color:#059669; font-size:1rem;">💡 Why In-App Messages (IAM) Deliver the Highest Conversion:</strong><br>
-        Unlike emails (which get lost in inboxes) or push notifications (which require opt-in permissions), <strong>In-App Messages have a 100% delivery rate</strong> because they appear while the user is actively using the app. They guide the user to the exact next lifecycle milestone with zero friction.
-    </div>
-    """, unsafe_allow_html=True)
-    
-    iam_scenario = st.selectbox(
-        "Select In-App Message (IAM) Campaign Format:",
-        [
-            "🎉 Format A: Full-Screen Modal — Post-Deposit Sparplan Upsell",
-            "🛡️ Format B: Sticky Bottom Slide-Up — Biometric FaceID Activation",
-            "🪙 Format C: Contextual Balance Card — Idle Cash Yield Nudge"
-        ]
-    )
-    
-    if "Format A" in iam_scenario:
-        st.markdown("""
-        <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:14px; padding:2rem; max-width:550px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
-            <div style="font-size:2.8rem; margin-bottom:0.4rem;">🎉 💶 📈</div>
-            <h3 style="color:#38bdf8; margin:0 0 6px 0;">First Deposit of €100 Successful!</h3>
-            <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.5; margin:0 0 16px 0;">
-                Your funds are ready for trading. Would you like to automate this €100 deposit every month to build wealth stress-free?
-            </p>
-            <div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.84rem; text-align:left;">
-                <strong>✅ Key Benefit:</strong> 0€ fees on automated Sparplans • Pause or adjust anytime with 1 click.
-            </div>
-            <div style="display:flex; gap:10px; justify-content:center;">
-                <span style="background:#0284c7; color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:0.9rem; cursor:pointer;">Activate as Monthly Sparplan &rarr;</span>
-            </div>
-            <div style="margin-top:10px; font-size:0.75rem; color:#94a3b8; cursor:pointer;">No thanks, keep as one-time deposit</div>
-        </div>
-        """, unsafe_allow_html=True)
-        st.success("📈 **Quantified Impact:** +31.4% Direct Conversion from First Deposit into Recurring Monthly Sparplan.")
-        
-    elif "Format B" in iam_scenario:
-        st.markdown("""
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
-                <div>
-                    <span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">SECURITY & CONVENIENCE</span>
-                    <h4 style="color:#0f172a; margin:6px 0 4px 0;">Enable FaceID / Biometric Login? 🛡️</h4>
-                    <p style="color:#475569; font-size:0.88rem; line-height:1.5; margin:0;">
-                        Log in securely in 0.5 seconds without typing passwords.
-                    </p>
-                </div>
-                <div style="font-size:2rem;">🔐</div>
-            </div>
-            <div style="margin-top:14px; display:flex; gap:8px;">
-                <span style="background:#059669; color:#fff; padding:8px 18px; border-radius:6px; font-weight:700; font-size:0.85rem;">Enable 1-Click Biometrics &rarr;</span>
-                <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:6px; font-weight:600; font-size:0.85rem;">Maybe Later</span>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        st.success("📈 **Quantified Impact:** Reduces authentication friction and increases 30-day App Open Frequency by +42.0%.")
-        
-    else:
-        st.markdown("""
-        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                <strong style="color:#0284c7; font-size:0.95rem;">🪙 Put Your Idle EUR Cash to Work</strong>
-                <span style="background:#0284c7; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:800;">3.2% P.A.</span>
-            </div>
-            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5; margin:0 0 12px 0;">
-                You have <strong>€850 in uninvested cash</strong>. Activate daily interest rewards (3.2% p.a.) or set an automated limit order to buy market dips.
-            </p>
-            <div style="display:flex; gap:8px;">
-                <span style="background:#0284c7; color:#fff; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Activate Yield (3.2% p.a.) &rarr;</span>
-                <span style="background:#ffffff; color:#0284c7; border:1px solid #bae6fd; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Set Limit Order</span>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        st.success("📈 **Quantified Impact:** +24.6% Deployment of Idle Cash Reserves into Active Trading and Yield.")
-
-# ==========================================
-# MODULE 9: CASE 8 - STALLED DEPOSIT RECOVERY
-# ==========================================
-elif nav_choice == NAV_MODULES[8]:
-    st.markdown("### 🏦 Case 8: Stalled-Deposit Recovery Flow (High-Intent Capital Rescue)")
+    st.markdown("### 🏦 Stage 3: Stalled-Deposit Recovery Flow (High-Intent Capital Rescue)")
     st.markdown("**Executive Context:** Recovers verified users who stalled before initiating their first bank transfer using a 15-minute in-app slide-up and a 24-hour supportive care email.")
     
     c1, c2 = st.columns(2)
@@ -822,64 +474,10 @@ elif nav_choice == NAV_MODULES[8]:
     st.success("📈 **Quantified Impact:** +20.3% First-Deposit Recovery Rate (+64% Email CTR).")
 
 # ==========================================
-# MODULE 10: CASE 9 - MILESTONE GAMIFICATION
+# MODULE 5: STAGE 4 - LEARN & EARN, SURVEYS & NPS
 # ==========================================
-elif nav_choice == NAV_MODULES[9]:
-    st.markdown("### 🏆 Case 9: Milestone Habit Gamification (Goal Gradient DCA)")
-    st.markdown("**Executive Context:** Based on the Goal Gradient Effect: celebrates users reaching €500, €1,000, or €5,000 AUC milestones to drive Sparplan retention.")
-    
-    st.markdown("""
-    <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px; min-height:auto;">
-        <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">IN-APP MILESTONE CELEBRATION (AUC CROSSED €1,000)</div>
-        <strong style="color:#0f172a; font-size:1rem;">🎉 Congratulations! You Crossed the €1,000 Savings Milestone!</strong>
-        <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
-            You are now in the top 25% of disciplined long-term accumulators on Faizex. Increase your Sparplan by +€25/month to reach your €2,500 goal 4 months faster.
-        </p>
-        <div style="margin-top:10px;">
-            <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.success("📈 **Quantified Impact:** 59.2% 12-Month Retention / +52.4% Sparplan Upgrade Velocity.")
-
-# ==========================================
-# MODULE 11: CASE 10 - IDLE STAKING YIELD
-# ==========================================
-elif nav_choice == NAV_MODULES[10]:
-    st.markdown("### 🪙 Case 10: Idle Asset Staking Yield Nudge")
-    st.markdown("**Executive Context:** Translates un-staked crypto holdings into concrete annual EUR rewards to overcome user inertia.")
-    
-    tok = st.selectbox("Asset Held in Custody:", ["Ethereum (ETH)", "Solana (SOL)", "Cardano (ADA)"])
-    bal = st.slider("Custody Balance (€ equivalent):", 200, 10000, 2000, 100)
-    
-    ann = round(bal * 0.048, 2)
-    mo = round(ann / 12, 2)
-    
-    st.markdown(f"""
-    <div class="exec-card" style="border-left: 4px solid #059669; max-width:650px; min-height:auto;">
-        <div style="font-size:0.75rem; color:#059669; font-weight:700; margin-bottom:4px;">IN-APP PORTFOLIO REWARD PROJECTION ({tok})</div>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <div>
-                <strong style="color:#0f172a; font-size:0.95rem;">Put your {tok.split()[0]} to work 🪙</strong><br>
-                <span style="color:#64748b; font-size:0.82rem;">100% Insured European Custody.</span>
-            </div>
-            <div style="text-align:right;">
-                <span style="color:#059669; font-size:1.2rem; font-weight:700;">+€{ann} / Year</span><br>
-                <span style="color:#64748b; font-size:0.75rem;">(~€{mo}/Month)</span>
-            </div>
-        </div>
-        <div style="margin-top:10px;">
-            <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Activate Staking with 1 Click &rarr;</span>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.success("📈 **Quantified Impact:** +3.4x Staking Product Adoption Rate (27.8% Conversion).")
-
-# ==========================================
-# MODULE 12: CASE 11 - INTERACTIVE QUIZZES, SURVEYS & NPS
-# ==========================================
-elif nav_choice == NAV_MODULES[11]:
-    st.markdown("### 💡 Case 11: Interactive Learn & Earn Quizzes, Micro-Surveys & NPS Engine")
+elif nav_choice == NAV_MODULES[4]:
+    st.markdown("### 💡 Stage 4: Interactive 'Learn & Earn' Quizzes, Micro-Surveys & NPS Engine")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -889,7 +487,7 @@ elif nav_choice == NAV_MODULES[11]:
     """, unsafe_allow_html=True)
     
     tab1, tab2, tab3 = st.tabs([
-        "🎓 1. Interactive Learn & Earn Quiz",
+        "🎓 1. Interactive 'Learn & Earn' Quiz",
         "🎯 2. 1-Click Trading Risk & Persona Survey",
         "⭐ 3. In-App NPS & CSAT Feedback Loop"
     ])
@@ -1016,10 +614,412 @@ elif nav_choice == NAV_MODULES[11]:
         """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 13: CASE 12 - CRM ARCHITECTURE
+# MODULE 6: STAGE 5 - IN-APP MESSAGE SUITE
+# ==========================================
+elif nav_choice == NAV_MODULES[5]:
+    st.markdown("### 📱 Stage 5: In-App Message (IAM) Contextual Conversion Suite")
+    
+    st.markdown("""
+    <div class="expl-box-green">
+        <strong style="color:#059669; font-size:1rem;">💡 Why In-App Messages (IAM) Deliver the Highest Conversion:</strong><br>
+        Unlike emails (which get lost in inboxes) or push notifications (which require opt-in permissions), <strong>In-App Messages have a 100% delivery rate</strong> because they appear while the user is actively using the app. They guide the user to the exact next lifecycle milestone with zero friction.
+    </div>
+    """, unsafe_allow_html=True)
+    
+    iam_scenario = st.selectbox(
+        "Select In-App Message (IAM) Campaign Format:",
+        [
+            "🎉 Format A: Full-Screen Modal — Post-Deposit Sparplan Upsell",
+            "🛡️ Format B: Sticky Bottom Slide-Up — Biometric FaceID Activation",
+            "🪙 Format C: Contextual Balance Card — Idle Cash Yield Nudge"
+        ]
+    )
+    
+    if "Format A" in iam_scenario:
+        st.markdown("""
+        <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:14px; padding:2rem; max-width:550px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
+            <div style="font-size:2.8rem; margin-bottom:0.4rem;">🎉 💶 📈</div>
+            <h3 style="color:#38bdf8; margin:0 0 6px 0;">First Deposit of €100 Successful!</h3>
+            <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.5; margin:0 0 16px 0;">
+                Your funds are ready for trading. Would you like to automate this €100 deposit every month to build wealth stress-free?
+            </p>
+            <div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.84rem; text-align:left;">
+                <strong>✅ Key Benefit:</strong> 0€ fees on automated Sparplans • Pause or adjust anytime with 1 click.
+            </div>
+            <div style="display:flex; gap:10px; justify-content:center;">
+                <span style="background:#0284c7; color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:0.9rem; cursor:pointer;">Activate as Monthly Sparplan &rarr;</span>
+            </div>
+            <div style="margin-top:10px; font-size:0.75rem; color:#94a3b8; cursor:pointer;">No thanks, keep as one-time deposit</div>
+        </div>
+        """, unsafe_allow_html=True)
+        st.success("📈 **Quantified Impact:** +31.4% Direct Conversion from First Deposit into Recurring Monthly Sparplan.")
+        
+    elif "Format B" in iam_scenario:
+        st.markdown("""
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                <div>
+                    <span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">SECURITY & CONVENIENCE</span>
+                    <h4 style="color:#0f172a; margin:6px 0 4px 0;">Enable FaceID / Biometric Login? 🛡️</h4>
+                    <p style="color:#475569; font-size:0.88rem; line-height:1.5; margin:0;">
+                        Log in securely in 0.5 seconds without typing passwords.
+                    </p>
+                </div>
+                <div style="font-size:2rem;">🔐</div>
+            </div>
+            <div style="margin-top:14px; display:flex; gap:8px;">
+                <span style="background:#059669; color:#fff; padding:8px 18px; border-radius:6px; font-weight:700; font-size:0.85rem;">Enable 1-Click Biometrics &rarr;</span>
+                <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:6px; font-weight:600; font-size:0.85rem;">Maybe Later</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        st.success("📈 **Quantified Impact:** Reduces authentication friction and increases 30-day App Open Frequency by +42.0%.")
+        
+    else:
+        st.markdown("""
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <strong style="color:#0284c7; font-size:0.95rem;">🪙 Put Your Idle EUR Cash to Work</strong>
+                <span style="background:#0284c7; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:800;">3.2% P.A.</span>
+            </div>
+            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5; margin:0 0 12px 0;">
+                You have <strong>€850 in uninvested cash</strong>. Activate daily interest rewards (3.2% p.a.) or set an automated limit order to buy market dips.
+            </p>
+            <div style="display:flex; gap:8px;">
+                <span style="background:#0284c7; color:#fff; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Activate Yield (3.2% p.a.) &rarr;</span>
+                <span style="background:#ffffff; color:#0284c7; border:1px solid #bae6fd; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Set Limit Order</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        st.success("📈 **Quantified Impact:** +24.6% Deployment of Idle Cash Reserves into Active Trading and Yield.")
+
+# ==========================================
+# MODULE 7: STAGE 6 - SPARPLAN LTV COHORT MODEL
+# ==========================================
+elif nav_choice == NAV_MODULES[6]:
+    st.markdown("### 📈 Stage 6: The Sparplan (DCA) Retention Engine — Core Growth Lever")
+    
+    st.markdown("""
+    <div class="expl-box-blue">
+        <strong style="color:#0284c7; font-size:1rem;">💡 The CRM Strategy in Simple Words:</strong><br>
+        <strong>1. The Problem in Trading Apps:</strong> When users buy crypto manually, they check the price every day. When the market goes down or sideways, they get scared, stop trading, and <strong>77% leave the app within 12 months</strong>.<br>
+        <strong>2. What We Did (CRM Campaign):</strong> Instead of telling them to "Trade Today", our automated lifecycle emails & in-app nudges pitch <strong>Automated Monthly Sparplans (DCA) from €25/month</strong> right on European payday (1st of each month).<br>
+        <strong>3. The 5-Year Result:</strong> Because their deposit is automatic, users stay active for years—increasing 12-month retention from <strong>22.8% to 59.2% (2.6x higher loyalty)</strong> and accumulating over <strong>€9,850 in Assets Under Custody (AUC)</strong>.
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("#### ✉️ The Automated CRM Campaign We Deployed:")
+    col_c1, col_c2 = st.columns(2)
+    with col_c1:
+        st.markdown("""
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: 1st of Month (Payday Cycle) • EMAIL</div>
+            <strong style="color:#0f172a; font-size:0.95rem;">Stress-Free Wealth: Automate your Bitcoin & ETF Sparplan 📈</strong>
+            <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
+                Hi [First Name], stop timing daily price swings. Set up a €25/month Sparplan today and let compound accumulation work automatically in the background. 0€ setup fee.
+            </p>
+            <div style="margin-top:10px;">
+                <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Set Up 1-Click Sparplan &rarr;</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_c2:
+        st.markdown("""
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: €500 Milestone Crossed • IN-APP MODAL</div>
+            <strong style="color:#0f172a; font-size:0.95rem;">🎉 Milestone Reached: You're in the Top 25% of Disciplined Savers!</strong>
+            <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
+                Your Sparplan has steadily accumulated €500. Increase by +€25/mo to reach your €2,500 goal 4 months faster.
+            </p>
+            <div style="margin-top:10px;">
+                <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("#### 📊 The Quantified 5-Year Impact on Customer Loyalty & Assets:")
+    
+    m_dep = st.slider("Simulate Monthly Sparplan Amount (€/month):", 25, 500, 100, 25)
+    months = np.arange(1, 61)
+    df_dca_calc = pd.DataFrame({
+        'Month': months,
+        'Sparplan Retention (%)': [round(100 * (0.988 ** m), 1) for m in months],
+        'Spot Trader Retention (%)': [round(100 * (0.935 ** m), 1) for m in months],
+        'Sparplan AUC (€)': [round(m_dep * m * (1.006 ** m), 2) for m in months],
+        'Spot Trader AUC (€)': [round(450 * (1 + 0.05 * math.sin(m/3)), 2) for m in months]
+    })
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("##### 1. Customer Retention Over 5 Years (%)")
+        fig1 = go.Figure()
+        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan Retention (%)'], name='Sparplan Savers (59.2% at Yr 1)', line=dict(color='#059669', width=2.5)))
+        fig1.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader Retention (%)'], name='Manual Spot Traders (22.8% at Yr 1)', line=dict(color='#ef4444', width=2, dash='dot')))
+        fig1.update_layout(height=280, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
+        st.plotly_chart(fig1, use_container_width=True)
+        st.caption("🟢 **Why the green line stays high:** Because the savings plan is automated, users don't panic-sell during bear markets and stay active for years.")
+        
+    with col2:
+        st.markdown("##### 2. Total Money Saved per User (€ AUC)")
+        fig2 = go.Figure()
+        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Sparplan AUC (€)'], name='Sparplan User Portfolio', line=dict(color='#0284c7', width=2.5), fill='tozeroy'))
+        fig2.add_trace(go.Scatter(x=df_dca_calc['Month'], y=df_dca_calc['Spot Trader AUC (€)'], name='Manual Spot Trader Balance', line=dict(color='#64748b', width=1.5)))
+        fig2.update_layout(height=280, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color='#475569', size=11))
+        st.plotly_chart(fig2, use_container_width=True)
+        st.caption("🔵 **Why the blue area grows huge:** Small monthly deposits compound into thousands of euros, creating high-value customer lifetime value (LTV).")
+
+# ==========================================
+# MODULE 8: STAGE 7 - MOBILE PUSH SCENARIOS
+# ==========================================
+elif nav_choice == NAV_MODULES[7]:
+    st.markdown("### 📲 Stage 7: Real-Time Mobile Push & Volatility Engine (4 Scenarios)")
+    
+    st.markdown("""
+    <div class="expl-box-blue">
+        <strong style="color:#0284c7; font-size:1rem;">💡 Why Mobile Push is Crucial for Trading Platforms:</strong><br>
+        In financial trading, mobile push notifications drive instant engagement during critical market moves. However, aggressive or misleading spam creates push fatigue (users turn off notifications). Our <strong>Braze Push Engine</strong> pairs factual market movements with <strong>smart execution tools (Limit Orders) and a strict 24-hour frequency cap</strong>.
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("#### 🎯 Select Real-World Push Scenario to Preview:")
+    push_scenario = st.selectbox(
+        "Choose Trigger Scenario:",
+        [
+            "⚡ Scenario 1: Bullish Market Breakout (+6.5% Move in 2h)",
+            "📉 Scenario 2: Flash Pullback / Dip-Buying Opportunity (-5.8% Move)",
+            "🪙 Scenario 3: Staking Yield Spike Announcement (5.2% p.a.)",
+            "⏱️ Scenario 4: Automated Sparplan Execution Reminder (Pre-Debit)"
+        ]
+    )
+    
+    if "Scenario 1" in push_scenario:
+        push_title = "Bitcoin moved +6.5% to €61,400 ⚡"
+        push_body = "High European buying volume detected across major order books. Tap to view depth & set a limit order."
+        push_tag = "BULLISH BREAKOUT TRIGGER"
+        deep_link = "faizex://markets/btc?tab=limit_order"
+        impact_note = "+44.1% 24h Trading Volume Lift with -62.3% Push Opt-Outs."
+        badge_color = "#0284c7"
+    elif "Scenario 2" in push_scenario:
+        push_title = "Market Pullback Detected (-5.8%) 📉"
+        push_body = "Top 10 crypto assets reaching 30-day support levels. You have €450 uninvested cash ready for 1-click orders."
+        push_tag = "FLASH DIP / CASH WAKE-UP"
+        deep_link = "faizex://portfolio/cash?action=buy_dip"
+        impact_note = "+32.8% Cash Balance Deployment within 6 hours of notification."
+        badge_color = "#d97706"
+    elif "Scenario 3" in push_scenario:
+        push_title = "Ethereum Staking Yield Updated: 5.2% p.a. 🪙"
+        push_body = "Your 2.4 ETH in custody can generate ~€12.50/month in passive rewards. 100% BaFin-regulated custody."
+        push_tag = "PRODUCT YIELD ACTIVATION"
+        deep_link = "faizex://staking/eth"
+        impact_note = "+3.4x Staking Adoption across eligible token holders."
+        badge_color = "#059669"
+    else:
+        push_title = "Tomorrow: Your €50 Bitcoin Sparplan Executes ⏱️"
+        push_body = "Your scheduled monthly DCA accumulation will run automatically at 08:00 CET with 0€ setup fees."
+        push_tag = "DCA LIFECYCLE PREVIEW"
+        deep_link = "faizex://sparplan/details"
+        impact_note = "Reduces failed bank direct-debits by 38.2% via advance balance awareness."
+        badge_color = "#7c3aed"
+        
+    st.markdown(f"""
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.4rem; max-width:650px; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:1rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <span style="background:{badge_color}; color:#fff; border-radius:6px; padding:3px 8px; font-size:0.72rem; font-weight:800;">FAIZEX DIGITAL</span>
+                <span style="font-size:0.75rem; color:#64748b; font-weight:600;">{push_tag}</span>
+            </div>
+            <span style="font-size:0.75rem; color:#94a3b8;">Just now</span>
+        </div>
+        <strong style="color:#0f172a; font-size:1.02rem;">{push_title}</strong>
+        <p style="color:#334155; font-size:0.9rem; margin:6px 0 10px 0; line-height:1.5;">
+            {push_body}
+        </p>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:6px 12px; font-size:0.78rem; color:#475569; display:flex; justify-content:space-between;">
+            <span>📲 Direct App Deep-Link: <code>{deep_link}</code></span>
+            <span style="color:#059669; font-weight:700;">🛡️ 24h Frequency Capped</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.success(f"📈 **Quantified Impact:** {impact_note}")
+
+# ==========================================
+# MODULE 9: STAGE 8 - IDLE STAKING YIELD
+# ==========================================
+elif nav_choice == NAV_MODULES[8]:
+    st.markdown("### 🪙 Stage 8: Idle Asset Staking Yield Nudge")
+    st.markdown("**Executive Context:** Translates un-staked crypto holdings into concrete annual EUR rewards to overcome user inertia.")
+    
+    tok = st.selectbox("Asset Held in Custody:", ["Ethereum (ETH)", "Solana (SOL)", "Cardano (ADA)"])
+    bal = st.slider("Custody Balance (€ equivalent):", 200, 10000, 2000, 100)
+    
+    ann = round(bal * 0.048, 2)
+    mo = round(ann / 12, 2)
+    
+    st.markdown(f"""
+    <div class="exec-card" style="border-left: 4px solid #059669; max-width:650px; min-height:auto;">
+        <div style="font-size:0.75rem; color:#059669; font-weight:700; margin-bottom:4px;">IN-APP PORTFOLIO REWARD PROJECTION ({tok})</div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+                <strong style="color:#0f172a; font-size:0.95rem;">Put your {tok.split()[0]} to work 🪙</strong><br>
+                <span style="color:#64748b; font-size:0.82rem;">100% Insured European Custody.</span>
+            </div>
+            <div style="text-align:right;">
+                <span style="color:#059669; font-size:1.2rem; font-weight:700;">+€{ann} / Year</span><br>
+                <span style="color:#64748b; font-size:0.75rem;">(~€{mo}/Month)</span>
+            </div>
+        </div>
+        <div style="margin-top:10px;">
+            <span style="background:#059669; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Activate Staking with 1 Click &rarr;</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.success("📈 **Quantified Impact:** +3.4x Staking Product Adoption Rate (27.8% Conversion).")
+
+# ==========================================
+# MODULE 10: STAGE 9 - MILESTONE GAMIFICATION
+# ==========================================
+elif nav_choice == NAV_MODULES[9]:
+    st.markdown("### 🏆 Stage 9: Milestone Habit Gamification (Goal Gradient DCA)")
+    st.markdown("**Executive Context:** Based on the Goal Gradient Effect: celebrates users reaching €500, €1,000, or €5,000 AUC milestones to drive Sparplan retention.")
+    
+    st.markdown("""
+    <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px; min-height:auto;">
+        <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">IN-APP MILESTONE CELEBRATION (AUC CROSSED €1,000)</div>
+        <strong style="color:#0f172a; font-size:1rem;">🎉 Congratulations! You Crossed the €1,000 Savings Milestone!</strong>
+        <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.5;">
+            You are now in the top 25% of disciplined long-term accumulators on Faizex. Increase your Sparplan by +€25/month to reach your €2,500 goal 4 months faster.
+        </p>
+        <div style="margin-top:10px;">
+            <span style="background:#0284c7; color:#fff; padding:6px 16px; border-radius:4px; font-weight:700; font-size:0.84rem;">Upgrade Sparplan (+€25/mo) &rarr;</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.success("📈 **Quantified Impact:** 59.2% 12-Month Retention / +52.4% Sparplan Upgrade Velocity.")
+
+# ==========================================
+# MODULE 11: STAGE 10 - EDITORIAL NEWSLETTER
+# ==========================================
+elif nav_choice == NAV_MODULES[10]:
+    st.markdown("### 📰 Stage 10: Monthly Market Newsletter Personalization")
+    st.markdown("**Executive Context:** Preserves 100% of high-quality macro storytelling, but uses **Liquid logic** to dynamically adapt the Call-to-Action module based on real-time subscriber lifecycle state.")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("##### 🔴 Control (Single Static CTA)")
+        st.markdown("""
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+            <p style="color:#64748b; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Hi, here's your Faizex Market Digest for August 📰</p>
+            <p style="color:#1e293b; font-size:0.88rem; line-height:1.5;">
+                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. The wake-up call came from Washington, where the US debt pile is spiraling out of control...
+            </p>
+            <div style="text-align: center; margin: 16px 0;">
+                <span style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1; padding:8px 20px; border-radius:4px; font-weight:600; font-size:0.85rem;">Trade Bitcoin</span>
+            </div>
+            <p style="color:#64748b; font-size:0.78rem;">Static button underperforms across unverified users and long-term savers.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with col2:
+        st.markdown("##### 🟢 Variant B (Dynamic Liquid CTAs)")
+        selected_persona = st.selectbox(
+            "Select Subscriber Lifecycle Persona:",
+            [
+                "Unverified Lead (KYC Pending)",
+                "Manual Spot Buyer (0 Active Sparplans)",
+                "Active Sparplan Accumulator (Monthly DCA)",
+                "Dormant Account (>60 Days Inactive)"
+            ]
+        )
+        
+        st.markdown("""
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:1.2rem;">
+            <p style="color:#0284c7; font-size:0.85rem; margin-bottom:4px;"><strong>Subject:</strong> Market Digest: Institutional flows & Volatility shift [Portfolio Impact] 📈</p>
+            <p style="color:#0f172a; font-size:0.88rem; line-height:1.5;">
+                Bitcoin has woken up—and pulled the entire crypto market out of hibernation. [Macro Report Preserved in Full]...
+            </p>
+        """, unsafe_allow_html=True)
+        
+        if "Unverified" in selected_persona:
+            st.markdown("""
+                <div style="background:#ffffff; border:1px solid #f59e0b; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#d97706; font-weight:700; font-size:0.88rem;">Complete 3-Min Verification to Catch Market Momentum &rarr;</span>
+                </div>
+            """, unsafe_allow_html=True)
+        elif "Spot Buyer" in selected_persona:
+            st.markdown("""
+                <div style="background:#ffffff; border:1px solid #059669; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#059669; font-weight:700; font-size:0.88rem;">Automate Your Accumulation: Set Up a €25 Sparplan &rarr;</span>
+                </div>
+            """, unsafe_allow_html=True)
+        elif "Sparplan" in selected_persona:
+            st.markdown("""
+                <div style="background:#ffffff; border:1px solid #0284c7; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#0284c7; font-weight:700; font-size:0.88rem;">View August Portfolio Growth & Staking Rewards &rarr;</span>
+                </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown("""
+                <div style="background:#ffffff; border:1px solid #db2777; border-radius:6px; padding:10px; text-align:center;">
+                    <span style="color:#db2777; font-weight:700; font-size:0.88rem;">Activate Real-Time Price Volatility Alerts &rarr;</span>
+                </div>
+            """, unsafe_allow_html=True)
+            
+        st.markdown("""
+            <hr style="border-color: #bae6fd; margin: 12px 0;">
+            <div style="font-size:0.82rem; color:#0284c7;">
+                <strong>Performance Impact:</strong> <strong>+86.3% Click-to-Open (CTOR) Lift</strong> (12.4% → 23.1%, $z = 4.15, p < 0.0001$).
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+# ==========================================
+# MODULE 12: STAGE 11 - KPIS & FORECAST
+# ==========================================
+elif nav_choice == NAV_MODULES[11]:
+    st.markdown("### 🎯 Stage 11: Exchange CRM & Retention KPI Framework")
+    
+    kpis = [
+        {"name": "1. KYC Throughput Rate", "formula": "(Approved Verified Users / Total Registrations) * 100", "target": "> 40% (Industry avg ~28%)", "why": "Directly reduces paid Customer Acquisition Cost (CAC) waste."},
+        {"name": "2. Time-to-First-Trade (TTFT)", "formula": "Timestamp(First Trade) - Timestamp(Registration)", "target": "< 24 Hours (Median)", "why": "Single strongest predictor of 12-month customer retention."},
+        {"name": "3. Automated Sparplan Adoption Rate", "formula": "(Active Recurring Accumulators / Monthly Active Traders) * 100", "target": "> 35% of Active Base", "why": "Insulates exchange revenue from bear market trading churn."},
+        {"name": "4. Assets Under Custody (AUC) / Account", "formula": "Total Custodial Balance (€) / Total Active Traders", "target": "> €7,500 Yr 1 → > €12,000 Yr 3", "why": "Directly drives trading spread volume and staking yield potential."},
+        {"name": "5. Volatility Reactivation Velocity", "formula": "(Reactivated Dormant Accounts / Targeted Volatility Segment) * 100", "target": "> 18% within 48 Hours", "why": "Measures whether price alert triggers successfully re-engage dormant balances."}
+    ]
+    
+    for k in kpis:
+        st.markdown(f"""
+        <div class="exec-card" style="margin-bottom:0.75rem; min-height:auto;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="color:#0f172a; font-size:0.95rem;">{k['name']}</strong>
+                <span style="background:#f1f5f9; color:#0284c7; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:700;">{k['target']}</span>
+            </div>
+            <div style="color:#059669; font-family:'JetBrains Mono', monospace; font-size:0.84rem; margin:4px 0;">{k['formula']}</div>
+            <div style="color:#475569; font-size:0.82rem;"><strong>Why it Matters:</strong> {k['why']}</div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    st.markdown("---")
+    st.markdown("#### Annual Assets Under Custody (AUC) Forecast Calculator")
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        n_reg = st.number_input("Monthly New Registrations:", value=10000, step=1000)
+    with c2:
+        r_kyc = st.slider("KYC Conversion Rate (%):", 20.0, 60.0, 39.4, 0.5)
+    with c3:
+        r_spar = st.slider("Sparplan Adoption Rate (%):", 10.0, 60.0, 35.0, 1.0)
+        
+    annual_verified = int(n_reg * (r_kyc / 100) * 12)
+    annual_spar = int(annual_verified * (r_spar / 100))
+    annual_inflow = annual_spar * 100 * 12 # €100/mo
+    
+    st.success(f"**Annual Forecast Output:** `{annual_verified:,}` Verified Accounts Added/Year | `{annual_spar:,}` Recurring Sparplan Accumulators | **€{annual_inflow:,}** Annual AUC Inflows.")
+
+# ==========================================
+# MODULE 13: STAGE 12 - CRM ARCHITECTURE
 # ==========================================
 elif nav_choice == NAV_MODULES[12]:
-    st.markdown("### 🛠️ Case 12: CRM Automation Architecture & State Machine")
+    st.markdown("### 🛠️ Stage 12: CRM Automation Architecture & State Machine")
     st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
     
     st.code("""
@@ -1038,10 +1038,10 @@ def dispatch_with_idempotency(campaign_id, user_id, payload):
     st.success("📈 **Quantified Impact:** 100% Crash-Resilient Delivery (Zero Duplicate Broadcast Sends).")
 
 # ==========================================
-# MODULE 14: CASE 13 - CROSS-FUNCTIONAL
+# MODULE 14: STAGE 13 - CROSS-FUNCTIONAL
 # ==========================================
 elif nav_choice == NAV_MODULES[13]:
-    st.markdown("### 👥 Case 13: Cross-Functional Collaboration & Delivery Framework")
+    st.markdown("### 👥 Stage 13: Cross-Functional Collaboration & Delivery Framework")
     st.markdown("""
     | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
     |---|---|---|
@@ -1052,10 +1052,10 @@ elif nav_choice == NAV_MODULES[13]:
     """, unsafe_allow_html=True)
 
 # ==========================================
-# MODULE 15: CASE 14 - TECHNICAL STACK
+# MODULE 15: STAGE 14 - TECHNICAL STACK
 # ==========================================
 elif nav_choice == NAV_MODULES[14]:
-    st.markdown("### 💻 Case 14: Production Liquid & SQL Schemas")
+    st.markdown("### 💻 Stage 14: Production Liquid & SQL Schemas")
     st.markdown("##### 1. Braze Liquid Conditional Block")
     st.code("""
 {% if user.kyc_status != 'approved' %}
