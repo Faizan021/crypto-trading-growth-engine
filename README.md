@@ -1,4 +1,4 @@
-# ⚡ Mison | Digital Asset & Trading Growth OS
+# ⚡ Faizex | Digital Asset & Trading Growth OS
 ### Enterprise CRM Lifecycle Intelligence, Open-Source Architectural Design Patterns, and Multi-Asset Sparplan Retention for Regulated European Exchanges
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-trading-growth-engine.streamlit.app)
@@ -8,7 +8,7 @@
 
 > [!IMPORTANT]
 > **LEGAL & PORTFOLIO DISCLAIMER:**  
-> **"Mison"** is a **fictional, simulated platform name** created solely for independent portfolio research, educational analysis, and open-source system design demonstration. It does **not** represent, reference, or affiliate with any real-world commercial company, financial institution, or registered trademark. All trading data, metrics, and email copy examples shown are synthetic simulations.
+> **"Faizex"** is a **custom portfolio case study platform created by Faizan Ahmed** for independent technical demonstration, quantitative CRM research, and open-source system design. It does **not** represent, reference, or affiliate with any real-world commercial company, financial institution, or registered trademark. All trading data, metrics, and email copy examples shown are synthetic simulations.
 
 ---
 
@@ -47,7 +47,7 @@ flowchart TD
 | **02** | **Fault-Tolerant Idempotent Dispatcher** | Server crashes during large 100k email/push broadcasts causing duplicate sends | **Idempotent Campaign Log State Machine** (`PENDING`, `DISPATCHED`, `FAILED`, `SUPPRESSED`) | **100% Crash-Resilient** (Zero Duplicate Broadcast Sends) |
 | **03** | **Real-Time Webhook Volatility Alerts** | Static cron schedules miss rapid $\pm 5\%$ intraday market breakouts | **Event-driven Webhook Router** firing sub-second multichannel alerts with 24h fatigue guards | **< 500ms Execution Latency** (Real-Time Price Reaction) |
 | **04** | **Transactional Confirmation Momentum** | High 68%+ open rates wasted on static confirmation links | **Momentum-Building Activation Hook** previewing live market movers upon confirmation | **+30.6% Activation Velocity** ($z = 2.89, p = 0.0039$) |
-| **05** | **Video-Ident & KYC Friction Breaker** | Users register but drop before ID verification due to paperwork anxiety | **3-Step Friction-Relief Checklist & App Deep-Linking** (`misonapp://verify/video-ident`) | **+38.7% KYC → First-Trade Rate** ($z = 3.12, p = 0.0018$) |
+| **05** | **Video-Ident & KYC Friction Breaker** | Users register but drop before ID verification due to paperwork anxiety | **3-Step Friction-Relief Checklist & App Deep-Linking** (`faizexapp://verify/video-ident`) | **+38.7% KYC → First-Trade Rate** ($z = 3.12, p = 0.0018$) |
 | **06** | **Editorial Newsletter Lifecycle Personalization** | Static "Trade Bitcoin" buttons underperform across different user stages | **Dynamic Liquid Payloads** adapting CTAs: Unverified → KYC; Spot Buyer → Sparplan; Active → Portfolio | **+86.3% Click-to-Open (CTOR) Lift** ($z = 4.15, p < 0.0001$) |
 | **07** | **5-Year Sparplan (DCA) LTV & Retention** | Manual spot buyers stop trading during bear markets (~6.5% monthly churn) | **60-Month Compound LTV Forecaster**, proving why DCA accumulation sustains 59.2% loyalty | **€9,850 Avg. 2-Year AUC / Member** |
 | **08** | **Comprehensive Exchange KPI Engine** | Fragmented metrics and ad-hoc attribution across growth teams | **5-Metric Framework** (KYC Throughput, TTFT, Sparplan Rate, AUC Depth, Reactivation Velocity) | **Audit-Ready Growth Governance** |
@@ -68,20 +68,20 @@ flowchart TD
 ---
 
 ### 🛡️ Case 2: Onboarding & Video-Ident Friction Breaker
-* **Email Analyzed:** *"Welcome to Mison 👋"*
+* **Email Analyzed:** *"Welcome to Faizex 👋"*
 * **👍 What We Appreciate:** Strong trust anchor (exchange backing), clear *"no wallet complexity or paperwork"* value proposition.
 * **💡 The Opportunity:** Dense paragraphs create cognitive friction. Users hesitate because they fear a long video call or needing physical documents.
 * **🟢 Our Hypothesis (Variant B):** Replace paragraphs with a visual, time-stamped **3-Step Checklist**:
   1. *Step 1: Have your ID card ready (1 min)*
   2. *Step 2: Quick 2-minute Video-Ident call*
   3. *Step 3: Instant trading access (0€ deposit fee)*
-  * *Paired with a direct mobile deep link (`misonapp://verify/video-ident`).*
+  * *Paired with a direct mobile deep link (`faizexapp://verify/video-ident`).*
 * **📈 Measurable Impact:** **+38.7% Relative Lift in KYC Completion** (28.4% → 39.4%, $z = 3.12, p = 0.0018$).
 
 ---
 
 ### 📰 Case 3: Monthly Market Newsletter A/B Test (August Edition)
-* **Email Analyzed:** *"Hi, here’s your Misonews for August 📰 / 🙌"*
+* **Email Analyzed:** *"Hi, here’s your Faizex Market Digest for August 📰 / 🙌"*
 * **👍 What We Appreciate:** Superb editorial quality, approachable breakdown of macro topics (US $35T debt, Nvidia earnings, Bitcoin rally), engaging 3D visuals.
 * **💡 The Opportunity:** A single static `[ Trade Bitcoin ]` button underperforms across different customer stages (non-holders feel unready to buy spot; active accumulators prefer automated DCA).
 * **🟢 Our Hypothesis (Variant B):** Keep the entire high-quality editorial intact, but **dynamically adapt the CTA module** based on the user's lifecycle stage:
@@ -139,7 +139,7 @@ flowchart TD
 
 ### 👥 Case 7: Cross-Functional Alignment Framework
 * **BI / Analytics:** Standardized event taxonomies (`kyc_step_reached`, `sparplan_created`).
-* **Product & Engineering:** Direct app deep-links (`misonapp://verify/video-ident`) and SDK webhook reliability.
+* **Product & Engineering:** Direct app deep-links (`faizexapp://verify/video-ident`) and SDK webhook reliability.
 * **UX/UI Design:** Dark/light mode accessibility, responsive HTML email templates.
 * **Legal & Compliance:** BaFin/MiCA regulatory disclaimers and strict Double-Opt-In (DOI) verification records.
 
@@ -170,4 +170,4 @@ python -m unittest test_engine.py
 ---
 
 ### 🛡️ Disclaimer
-This project is an independent quantitative growth engineering prototype. "Mison" is a fictional entity used exclusively for portfolio and technical simulation purposes.
+This project is an independent quantitative growth engineering prototype. "Faizex" is a fictional entity used exclusively for portfolio and technical simulation purposes.
