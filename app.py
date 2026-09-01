@@ -741,17 +741,17 @@ elif "8. Case 7: In-App Message" in nav_choice:
         st.markdown('''
         <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:14px; padding:2rem; max-width:550px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
             <div style="font-size:2.8rem; margin-bottom:0.4rem;">🎉 💶 📈</div>
-            <h3 style="color:#38bdf8; margin:0 0 6px 0;">Erste Einzahlung von 100€ erfolgreich!</h3>
+            <h3 style="color:#38bdf8; margin:0 0 6px 0;">First Deposit of €100 Successful!</h3>
             <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.5; margin:0 0 16px 0;">
-                Dein Guthaben ist sofort handelsbereit. Möchtest du diese Einzahlung jeden Monat automatisch wiederholen und stressfrei Vermögen aufbauen?
+                Your funds are ready for trading. Would you like to automate this €100 deposit every month to build wealth stress-free?
             </p>
             <div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.84rem; text-align:left;">
                 <strong>✅ Dein Vorteil:</strong> 0€ Gebühren auf automatische Sparpläne • Jederzeit mit 1 Klick pausierbar.
             </div>
             <div style="display:flex; gap:10px; justify-content:center;">
-                <span style="background:#0284c7; color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:0.9rem; cursor:pointer;">Als monatlichen Sparplan aktivieren &rarr;</span>
+                <span style="background:#0284c7; color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:0.9rem; cursor:pointer;">Activate as Monthly Sparplan &rarr;</span>
             </div>
-            <div style="margin-top:10px; font-size:0.75rem; color:#94a3b8; cursor:pointer;">Nein danke, vorerst nur einmalig</div>
+            <div style="margin-top:10px; font-size:0.75rem; color:#94a3b8; cursor:pointer;">No thanks, keep as one-time deposit</div>
         </div>
         ''', unsafe_allow_html=True)
         st.success("📈 **Quantified Impact:** +31.4% Direct Conversion from First Deposit into Recurring Monthly Sparplan.")
@@ -761,17 +761,17 @@ elif "8. Case 7: In-App Message" in nav_choice:
         <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
             <div style="display:flex; justify-content:space-between; align-items:flex-start;">
                 <div>
-                    <span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">SICHERHEIT & KOMFORT</span>
-                    <h4 style="color:#0f172a; margin:6px 0 4px 0;">FaceID / Fingerabdruck aktivieren? 🛡️</h4>
+                    <span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">SECURITY & CONVENIENCE</span>
+                    <h4 style="color:#0f172a; margin:6px 0 4px 0;">Enable FaceID / Biometric Login? 🛡️</h4>
                     <p style="color:#475569; font-size:0.88rem; line-height:1.5; margin:0;">
-                        Logge dich in 0.5 Sekunden ein und schütze dein Konto ohne Passwörter.
+                        Log in securely in 0.5 seconds without typing passwords.
                     </p>
                 </div>
                 <div style="font-size:2rem;">🔐</div>
             </div>
             <div style="margin-top:14px; display:flex; gap:8px;">
-                <span style="background:#059669; color:#fff; padding:8px 18px; border-radius:6px; font-weight:700; font-size:0.85rem;">Jetzt 1-Klick aktivieren &rarr;</span>
-                <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:6px; font-weight:600; font-size:0.85rem;">Später</span>
+                <span style="background:#059669; color:#fff; padding:8px 18px; border-radius:6px; font-weight:700; font-size:0.85rem;">Enable 1-Click Biometrics &rarr;</span>
+                <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:6px; font-weight:600; font-size:0.85rem;">Maybe Later</span>
             </div>
         </div>
         ''', unsafe_allow_html=True)
@@ -781,15 +781,15 @@ elif "8. Case 7: In-App Message" in nav_choice:
         st.markdown('''
         <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                <strong style="color:#0284c7; font-size:0.95rem;">🪙 Dein EUR-Guthaben arbeitet noch nicht</strong>
+                <strong style="color:#0284c7; font-size:0.95rem;">🪙 Put Your Idle EUR Cash to Work</strong>
                 <span style="background:#0284c7; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:800;">3.2% P.A.</span>
             </div>
             <p style="color:#0f172a; font-size:0.88rem; line-height:1.5; margin:0 0 12px 0;">
-                Du hast <strong>€850 uninvestiertes Bargeld</strong> auf deinem Konto. Aktiviere tägliche Zinsausschüttung oder setze einen automatischen Limit-Kauf bei Markt-Dips.
+                You have <strong>€850 in uninvested cash</strong>. Activate daily interest rewards (3.2% p.a.) or set an automated limit order to buy market dips.
             </p>
             <div style="display:flex; gap:8px;">
-                <span style="background:#0284c7; color:#fff; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Zinsen aktivieren &rarr;</span>
-                <span style="background:#ffffff; color:#0284c7; border:1px solid #bae6fd; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Limit Order setzen</span>
+                <span style="background:#0284c7; color:#fff; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Activate Yield (3.2% p.a.) &rarr;</span>
+                <span style="background:#ffffff; color:#0284c7; border:1px solid #bae6fd; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Set Limit Order</span>
             </div>
         </div>
         ''', unsafe_allow_html=True)
@@ -807,9 +807,9 @@ elif "8. Case 7: Stalled-Deposit Recovery" in nav_choice:
         st.markdown("""
         <div class="exec-card" style="border-left: 4px solid #d97706; min-height:auto;">
             <div style="font-size:0.75rem; color:#d97706; font-weight:700;">TOUCHPOINT 1 • IN-APP SLIDE-UP (T + 15 MIN)</div>
-            <strong style="color:#0f172a; font-size:0.9rem;">Dein 0€ Einzahlungs-Auftrag wartet noch ⏱️</strong>
+            <strong style="color:#0f172a; font-size:0.9rem;">Your 0€ Deposit Request is Ready ⏱️</strong>
             <p style="color:#334155; font-size:0.84rem; margin:4px 0 0 0;">
-                Tippe unten, um die IBAN direkt in deine Banking-App zu kopieren. Keine Gebühren, sofort startklar.
+                Tap below to copy your dedicated IBAN directly into your banking app. 0€ deposit fee, ready in minutes.
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -817,9 +817,9 @@ elif "8. Case 7: Stalled-Deposit Recovery" in nav_choice:
         st.markdown("""
         <div class="exec-card" style="border-left: 4px solid #059669; min-height:auto;">
             <div style="font-size:0.75rem; color:#059669; font-weight:700;">TOUCHPOINT 2 • CUSTOMER CARE EMAIL (T + 24H)</div>
-            <strong style="color:#0f172a; font-size:0.9rem;">Brauchst du Unterstützung bei deiner ersten Einzahlung? 🛡️</strong>
+            <strong style="color:#0f172a; font-size:0.9rem;">Need help with your first account deposit? 🛡️</strong>
             <p style="color:#334155; font-size:0.84rem; margin:4px 0 0 0;">
-                Reassuring guidance explaining SEPA instant settlement, zero deposit fees, and German custody security.
+                Reassuring customer care explaining SEPA instant settlement, zero fees, and European custody security.
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -835,9 +835,9 @@ elif "9. Case 8: Milestone Habit Gamification" in nav_choice:
     st.markdown("""
     <div class="exec-card" style="border-left: 4px solid #0284c7; max-width:650px; min-height:auto;">
         <div style="font-size:0.75rem; color:#0284c7; font-weight:700; margin-bottom:4px;">IN-APP MILESTONE CELEBRATION (AUC CROSSED €1,000)</div>
-        <strong style="color:#0f172a; font-size:1rem;">🎉 Glückwunsch! Du hast die 1.000€ Spar-Marke erreicht!</strong>
+        <strong style="color:#0f172a; font-size:1rem;">🎉 Congratulations! You Crossed the €1,000 Savings Milestone!</strong>
         <p style="color:#334155; font-size:0.86rem; margin:6px 0 0 0; line-height:1.4;">
-            Damit gehörst du zu den Top 25% der disziplinierten Langzeit-Investoren auf Faizex. Erhöhe deinen Sparplan um +25€/Monat, um deinen nächsten Meilenstein (2.500€) 4 Monate schneller zu erreichen.
+            You are now in the top 25% of disciplined long-term accumulators on Faizex. Increase your Sparplan by +€25/month to reach your €2,500 goal 4 months faster.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -861,8 +861,8 @@ elif "10. Case 9: Idle Asset Staking" in nav_choice:
         <div style="font-size:0.75rem; color:#059669; font-weight:700; margin-bottom:4px;">IN-APP PORTFOLIO REWARD PROJECTION ({tok})</div>
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <div>
-                <strong style="color:#0f172a; font-size:0.95rem;">Lass deine {tok.split()[0]} nicht schlafen 🪙</strong><br>
-                <span style="color:#64748b; font-size:0.82rem;">100% BaFin-regulierte Verwahrung.</span>
+                <strong style="color:#0f172a; font-size:0.95rem;">Put your {tok.split()[0]} to work 🪙</strong><br>
+                <span style="color:#64748b; font-size:0.82rem;">100% Insured European Custody.</span>
             </div>
             <div style="text-align:right;">
                 <span style="color:#059669; font-size:1.2rem; font-weight:700;">+€{ann} / Jahr</span><br>

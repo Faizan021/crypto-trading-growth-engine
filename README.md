@@ -98,9 +98,9 @@
 
 | IAM Format | Lifecycle Trigger | In-App Copy & Interaction Mechanism | Business Conversion Lift |
 | :--- | :--- | :--- | :--- |
-| **1. Full-Screen Celebration Modal** | `first_deposit_completed` (€100+) | 🎉 *„Erste Einzahlung erfolgreich! Möchtest du diese 100€ jeden Monat automatisch ansparen?“* (1-Click Sparplan toggle) | **+31.4% Immediate Sparplan Adoption** |
-| **2. Sticky Bottom Slide-Up** | User logs in with password 3x | 🔐 *„FaceID / Fingerabdruck aktivieren? Logge dich in 0.5s ein.“* (Reduces authentication drop-off) | **+42.0% 30-Day App Open Frequency** |
-| **3. Contextual Balance Card** | Holding >€200 uninvested cash | 🪙 *„Dein Bargeld arbeitet noch nicht: 3.2% p.a. Zinsen aktivieren oder Limit-Order setzen.“* | **+24.6% Deployment of Idle Balances** |
+| **1. Full-Screen Celebration Modal** | `first_deposit_completed` (€100+) | 🎉 *“First deposit successful! Would you like to automate this €100 deposit every month?”* (1-Click Sparplan toggle) | **+31.4% Immediate Sparplan Adoption** |
+| **2. Sticky Bottom Slide-Up** | User logs in with password 3x | 🔐 *“Enable FaceID / Biometrics? Log in securely in 0.5s.”* (Reduces authentication drop-off) | **+42.0% 30-Day App Open Frequency** |
+| **3. Contextual Balance Card** | Holding >€200 uninvested cash | 🪙 *“Put your cash to work: Earn 3.2% p.a. interest or set limit buy orders.”* | **+24.6% Deployment of Idle Balances** |
 
 ---
 
@@ -125,8 +125,8 @@
 
 | Experiment Dimension | 🔴 Control (Zero Recovery Journey) | 🟢 Variant B (Automated Friction-Rescue Journey) | Strategic CRM Rationale |
 | :--- | :--- | :--- | :--- |
-| **T + 15m Touchpoint** | None (User drops off) | In-App Slide-Up: *„Dein 0€ Einzahlungs-Auftrag wartet: 1-Klick IBAN kopieren“* | Rescues intent while context is fresh |
-| **T + 24h Email** | Generic promotional email | Supportive Care Email: *„Brauchst du Hilfe bei deiner ersten Einzahlung? Wir unterstützen dich gerne.“* | Replaces aggressive sales pressure with helpful customer care |
+| **T + 15m Touchpoint** | None (User drops off) | In-App Slide-Up: *“Your 0€ Deposit Request is Ready: 1-Click IBAN Copy”* | Rescues intent while context is fresh |
+| **T + 24h Email** | Generic promotional email | Supportive Care Email: *“Need help with your first deposit? Our support team is here for you.”* | Replaces aggressive sales pressure with helpful customer care |
 | **Deep-Link Route** | General app home | Direct deep-link to bank transfer instructions (`faizex://deposit/details`) | Eliminates navigation friction |
 | **Trust Assurance** | Standard footer | Prominent German BaFin Custody & 0€ Deposit Fee Badges | Overcomes hesitation regarding bank transfer safety |
 | **Target Emotion** | Frustration / Confusion | Reassurance & satisfaction | Direct revenue recovery from warm signups |
@@ -140,10 +140,10 @@
 
 | Experiment Dimension | 🔴 Control (Silent Milestone) | 🟢 Variant B (Gamified Milestone Celebration) | Strategic CRM Rationale |
 | :--- | :--- | :--- | :--- |
-| **In-App Reaction** | Standard numeric balance update | 🎉 Confetti Modal: *„Meilenstein erreicht! Du gehörst zu den Top 25% der disziplinierten Sparer.“* | Provides immediate emotional payoff for disciplined saving |
+| **In-App Reaction** | Standard numeric balance update | 🎉 Confetti Modal: *“Milestone Reached! You are in the top 25% of disciplined savers.”* | Provides immediate emotional payoff for disciplined saving |
 | **Email Summary** | None | Congratulatory Milestone Email showing 3-year projected trajectory if Sparplan is upgraded by +€25/mo | Bridges positive feelings directly into the next goal |
 | **Gamification Badge** | None | Visual "Top Saver" tier badge embedded in profile | Activates social status and personal pride |
-| **Primary CTA** | None | `🚀 Nächsten Meilenstein setzen (ab 50€/Monat) →` | Frictionless 1-click Sparplan amount adjustment |
+| **Primary CTA** | None | `🚀 Set Next Milestone (from €50/month) →` | Frictionless 1-click Sparplan amount adjustment |
 | **Target Emotion** | Indifference | Pride, accomplishment, and motivation | Nurtures lifetime wealth building |
 | **Quantified Impact** | 6.2% Monthly Churn | **+52.4% Sparplan Upgrade Rate (59.2% 12M Retention)** | Higher AUC inflows per active account |
 
@@ -155,10 +155,10 @@
 
 | Experiment Dimension | 🔴 Control (Generic Staking Announcement) | 🟢 Variant B (Personalized Dynamic Yield Nudge) | Strategic CRM Rationale |
 | :--- | :--- | :--- | :--- |
-| **In-App Placement** | Hidden in product sub-menu | Dynamic native card inside Portfolio: *„Lass deine Assets nicht schlafen: +€72/Jahr Rewards sichern“* | Contextual discovery exactly where users review balances |
-| **Email Rationale** | Technical staking explanation | Dynamic Liquid reward projection in EUR (e.g. *„Deine 2.4 ETH können 4.8% p.a. generieren“*) | Translates complex blockchain staking into tangible EUR value |
+| **In-App Placement** | Hidden in product sub-menu | Dynamic native card inside Portfolio: *“Put your assets to work: Earn +€72/year in staking rewards”* | Contextual discovery exactly where users review balances |
+| **Email Rationale** | Technical staking explanation | Dynamic Liquid reward projection in EUR (e.g. *“Your 2.4 ETH can generate 4.8% p.a. in staking rewards”*) | Translates complex blockchain staking into tangible EUR value |
 | **Regulatory Safety** | Generic disclaimer | Prominent: **100% BaFin-Compliant & Insured Custody** | Neutralizes security and slashing fears |
-| **Primary CTA** | `Read Docs` | `1-Klick Staking aktivieren →` | Immediate zero-friction activation |
+| **Primary CTA** | `Read Docs` | `Activate 1-Click Staking →` | Immediate zero-friction activation |
 | **Target Emotion** | Hesitation / Apathy | Empowerment & excitement for passive rewards | Sticky custodial lock-in |
 | **Quantified Impact** | 8.2% Staking Adoption | **+3.4x Staking Product Adoption Rate (27.8% Conversion)** | Substantial increase in custodial revenue |
 
