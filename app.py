@@ -173,22 +173,22 @@ st.markdown("""
 
 # Master Navigation Menu Array (16 Operational Modules with BISON Strategic Fit)
 NAV_MODULES = [
-    "📊 Executive Summary: Strategy & Scorecard",
-    "🦬 BISON (Boerse Stuttgart Digital): Strategic Fit & Blueprint",
-    "✉️ Stage 1: Double Opt-In (DOI) Email Redesign",
-    "🛡️ Stage 2: Breaking the KYC Drop-off",
-    "🏦 Stage 3: High-Intent Deposit Recovery",
-    "🎓 Stage 4: 'Learn & Earn' Quiz & Risk Profiling",
-    "📱 Stage 5: Contextual In-App Conversion Nudges",
-    "📈 Stage 6: The 5-Year Sparplan (DCA) Retention Engine",
-    "📲 Stage 7: Event-Triggered Mobile Push (4 Scenarios)",
-    "🪙 Stage 8: Idle Staking Yield & Cash Activation",
-    "🏆 Stage 9: Milestone Habit Loops & Goal Gradient",
-    "📰 Stage 10: Dynamic 1:1 Lifecycle Newsletter",
-    "🎯 Stage 11: Retention Metrics, Unit Economics & AUC Forecast",
-    "🛠️ Stage 12: Event-Driven Infrastructure & Idempotency",
-    "👥 Stage 13: Cross-Functional Squad Execution Matrix",
-    "💻 Stage 14: Production Liquid & Snowflake SQL Schemas"
+    "📊 Executive Summary: Full-Lifecycle Retention Strategy & Scorecard",
+    "🦬 BISON (Boerse Stuttgart Digital): 1:1 CRM Manager Application Blueprint",
+    "✉️ Case 1: Double Opt-In (DOI) Onboarding & Activation Velocity (Email)",
+    "🛡️ Case 2: Regulated Identity Verification (KYC) Funnel Optimization (Journey)",
+    "🏦 Case 3: High-Intent Deposit Abandonment & Recovery Journey (Automated Flow)",
+    "🎓 Case 4: Zero-Party Data Profiling & 'Learn & Earn' Gamification (Segmentation)",
+    "📱 Case 5: Contextual In-App Messaging (IAM) & Home Feed Banners (Multichannel)",
+    "📈 Case 6: Automated Sparplan (DCA) Recurring Retention Engine (Customer Loyalty)",
+    "📲 Case 7: Event-Triggered Volatility & Cryptoradar Push Campaigns (Push Channel)",
+    "🪙 Case 8: Idle Asset Monetization & Regulated Staking Cross-Sell (Product Growth)",
+    "🏆 Case 9: Milestone-Based Retention Loops & Habit Gamification (Engagement)",
+    "📰 Case 10: Dynamic 1:1 Personalized Newsletter via Liquid Logic (Personalization)",
+    "🎯 Case 11: Quantitative CRM Metrics, LTV/CAC & Statistical A/B Testing (Analysis)",
+    "🛠️ Case 12: Event-Driven Marketing Automation & Idempotency Infrastructure (Tech Stack)",
+    "👥 Case 13: Cross-Functional Growth Squad Matrix (Marketing, Product, BI, UX/UI)",
+    "💻 Case 14: Production Braze Liquid Templates & Snowflake SQL Cohorts (Data & Tech)"
 ]
 
 # Sidebar Navigation
@@ -645,7 +645,7 @@ elif nav_choice == NAV_MODULES[1]:
 # MODULE 2: STAGE 1 - DOUBLE OPT-IN (DOI)
 # ==========================================
 elif nav_choice == NAV_MODULES[2]:
-    st.markdown("### ✉️ Stage 1: Double Opt-In (DOI) Confirmation & Activation Momentum")
+    st.markdown("### ✉️ Case 1: Double Opt-In (DOI) Onboarding & Activation Velocity (Email Campaign)")
     st.markdown("**Executive Context:** Under European GDPR and German UWG regulations, **Double Opt-In (DOI)** confirmation is legally mandatory before sending marketing communications. With an outstanding **68.2% open rate** (the highest in the customer lifecycle), treating the DOI email as a dry legal stop wastes peak customer motivation. Our hypothesis embeds live market movers directly into the DOI confirmation to drive immediate momentum into Video-Ident (KYC).")
     
     col1, col2 = st.columns(2)
@@ -703,7 +703,7 @@ elif nav_choice == NAV_MODULES[2]:
 # MODULE 3: STAGE 2 - ONBOARDING / KYC
 # ==========================================
 elif nav_choice == NAV_MODULES[3]:
-    st.markdown("### 🛡️ Stage 2: Regulated Identity Verification (KYC) Funnel Optimization")
+    st.markdown("### 🛡️ Case 2: Regulated Identity Verification (KYC) Funnel Optimization (Automated Customer Journey)")
     st.markdown("**Executive Context:** In regulated European markets (BaFin & MiCA), identity verification creates a major cognitive barrier. Our hypothesis replaces dense paragraphs with a 3-step time-stamped checklist and mobile deep-linking.")
     
     colA, colB = st.columns(2)
@@ -761,7 +761,7 @@ elif nav_choice == NAV_MODULES[3]:
 # MODULE 4: STAGE 3 - STALLED DEPOSIT RECOVERY
 # ==========================================
 elif nav_choice == NAV_MODULES[4]:
-    st.markdown("### 🏦 Stage 3: High-Intent Deposit Abandonment & Recovery Journey")
+    st.markdown("### 🏦 Case 3: High-Intent Deposit Abandonment & Recovery Flow (Triggered Multi-Touchpoint Journey)")
     st.markdown("**Executive Context:** Recovers verified users who stalled before initiating their first bank transfer using a 15-minute in-app slide-up and a 24-hour supportive care email.")
     
     c1, c2 = st.columns(2)
@@ -797,7 +797,7 @@ elif nav_choice == NAV_MODULES[4]:
 # MODULE 5: STAGE 4 - LEARN & EARN, SURVEYS & NPS
 # ==========================================
 elif nav_choice == NAV_MODULES[5]:
-    st.markdown("### 💡 Stage 4: Zero-Party Data Collection, 'Learn & Earn' Gamification & In-App NPS")
+    st.markdown("### 🎓 Case 4: Zero-Party Data Collection, 'Learn & Earn' Gamification & In-App Micro-NPS Loops")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -937,7 +937,7 @@ elif nav_choice == NAV_MODULES[5]:
 # MODULE 6: STAGE 5 - IN-APP MESSAGE SUITE
 # ==========================================
 elif nav_choice == NAV_MODULES[6]:
-    st.markdown("### 📱 Stage 5: Contextual In-App Messaging (IAM) & Conversion Modals")
+    st.markdown("### 📱 Case 5: Multichannel Contextual In-App Messaging (IAM) & Home Feed Banners Suite")
     
     st.markdown("""
     <div class="expl-box-green">
@@ -1017,7 +1017,7 @@ elif nav_choice == NAV_MODULES[6]:
 # MODULE 7: STAGE 6 - SPARPLAN LTV COHORT MODEL
 # ==========================================
 elif nav_choice == NAV_MODULES[7]:
-    st.markdown("### 📈 Stage 6: Recurring Dollar-Cost Averaging (DCA Sparplan) Retention Engine")
+    st.markdown("### 📈 Case 6: Automated Sparplan (DCA) Recurring Retention Engine — Core Customer Loyalty Lever")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -1093,7 +1093,7 @@ elif nav_choice == NAV_MODULES[7]:
 # MODULE 8: STAGE 7 - MOBILE PUSH SCENARIOS
 # ==========================================
 elif nav_choice == NAV_MODULES[8]:
-    st.markdown("### 📲 Stage 7: Event-Triggered Mobile Push & Volatility Reactivation Engine")
+    st.markdown("### 📲 Case 7: Event-Triggered Mobile Push & Cryptoradar Volatility Reactivation (4 Scenarios)")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -1167,7 +1167,7 @@ elif nav_choice == NAV_MODULES[8]:
 # MODULE 9: STAGE 8 - IDLE STAKING YIELD
 # ==========================================
 elif nav_choice == NAV_MODULES[9]:
-    st.markdown("### 🪙 Stage 8: Cross-Sell Staking Yield & Idle Capital Monetization")
+    st.markdown("### 🪙 Case 8: Idle Asset Monetization & Regulated Staking Cross-Sell (Product Growth Nudge)")
     st.markdown("**Executive Context:** Translates un-staked crypto holdings into concrete annual EUR rewards to overcome user inertia.")
     
     tok = st.selectbox("Asset Held in Custody:", ["Ethereum (ETH)", "Solana (SOL)", "Cardano (ADA)"])
@@ -1200,7 +1200,7 @@ elif nav_choice == NAV_MODULES[9]:
 # MODULE 10: STAGE 9 - MILESTONE GAMIFICATION
 # ==========================================
 elif nav_choice == NAV_MODULES[10]:
-    st.markdown("### 🏆 Stage 9: Milestone-Based Retention Loops & Goal-Gradient Rewards")
+    st.markdown("### 🏆 Case 9: Milestone-Based Retention Loops & Habit Gamification (Long-Term Engagement)")
     st.markdown("**Executive Context:** Based on the Goal Gradient Effect: celebrates users reaching €500, €1,000, or €5,000 AUC milestones to drive Sparplan retention.")
     
     st.markdown("""
@@ -1221,7 +1221,7 @@ elif nav_choice == NAV_MODULES[10]:
 # MODULE 11: STAGE 10 - EDITORIAL NEWSLETTER
 # ==========================================
 elif nav_choice == NAV_MODULES[11]:
-    st.markdown("### 📰 Stage 10: Dynamic 1:1 Personalized Newsletter (Liquid Content Blocks)")
+    st.markdown("### 📰 Case 10: Dynamic 1:1 Personalized Newsletter via Braze Liquid Content Blocks")
     st.markdown("**Executive Context:** Preserves 100% of high-quality macro storytelling, but uses **Liquid logic** to dynamically adapt the Call-to-Action module based on real-time subscriber lifecycle state.")
     
     col1, col2 = st.columns(2)
@@ -1297,7 +1297,7 @@ elif nav_choice == NAV_MODULES[11]:
 # MODULE 12: STAGE 11 - KPIS & FORECAST
 # ==========================================
 elif nav_choice == NAV_MODULES[12]:
-    st.markdown("### 🎯 Stage 11: Quantitative CRM Metrics, LTV/CAC & AUC Forecasting")
+    st.markdown("### 🎯 Case 11: Quantitative CRM Metrics, LTV/CAC Unit Economics & Statistical A/B Testing")
     
     kpis = [
         {"name": "1. KYC Throughput Rate", "formula": "(Approved Verified Users / Total Registrations) * 100", "target": "> 40% (Industry avg ~28%)", "why": "Directly reduces paid Customer Acquisition Cost (CAC) waste."},
@@ -1339,7 +1339,7 @@ elif nav_choice == NAV_MODULES[12]:
 # MODULE 13: STAGE 12 - CRM ARCHITECTURE
 # ==========================================
 elif nav_choice == NAV_MODULES[13]:
-    st.markdown("### 🛠️ Stage 12: Event-Driven CRM Infrastructure & Idempotent Dispatcher")
+    st.markdown("### 🛠️ Case 12: Event-Driven Marketing Automation Infrastructure & Idempotent Message Dispatcher")
     st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
     
     st.code("""
@@ -1361,7 +1361,7 @@ def dispatch_with_idempotency(campaign_id, user_id, payload):
 # MODULE 14: STAGE 13 - CROSS-FUNCTIONAL
 # ==========================================
 elif nav_choice == NAV_MODULES[14]:
-    st.markdown("### 👥 Stage 13: Cross-Functional Squad Execution Matrix (BI, Product, Compliance)")
+    st.markdown("### 👥 Case 13: Cross-Functional Growth Squad Collaboration Matrix (Marketing, Product, BI, UX/UI, Compliance)")
     st.markdown("""
     | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
     |---|---|---|
@@ -1375,7 +1375,7 @@ elif nav_choice == NAV_MODULES[14]:
 # MODULE 15: STAGE 14 - TECHNICAL STACK
 # ==========================================
 elif nav_choice == NAV_MODULES[15]:
-    st.markdown("### 💻 Stage 14: Production Liquid Templates & Snowflake Cohort Schemas")
+    st.markdown("### 💻 Case 14: Production Braze Liquid Templates & Snowflake SQL Cohort Schemas")
     st.markdown("##### 1. Braze Liquid Conditional Block")
     st.code("""
 {% if user.kyc_status != 'approved' %}
