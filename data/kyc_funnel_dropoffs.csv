@@ -1,0 +1,7 @@
+funnel_stage,baseline_users,baseline_conversion_pct,variant_b_users,variant_b_conversion_pct,stage_dropoff_baseline,stage_dropoff_variant_b
+1. App Download & Registration,10000,100.0,10000,100.0,0,0
+2. Email Address Confirmed,8420,84.2,8950,89.5,1580,1050
+3. Video-Ident Initiated,4820,48.2,6740,67.4,3600,2210
+4. KYC Verification Approved,3910,39.1,5890,58.9,910,850
+5. First Bank/SEPA Deposit,2850,28.5,4780,47.8,1060,1110
+6. First Trade Executed,2210,22.1,3940,39.4,640,840

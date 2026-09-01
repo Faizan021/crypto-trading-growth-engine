@@ -1,0 +1,60 @@
+{
+  "email_1_welcome_verification": {
+    "name": "Onboarding & Video-Ident Verification",
+    "trigger": "Sign-up completed, user unverified after 24-48 hours",
+    "baseline_control": {
+      "subject": "Welcome to the Trading App \ud83d\udc4b",
+      "preheader": "Start trading digital assets today",
+      "structure": "Generic welcome greeting followed by descriptive paragraphs about exchange reliability and a static verify button.",
+      "conversion_rate_kyc": 0.284,
+      "dropoff_point": "Users hesitate due to perceived paperwork and video-call friction."
+    },
+    "variant_b_friction_breaker": {
+      "subject": "Your account is 1 step away: 3-min ID checklist \ud83d\udee1\ufe0f",
+      "preheader": "Instant verification \u2022 No paperwork \u2022 Regulated German custody",
+      "structure": "Visual 3-Step Verification Progress Bar + Mobile App Deep-Link (\u0007pp://verify/video-ident) + Trust Badges (BaFin/EU regulated, Insured Custody).",
+      "conversion_rate_kyc": 0.394,
+      "lift_percentage": "+38.7%",
+      "z_score": 3.12,
+      "p_value": 0.0018
+    }
+  },
+  "email_2_email_confirmation": {
+    "name": "Transactional Email Confirmation",
+    "trigger": "User submits registration form",
+    "baseline_control": {
+      "subject": "Confirm your email address now!",
+      "preheader": "Please verify your email address to continue",
+      "structure": "Minimal transactional text with a single confirmation button and legal footer.",
+      "ctr_to_app_download": 0.412
+    },
+    "variant_b_momentum_builder": {
+      "subject": "Confirm your email & unlock your trading workspace \ud83d\ude80",
+      "preheader": "Top traded assets today & automated Sparplan preview inside",
+      "structure": "High-contrast verification CTA + Post-Verification Feature Teaser (Live Coin Watchlist & 1-Click Sparplan Setup preview).",
+      "ctr_to_app_download": 0.538,
+      "lift_percentage": "+30.6%",
+      "z_score": 2.89,
+      "p_value": 0.0039
+    }
+  },
+  "email_3_editorial_newsletter": {
+    "name": "Monthly Market Intelligence & Newsletter",
+    "trigger": "Monthly scheduled broadcast (Segment-tailored)",
+    "baseline_control": {
+      "subject": "Your Market News for August \ud83d\udcf0",
+      "preheader": "What moved crypto and equities this month",
+      "structure": "Static market report with uniform Trade Bitcoin CTA across all recipients.",
+      "click_to_open_rate": 0.124
+    },
+    "variant_b_lifecycle_segmented": {
+      "subject": "Market Digest: Institutional flows & Volatility shift [Portfolio Impact]",
+      "preheader": "Bitcoin macro update + personalized accumulation strategy",
+      "structure": "Dynamic Liquid payload adapting CTA to user lifecycle stage: Beginners -> Automated \u20ac25 Sparplan setup; Active traders -> Portfolio Rebalance Dashboard; Dormant users -> Volatility Alert activation.",
+      "click_to_open_rate": 0.231,
+      "lift_percentage": "+86.3%",
+      "z_score": 4.15,
+      "p_value": 3e-05
+    }
+  }
+}

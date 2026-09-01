@@ -1,0 +1,15 @@
+{
+  "platform_archetype": "Regulated European Digital Asset & Securities Trading Platform",
+  "regulatory_framework": "BaFin & MiCA (Markets in Crypto-Assets) Compliant",
+  "core_value_props": [
+    "Institutional Custody & Security (Regulated European Exchange Backing)",
+    "Zero Wallet Friction (No seed phrases or private key complexity)",
+    "Automated DCA Wealth Accumulation (Crypto & ETF Sparplan)",
+    "Transparent Spread Execution without PFOF conflicts"
+  ],
+  "tone_guidelines": {
+    "approachability": "Demystifying financial markets without using aggressive degen/hype jargon",
+    "trust_anchors": "Highlighting German/European security standards, multi-asset breadth, and regulated custodial backing",
+    "urgency_framing": "Educative market intelligence rather than FOMO (Fear Of Missing Out)"
+  }
+}
