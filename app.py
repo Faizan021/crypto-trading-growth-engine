@@ -250,7 +250,17 @@ if "1. Executive Performance Dashboard" in nav_choice:
         </div>
         """, unsafe_allow_html=True)
         
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown('''
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:14px 18px; margin: 12px 0 16px 0; font-size:0.9rem; color:#1e293b; line-height:1.6; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+        <strong style="color:#0284c7; font-size:0.95rem;">📋 Executive Narrative — What This Summary Proves:</strong><br>
+        This executive scorecard shows that our CRM strategy is not just sending emails—it is transforming the exchange's economics:
+        <ul style="margin:6px 0 0 0; padding-left:20px;">
+            <li><strong>Fixing Acquisition Leaks:</strong> By breaking Video-Ident friction, we converted <strong>39.4% of signups into verified active traders</strong> (vs. 28.4% industry baseline), directly reducing wasted marketing ad spend.</li>
+            <li><strong>Creating Predictable Revenue:</strong> Shifting retail users from erratic manual trading into automated monthly <strong>Sparpläne (DCA)</strong> increased 12-month customer retention from <strong>22.8% to 59.2% (a 2.6x improvement)</strong>.</li>
+            <li><strong>Building Institutional Custodial Depth:</strong> Long-term recurring accumulators reach an average of <strong>€9,850 in Assets Under Custody (AUC)</strong> within 24 months, providing stable trading spread and staking yield revenue.</li>
+        </ul>
+    </div>
+    ''', unsafe_allow_html=True)
     
     col_left, col_right = st.columns([1.25, 1])
     with col_left:
