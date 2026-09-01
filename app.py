@@ -77,8 +77,12 @@ st.markdown("""
         background: #0f172a;
         border: 1px solid #1e293b;
         border-radius: 8px;
-        padding: 1.1rem;
+        padding: 1.2rem;
         text-align: left;
+        min-height: 145px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .exec-card-val {
         font-size: 1.6rem;
@@ -190,33 +194,33 @@ if "1. Executive Performance Dashboard" in nav_choice:
     with col1:
         st.markdown("""
         <div class="exec-card">
-            <div class="exec-card-lbl">30-Day Retail Volume</div>
+            <div class="exec-card-lbl" style="min-height:34px;">30-Day Retail<br>Trading Volume</div>
             <div class="exec-card-val">€148.4M</div>
-            <div class="exec-card-sub">+12.4% vs. Prior Month</div>
+            <div class="exec-card-sub" style="min-height:32px;">+12.4% vs. Prior Month<br>&nbsp;</div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
         st.markdown("""
         <div class="exec-card">
-            <div class="exec-card-lbl">KYC → First-Trade Rate</div>
+            <div class="exec-card-lbl" style="min-height:34px;">KYC → First-Trade<br>Throughput Rate</div>
             <div class="exec-card-val">39.4%</div>
-            <div class="exec-card-sub">+11.0% Lift over Baseline (28.4%)</div>
+            <div class="exec-card-sub" style="min-height:32px;">+11.0% Lift vs. Baseline<br>(28.4% Control)</div>
         </div>
         """, unsafe_allow_html=True)
     with col3:
         st.markdown("""
         <div class="exec-card">
-            <div class="exec-card-lbl">12-Month Sparplan Retention</div>
+            <div class="exec-card-lbl" style="min-height:34px;">12-Month Sparplan<br>Customer Retention</div>
             <div class="exec-card-val">59.2%</div>
-            <div class="exec-card-sub">2.6x Higher than Spot (22.8%)</div>
+            <div class="exec-card-sub" style="min-height:32px;">2.6x Higher Retention<br>(vs. 22.8% Spot)</div>
         </div>
         """, unsafe_allow_html=True)
     with col4:
         st.markdown("""
         <div class="exec-card">
-            <div class="exec-card-lbl">Avg 2-Year AUC / Account</div>
+            <div class="exec-card-lbl" style="min-height:34px;">Avg 2-Year AUC<br>per Active Account</div>
             <div class="exec-card-val">€9,850</div>
-            <div class="exec-card-sub">Steady Recurring Accumulation</div>
+            <div class="exec-card-sub" style="min-height:32px;">Steady Compound<br>Recurring Inflows</div>
         </div>
         """, unsafe_allow_html=True)
         
