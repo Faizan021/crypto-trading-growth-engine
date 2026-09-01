@@ -746,7 +746,7 @@ elif "11. Case 10: CRM Automation Architecture" in nav_choice:
         
         col_c1, col_c2 = st.columns(2)
         with col_c1:
-            st.code("""
+            st.code('''
 def update_segment_cache(db_conn, segment_id, criteria):
     query = """
         SELECT user_id FROM users 
@@ -757,7 +757,7 @@ def update_segment_cache(db_conn, segment_id, criteria):
     matched_ids = db_conn.execute(query, (criteria['kyc'], criteria['balance'], criteria['days'])).fetchall()
     redis_client.set(f"segment:{segment_id}", json.dumps(matched_ids), ex=900)
     return len(matched_ids)
-            """, language="python")
+            ''', language="python")
         with col_c2:
             st.markdown("##### 🚀 Test Live Segment Extraction:")
             sim_kyc = st.selectbox("Filter: KYC Status", ["APPROVED", "PENDING_VERIFICATION", "ALL"])
