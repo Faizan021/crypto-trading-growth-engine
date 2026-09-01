@@ -1,4 +1,5 @@
 # Faizex Digital — Regulated Retail CRM Marketing & Retention Engine
+### 🦬 Direct Application Blueprint for BISON (Boerse Stuttgart Digital)
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-trading-growth-engine.streamlit.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,62 +7,54 @@
 [![Statistical Rigor](https://img.shields.io/badge/A%2FB%20Testing-Two--Proportion%20Z--Test-success.svg)]()
 [![Compliance](https://img.shields.io/badge/Compliance-BaFin%20%26%20MiCA%20%26%20GDPR-green.svg)]()
 
-> 🔒 **PORTFOLIO NOTICE:** Faizex Digital is an independent portfolio project and case study platform created by **Faizan Ahmed** for technical, product, and quantitative CRM demonstration. All customer, trading, and custodial metrics are synthetic simulations.
+> 🔒 **PORTFOLIO NOTICE:** Faizex Digital is an independent portfolio project and strategic CRM case study platform created by **Faizan Ahmed** for technical, product, and quantitative CRM demonstration. All customer, trading, and custodial metrics are synthetic simulations.
 
 ---
 
-## 🗺️ Full-Funnel Customer Lifecycle Marketing Architecture
+## 🦬 Why This Engine Directly Maps to BISON (Boerse Stuttgart Digital)
+
+As Germany's leading regulated retail crypto platform powered by **Boerse Stuttgart Group**, BISON operates at the intersection of regulatory trust, mobile-first retail UX, and long-term customer retention.
 
 ```mermaid
-flowchart TD
-    subgraph S1["1. Acquisition & Verification (Activation Velocity)"]
-        A["App Download & Lead Capture"] --> B["Stage 1: Double Opt-In (DOI) & Activation Velocity<br>(Live market movers in transactional DOI)"]
-        B --> C["Stage 2: Regulated KYC Onboarding Funnel<br>(3-min Video-Ident checklist + deep-link)"]
-    end
-
-    subgraph S2["2. First Capital & Activation (Drop-off Rescue)"]
-        C --> D["Stage 3: High-Intent Deposit Abandonment Flow<br>(T+15m IBAN slide-up & T+24h SEPA care)"]
-        D --> E["Stage 4: Zero-Party Data, 'Learn & Earn' & NPS<br>(2-min quiz + €5 bonus + 1-click risk survey)"]
-        E --> F["Stage 5: Contextual In-App Messaging (IAM)<br>(Post-deposit Sparplan upsell & FaceID)"]
-    end
-
-    subgraph S3["3. Habit Formation & LTV (Recurring Growth Engine)"]
-        F --> G["Stage 6: Recurring DCA Sparplan Engine<br>(Payday recurring wealth cadence)"]
-        G --> H["Stage 7: Event-Triggered Mobile Push Engine<br>(Breakouts, dips, yield spikes, DCA preview)"]
-        H --> I["Stage 8: Cross-Sell Staking Yield Monetization<br>(Dynamic reward calculator for ETH/SOL/Cash)"]
-        I --> J["Stage 9: Milestone-Based Retention Loops<br>(€1,000 AUC celebration + +€25/mo upgrade)"]
-    end
-
-    subgraph S4["4. Advocacy, Performance & Data Infrastructure"]
-        J --> K["Stage 10: Dynamic 1:1 Personalized Newsletter<br>(Liquid conditional lifecycle CTAs)"]
-        K --> L["Stage 11: Quantitative CRM Metrics & LTV/CAC<br>(TTFT, AUC Forecasting & Unit Economics)"]
-        L --> M["Stage 12: Event-Driven CRM Architecture<br>(Redis cache & SHA-256 idempotency state machine)"]
-        M --> N["Stage 13: Cross-Functional Squad Matrix<br>(BI, Mobile Product, UI/UX & BaFin compliance)"]
-        N --> O["Stage 14: Production Liquid & SQL Schemas<br>(Snowflake cohort queries & Braze tags)"]
-    end
+flowchart LR
+    A["BISON User Registration<br>(German Lead Acquisition)"] --> B["Stage 1: Double Opt-In (DOI)<br>(GDPR/UWG Audit-Proof)"]
+    B --> C["Stage 2: Video-Ident KYC<br>(+38.7% Throughput Lift)"]
+    C --> D["Stage 3: Stalled SEPA Deposit<br>(T+15m IBAN & T+24h Care)"]
+    D --> E["Stage 6: BISON Sparplan DCA<br>(59.2% 12-Month Retention)"]
+    E --> F["Stage 8: Regulated Staking<br>(Boerse Stuttgart Custody Yield)"]
 ```
+
+### 📋 1:1 Operational Mapping to BISON CRM Manager Responsibilities:
+
+| BISON CRM Responsibility | Project Operational Solution | Quantified Benchmark Impact |
+|---|---|---|
+| **1. Full-Lifecycle CRM Management** | End-to-end 14-stage journey (DOI $	o$ KYC $	o$ Sparplan $	o$ Volatility) | **39.4% KYC Activation / 59.2% 12-Month Retention** |
+| **2. Multichannel Execution (Email, Push, IAM)** | Braze responsive HTML emails, 4 volatility push scenarios, 3 IAM modals | **+31.4% IAM Sparplan Upsell / -62.3% Push Opt-Outs** |
+| **3. Automated Customer Journeys & Triggers** | Event-driven triggers (deposit success, payday 1st of month, peak joy) | **+68.1% Through-Funnel Deposit Lift** |
+| **4. Behavioral Segmentation & Personalization** | Portfolio holdings segmentation with production Braze Liquid tags | **+86.3% Email Click-to-Open (CTOR) Lift** |
+| **5. A/B Testing & Statistical Optimization** | Two-Proportion Z-Tests with p-values, sample calculators & unit tests | **$z = 3.12, p = 0.0018$ Verified Statistical Significance** |
+| **6. Cross-Functional Squad Collaboration** | Structured matrix aligning BI Analytics, Mobile Product, UI/UX & BaFin | **Zero-Disruption Native Deep-Link Deployments** |
 
 ---
 
-## 📊 Strategic Enterprise CRM Lifecycle Matrix
+## 🗺️ The Customer Lifecycle Journey Stages
 
-| Operational Stage | Lifecycle Marketing Phase | Core Quantitative Problem | CRM Multi-Channel Solution | Quantified Benchmark Lift |
-|---|---|---|---|---|
-| **#01** | **Executive Summary: Strategy & Scorecard** | Macro Throughput & Custody Overview | Live Onboarding Funnel & AUC Distribution | **39.4% KYC Activation / 59.2% 12-Mo Retention** |
-| **#02** | **Stage 1: Double Opt-In (DOI) Email Redesign** | 58.8% users delay KYC after confirming email | Live BTC/ETH market movers embedded in DOI verification | **+30.6% Click Velocity** ($z = 2.89, p = 0.0039$) |
-| **#03** | **Stage 2: Breaking the KYC Drop-off** | BaFin Video-Ident creates cognitive friction | 3-step time-stamped checklist + mobile deep-linking | **+38.7% Relative KYC Lift** ($z = 3.12, p = 0.0018$) |
-| **#04** | **Stage 3: High-Intent Deposit Recovery** | Verified users stall before first bank transfer | T+15m IBAN copy slide-up + T+24h SEPA care email | **+20.3% First-Deposit Recovery** (+64% Email CTR) |
-| **#05** | **Stage 4: 'Learn & Earn' Quiz & Risk Profiling** | Beginners hesitate to deploy initial funds | 2-min quiz unlocking €5 bonus + 1-click risk profiling | **74.2% Completion** $	o$ **+52.4% 7-Day Trading Lift** |
-| **#06** | **Stage 5: Contextual In-App Conversion Nudges** | Post-deposit drop-off and login friction | Post-deposit Sparplan upsell, FaceID, 3.2% cash yield | **+31.4% Sparplan Upsell / +42% Open Frequency** |
-| **#07** | **Stage 6: The 5-Year Sparplan (DCA) Retention Engine** | 77% manual spot traders churn in bear markets | Automated Payday recurring Sparplan from €25/month | **2.6x Higher 12-Mo Retention (59.2% vs 22.8%)** |
-| **#08** | **Stage 7: Event-Triggered Mobile Push (4 Scenarios)** | Push fatigue and opt-outs during market swings | 4 factual trading triggers + Limit Orders + 24h cap | **+44.1% Volume Lift** (-62.3% Opt-Outs) |
-| **#09** | **Stage 8: Idle Staking Yield & Cash Activation** | Un-staked crypto sits dormant in custody | Dynamic annual reward calculator (+€72/yr ETH/SOL) | **+3.4x Staking Adoption (27.8% Conversion)** |
-| **#10** | **Stage 9: Milestone Habit Loops & Goal Gradient** | Long-term savers lose motivation | €1,000 AUC milestone celebration + +€25/mo upgrade | **+52.4% Sparplan Upgrade Velocity** |
-| **#11** | **Stage 10: Dynamic 1:1 Lifecycle Newsletter** | Generic static CTA underperforms | Dynamic Liquid tags matching user lifecycle persona | **+86.3% CTOR Lift** ($z = 4.15, p < 0.0001$) |
-| **#12** | **Stage 11: Retention Metrics, Unit Economics & AUC Forecast** | Lack of long-term unit economic models | Quantitative forecasting (TTFT, AUC / Account, LTV) | **Institutional Custodial Compounding** |
-| **#13** | **Stage 12: Event-Driven Infrastructure & Idempotency** | Duplicate sends during 100k+ broadcasts | Redis caching (4.2ms) + SHA-256 idempotency keys | **100% Crash-Resilient Delivery** |
-| **#14** | **Stage 13: Cross-Functional Squad Execution Matrix** | Siloed delivery between Engineering and CRM | Unified growth squad (BI, Mobile, UI, BaFin) | **Zero-Disruption Production Deployments** |
-| **#15** | **Stage 14: Production Liquid & Snowflake SQL Schemas** | Manual cohort extraction bottlenecks | Production-ready Liquid blocks and Snowflake SQL | **100% Automated Lifecycle Synchronization** |
+1. **📊 Executive Summary: Strategy & Scorecard** — Macro Throughput, Through-Funnel Conversion & AUC Distribution.
+2. **🦬 BISON (Boerse Stuttgart Digital): Strategic Fit & Blueprint** — 1:1 Mapping, 5 Growth Levers & 30-60-90 Day Plan.
+3. **✉️ Stage 1: Double Opt-In (DOI) Email Redesign** — GDPR/UWG Compliance + Live Market Movers Momentum Hook.
+4. **🛡️ Stage 2: Breaking the KYC Drop-off** — BaFin/MiCA Video-Ident Friction Breaker & Mobile Deep-Linking.
+5. **🏦 Stage 3: High-Intent Deposit Recovery** — Multi-Touchpoint Capital Rescue (T+15m Slide-Up & T+24h Email).
+6. **🎓 Stage 4: 'Learn & Earn' Quiz & Risk Profiling** — 2-Min Interactive Quiz + €5 Bonus + Risk Profiling + CSAT Loop.
+7. **📱 Stage 5: Contextual In-App Conversion Nudges** — In-App Nudges (Sparplan Upsell, Biometrics, Cash Yield).
+8. **📈 Stage 6: The 5-Year Sparplan (DCA) Retention Engine** — Payday Recurring Inflows, 5-Year LTV & Bear Market Churn Insulation.
+9. **📲 Stage 7: Event-Triggered Mobile Push (4 Scenarios)** — Real-Time Market Movers, Limit Buy Orders & 24h Frequency Capping.
+10. **🪙 Stage 8: Idle Staking Yield & Cash Activation** — Translating Unstaked Tokens into Annual EUR Cashflow Projection.
+11. **🏆 Stage 9: Milestone Habit Loops & Goal Gradient** — €1,000 AUC Celebration + +€25/mo Automated Sparplan Upgrades.
+12. **📰 Stage 10: Dynamic 1:1 Lifecycle Newsletter** — Modular Liquid Logic dynamically serving 4 lifecycle subscriber personas.
+13. **🎯 Stage 11: Retention Metrics, Unit Economics & AUC Forecast** — TTFT, Retention Half-Life & Annual Inflow Calculator.
+14. **🛠️ Stage 12: Event-Driven Infrastructure & Idempotency** — Asynchronous Redis Caching (4.2ms) + SHA-256 Idempotency State Machine.
+15. **👥 Stage 13: Cross-Functional Squad Execution Matrix** — BI Analytics Schemas, Mobile Deep-Links, UI Tokens & BaFin DOI Ledgers.
+16. **💻 Stage 14: Production Liquid & Snowflake SQL Schemas** — Automated Braze Liquid conditional blocks & Snowflake SQL extractions.
 
 ---
 
