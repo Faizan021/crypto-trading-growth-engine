@@ -200,7 +200,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("""
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 12px; font-size:0.8rem; color:#334155; line-height:1.45; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
     <strong style="color:#0f172a; font-size:0.85rem;">Faizan Ahmed</strong><br>
-    <span style="color:#0284c7; font-weight:600;">CRM Marketing & Lifecycle Lead</span>
+    <span style="color:#0284c7; font-weight:600;">CRM Marketing & Lifecycle Manager</span>
     <div style="margin-top:6px; padding-top:6px; border-top:1px solid #f1f5f9;">
         <a href="https://github.com/Faizan021/crypto-trading-growth-engine" target="_blank" style="color:#059669; text-decoration:none; font-weight:700;">📂 GitHub Repository &rarr;</a>
     </div>

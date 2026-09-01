@@ -79,6 +79,6 @@ streamlit run app.py
 
 ## 👨‍💻 Author & Attribution
 * **Created by:** Faizan Ahmed
-* **Role:** Lead CRM Marketing & Lifecycle Growth Engineer
+* **Role:** CRM Marketing & Lifecycle Manager
 * **Live Streamlit App:** [https://crypto-trading-growth-engine.streamlit.app/](https://crypto-trading-growth-engine.streamlit.app/)
 * **GitHub Repository:** [https://github.com/Faizan021/crypto-trading-growth-engine](https://github.com/Faizan021/crypto-trading-growth-engine)
