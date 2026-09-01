@@ -268,9 +268,18 @@ if nav_choice == NAV_MODULES[0]:
     with col_left:
         st.markdown("#### ⚡ Through-Funnel Onboarding Conversion (Per 10,000 Signups)")
         st.markdown("""
-        <div class="expl-box-blue">
-            <strong style="color:#0284c7; font-size:0.92rem;">💡 Where We Focused First</strong><br>
-            Most retail platforms lose 60%+ of signups before KYC is even complete — acquisition spend evaporating before a customer ever trades. Rather than spread effort evenly across the funnel, we diagnosed the single biggest leak (Video-Ident) and rebuilt that step first. The result: a 76.7% cumulative lift in first-trade activation, from 22.3% to 39.4%.
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-left:4px solid #0284c7; border-radius:8px; padding:14px 16px; margin-bottom:12px; line-height:1.55;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="color:#0369a1; font-size:0.96rem;">💡 Where We Focused First: The Video-Ident Drop-Off</strong>
+                <span style="background:#e0f2fe; color:#0284c7; font-size:0.72rem; font-weight:700; padding:2px 8px; border-radius:4px;">FUNNEL PRIORITY</span>
+            </div>
+            <div style="font-size:0.86rem; color:#0f172a; margin-bottom:6px;">
+                • <strong>The Problem:</strong> Most retail platforms lose <strong>60%+ of signups</strong> before KYC is complete — acquisition spend evaporating before a trade occurs.<br>
+                • <strong>The Fix:</strong> Rather than spreading effort evenly, we diagnosed the single biggest leak (Video-Ident) and rebuilt that step first.
+            </div>
+            <div style="font-size:0.82rem; color:#0369a1; font-weight:600; border-top:1px solid #bae6fd; padding-top:6px;">
+                🎯 <strong>The Result:</strong> A <strong>+76.7% cumulative lift</strong> in first-trade activation (from 22.3% to 39.4%).
+            </div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -309,9 +318,18 @@ if nav_choice == NAV_MODULES[0]:
     with col_right:
         st.markdown("#### 🪙 Assets Under Custody (AUC) Asset Mix & Segmentation")
         st.markdown("""
-        <div class="expl-box-green">
-            <strong style="color:#059669; font-size:0.92rem;">💡 Why Segment by Portfolio, Not Persona</strong><br>
-            Demographic segments tell you who someone is. Portfolio segments tell you what they're about to do next. By triggering messages off actual holdings — not age or signup date — each nudge lands at the moment it's most relevant, which is why retention velocity holds up across every asset class below.
+        <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-left:4px solid #059669; border-radius:8px; padding:14px 16px; margin-bottom:12px; line-height:1.55;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                <strong style="color:#065f46; font-size:0.96rem;">💡 Why Segment by Portfolio, Not Persona</strong>
+                <span style="background:#d1fae5; color:#047857; font-size:0.72rem; font-weight:700; padding:2px 8px; border-radius:4px;">INTENT-BASED CRM</span>
+            </div>
+            <div style="font-size:0.86rem; color:#0f172a; margin-bottom:6px;">
+                • <strong>Demographic segments</strong> tell you <em>who someone is</em> (age, city).<br>
+                • <strong>Portfolio segments</strong> tell you <strong>what they're about to do next</strong> (buy dips, stake, automate).
+            </div>
+            <div style="font-size:0.82rem; color:#047857; font-weight:600; border-top:1px solid #a7f3d0; padding-top:6px;">
+                🎯 <strong>The Takeaway:</strong> Triggering messages off real wallet holdings — not signup dates — ensures every nudge lands at peak relevance, maximizing long-term retention.
+            </div>
         </div>
         """, unsafe_allow_html=True)
         
