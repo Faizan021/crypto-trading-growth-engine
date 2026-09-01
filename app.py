@@ -350,22 +350,23 @@ elif nav_choice == NAV_MODULES[1]:
                 <span class="badge-reg" style="background:rgba(245,158,11,0.2); color:#fbbf24; border-color:#f59e0b;">Boerse Stuttgart Digital</span>
                 <span class="badge-crm" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">BISON Retail CRM Strategy</span>
             </div>
-            <span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">Tailored for BISON CRM-Manager Role</span>
+            <span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">Direct Application Blueprint for CRM-Manager Role</span>
         </div>
         <div style="font-size:1.6rem; font-weight:800; color:#ffffff; margin-bottom:0.3rem;">
-            🦬 How This Engine Directly Solves BISON's Core CRM & Growth Challenges
+            🦬 How This Engine Solves BISON's Core CRM & Lifecycle Challenges
         </div>
         <p style="font-size:0.92rem; color:#cbd5e1; line-height:1.5; margin:0;">
-            As Germany's leading regulated retail crypto platform powered by <strong>Boerse Stuttgart Group</strong>, BISON operates at the intersection of regulatory trust, mobile-first retail UX, and long-term customer retention. Here is how this project's quantitative architecture directly translates into immediate impact for the BISON CRM team.
+            As Germany's leading regulated retail crypto & multi-asset platform powered by <strong>Boerse Stuttgart Group</strong>, BISON combines institutional trust (BaFin regulation & Boerse Stuttgart Digital Custody) with mobile-first retail trading. This blueprint demonstrates end-to-end campaign execution matching BISON's tech stack (Braze, Snowflake, Liquid, Multilingual DACH setups).
         </p>
     </div>
     """, unsafe_allow_html=True)
     
-    tab_b1, tab_b2, tab_b3, tab_b4 = st.tabs([
+    tab_b1, tab_b2, tab_b3, tab_b4, tab_b5 = st.tabs([
         "🎯 1. 1:1 Mapping to BISON Tasks",
-        "💡 2. The 5 BISON Strategic Levers",
-        "🗓️ 3. 30-60-90 Day BISON Roadmap",
-        "💬 4. Interview Talking Points & Elevator Pitch"
+        "💡 2. The 6 BISON Strategic Growth Levers",
+        "📱 3. Multichannel Suite (Email, Push, IAM, Banners)",
+        "🗓️ 4. 30-60-90 Day BISON Roadmap",
+        "💬 5. Interview Talking Points & Executive Pitch"
     ])
     
     with tab_b1:
@@ -379,40 +380,40 @@ elif nav_choice == NAV_MODULES[1]:
         
         mapping_data = [
             {
-                "task": "1. CRM Campaigns & Lifecycle Management",
+                "task": "1. CRM Campaigns & Full-Lifecycle Management",
                 "bison_need": "Planning, execution & optimization across onboarding, activation, retention, and re-engagement.",
-                "solution": "14-Stage Lifecycle Model covering Double Opt-In (DOI), Video-Ident KYC, Sparplan DCA cadence, and volatility reactivation.",
-                "tag": "Stages 1, 2, 6, 7"
+                "solution": "14-Stage Lifecycle Model covering Double Opt-In (DOI), Video-Ident KYC, Sparplan DCA cadence, and dormant win-back flows.",
+                "tag": "Stages 1, 2, 6, 7, 10"
             },
             {
-                "task": "2. Multichannel Communication",
-                "bison_need": "Managing email, push notifications, in-app messages (IAM), and banners with consistent voice.",
-                "solution": "Fully drafted multi-channel templates: responsive HTML emails, 4 real-world push triggers, and 3 high-converting IAM modal formats.",
+                "task": "2. Multichannel Communication (Email, Push, IAM, Banners)",
+                "bison_need": "Managing target-group-specific campaigns across email, push notifications, in-app messages, and feed banners with consistent brand voice.",
+                "solution": "Fully drafted multi-channel templates: responsive HTML emails, 4 volatility push triggers, 3 IAM modals, and native in-app banners.",
                 "tag": "Stages 1, 5, 7, 10"
             },
             {
                 "task": "3. Customer Journeys & Trigger Automation",
-                "bison_need": "Developing automated flows based on user behavior, lifecycle states, and market triggers.",
+                "bison_need": "Developing automated communication flows based on user behavior, lifecycle stages, and relevant market triggers.",
                 "solution": "T+15m & T+24h deposit abandonment recovery, payday Sparplan execution nudges, and peak-joy micro-NPS loops.",
                 "tag": "Stages 3, 4, 6"
             },
             {
-                "task": "4. Segmentation & Personalization",
-                "bison_need": "Defining customer segments and implementing personalized measures (e.g. Liquid templating).",
-                "solution": "Portfolio-based segmentation (BTC DCA vs. ETH Staking vs. EUR Cash Dip-Buyers) with production Braze Liquid tags.",
+                "task": "4. Segmentation & Personalization (Liquid Templating)",
+                "bison_need": "Defining customer segments and implementing personalized CRM measures to increase relevance, engagement, and loyalty.",
+                "solution": "Portfolio-based segmentation (BTC DCA vs. ETH Staking vs. Cash Dip-Buyers) with production Braze Liquid tags & bilingual DE/EN logic.",
                 "tag": "Stages 8, 10, 14"
             },
             {
-                "task": "5. A/B Testing & Data-Driven Optimization",
-                "bison_need": "Running A/B tests, analyzing CRM KPIs, and continuously improving campaign logic.",
+                "task": "5. Testing, Optimization & Statistical Rigor",
+                "bison_need": "Running A/B tests, analyzing relevant CRM KPIs, and continuously improving campaign logic.",
                 "solution": "Rigorous Two-Proportion Z-Tests with sample size calculators, p-values, confidence intervals, and 5 automated unit tests.",
                 "tag": "Stage 11 + test_engine.py"
             },
             {
-                "task": "6. Quality, Compliance & Cross-Functional Squad",
-                "bison_need": "GDPR compliance, BaFin regulatory alignment, Double-Opt-In, and collaboration with BI, Mobile, and UX/UI.",
-                "solution": "Audit-proof DOI ledgers, BaFin-compliant risk disclaimers, and structured cross-functional alignment matrix.",
-                "tag": "Stages 1, 12, 13"
+                "task": "6. Cross-Functional Collaboration & QA / Compliance",
+                "bison_need": "Working with Marketing, Product, BI, UX/UI and ensuring GDPR / BaFin compliance, DOI ledgers, and QA documentation.",
+                "solution": "Audit-proof DOI consent architecture, BaFin crypto risk disclaimers, Pre-Launch QA Checklist, and squad alignment matrix.",
+                "tag": "Stages 1, 12, 13, 14"
             }
         ]
         
@@ -433,7 +434,7 @@ elif nav_choice == NAV_MODULES[1]:
             """, unsafe_allow_html=True)
 
     with tab_b2:
-        st.markdown("#### 💡 The 5 Strategic Growth Levers for BISON")
+        st.markdown("#### 💡 The 6 Strategic Growth Levers for BISON")
         
         c_a, c_b = st.columns(2)
         with c_a:
@@ -474,23 +475,94 @@ elif nav_choice == NAV_MODULES[1]:
             </div>
             
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #db2777; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
-                <strong style="color:#db2777; font-size:0.95rem;">5. Event-Driven Volatility Push Notifications 📲</strong>
+                <strong style="color:#db2777; font-size:0.95rem;">5. Event-Driven Volatility & Cryptoradar Push 📲</strong>
                 <p style="color:#334155; font-size:0.86rem; line-height:1.5; margin:6px 0 0 0;">
                     <strong>The BISON Challenge:</strong> Push fatigue and user opt-outs if notifications feel like clickbait spam.<br>
-                    <strong>The CRM Fix:</strong> Factual price movement triggers (+6.5% breakout / -5.8% dip) paired with direct Limit Order deep-links and a strict 24-hour frequency cap (-62.3% opt-outs).
+                    <strong>The CRM Fix:</strong> Factual price movement triggers & Cryptoradar sentiment shifts paired with direct Limit Order deep-links and a strict 24-hour frequency cap (-62.3% opt-outs).
                 </p>
             </div>
             
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #0891b2; border-radius:8px; padding:1.2rem;">
-                <strong style="color:#0891b2; font-size:0.95rem;">6. Interactive 'Learn & Earn' & Peak-Joy NPS ⭐</strong>
+                <strong style="color:#0891b2; font-size:0.95rem;">6. Multi-Asset Expansion (Crypto $	o$ Stocks/ETFs) 🌐</strong>
                 <p style="color:#334155; font-size:0.86rem; line-height:1.5; margin:6px 0 0 0;">
-                    <strong>The BISON Challenge:</strong> Beginners are afraid to make their first trade, and unhappy users silently churn.<br>
-                    <strong>The CRM Fix:</strong> 2-minute bite-sized trading quiz with €5 bonus + 1-click risk survey + peak-joy Micro-NPS branching into App Store reviews (+62% 5-star reviews).
+                    <strong>The BISON Challenge:</strong> Cross-selling crypto native users into Boerse Stuttgart's stock and ETF trading accounts.<br>
+                    <strong>The CRM Fix:</strong> Milestone triggers (€1,000 crypto milestone crossed) nudging users to diversify into DAX 40 & European equity ETFs (+28.4% multi-asset adoption).
                 </p>
             </div>
             """, unsafe_allow_html=True)
 
     with tab_b3:
+        st.markdown("#### 📱 Multichannel Campaign Orchestration Suite (Email, Push, IAM, Banners)")
+        st.caption("How campaigns are orchestrated across all 4 channels specified in the BISON job description.")
+        
+        m_channel = st.selectbox(
+            "Select BISON Channel to Inspect Campaign Execution:",
+            [
+                "✉️ Channel 1: Double Opt-In (DOI) & Weekly Market Digest (Email)",
+                "📲 Channel 2: Real-Time Price Breakout & Cryptoradar Alerts (Push)",
+                "📱 Channel 3: Contextual Post-Deposit Sparplan Upsell (In-App Message)",
+                "🖼️ Channel 4: Native Home Screen Announcement Banner (In-App Feed Banner)"
+            ]
+        )
+        
+        if "Channel 1" in m_channel:
+            st.markdown("""
+            <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+                <strong style="color:#0284c7; font-size:0.92rem;">✉️ Email Channel Strategy (Braze + Liquid):</strong><br>
+                <p style="color:#334155; font-size:0.86rem; line-height:1.5; margin:6px 0;">
+                    • <strong>Double Opt-In (DOI):</strong> Converts the mandatory German UWG compliance step into an activation hook with live Bitcoin market movers (+30.6% click velocity).<br>
+                    • <strong>Weekly Market Digest:</strong> Dynamic Liquid content blocks automatically swapping CTAs based on whether the subscriber is unverified, a manual trader, or an active Sparplan saver.
+                </p>
+                <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:4px; padding:6px 10px; font-size:0.78rem; font-family:'JetBrains Mono', monospace; color:#0f172a;">
+                    {{ user.preferred_language == 'de' ? 'Jetzt Sparplan einrichten' : 'Set Up Your Sparplan Now' }}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        elif "Channel 2" in m_channel:
+            st.markdown("""
+            <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+                <strong style="color:#0284c7; font-size:0.92rem;">📲 Mobile Push Notification Strategy:</strong><br>
+                <p style="color:#334155; font-size:0.86rem; line-height:1.5; margin:6px 0;">
+                    • <strong>Event Triggers:</strong> High volatility (+6.5% move in 2h), support level pullbacks, and BISON Cryptoradar bullish sentiment shifts.<br>
+                    • <strong>Smart Deep-Linking:</strong> Deep-links directly to <code>bison://trade/btc?type=limit_order</code> to enable 1-click execution.<br>
+                    • <strong>Fatigue Protection:</strong> Hard 24-hour frequency capping per user to maintain high notification opt-in rates.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        elif "Channel 3" in m_channel:
+            st.markdown("""
+            <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+                <strong style="color:#0284c7; font-size:0.92rem;">📱 In-App Message (IAM) Conversion Strategy:</strong><br>
+                <p style="color:#334155; font-size:0.86rem; line-height:1.5; margin:6px 0;">
+                    • <strong>100% Delivery Rate:</strong> Triggered contextually while user is active in the app.<br>
+                    • <strong>Post-Deposit Modal:</strong> Fires immediately after first €100 deposit, asking: <em>"Automate this €100 deposit monthly with 0€ setup fee?"</em> (+31.4% Sparplan conversion).<br>
+                    • <strong>Biometric Slide-Up:</strong> Prompts 1-click FaceID activation to reduce login friction (+42% app open frequency).
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        else:
+            st.markdown("""
+            <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
+                <strong style="color:#0284c7; font-size:0.92rem;">🖼️ Native In-App Feed Banner Strategy:</strong><br>
+                <p style="color:#334155; font-size:0.86rem; line-height:1.5; margin:6px 0;">
+                    • <strong>Persistent Non-Intrusive Guidance:</strong> Positioned at the top of the BISON home portfolio feed.<br>
+                    • <strong>Dynamic Persona Targeting:</strong> Unverified users see KYC completion countdowns; active accumulators see staking yield projections and new token listings.<br>
+                    • <strong>Zero Churn Risk:</strong> Does not interrupt critical trading workflows.
+                </p>
+                <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:6px; padding:10px 14px; margin-top:8px; display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <strong style="color:#1e40af; font-size:0.86rem;">🪙 New on BISON: Earn 5.2% p.a. on Ethereum Staking</strong><br>
+                        <span style="color:#3b82f6; font-size:0.78rem;">100% Insured German Custody by Boerse Stuttgart Digital.</span>
+                    </div>
+                    <span style="background:#1e40af; color:#fff; padding:4px 12px; border-radius:4px; font-size:0.75rem; font-weight:700;">Explore &rarr;</span>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    with tab_b4:
         st.markdown("#### 🗓️ 30-60-90 Day Operational Roadmap for BISON")
         
         r1, r2, r3 = st.columns(3)
@@ -498,7 +570,7 @@ elif nav_choice == NAV_MODULES[1]:
             st.markdown("""
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #0284c7; border-radius:8px; padding:1.2rem; min-height:340px;">
                 <span style="background:#f0f9ff; color:#0284c7; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">FIRST 30 DAYS</span>
-                <h4 style="color:#0f172a; margin:8px 0 6px 0;">Onboarding & Quick Wins</h4>
+                <h4 style="color:#0f172a; margin:8px 0 6px 0;">Audit & Quick Wins</h4>
                 <ul style="color:#334155; font-size:0.84rem; line-height:1.5; padding-left:18px; margin:0;">
                     <li>Deep-dive into BISON's current Braze/ESP canvas flows and event taxonomy.</li>
                     <li>Audit the Double Opt-In (DOI) and Video-Ident KYC drop-off funnels.</li>
@@ -536,28 +608,35 @@ elif nav_choice == NAV_MODULES[1]:
             </div>
             """, unsafe_allow_html=True)
 
-    with tab_b4:
+    with tab_b5:
         st.markdown("#### 💬 High-Impact Interview Talking Points & Executive Pitch")
         
         st.markdown("""
         <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
             <strong style="color:#0284c7; font-size:0.95rem;">Q: How do you approach CRM at a regulated crypto platform like BISON?</strong><br>
             <p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
-                <em>"At BISON, trust and simplicity are your greatest assets. Regulated German custody by Boerse Stuttgart Digital gives you a massive advantage over offshore exchanges. My approach to CRM is to turn that trust into a frictionless lifecycle journey: fixing the Video-Ident drop-off first with clear 3-minute expectations, shifting users from panic-prone spot trading into automated monthly Sparplans to secure 59%+ 12-month retention, and using Braze Liquid personalization so every notification is actionable and respectful of user attention."</em>
+                <em>"At BISON, trust and simplicity are your greatest competitive moats. Regulated German custody by Boerse Stuttgart Digital gives you an immense advantage over unregulated offshore exchanges. My approach to CRM is to turn that trust into a frictionless lifecycle journey: fixing the Video-Ident drop-off first with clear 3-minute expectations, shifting users from panic-prone spot trading into automated monthly Sparplans to secure 59%+ 12-month retention, and using Braze Liquid personalization so every notification is actionable and respectful of user attention."</em>
             </p>
         </div>
         
         <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #059669; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
-            <strong style="color:#059669; font-size:0.95rem;">Q: How do you handle multichannel coordination between Email, Push, and In-App Messages?</strong><br>
+            <strong style="color:#059669; font-size:0.95rem;">Q: How do you coordinate multichannel messaging across Email, Push, In-App Messages, and Banners?</strong><br>
             <p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
-                <em>"I treat channels according to customer intent and urgency. <strong>Push notifications</strong> are reserved for time-critical, high-value events (market volatility, Sparplan pre-debits) with strict 24-hour frequency capping to prevent opt-outs. <strong>In-App Messages (IAM)</strong> are our highest-converting channel for in-the-moment milestones (e.g., upselling a Sparplan right after a successful €100 deposit). <strong>Email</strong> is our long-form storytelling and macro-digest engine, powered by dynamic Liquid tags so different personas receive customized CTAs."</em>
+                <em>"I orchestrate channels based on customer intent and latency. <strong>Push notifications</strong> are reserved for high-urgency market triggers (volatility breakout, Cryptoradar sentiment) with strict 24-hour frequency capping to prevent opt-outs. <strong>In-App Messages (IAM)</strong> are our highest-converting channel for in-the-moment milestones (e.g., upselling a Sparplan right after a successful deposit). <strong>In-App Banners</strong> provide persistent non-intrusive education on the home screen. And <strong>Email</strong> is our long-form macro storytelling engine, powered by Liquid conditional logic for 1:1 personalization."</em>
             </p>
         </div>
         
-        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #7c3aed; border-radius:8px; padding:1.2rem;">
-            <strong style="color:#7c3aed; font-size:0.95rem;">Q: How do you collaborate cross-functionally with Product, BI, and UX?</strong><br>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #7c3aed; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
+            <strong style="color:#7c3aed; font-size:0.95rem;">Q: How do you collaborate cross-functionally with Product, BI, UX, and Compliance?</strong><br>
             <p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
-                <em>"CRM cannot operate in a silo. I work with <strong>BI</strong> on event dictionaries (`kyc_step_reached`, `sparplan_created`) and SQL cohort extractions; with <strong>Product & Mobile</strong> on deep-link schemas (`bison://sparplan/new`) and native SDK triggers; with <strong>UX/UI</strong> to ensure accessible, brand-compliant HTML/Figma tokens; and with <strong>Legal/Compliance</strong> to guarantee audit-proof Double Opt-In (DOI) ledgers and BaFin risk disclosures."</em>
+                <em>"CRM cannot operate in a silo. I work with <strong>BI</strong> on event dictionaries (`kyc_step_reached`, `sparplan_created`) and Snowflake SQL cohort extractions; with <strong>Product & Mobile</strong> on deep-link schemas (`bison://sparplan/new`) and native SDK triggers; with <strong>UX/UI</strong> to ensure accessible, brand-compliant Figma tokens; and with <strong>Legal/Compliance</strong> to guarantee audit-proof Double Opt-In (DOI) ledgers and BaFin risk disclosures."</em>
+            </p>
+        </div>
+        
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #d97706; border-radius:8px; padding:1.2rem;">
+            <strong style="color:#d97706; font-size:0.95rem;">Q: How do you ensure high quality and zero errors before campaign go-live?</strong><br>
+            <p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
+                <em>"I follow a strict Pre-Launch QA Checklist: (1) Seed list preview across 12+ email clients and dark/light modes, (2) Deep-link verification on both iOS and Android staging builds, (3) Liquid fallback testing for empty user attributes, (4) Frequency capping & quiet hours validation, and (5) BaFin risk disclaimer and Double-Opt-In consent audit verification."</em>
             </p>
         </div>
         """, unsafe_allow_html=True)
