@@ -879,7 +879,7 @@ elif nav_choice == NAV_MODULES[10]:
 # MODULE 12: CASE 11 - INTERACTIVE QUIZZES, SURVEYS & NPS (NEW!)
 # ==========================================
 elif nav_choice == NAV_MODULES[11]:
-    st.markdown("### 💡 Case 11: Interactive "Learn & Earn" Quizzes, Micro-Surveys & NPS Engine")
+    st.markdown("### 💡 Case 11: Interactive 'Learn & Earn' Quizzes, Micro-Surveys & NPS Engine")
     
     st.markdown("""
     <div class="expl-box-blue">
@@ -889,7 +889,7 @@ elif nav_choice == NAV_MODULES[11]:
     """, unsafe_allow_html=True)
     
     tab1, tab2, tab3 = st.tabs([
-        "🎓 1. Interactive "Learn & Earn" Quiz",
+        "🎓 1. Interactive 'Learn & Earn' Quiz",
         "🎯 2. 1-Click Trading Risk & Persona Survey",
         "⭐ 3. In-App NPS & CSAT Feedback Loop"
     ])
