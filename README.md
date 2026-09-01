@@ -16,24 +16,24 @@
 
 ```mermaid
 flowchart TD
-    subgraph Signal_Layer [1. Real-Time Market & Event Ingestion]
-        A[Live Crypto/Equity WebSockets] -->|Price Spike / Dip| B[Webhook Event Router (Frappe Pattern)]
+    subgraph Signal_Layer ["1. Real-Time Market & Event Ingestion"]
+        A["Live Crypto/Equity WebSockets"] -->|Price Spike / Dip| B["Webhook Event Router (Frappe Pattern)"]
     end
 
-    subgraph Data_Layer [2. Dynamic Segmentation & Caching]
-        C[(User Trading Database)] -->|Scheduled Batching| D[Async Segment Cache (Mautic Pattern)]
+    subgraph Data_Layer ["2. Dynamic Segmentation & Caching"]
+        C[("User Trading Database")] -->|Scheduled Batching| D["Async Segment Cache (Mautic Pattern)"]
         B -->|Check Active Segments| D
     end
 
-    subgraph Execution_Layer [3. Fault-Tolerant Dispatcher]
-        D --> E[Idempotent Campaign Engine (EspoCRM Pattern)]
-        E -->|Check Idempotency Key & Fatigue Cooldown| F{Channel Router}
+    subgraph Execution_Layer ["3. Fault-Tolerant Dispatcher"]
+        D --> E["Idempotent Campaign Engine (EspoCRM Pattern)"]
+        E -->|Check Idempotency Key & Fatigue Cooldown| F{"Channel Router"}
     end
 
-    subgraph Touchpoints [4. Multichannel Delivery]
-        F -->|Sub-Second| G[Mobile Push Notification]
-        F -->|In-Session| H[In-App Message / Banner]
-        F -->|Educational| I[Segmented HTML Email]
+    subgraph Touchpoints ["4. Multichannel Delivery"]
+        F -->|Sub-Second| G["Mobile Push Notification"]
+        F -->|In-Session| H["In-App Message / Banner"]
+        F -->|Educational| I["Segmented HTML Email"]
     end
 ```
 
