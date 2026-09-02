@@ -21,11 +21,11 @@ flowchart TD
         C1["Case 1: Double Opt-In (DOI) Onboarding Velocity (Email)"]
         C2["Case 2: Regulated Identity Verification (KYC) Funnel"]
         C3["Case 3: Dynamic 1:1 BISONews Welcome & Market Digest (Liquid)"]
+        C4["Case 4: Zero-Party & First-Party Data Profiling (Quiz & Survey)"]
     end
 
-    subgraph PHASE2["🔵 Phase 2: Activation & Trust Safety Nets"]
-        C4["Case 4: High-Intent Deposit Recovery Flow (T+15m & T+24h)"]
-        C5["Case 5: The 1M User Case: 'Millionaire in Trust' (Learn & Earn + NPS)"]
+    subgraph PHASE2["🔵 Phase 2: Activation & Deposit Recovery"]
+        C5["Case 5: High-Intent Deposit Recovery Flow (T+15m & T+24h)"]
     end
 
     subgraph PHASE3["🟣 Phase 3: Retention & Sparplan Loyalty"]
@@ -60,8 +60,8 @@ flowchart TD
 | **Phase 1** | **#02** | **✉️ Case 1: Double Opt-In (DOI) Velocity** | Email 1: `Confirm your email address now!` + BTC movers | **+30.6% Click Velocity** ($p = 0.0039$) |
 | **Phase 1** | **#03** | **🛡️ Case 2: Regulated KYC Funnel Optimization** | Email 2: `Welcome to BISON 👋` + 3-min Video-Ident checklist | **+38.7% Relative KYC Lift** ($p = 0.0018$) |
 | **Phase 1** | **#04** | **📰 Case 3: Dynamic 1:1 BISONews (Liquid)** | Email 3: `Hi, here's your BISONews 🙌` + Modular Liquid logic | **+86.3% CTOR Lift** ($p < 0.0001$) |
-| **Phase 2** | **#05** | **🏦 Case 4: High-Intent Deposit Recovery Flow** | Stalled IBAN recovery (T+15m slide-up & T+24h SEPA care email) | **+20.3% First-Deposit Recovery** |
-| **Phase 2** | **#06** | **🛡️ Case 5: 1M User Case: 'Millionaire in Trust'** | 2-min quiz (€5 bonus) + 1-click risk survey + Micro-NPS | **+52.4% 7-Day Trading Lift** |
+| **Phase 1** | **#05** | **🎓 Case 4: Zero-Party & First-Party Data Profiling** | 2-min quiz (€5 bonus) + 1-click risk survey + Micro-NPS | **+52.4% 7-Day Trading Lift** |
+| **Phase 2** | **#06** | **🏦 Case 5: High-Intent Deposit Recovery Flow** | Stalled IBAN recovery (T+15m slide-up & T+24h SEPA care email) | **+20.3% First-Deposit Recovery** |
 | **Phase 3** | **#07** | **📱 Case 6: Contextual IAM & Feed Banners** | Post-deposit Sparplan upsell modal + Home Feed Banners | **+31.4% Sparplan Upsell** |
 | **Phase 3** | **#08** | **📈 Case 7: Automated Sparplan (DCA) Engine** | Shifting users from erratic spot trading to monthly Sparplans | **59.2% 12-Month Retention (2.6x)** |
 | **Phase 4** | **#09** | **📲 Case 8: Volatility & Cryptoradar Push** | Real-time market breakout alerts with 24h frequency cap | **+44.1% Volume Lift** (-62.3% opt-outs) |
