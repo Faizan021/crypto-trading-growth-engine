@@ -47,7 +47,7 @@ flowchart TD
 | **#03** | **✉️ Case 1: Double Opt-In (DOI) Onboarding Velocity (Email)** | GDPR/UWG Double Opt-In compliance + Live Bitcoin market movers hook | **+30.6% Click Velocity** ($z = 2.89, p = 0.0039$) |
 | **#04** | **🛡️ Case 2: Regulated Identity Verification (KYC) Optimization** | BaFin Video-Ident friction breaker via 3-step checklist & mobile deep-links | **+38.7% Relative KYC Lift** ($z = 3.12, p = 0.0018$) |
 | **#05** | **🏦 Case 3: High-Intent Deposit Abandonment Flow (Journey)** | Multi-touchpoint capital rescue: T+15m IBAN slide-up & T+24h SEPA care email | **+20.3% First-Deposit Recovery** (+64% Email CTR) |
-| **#06** | **🎓 Case 4: Zero-Party Data & 'Learn & Earn' (Segmentation)** | 2-min interactive quiz unlocking €5 bonus + 1-click risk survey + Micro-NPS | **74.2% Completion Rate $	o$ +52.4% 7-Day Trading Lift** |
+| **#06** | **🛡️ Case 4: The 1M User Retention Case: 'Millionaire in Trust'** | 2-min interactive quiz unlocking €5 bonus + 1-click risk survey + Micro-NPS | **74.2% Completion Rate $	o$ +52.4% 7-Day Trading Lift** |
 | **#07** | **📱 Case 5: Contextual In-App Messaging & Banners (Multichannel)** | High-converting in-app nudges: Post-deposit Sparplan modal, FaceID, Feed Banners | **+31.4% Sparplan Upsell / +42% App Open Frequency** |
 | **#08** | **📈 Case 6: Automated Sparplan (DCA) Retention Engine (Loyalty)** | Shifting retail traders from erratic spot buying into monthly automated Sparplans | **2.6x Higher 12-Month Retention (59.2% vs 22.8%)** |
 | **#09** | **📲 Case 7: Event-Triggered Volatility & Cryptoradar Push (Push)** | Real-time market movers & Cryptoradar sentiment triggers with 24h frequency cap | **+44.1% Volume Lift** (-62.3% Push Opt-Outs) |
