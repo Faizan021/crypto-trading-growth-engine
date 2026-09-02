@@ -42,6 +42,7 @@ st.markdown("""
 
 
 
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -203,7 +204,6 @@ margin-top: 0.25rem !important;
 # Master Navigation Menu Array (16 Operational Modules in Chronological Customer Lifecycle)
 NAV_MODULES = [
     "📊 Executive Summary: Strategy & Scorecard",
-    "🦬 BISON: Full-Lifecycle Growth & Retention Blueprint",
     "✉️ Case 1: Double Opt-In (DOI) Onboarding Velocity (Email)",
     "🛡️ Case 2: Regulated Identity Verification (KYC) Funnel",
     "📰 Case 3: Dynamic 1:1 BISONews (Welcome Digest)",
@@ -222,36 +222,31 @@ NAV_MODULES = [
 
 # Grouping by Customer Lifecycle Stages (Phase Headings)
 PHASE_GROUPS = {
-    "🌐 All 16 Cases": NAV_MODULES,
-    "📊 Strategy & BISON Blueprint": [
-        NAV_MODULES[0],
-        NAV_MODULES[1]
+    "🌐 All 15 Operational Modules": NAV_MODULES,
+    "📊 Executive Summary": [
+        NAV_MODULES[0]
     ],
-    "🟢 1. Onboarding & Welcome": [
+    "🟢 1. Onboarding & Welcome (Cases 1-4)": [
+        NAV_MODULES[1],
         NAV_MODULES[2],
         NAV_MODULES[3],
-        NAV_MODULES[4],
-        NAV_MODULES[5]
+        NAV_MODULES[4]
     ],
-    "🔵 2. Activation & Retention": [
+    "🔵 2. Activation & Retention (Cases 5-7)": [
+        NAV_MODULES[5],
         NAV_MODULES[6],
-        NAV_MODULES[7],
-        NAV_MODULES[8]
+        NAV_MODULES[7]
     ],
-    "🟣 3. Retention & Sparplans": [
-        NAV_MODULES[7],
-        NAV_MODULES[8]
-    ],
-    "⚡ 4. Volatility & Staking": [
+    "⚡ 3. Volatility, Staking & Habits (Cases 8-10)": [
+        NAV_MODULES[8],
         NAV_MODULES[9],
-        NAV_MODULES[10],
-        NAV_MODULES[11]
+        NAV_MODULES[10]
     ],
-    "🟠 5. Data & Architecture": [
+    "🟠 4. Data, Infrastructure & Code (Cases 11-14)": [
+        NAV_MODULES[11],
         NAV_MODULES[12],
         NAV_MODULES[13],
-        NAV_MODULES[14],
-        NAV_MODULES[15]
+        NAV_MODULES[14]
     ]
 }
 
@@ -260,6 +255,7 @@ st.sidebar.title("Faizan's CRM Portfolio")
 st.sidebar.caption("FinTech & Crypto Lifecycle Engine")
 
 st.sidebar.markdown("""
+
 
 
 
@@ -320,6 +316,7 @@ st.sidebar.markdown("""
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 12px; font-size:0.8rem; color:#334155; line-height:1.45; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 <strong style="color:#0f172a; font-size:0.85rem;">Faizan Ahmed</strong><br>
 <span style="color:#0284c7; font-weight:600;">CRM Marketing & Lifecycle Manager</span>
@@ -338,6 +335,7 @@ if nav_choice == NAV_MODULES[0]:
     st.markdown("""
 
 
+
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:12px 16px; margin-bottom:14px; font-size:0.84rem; color:#334155; line-height:1.55;">
 <strong>📌 A Respectful Note on Data & Target Benchmarks:</strong><br>
 Out of deep respect for proprietary data, all figures shown in this blueprint represent <strong>simulated industry benchmarks</strong> modeled on retail FinTech and subscription app cohort standards. They serve as positive, aspirational North Stars to illustrate what is possible when great engineering and regulatory trust meet empathetic customer communication.
@@ -346,6 +344,7 @@ Out of deep respect for proprietary data, all figures shown in this blueprint re
 """, unsafe_allow_html=True)
 
     st.markdown("""
+
 
 
 <div class="exec-header" style="padding: 1.3rem 1.7rem; margin-bottom: 1.2rem;">
@@ -370,6 +369,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
         st.markdown("""
 
 
+
 <div class="exec-card">
 <div class="exec-card-lbl" style="min-height:34px;">30-Day Retail<br>Trading Volume</div>
 <div class="exec-card-val">€148.4M</div>
@@ -379,6 +379,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
 """, unsafe_allow_html=True)
     with col2:
         st.markdown("""
+
 
 
 <div class="exec-card">
@@ -392,6 +393,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
         st.markdown("""
 
 
+
 <div class="exec-card">
 <div class="exec-card-lbl" style="min-height:34px;">12-Month Sparplan<br>Customer Retention</div>
 <div class="exec-card-val">59.2%</div>
@@ -403,6 +405,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
         st.markdown("""
 
 
+
 <div class="exec-card">
 <div class="exec-card-lbl" style="min-height:34px;">Avg 2-Year AUC<br>per Active Account</div>
 <div class="exec-card-val">€9,850</div>
@@ -412,6 +415,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
 """, unsafe_allow_html=True)
         
     st.markdown("""
+
 
 
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin: 1.2rem 0; box-shadow:0 2px 4px rgba(0,0,0,0.02);">
@@ -432,6 +436,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
     with col_left:
         st.markdown("#### ⚡ Through-Funnel Onboarding Conversion (Per 10,000 Signups)")
         st.markdown("""
+
 
 
 
@@ -508,6 +513,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
 
 
 
+
 <div class="funnel-card">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
 <div>
@@ -532,6 +538,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
     with col_right:
         st.markdown("#### 🪙 Assets Under Custody (AUC) Asset Mix & Segmentation")
         st.markdown("""
+
 
 
 
@@ -606,6 +613,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
 
 
 
+
 <div class="funnel-card">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
 <strong style="color:#0f172a; font-size:0.88rem;">{a['name']}</strong>
@@ -628,1098 +636,6 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
 elif nav_choice == NAV_MODULES[1]:
     st.markdown("""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.5rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 8px;">
-<div>
-<span class="badge-reg" style="background:rgba(245,158,11,0.2); color:#fbbf24; border-color:#f59e0b;">Boerse Stuttgart Digital</span>
-<span class="badge-crm" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">BISON Retail CRM Strategy</span>
-</div>
-<span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">1:1 Interview & Operational Blueprint</span>
-</div>
-<div style="font-size:1.65rem; font-weight:800; color:#ffffff; margin-bottom:0.3rem;">
-🦬 How This Engine Solves BISON's Core CRM & Lifecycle Challenges
-</div>
-<p style="font-size:0.92rem; color:#cbd5e1; line-height:1.55; margin:0;">
-As Germany's leading regulated retail crypto & multi-asset platform powered by <strong>Boerse Stuttgart Group</strong>, BISON combines institutional trust (BaFin regulation & Boerse Stuttgart Digital Custody GmbH) with mobile-first retail UX. This section provides <strong>real-world case studies, channel examples, and verbal talking points</strong> built directly for the BISON CRM-Manager role.
-</p>
-</div>
-""", unsafe_allow_html=True)
-
-    tab_b1, tab_b2, tab_b3, tab_b4, tab_b5 = st.tabs([
-        "📋 1. Job Task Mapping & Live Examples",
-        "💡 2. 6 Concrete BISON Case Studies",
-        "📱 3. Multichannel Campaign Showcase",
-        "🗓️ 4. 30-60-90 Day Impact Roadmap",
-        "🎤 5. Strategic Alignment & Executive Q&A"
-    ])
-
-    # ----------------------------------------------------
-    # TAB 1: 1:1 JOB MAPPING WITH HIGH-CONTRAST VISUAL CARDS
-    # ----------------------------------------------------
-    with tab_b1:
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#f0f9ff; border:1px solid #bae6fd; border-left:4px solid #0284c7; border-radius:8px; padding:12px 16px; margin-bottom:14px;">
-<strong style="color:#0284c7; font-size:0.95rem;">💡 How to Speak to This in Your Interview:</strong><br>
-<span style="font-size:0.88rem; color:#0f172a; line-height:1.5;">
-<em>"Every core responsibility in the BISON job description has been tested, engineered, and quantified in this live dashboard with working multichannel copy, Braze Liquid logic, and statistical verification."</em>
-</span>
-</div>
-""", unsafe_allow_html=True)
-
-        # Task 1 Card
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin-bottom:12px; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-<div>
-<span style="background:#0284c7; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">TASK 01</span>
-<strong style="color:#0f172a; font-size:1.02rem; margin-left:6px;">Full-Lifecycle Campaign Management (Onboarding to Win-Back)</strong>
-</div>
-<span style="background:#f1f5f9; color:#0284c7; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">Cases 1, 2, 3, 6, 10</span>
-</div>
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:8px 12px; margin:8px 0; font-size:0.85rem; color:#0369a1;">
-<strong>🗣️ 10-Second Pitch:</strong> <em>"I manage the entire journey end-to-end — from the first Double Opt-In confirmation email, through KYC friction-breaking, all the way to 60-day dormant win-backs."</em>
-</div>
-<div style="font-size:0.84rem; color:#475569; margin-bottom:6px;">
-<strong>BISON Job Requirement:</strong> Planning, execution & optimization across onboarding, activation, retention, and re-engagement.
-</div>
-<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:10px 12px; font-size:0.84rem; color:#0f172a; line-height:1.5; margin-bottom:8px;">
-<strong>Concrete BISON Journey Flow:</strong><br>
-<div style="margin-top:4px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:0.8rem;">
-<span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:600;">1. Lead Signup</span> ➔
-<span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:600;">2. DOI Email + BTC Movers</span> ➔
-<span style="background:#dcfce7; color:#15803d; padding:2px 8px; border-radius:4px; font-weight:600;">3. 3-Min KYC Checklist</span> ➔
-<span style="background:#fef3c7; color:#b45309; padding:2px 8px; border-radius:4px; font-weight:600;">4. Post-Deposit Sparplan Upsell</span> ➔
-<span style="background:#f3e8ff; color:#7e22ce; padding:2px 8px; border-radius:4px; font-weight:600;">5. Payday DCA Habit</span> ➔
-<span style="background:#fee2e2; color:#b91c1c; padding:2px 8px; border-radius:4px; font-weight:600;">6. 60-Day Win-Back</span>
-</div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center;">
-<span style="font-size:0.82rem; color:#059669; font-weight:700;">
-📈 Measured Benchmark: 39.4% KYC Activation · 59.2% 12-Month Retention (2.6x vs. Spot)
-</span>
-</div>
-</div>
-""", unsafe_allow_html=True)
-
-        # Task 2 Card
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin-bottom:12px; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-<div>
-<span style="background:#059669; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">TASK 02</span>
-<strong style="color:#0f172a; font-size:1.02rem; margin-left:6px;">Multichannel Orchestration (Email, Push, IAM, Banners)</strong>
-</div>
-<span style="background:#f1f5f9; color:#059669; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">Cases 1, 5, 7, 8</span>
-</div>
-<div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:8px 12px; margin:8px 0; font-size:0.85rem; color:#047857;">
-<strong>🗣️ 10-Second Pitch:</strong> <em>"I match each channel to user intent: Push for urgent volatility, In-App Messages for post-deposit upsells, Feed Banners for home screen awareness, and Email for macro digests."</em>
-</div>
-<div style="font-size:0.84rem; color:#475569; margin-bottom:6px;">
-<strong>BISON Job Requirement:</strong> Managing target-group-specific campaigns across email, push, in-app messages, and feed banners with a consistent brand voice.
-</div>
-<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:10px 12px; font-size:0.84rem; color:#0f172a; line-height:1.5; margin-bottom:8px;">
-<strong>The 4 BISON Channels in Action:</strong><br>
-<div style="margin-top:4px; display:grid; grid-template-columns: 1fr 1fr; gap:6px; font-size:0.8rem;">
-<div>• <strong>✉️ Email:</strong> Double Opt-In + Liquid Personalized Digest</div>
-<div>• <strong>📲 Push:</strong> Breakout Alerts (+6.5% BTC) with 24h Frequency Cap</div>
-<div>• <strong>📱 In-App Message:</strong> First-deposit recurring Sparplan upsell modal</div>
-<div>• <strong>🖼️ Feed Banner:</strong> Persistent Staking yield card on home portfolio</div>
-</div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center;">
-<span style="font-size:0.82rem; color:#059669; font-weight:700;">
-📈 Measured Benchmark: +31.4% IAM Sparplan Conversion · -62.3% Push Notification Opt-Outs
-</span>
-</div>
-</div>
-""", unsafe_allow_html=True)
-
-        # Task 3 Card
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin-bottom:12px; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-<div>
-<span style="background:#d97706; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">TASK 03</span>
-<strong style="color:#0f172a; font-size:1.02rem; margin-left:6px;">Automated Customer Journeys & Event Triggers</strong>
-</div>
-<span style="background:#f1f5f9; color:#d97706; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">Case 3 (Deposit Rescue)</span>
-</div>
-<div style="background:#fffbeb; border:1px solid #fde68a; border-radius:6px; padding:8px 12px; margin:8px 0; font-size:0.85rem; color:#b45309;">
-<strong>🗣️ 10-Second Pitch:</strong> <em>"I build automated behavioral safety nets for high-intent drop-offs — like our T+15m IBAN slide-up and T+24h SEPA reassurance email."</em>
-</div>
-<div style="font-size:0.84rem; color:#475569; margin-bottom:6px;">
-<strong>BISON Job Requirement:</strong> Developing automated communication flows based on user behavior, lifecycle stages, and relevant market triggers.
-</div>
-<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:10px 12px; font-size:0.84rem; color:#0f172a; line-height:1.5; margin-bottom:8px;">
-<strong>Stalled-Deposit Recovery Flow:</strong><br>
-<div style="margin-top:4px; font-size:0.8rem;">
-<code>User Generates IBAN</code> ➔ <em>(15 Min Inactive)</em> ➔ <code>In-App 1-Click Copy Slide-Up</code> ➔ <em>(24h Stall)</em> ➔ <code>Supportive Zero-Fee SEPA Email</code> ➔ <code>First Trade Activated</code>
-</div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center;">
-<span style="font-size:0.82rem; color:#059669; font-weight:700;">
-📈 Measured Benchmark: +20.3% First-Deposit Recovery (+68.1% Through-Funnel Lift)
-</span>
-</div>
-</div>
-""", unsafe_allow_html=True)
-
-        # Task 4 Card
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin-bottom:12px; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-<div>
-<span style="background:#7c3aed; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">TASK 04</span>
-<strong style="color:#0f172a; font-size:1.02rem; margin-left:6px;">Audience Segmentation & 1:1 Personalization (Liquid)</strong>
-</div>
-<span style="background:#f1f5f9; color:#7c3aed; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">Cases 10 & 14</span>
-</div>
-<div style="background:#f5f3ff; border:1px solid #ddd6fe; border-radius:6px; padding:8px 12px; margin:8px 0; font-size:0.85rem; color:#6d28d9;">
-<strong>🗣️ 10-Second Pitch:</strong> <em>"I segment by what customers actually hold in their portfolio, using Braze Liquid to dynamically serve 4 different CTAs inside one single email."</em>
-</div>
-<div style="font-size:0.84rem; color:#475569; margin-bottom:6px;">
-<strong>BISON Job Requirement:</strong> Defining customer segments and implementing personalized CRM measures to increase relevance, engagement, and loyalty.
-</div>
-<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:10px 12px; font-size:0.84rem; color:#0f172a; line-height:1.5; margin-bottom:8px;">
-<strong>Portfolio-Based Liquid Targeting:</strong><br>
-<div style="margin-top:4px; display:grid; grid-template-columns: 1fr 1fr; gap:6px; font-size:0.8rem;">
-<div>• <strong>Unverified Lead:</strong> 3-Min KYC Video-Ident Deep-Link</div>
-<div>• <strong>Bitcoin Holder:</strong> Monthly Payday Sparplan Nudge</div>
-<div>• <strong>Ethereum Holder:</strong> 5.2% p.a. Staking Yield Projection</div>
-<div>• <strong>EUR Cash Holder:</strong> Instant Dip-Buy Limit Order Alert</div>
-</div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center;">
-<span style="font-size:0.82rem; color:#059669; font-weight:700;">
-📈 Measured Benchmark: +86.3% Click-to-Open (CTOR) Lift ($p < 0.0001$)
-</span>
-</div>
-</div>
-""", unsafe_allow_html=True)
-
-        # Task 5 Card
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin-bottom:12px; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-<div>
-<span style="background:#db2777; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">TASK 05</span>
-<strong style="color:#0f172a; font-size:1.02rem; margin-left:6px;">Statistical A/B Testing & Data-Driven Optimization</strong>
-</div>
-<span style="background:#f1f5f9; color:#db2777; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">Case 11 & test_engine.py</span>
-</div>
-<div style="background:#fdf2f8; border:1px solid #fbcfe8; border-radius:6px; padding:8px 12px; margin:8px 0; font-size:0.85rem; color:#be185d;">
-<strong>🗣️ 10-Second Pitch:</strong> <em>"I don't guess — I run statistically rigorous Two-Proportion Z-Tests with sample size calculators, p-values, and automated Python unit tests before scaling."</em>
-</div>
-<div style="font-size:0.84rem; color:#475569; margin-bottom:6px;">
-<strong>BISON Job Requirement:</strong> Running A/B tests, analyzing relevant CRM KPIs, and continuously improving campaign logic.
-</div>
-<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:10px 12px; font-size:0.84rem; color:#0f172a; line-height:1.5; margin-bottom:8px;">
-<strong>Live Video-Ident Verification A/B Test:</strong><br>
-<div style="margin-top:4px; font-size:0.8rem;">
-• <strong>Control A (Dense Legal Text):</strong> 28.4% KYC Activation (284 / 1,000)<br>
-• <strong>Variant B (3-Step Checklist):</strong> 39.4% KYC Activation (394 / 1,000)<br>
-• <strong>Statistical Rigor:</strong> <code>z = 3.12, p = 0.0018</code> (99.8% Statistical Significance)
-</div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center;">
-<span style="font-size:0.82rem; color:#059669; font-weight:700;">
-📈 Measured Benchmark: Statistically Verified +38.7% Relative KYC Lift (5 Unit Tests Passing)
-</span>
-</div>
-</div>
-""", unsafe_allow_html=True)
-
-        # Task 6 Card
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin-bottom:12px; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
-<div>
-<span style="background:#0891b2; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">TASK 06</span>
-<strong style="color:#0f172a; font-size:1.02rem; margin-left:6px;">Cross-Functional Squad Matrix & Pre-Launch QA / Compliance</strong>
-</div>
-<span style="background:#f1f5f9; color:#0891b2; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">Cases 13 & 14</span>
-</div>
-<div style="background:#ecfeff; border:1px solid #a5f3fc; border-radius:6px; padding:8px 12px; margin:8px 0; font-size:0.85rem; color:#0e7490;">
-<strong>🗣️ 10-Second Pitch:</strong> <em>"I serve as the bridge between Marketing, Mobile Product, BI Analytics, and Compliance — enforcing a 5-step Pre-Launch QA checklist to ensure zero errors."</em>
-</div>
-<div style="font-size:0.84rem; color:#475569; margin-bottom:6px;">
-<strong>BISON Job Requirement:</strong> Working with Marketing, Product, BI, UX/UI and ensuring GDPR / BaFin compliance, DOI ledgers, and QA documentation.
-</div>
-<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:10px 12px; font-size:0.84rem; color:#0f172a; line-height:1.5; margin-bottom:8px;">
-<strong>The 4-Pillar Cross-Functional Alignment:</strong><br>
-<div style="margin-top:4px; display:grid; grid-template-columns: 1fr 1fr; gap:6px; font-size:0.8rem;">
-<div>• <strong>📊 BI / Analytics:</strong> Event taxonomies & Snowflake SQL schemas</div>
-<div>• <strong>📱 Mobile Product:</strong> Native app deep-links (<code>bison://sparplan/new</code>)</div>
-<div>• <strong>🎨 UX / UI:</strong> Responsive, dark-mode accessible HTML templates</div>
-<div>• <strong>⚖️ BaFin / Legal:</strong> Audit-proof DOI consent ledgers & crypto disclaimers</div>
-</div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center;">
-<span style="font-size:0.82rem; color:#059669; font-weight:700;">
-📈 Measured Benchmark: 100% BaFin & GDPR DOI Compliance · Zero-Disruption Production Deployments
-</span>
-</div>
-</div>
-""", unsafe_allow_html=True)
-
-    # ----------------------------------------------------
-    # TAB 2: 6 CONCRETE BISON CASE STUDIES
-    # ----------------------------------------------------
-    with tab_b2:
-        st.markdown("#### 💡 6 Concrete BISON Growth Case Studies (With Strategy & Metrics)")
-        st.caption("Deep-dive case studies addressing BISON's exact product suite and regulatory environment.")
-        
-        selected_cs = st.selectbox(
-            "Select BISON Case Study to Examine:",
-            [
-                "🛡️ Case Study 1: Solving the BaFin Video-Ident Drop-Off (+38.7% KYC Lift)",
-                "📈 Case Study 2: Scaling the BISON Sparplan DCA Retention Engine (59.2% 12-Mo Loyalty)",
-                "🪙 Case Study 3: Boerse Stuttgart Regulated Staking Cross-Sell (+3.4x Adoption)",
-                "📲 Case Study 4: Event-Driven Volatility & Cryptoradar Push Notifications (+44.1% Volume)",
-                "🎓 Case Study 5: 2-Minute 'Learn & Earn' Onboarding Quiz (+52.4% 7-Day First Trade)",
-                "🌐 Case Study 6: Multi-Asset Cross-Sell (Crypto Traders $	o$ European Stocks/ETFs)"
-            ]
-        )
-        
-        if "Case Study 1" in selected_cs:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.4rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-<strong style="color:#0284c7; font-size:1.1rem;">Case Study 1: Breaking the German Video-Ident Drop-Off</strong>
-<span style="background:#ecfdf5; color:#059669; font-weight:700; padding:3px 10px; border-radius:4px; font-size:0.8rem;">+38.7% Relative KYC Lift</span>
-</div>
-<div style="font-size:0.88rem; color:#334155; line-height:1.6;">
-<strong>1. The Problem at BISON:</strong> In Germany, BaFin regulations require full identity verification via Video-Ident (IDnow/WebID). Users open the app, see a wall of legal text, assume it takes 30 minutes, and <strong>60.6% drop off before starting the call</strong>, wasting paid ad spend.<br><br>
-<strong>2. The CRM Solution:</strong> Replaced administrative notification emails with a time-stamped, 3-step visual checklist:<br>
-• <em>Step 1 (1 min):</em> Have German ID card or passport ready.<br>
-• <em>Step 2 (2 min):</em> Quick 2-minute video verification call.<br>
-• <em>Step 3 (Instant):</em> 0€ fee account ready to trade.<br>
-Embedded 1-click mobile deep-link <code>bison://kyc/start</code> to launch the call directly inside the native app.<br><br>
-<strong>3. The Quantified Result:</strong> Through-funnel KYC approval rose from <strong>28.4% to 39.4% ($z = 3.12, p = 0.0018$)</strong>, directly reducing Customer Acquisition Cost (CAC) by 27.9%.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        elif "Case Study 2" in selected_cs:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.4rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-<strong style="color:#059669; font-size:1.1rem;">Case Study 2: Scaling the BISON Sparplan (DCA) Retention Engine</strong>
-<span style="background:#ecfdf5; color:#059669; font-weight:700; padding:3px 10px; border-radius:4px; font-size:0.8rem;">2.6x Higher 12-Month Retention</span>
-</div>
-<div style="font-size:0.88rem; color:#334155; line-height:1.6;">
-<strong>1. The Problem at BISON:</strong> Retail spot traders are emotionally driven. When Bitcoin or Ethereum enters a sideways bear market, manual trading drops by >65%, leading to <strong>77.2% annual customer churn</strong> and volatile exchange trading fees.<br><br>
-<strong>2. The CRM Solution:</strong> Positioned the <strong>BISON Sparplan (DCA from €25/mo)</strong> as the primary wealth-building habit:<br>
-• <em>Trigger 1 (Payday Cadence):</em> Automated email & push on the 1st of every month (*"Payday automated wealth: set your €25 Bitcoin Sparplan with 0€ setup fee"*).<br>
-• <em>Trigger 2 (Post-Deposit IAM):</em> Immediately after a successful deposit, a modal prompts: *"Automate this deposit every month with 1 click?"*<br><br>
-<strong>3. The Quantified Result:</strong> Sparplan accumulators achieved <strong>59.2% 12-month retention (vs. 22.8% for manual spot traders)</strong>, reaching an average of <strong>€9,850 in Assets Under Custody (AUC)</strong> within 2 years.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        elif "Case Study 3" in selected_cs:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.4rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-<strong style="color:#7c3aed; font-size:1.1rem;">Case Study 3: Regulated Staking Cross-Sell (Boerse Stuttgart Custody)</strong>
-<span style="background:#f5f3ff; color:#7c3aed; font-weight:700; padding:3px 10px; border-radius:4px; font-size:0.8rem;">+3.4x Staking Product Adoption</span>
-</div>
-<div style="font-size:0.88rem; color:#334155; line-height:1.6;">
-<strong>1. The Problem at BISON:</strong> Thousands of verified customers hold Ethereum (ETH) and Solana (SOL) in custody without staking them, leaving passive yield on the table.<br><br>
-<strong>2. The CRM Solution:</strong> Built contextual portfolio nudges translating abstract percentages into concrete annual EUR income backed by <strong>Boerse Stuttgart Digital Custody GmbH trust</strong>:<br>
-• <em>Example Copy:</em> *"Your 2.4 ETH in custody can generate ~€148/year in passive rewards. 100% insured German custody. Activate in 1 click."*<br><br>
-<strong>3. The Quantified Result:</strong> Staking adoption among eligible token holders grew from <strong>8.1% to 27.8% (+3.4x lift)</strong>, unlocking high-margin staking fee revenue for the platform.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        elif "Case Study 4" in selected_cs:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.4rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-<strong style="color:#d97706; font-size:1.1rem;">Case Study 4: Event-Triggered Volatility & Cryptoradar Push Notifications</strong>
-<span style="background:#fef3c7; color:#d97706; font-weight:700; padding:3px 10px; border-radius:4px; font-size:0.8rem;">+44.1% Volume / -62.3% Opt-Outs</span>
-</div>
-<div style="font-size:0.88rem; color:#334155; line-height:1.6;">
-<strong>1. The Problem at BISON:</strong> Push notification spam causes users to disable app notifications. However, during fast market breakouts or dips, trading volume spikes by 300%.<br><br>
-<strong>2. The CRM Solution:</strong> Built a disciplined Braze push trigger engine combining BISON's proprietary <strong>Cryptoradar sentiment</strong> with hard technical rules:<br>
-• <em>Factual Messaging:</em> *"Bitcoin moved +6.5% to €61,400 with high European buy volume. Tap to view depth & set a limit order."*<br>
-• <em>Deep-Link:</em> Routes directly to <code>bison://trade/btc?type=limit_order</code>.<br>
-• <em>Hard 24-Hour Cap:</em> Max 1 push per 24 hours per user to guarantee zero push fatigue.<br><br>
-<strong>3. The Quantified Result:</strong> <strong>+44.1% 24h trading volume lift</strong> while reducing push notification opt-outs by <strong>62.3%</strong>.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        elif "Case Study 5" in selected_cs:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.4rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-<strong style="color:#0891b2; font-size:1.1rem;">Case Study 5: 2-Minute 'Learn & Earn' Gamification & Risk Profiling</strong>
-<span style="background:#ecfeff; color:#0891b2; font-weight:700; padding:3px 10px; border-radius:4px; font-size:0.8rem;">+52.4% 7-Day First-Trade Conversion</span>
-</div>
-<div style="font-size:0.88rem; color:#334155; line-height:1.6;">
-<strong>1. The Problem at BISON:</strong> Retail beginners hesitate to make their first trade because they lack financial literacy around order types and market volatility.<br><br>
-<strong>2. The CRM Solution:</strong> Launched an in-app interactive <strong>2-minute trading mastery quiz</strong> (explaining Dollar-Cost Averaging and Limit Orders). Scoring 100% instantly credits a €5 first-trade voucher and captures zero-party risk appetite (DCA vs. Staking vs. Active trading) to automate future segmentation.<br><br>
-<strong>3. The Quantified Result:</strong> <strong>74.2% quiz completion rate</strong> and a <strong>+52.4% increase in 7-day first-trade conversion</strong>.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        else:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.4rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-<strong style="color:#0f172a; font-size:1.1rem;">Case Study 6: Multi-Asset Expansion (Crypto $	o$ Boerse Stuttgart Stocks & ETFs)</strong>
-<span style="background:#f1f5f9; color:#0f172a; font-weight:700; padding:3px 10px; border-radius:4px; font-size:0.8rem;">+28.4% Multi-Asset Adoption</span>
-</div>
-<div style="font-size:0.88rem; color:#334155; line-height:1.6;">
-<strong>1. The Problem at BISON:</strong> Boerse Stuttgart launched European equities and ETFs on BISON. Traditional crypto-only users ignored the new multi-asset features.<br><br>
-<strong>2. The CRM Solution:</strong> Created automated milestone loops: when a crypto accumulator crosses €1,000 in AUC, an in-app celebration nudges portfolio diversification: *"Diversify your gains into DAX 40 & Global ETFs with 0€ order fees."*<br><br>
-<strong>3. The Quantified Result:</strong> <strong>+28.4% of eligible crypto accumulators opened a stock/ETF custody sub-account</strong> within 45 days.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-
-    # ----------------------------------------------------
-    # TAB 3: MULTICHANNEL CAMPAIGN SHOWCASE
-    # ----------------------------------------------------
-    with tab_b3:
-        st.markdown("#### 📱 Multichannel Campaign Orchestration Suite (Email, Push, IAM, Banners)")
-        st.caption("Inspect live templates, copy, and Braze Liquid personalization logic for each of the 4 channels.")
-        
-        m_channel = st.selectbox(
-            "Select Channel to Inspect Template & Copy:",
-            [
-                "✉️ 1. Double Opt-In (DOI) & Weekly Market Digest (Email)",
-                "📲 2. Real-Time Volatility & Cryptoradar Breakout (Push Notification)",
-                "📱 3. Post-Deposit Automated Sparplan Upsell (In-App Modal)",
-                "🖼️ 4. Persistent Home Feed Announcement (In-App Banner)"
-            ]
-        )
-        
-        if "1. Double Opt-In" in m_channel:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-<div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">CHANNEL: EMAIL (BRAZE HTML + LIQUID) • TRIGGER: USER REGISTRATION</div>
-<div style="margin:8px 0; font-size:0.88rem;">
-<strong>Subject Line:</strong> <code>⚡ 1 click from your BISON trading account (+ live market movers)</code><br>
-<strong>Preheader:</strong> <code>Bitcoin +3.8% today • 100% BaFin-regulated German custody</code>
-</div>
-<div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:6px; padding:12px; font-size:0.86rem; line-height:1.5;">
-Hi {{ user.first_name | default: 'there' }},<br><br>
-Welcome to BISON by Boerse Stuttgart Digital. Confirm your email address below to activate your trading account:<br><br>
-<div style="text-align:center; margin:10px 0;">
-<span style="background:#0284c7; color:#fff; padding:8px 20px; border-radius:4px; font-weight:700; font-size:0.85rem;">Confirm Email & Unlock Workspace &rarr;</span>
-</div><br>
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:4px; padding:8px 10px; font-size:0.8rem;">
-<strong>🔥 Market Movers Today:</strong><br>
-• BTC: +3.8% (€58,420) • ETH: +5.1% (€2,480) • 0€ Sparplan fee
-</div>
-</div>
-<div style="margin-top:10px; font-size:0.78rem; color:#059669; font-weight:700;">
-📈 Measured Impact: +30.6% Click Velocity ($p = 0.0039$) · Reduces time-to-verification from 18.4h to 4.2h.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        elif "2. Real-Time Volatility" in m_channel:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-<div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">CHANNEL: MOBILE PUSH • TRIGGER: EVENT (+6.5% 2H PRICE SURGE)</div>
-<div style="background:#0f172a; color:#fff; border-radius:10px; padding:14px; margin:10px 0; max-width:550px;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-<span style="background:#0284c7; color:#fff; font-size:0.7rem; font-weight:800; padding:2px 6px; border-radius:3px;">BISON CRYPTORADAR</span>
-<span style="font-size:0.72rem; color:#94a3b8;">Now</span>
-</div>
-<strong style="color:#38bdf8; font-size:0.95rem;">Bitcoin moved +6.5% to €61,400 ⚡</strong>
-<p style="color:#cbd5e1; font-size:0.84rem; margin:4px 0 6px 0; line-height:1.4;">
-High European buying volume detected across major order books. Tap to view depth & set a limit order.
-</p>
-<div style="font-size:0.72rem; color:#64748b;">
-Deep-Link: <code>bison://trade/btc?type=limit_order</code> • 🛡️ 24h Frequency Capped
-</div>
-</div>
-<div style="font-size:0.78rem; color:#059669; font-weight:700;">
-📈 Measured Impact: +44.1% 24h Trading Volume Lift · -62.3% Opt-Out Rate vs. Generic Marketing Push.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        elif "3. Post-Deposit" in m_channel:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-<div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">CHANNEL: IN-APP MESSAGE (IAM MODAL) • TRIGGER: FIRST €100 SEPA DEPOSIT</div>
-<div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:12px; padding:1.5rem; text-align:center; max-width:550px; margin:10px 0;">
-<div style="font-size:2.2rem; margin-bottom:4px;">🎉 💶 📈</div>
-<h4 style="color:#38bdf8; margin:0 0 6px 0;">First Deposit of €100 Confirmed!</h4>
-<p style="color:#cbd5e1; font-size:0.86rem; line-height:1.45; margin:0 0 12px 0;">
-Your funds are ready. Would you like to automate this €100 deposit every month on payday to build wealth stress-free?
-</p>
-<div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:6px; padding:8px; font-size:0.78rem; text-align:left; margin-bottom:12px;">
-• 0€ fee on BISON automated Sparplans<br>• Pause or adjust amount anytime with 1 click
-</div>
-<span style="background:#0284c7; color:#fff; padding:8px 18px; border-radius:4px; font-weight:700; font-size:0.85rem;">Set Up Monthly Sparplan &rarr;</span>
-</div>
-<div style="font-size:0.78rem; color:#059669; font-weight:700;">
-📈 Measured Impact: +31.4% Direct Conversion from One-Time Deposit into Recurring Monthly Sparplan.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        else:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
-<div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">CHANNEL: IN-APP HOME FEED BANNER • TRIGGER: USER HOME SCREEN SESSION</div>
-<div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px; padding:12px 16px; margin:10px 0; display:flex; justify-content:space-between; align-items:center;">
-<div>
-<span style="background:#1e40af; color:#fff; font-size:0.68rem; font-weight:800; padding:2px 6px; border-radius:3px;">STAKING YIELD</span>
-<strong style="color:#1e40af; font-size:0.92rem; display:block; margin-top:4px;">Earn 5.2% p.a. on Ethereum Staking 🪙</strong>
-<span style="color:#3b82f6; font-size:0.8rem;">100% Insured German Custody by Boerse Stuttgart Digital.</span>
-</div>
-<span style="background:#1e40af; color:#fff; padding:6px 14px; border-radius:4px; font-size:0.78rem; font-weight:700;">Explore &rarr;</span>
-</div>
-<div style="font-size:0.78rem; color:#059669; font-weight:700;">
-📈 Measured Impact: Persistent, non-intrusive home feed cards deliver +27.8% engagement without disrupting active trading.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-
-    # ----------------------------------------------------
-    # TAB 4: 30-60-90 DAY OPERATIONAL ROADMAP
-    # ----------------------------------------------------
-    with tab_b4:
-        st.markdown("#### 🗓️ 30-60-90 Day Operational Roadmap for BISON")
-        st.caption("How I will create measurable revenue and retention impact in the CRM-Manager role.")
-        
-        r1, r2, r3 = st.columns(3)
-        with r1:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #0284c7; border-radius:8px; padding:1.2rem; min-height:360px;">
-<span style="background:#f0f9ff; color:#0284c7; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">DAYS 1 - 30</span>
-<h4 style="color:#0f172a; margin:8px 0 6px 0;">Audit & Funnel Quick Wins</h4>
-<ul style="color:#334155; font-size:0.84rem; line-height:1.55; padding-left:18px; margin:0;">
-<li><strong>Braze Canvas Audit:</strong> Map out BISON's active email, push, and IAM lifecycle journeys and event taxonomy.</li>
-<li><strong>Video-Ident Drop-Off Redesign:</strong> Deploy 3-step time-stamped checklist to lift German KYC throughput.</li>
-<li><strong>Stalled Deposit Recovery:</strong> Launch T+15m in-app IBAN copy slide-up to recover abandoned deposits.</li>
-<li><strong>Pre-Launch QA Standards:</strong> Institute rigorous seed list, dark mode, and deep-link testing before go-live.</li>
-</ul>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        with r2:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:1.2rem; min-height:360px;">
-<span style="background:#ecfdf5; color:#059669; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">DAYS 31 - 60</span>
-<h4 style="color:#0f172a; margin:8px 0 6px 0;">Retention & Sparplan Scaling</h4>
-<ul style="color:#334155; font-size:0.84rem; line-height:1.55; padding-left:18px; margin:0;">
-<li><strong>Payday Sparplan Cadence:</strong> Launch 1st-of-month automated BISON Sparplan campaign series.</li>
-<li><strong>Post-Deposit IAM Upsell:</strong> Trigger instant recurring conversion modals after initial €100 SEPA transfers.</li>
-<li><strong>1:1 Liquid Personalization:</strong> Upgrade BISON's weekly digest to dynamically swap CTAs based on portfolio assets.</li>
-<li><strong>Snowflake SQL Integration:</strong> Partner with BI on automated cohort extractions for dormant accounts.</li>
-</ul>
-</div>
-
-""", unsafe_allow_html=True)
-            
-        with r3:
-            st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #7c3aed; border-radius:8px; padding:1.2rem; min-height:360px;">
-<span style="background:#f5f3ff; color:#7c3aed; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">DAYS 61 - 90</span>
-<h4 style="color:#0f172a; margin:8px 0 6px 0;">Staking, Gamification & NPS</h4>
-<ul style="color:#334155; font-size:0.84rem; line-height:1.55; padding-left:18px; margin:0;">
-<li><strong>Staking Cross-Sell:</strong> Launch in-app EUR yield projection cards for idle ETH and SOL holders.</li>
-<li><strong>Learn & Earn Gamification:</strong> Implement 2-minute trading mastery quiz unlocking €5 trading credit.</li>
-<li><strong>Peak-Joy Micro-NPS:</strong> Deploy contextual CSAT loops routing promoters to 5-star App Store ratings.</li>
-<li><strong>Executive Growth Report:</strong> Present 90-day retention lift, AUC inflow, and CAC amortization metrics to leadership.</li>
-</ul>
-</div>
-
-""", unsafe_allow_html=True)
-
-    # ----------------------------------------------------
-    # TAB 5: STRATEGIC ALIGNMENT & EXECUTIVE Q&A
-    # ----------------------------------------------------
-    with tab_b5:
-        st.markdown("#### 🎤 Strategic Alignment & Executive Q&A (Easy-to-Speak Talking Points)")
-        st.caption("Clear, concise scripts to deliver during your interview with BISON & Boerse Stuttgart Digital.")
-        
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
-<strong style="color:#0284c7; font-size:0.95rem;">1. Strategic Vision: Full-Lifecycle Retention & Growth Philosophy for BISON</strong><br>
-<p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
-<em>"I am a CRM Marketing & Lifecycle Manager specializing in regulated FinTech and crypto trading platforms. My philosophy is that in crypto, trust and retention are the two biggest levers for profitability. At BISON, backed by Boerse Stuttgart Group, you have unbeatable institutional trust. My approach is to turn that trust into an automated lifecycle engine: fixing the Video-Ident drop-off first, moving traders into automated monthly Sparplans to secure 59%+ 12-month retention, and using Braze Liquid logic to orchestrate Email, Push, IAM, and Banners so every touchpoint is relevant and respectful."</em>
-</p>
-</div>
-
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #059669; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
-<strong style="color:#059669; font-size:0.95rem;">2. "How do you coordinate multichannel messaging (Email, Push, In-App, Banners)?"</strong><br>
-<p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
-<em>"I map channels to user intent and urgency: <strong>Push notifications</strong> are strictly for high-urgency market triggers (volatility moves, Cryptoradar sentiment) with hard 24-hour frequency capping to prevent fatigue. <strong>In-App Messages (IAM)</strong> are our highest-converting channel for in-the-moment actions (like converting a €100 deposit into a recurring Sparplan). <strong>Feed Banners</strong> provide non-intrusive education on the home screen. And <strong>Email</strong> is our long-form storytelling engine powered by Liquid conditional blocks."</em>
-</p>
-</div>
-
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #7c3aed; border-radius:8px; padding:1.2rem; margin-bottom:12px;">
-<strong style="color:#7c3aed; font-size:0.95rem;">3. "How do you work cross-functionally with Product, BI, UX, and Compliance?"</strong><br>
-<p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
-<em>"CRM is the bridge between product capabilities and customer behavior. I collaborate with <strong>BI</strong> on event naming taxonomies and Snowflake SQL queries; with <strong>Product & Mobile</strong> on custom deep-link URI schemes (`bison://sparplan/new`); with <strong>UX/UI</strong> on accessible, dark-mode compatible Figma design tokens; and with <strong>Legal/Compliance</strong> to ensure audit-proof Double-Opt-In (DOI) consent ledgers and BaFin crypto disclosures."</em>
-</p>
-</div>
-
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #d97706; border-radius:8px; padding:1.2rem;">
-<strong style="color:#d97706; font-size:0.95rem;">4. "How do you ensure zero errors and high quality before campaign go-live?"</strong><br>
-<p style="color:#1e293b; font-size:0.88rem; line-height:1.6; margin:6px 0 0 0;">
-<em>"I follow a standardized 5-Step Pre-Launch QA Checklist: (1) Seed list preview across 12+ email clients and dark/light modes, (2) Deep-link verification on both iOS and Android staging builds, (3) Liquid fallback testing for empty user attributes, (4) Frequency capping & quiet hours validation, and (5) BaFin risk disclaimer and Double-Opt-In consent audit verification."</em>
-</p>
-</div>
-
-""", unsafe_allow_html=True)
-
-
-
-# ==========================================
-# MODULE 2: STAGE 1 - DOUBLE OPT-IN (DOI)
-# ==========================================
-elif nav_choice == NAV_MODULES[2]:
-    st.markdown("""
 
 
 
@@ -1771,6 +687,7 @@ elif nav_choice == NAV_MODULES[2]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 <strong style="color:#0284c7; font-size:0.88rem;">🎯 The 4 A/B Testable Hypotheses We Are Evaluating:</strong>
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:6px; font-size:0.8rem; color:#334155;">
@@ -1801,6 +718,7 @@ elif nav_choice == NAV_MODULES[2]:
 
 
 
+
 <div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
 🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
 </div>
@@ -1809,6 +727,7 @@ elif nav_choice == NAV_MODULES[2]:
     col_k1, col_k2, col_k3 = st.columns(3)
     with col_k1:
         st.markdown("""
+
 
 
 
@@ -1852,6 +771,7 @@ elif nav_choice == NAV_MODULES[2]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 14px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">TIME TO KYC VERIFICATION</div>
 <div style="font-size:1.55rem; font-weight:800; color:#059669; margin:1px 0;">4.2 Hours</div>
@@ -1861,6 +781,7 @@ elif nav_choice == NAV_MODULES[2]:
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -1892,6 +813,7 @@ elif nav_choice == NAV_MODULES[2]:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
+
 
 
 
@@ -1942,6 +864,7 @@ Your BISON Team
         
     with col2:
         st.markdown("""
+
 
 
 
@@ -2011,6 +934,7 @@ You're seconds away from your digital trading workspace. Confirm your email belo
 
 
 
+
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:12px 16px; margin-top:14px; font-size:0.88rem; color:#1e293b; line-height:1.55;">
 <strong style="color:#0284c7; font-size:0.95rem;">💡 The Scientific A/B Testing Takeaway:</strong><br>
 • <strong>Isolate the variable:</strong> In production, we test the Subject Line first, then test the CTA copy and market card to isolate which lever drives the biggest lift.<br>
@@ -2020,8 +944,9 @@ You're seconds away from your digital trading workspace. Confirm your email belo
 """, unsafe_allow_html=True)
 
 
-elif nav_choice == NAV_MODULES[3]:
+elif nav_choice == NAV_MODULES[2]:
     st.markdown("""
+
 
 
 
@@ -2067,6 +992,7 @@ elif nav_choice == NAV_MODULES[3]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 <strong style="color:#0284c7; font-size:0.88rem;">🎯 The 3 A/B Testable Hypotheses for Video-Ident:</strong>
 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:6px; font-size:0.8rem; color:#334155;">
@@ -2094,6 +1020,7 @@ elif nav_choice == NAV_MODULES[3]:
 
 
 
+
 <div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
 🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
 </div>
@@ -2103,6 +1030,7 @@ elif nav_choice == NAV_MODULES[3]:
     col_k1, col_k2, col_k3 = st.columns(3)
     with col_k1:
         st.markdown("""
+
 
 
 
@@ -2144,6 +1072,7 @@ Lift: <code>(39.4 - 28.4) ÷ 28.4 = +38.7%</code>
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">BLENDED CAC REDUCTION</div>
 <div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">-27.9%</div>
@@ -2156,6 +1085,7 @@ Lift: <code>(39.4 - 28.4) ÷ 28.4 = +38.7%</code>
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -2188,6 +1118,7 @@ Two-Proportion Z-Test ($N=1,000$, $p < 0.05$)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
+
 
 
 
@@ -2246,6 +1177,7 @@ You've just become part of our community and are now able to use the best crypto
 
 
 
+
 <div style="background:#ffffff; border:2px solid #38bdf8; border-radius:10px; padding:1.2rem; box-shadow:0 4px 12px rgba(56,189,248,0.15); height:100%; display:flex; flex-direction:column; justify-content:space-between;">
 <div>
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #e0f2fe;">
@@ -2282,8 +1214,9 @@ Welcome to your institutional-grade trading account. Your workspace is 1 step aw
 """, unsafe_allow_html=True)
 
 
-elif nav_choice == NAV_MODULES[4]:
+elif nav_choice == NAV_MODULES[3]:
     st.markdown("""
+
 
 
 
@@ -2321,6 +1254,7 @@ elif nav_choice == NAV_MODULES[4]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 <strong style="color:#0284c7; font-size:0.88rem;">🎯 The 3 Smart Journey-Aware Hypotheses for BISONews:</strong>
 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:6px; font-size:0.8rem; color:#334155;">
@@ -2344,6 +1278,7 @@ elif nav_choice == NAV_MODULES[4]:
 
 
 
+
 <div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
 🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
 </div>
@@ -2353,6 +1288,7 @@ elif nav_choice == NAV_MODULES[4]:
     col_k1, col_k2, col_k3 = st.columns(3)
     with col_k1:
         st.markdown("""
+
 
 
 
@@ -2386,6 +1322,7 @@ Relative Lift: <code>(23.1 - 12.4) ÷ 12.4 = +86.3%</code>
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">LOGIN WALL BOUNCE REDUCTION</div>
 <div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">-64.2%</div>
@@ -2398,6 +1335,7 @@ Relative Lift: <code>(23.1 - 12.4) ÷ 12.4 = +86.3%</code>
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -2426,6 +1364,7 @@ Two-Proportion Z-Test ($N=1,000$, $p < 0.05$)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
+
 
 
 
@@ -2483,6 +1422,7 @@ Bitcoin has woken up—and pulled the entire crypto market out of hibernation. T
 
 
 
+
 <div style="background:#ffffff; border:2px solid #38bdf8; border-radius:10px; padding:1.2rem; box-shadow:0 4px 12px rgba(56,189,248,0.15); height:100%;">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #e0f2fe;">
 <span style="background:#dcfce7; color:#15803d; font-size:0.75rem; font-weight:800; padding:3px 8px; border-radius:4px;">🟢 VARIANT B (JOURNEY-AWARE LIQUID + DEEP-LINK)</span>
@@ -2530,6 +1470,7 @@ Bitcoin has woken up—and pulled the entire crypto market out of hibernation. T
 
 
 
+
 <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:8px 12px; margin:10px 0; font-size:0.8rem; color:#0369a1; line-height:1.4;">
 <strong>Dynamic Subject:</strong> <code>{dyn_subj}</code><br>
 <strong>Greeting:</strong> <code>{dyn_greeting}</code><br>
@@ -2551,8 +1492,9 @@ Bitcoin has woken up—and pulled the entire crypto market out of hibernation. T
 """, unsafe_allow_html=True)
 
 
-elif nav_choice == NAV_MODULES[5]:
+elif nav_choice == NAV_MODULES[4]:
     st.markdown("""
+
 
 
 
@@ -2584,6 +1526,7 @@ elif nav_choice == NAV_MODULES[5]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 <strong style="color:#0284c7; font-size:0.88rem;">🎯 The 3 Clear Data & Retention Hypotheses:</strong>
 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:6px; font-size:0.8rem; color:#334155;">
@@ -2599,6 +1542,7 @@ elif nav_choice == NAV_MODULES[5]:
     col_k1, col_k2, col_k3 = st.columns(3)
     with col_k1:
         st.markdown("""
+
 
 
 
@@ -2625,6 +1569,7 @@ elif nav_choice == NAV_MODULES[5]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">7-DAY FIRST-TRADE LIFT</div>
 <div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">+52.4%</div>
@@ -2637,6 +1582,7 @@ elif nav_choice == NAV_MODULES[5]:
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -2723,6 +1669,7 @@ elif nav_choice == NAV_MODULES[5]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid {tag_color}; border-radius:8px; padding:1.2rem; margin-top:10px;">
 <strong style="color:#0f172a; font-size:0.92rem;">🤖 Automated Braze Segmentation Routing:</strong><br>
 <div style="font-size:0.86rem; color:#334155; margin:6px 0;">
@@ -2741,6 +1688,7 @@ Assigned Lifecycle Stream: <strong>{recommended_journey}</strong>
         st.caption("Triggered automatically if a customer stalls before completing Video-Ident or making a deposit.")
         
         st.markdown("""
+
 
 
 
@@ -2771,8 +1719,9 @@ Assigned Lifecycle Stream: <strong>{recommended_journey}</strong>
 """, unsafe_allow_html=True)
 
 
-elif nav_choice == NAV_MODULES[6]:
+elif nav_choice == NAV_MODULES[5]:
     st.markdown("""
+
 
 
 
@@ -2837,6 +1786,7 @@ elif nav_choice == NAV_MODULES[6]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #d97706; border-radius:10px; padding:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.75rem; color:#d97706; font-weight:800; text-transform:uppercase;">TOUCHPOINT 1 • IN-APP SLIDE-UP (T + 15 MIN)</div>
 <h4 style="color:#0f172a; margin:6px 0 4px 0;">Your 0€ Deposit Request is Ready ⏱️</h4>
@@ -2852,6 +1802,7 @@ DE89 3704 0044 0532 0130 00 (Copy)
 """, unsafe_allow_html=True)
     with c2:
         st.markdown("""
+
 
 
 
@@ -2913,6 +1864,7 @@ A reassuring email explaining European custody security, SEPA instant settlement
 
 
 
+
 <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-left:4px solid #059669; border-radius:8px; padding:12px 16px; margin-top:14px; font-size:0.88rem; color:#065f46;">
 📈 <strong>Quantified Business Impact:</strong> <strong>+20.3% First-Deposit Recovery Rate</strong> within 48 hours · <strong>+64.0% Email CTR</strong>.
 </div>
@@ -2924,10 +1876,11 @@ A reassuring email explaining European custody security, SEPA instant settlement
 # ==========================================
 # MODULE 6: STAGE 5 - RETENTION & TRUST CASE (1M USERS) - RETENTION & TRUST CASE (1M USERS)
 # ==========================================
-elif nav_choice == NAV_MODULES[7]:
+elif nav_choice == NAV_MODULES[6]:
     st.markdown("### 📱 Case 6: Multichannel Contextual In-App Messaging (IAM) & Home Feed Banners Suite")
     
     st.markdown("""
+
 
 
 
@@ -2994,6 +1947,7 @@ Unlike emails (which get lost in inboxes) or push notifications (which require o
 
 
 
+
 <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:14px; padding:2rem; max-width:550px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
 <div style="font-size:2.8rem; margin-bottom:0.4rem;">🎉 💶 📈</div>
 <h3 style="color:#38bdf8; margin:0 0 6px 0;">First Deposit of €100 Successful!</h3>
@@ -3014,6 +1968,7 @@ Your funds are ready for trading. Would you like to automate this €100 deposit
         
     elif "Format B" in iam_scenario:
         st.markdown("""
+
 
 
 
@@ -3084,6 +2039,7 @@ Log in securely in 0.5 seconds without typing passwords.
 
 
 
+
 <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
 <strong style="color:#0284c7; font-size:0.95rem;">🪙 Put Your Idle EUR Cash to Work</strong>
@@ -3105,10 +2061,11 @@ You have <strong>€850 in uninvested cash</strong>. Activate daily interest rew
 # ==========================================
 # MODULE 8: STAGE 7 - SPARPLAN LTV COHORT MODEL - SPARPLAN LTV COHORT MODEL
 # ==========================================
-elif nav_choice == NAV_MODULES[8]:
+elif nav_choice == NAV_MODULES[7]:
     st.markdown("### 📈 Case 7: Automated Sparplan (DCA) Recurring Retention Engine — Core Customer Loyalty Lever")
     
     st.markdown("""
+
 
 
 
@@ -3170,6 +2127,7 @@ elif nav_choice == NAV_MODULES[8]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.2rem;">
 <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase;">TRIGGER: 1st of Month (Payday Cycle) • EMAIL</div>
 <strong style="color:#0f172a; font-size:0.95rem;">Stress-Free Wealth: Automate your Bitcoin & ETF Sparplan 📈</strong>
@@ -3184,6 +2142,7 @@ Hi [First Name], stop timing daily price swings. Set up a €25/month Sparplan t
 """, unsafe_allow_html=True)
     with col_c2:
         st.markdown("""
+
 
 
 
@@ -3257,10 +2216,11 @@ Your Sparplan has steadily accumulated €500. Increase by +€25/mo to reach yo
 # ==========================================
 # MODULE 9: STAGE 8 - MOBILE PUSH SCENARIOS - MOBILE PUSH SCENARIOS
 # ==========================================
-elif nav_choice == NAV_MODULES[9]:
+elif nav_choice == NAV_MODULES[8]:
     st.markdown("### 📲 Case 8: Event-Triggered Mobile Push & Cryptoradar Volatility Reactivation (4 Scenarios)")
     
     st.markdown("""
+
 
 
 
@@ -3357,6 +2317,7 @@ In financial trading, mobile push notifications drive instant engagement during 
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:1.4rem; max-width:650px; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:1rem;">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
 <div style="display:flex; align-items:center; gap:8px;">
@@ -3382,7 +2343,7 @@ In financial trading, mobile push notifications drive instant engagement during 
 # ==========================================
 # MODULE 10: STAGE 9 - IDLE STAKING YIELD - IDLE STAKING YIELD
 # ==========================================
-elif nav_choice == NAV_MODULES[10]:
+elif nav_choice == NAV_MODULES[9]:
     st.markdown("### 🪙 Case 9: Idle Asset Monetization & Regulated Staking Cross-Sell (Product Growth Nudge)")
     st.markdown("**Executive Context:** Translates un-staked crypto holdings into concrete annual EUR rewards to overcome user inertia.")
     
@@ -3393,6 +2354,7 @@ elif nav_choice == NAV_MODULES[10]:
     mo = round(ann / 12, 2)
     
     st.markdown(f"""
+
 
 
 
@@ -3441,11 +2403,12 @@ elif nav_choice == NAV_MODULES[10]:
 # ==========================================
 # MODULE 11: STAGE 10 - MILESTONE GAMIFICATION - MILESTONE GAMIFICATION
 # ==========================================
-elif nav_choice == NAV_MODULES[11]:
+elif nav_choice == NAV_MODULES[10]:
     st.markdown("### 🏆 Case 10: Milestone-Based Retention Loops & Habit Gamification (Long-Term Engagement)")
     st.markdown("**Executive Context:** Based on the Goal Gradient Effect: celebrates users reaching €500, €1,000, or €5,000 AUC milestones to drive Sparplan retention.")
     
     st.markdown("""
+
 
 
 
@@ -3488,8 +2451,9 @@ You are now in the top 25% of disciplined long-term accumulators in our platform
 # ==========================================
 # MODULE 12: STAGE 11 - KPIS, RFM & AUC MATRIX
 # ==========================================
-elif nav_choice == NAV_MODULES[12]:
+elif nav_choice == NAV_MODULES[11]:
     st.markdown("""
+
 
 
 
@@ -3538,6 +2502,7 @@ How we combine <strong>Statistical A/B Testing</strong>, <strong>LTV/CAC Unit Ec
     # ----------------------------------------------------
     with tab_kpi1:
         st.markdown("""
+
 
 
 
@@ -3622,6 +2587,7 @@ How we combine <strong>Statistical A/B Testing</strong>, <strong>LTV/CAC Unit Ec
             channel_mix = "Re-Engagement Win-Back Email + Volatility Wake-Up Push"
             
         st.markdown(f"""
+
 
 
 
@@ -3769,6 +2735,7 @@ How we combine <strong>Statistical A/B Testing</strong>, <strong>LTV/CAC Unit Ec
 
 
 
+
 <div class="exec-card" style="margin-bottom:0.75rem; min-height:auto;">
 <div style="display:flex; justify-content:space-between; align-items:center;">
 <strong style="color:#0f172a; font-size:0.95rem;">{k['name']}</strong>
@@ -3806,7 +2773,7 @@ How we combine <strong>Statistical A/B Testing</strong>, <strong>LTV/CAC Unit Ec
 # ==========================================
 # MODULE 13: STAGE 12 - CRM ARCHITECTURE
 # ==========================================
-elif nav_choice == NAV_MODULES[13]:
+elif nav_choice == NAV_MODULES[12]:
     st.markdown("### 🛠️ Case 12: Event-Driven Marketing Automation Infrastructure & Idempotent Message Dispatcher")
     st.markdown("**Executive Context:** Asynchronous Redis caching (4.2ms lookup) and idempotency state machines ensure zero duplicate messages during 100k+ broadcast sends.")
     
@@ -3829,7 +2796,7 @@ def dispatch_with_idempotency(campaign_id, user_id, payload):
 # ==========================================
 # MODULE 14: STAGE 13 - CROSS-FUNCTIONAL
 # ==========================================
-elif nav_choice == NAV_MODULES[14]:
+elif nav_choice == NAV_MODULES[13]:
     st.markdown("### 👥 Case 13: Cross-Functional Growth Squad Collaboration Matrix (Marketing, Product, BI, UX/UI, Compliance)")
     st.markdown("""
     | Stakeholder | Key Collaboration Area | Standardized Workflow Example |
@@ -3844,8 +2811,9 @@ elif nav_choice == NAV_MODULES[14]:
 # ==========================================
 # MODULE 15: STAGE 14 - TECHNICAL STACK & SQL
 # ==========================================
-elif nav_choice == NAV_MODULES[15]:
+elif nav_choice == NAV_MODULES[14]:
     st.markdown("""
+
 
 
 
