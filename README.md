@@ -1,5 +1,5 @@
-# Faizan's Portfolio — FinTech & Crypto CRM Marketing & Retention Engine
-### 🦬 Full-Lifecycle Growth & Retention Blueprint for BISON (Boerse Stuttgart Digital)
+# Faizan's Portfolio — FinTech & Crypto CRM Marketing & Retention Blueprint
+### 🦬 Supporting BISON's Retail Mission (Boerse Stuttgart Digital)
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-trading-growth-engine.streamlit.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -7,7 +7,7 @@
 [![Statistical Rigor](https://img.shields.io/badge/A%2FB%20Testing-Two--Proportion%20Z--Test-success.svg)]()
 [![Compliance](https://img.shields.io/badge/Compliance-BaFin%20%26%20MiCA%20%26%20GDPR-green.svg)]()
 
-> 🔒 **PORTFOLIO NOTICE:** This is an independent portfolio project and strategic CRM case study platform created by **Faizan Ahmed** for technical, product, and quantitative CRM demonstration. All customer, trading, and custodial metrics are synthetic simulations.
+> 📌 **A RESPECTFUL NOTE ON DATA & BENCHMARKS:** Built with deep appreciation for **Boerse Stuttgart Group's 160-year heritage** and BISON's intuitive mobile experience. Out of respect for proprietary data, all figures shown in this blueprint represent **simulated industry benchmarks** modeled on retail FinTech and subscription app cohort standards.
 
 ---
 
