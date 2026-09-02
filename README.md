@@ -51,12 +51,11 @@ flowchart TD
 
 ---
 
-## 📋 The 16 Operational Modules Grouped by Lifecycle Phase
+## 📋 The 15 Operational Modules Grouped by Lifecycle Phase
 
 | Phase | Case # | Case Study Name | CRM Marketing & Lifecycle Focus | Quantified Benchmark |
 |---|---|---|---|---|
-| **Strategy** | **#00** | **📊 Executive Strategy & Scorecard** | Macro Retail Throughput & AUC Distribution | **39.4% KYC / 59.2% Retention** |
-| **Strategy** | **#01** | **🦬 BISON Full-Lifecycle Growth & Retention Blueprint** | Direct JD Mapping, 6 Levers & 30-60-90 Day Plan | **100% Operational Alignment** |
+| **Strategy** | **Exec** | **📊 Executive Strategy & Scorecard** | Macro Retail Throughput & AUC Distribution | **39.4% KYC / 59.2% Retention** |
 | **Phase 1** | **#02** | **✉️ Case 1: Double Opt-In (DOI) Velocity** | Email 1: `Confirm your email address now!` + BTC movers | **+30.6% Click Velocity** ($p = 0.0039$) |
 | **Phase 1** | **#03** | **🛡️ Case 2: Regulated KYC Funnel Optimization** | Email 2: `Welcome to BISON 👋` + 3-min Video-Ident checklist | **+38.7% Relative KYC Lift** ($p = 0.0018$) |
 | **Phase 1** | **#04** | **📰 Case 3: Dynamic 1:1 BISONews (Liquid)** | Email 3: `Hi, here's your BISONews 🙌` + Modular Liquid logic | **+86.3% CTOR Lift** ($p < 0.0001$) |
