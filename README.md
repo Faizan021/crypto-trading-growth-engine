@@ -17,33 +17,33 @@ As Germany's leading regulated retail crypto & multi-asset platform powered by *
 
 ```mermaid
 flowchart TD
-    subgraph PHASE1["🟢 Phase 1: Onboarding & Welcome Journey (Live Inbox Sequence)"]
-        C1["Case 1: Double Opt-In (DOI) Onboarding Velocity (Email)"]
-        C2["Case 2: Regulated Identity Verification (KYC) Funnel"]
-        C3["Case 3: Dynamic 1:1 BISONews Welcome & Market Digest (Liquid)"]
-        C4["Case 4: Zero-Party & First-Party Data Profiling (Quiz & Survey)"]
+    subgraph PHASE1["🟢 Phase 1: Onboarding & Welcome (Inbox Flow)"]
+        C1["Case 1: Double Opt-In (DOI)<br/>Onboarding Velocity"]
+        C2["Case 2: Video-Ident (KYC)<br/>Account Verification"]
+        C3["Case 3: Dynamic BISONews<br/>1:1 Market Digest"]
+        C4["Case 4: Data Profiling<br/>Learn & Earn Quiz"]
     end
 
     subgraph PHASE2["🔵 Phase 2: Activation & Deposit Recovery"]
-        C5["Case 5: High-Intent Deposit Recovery Flow (T+15m & T+24h)"]
+        C5["Case 5: Deposit Recovery<br/>High-Intent Flow"]
     end
 
-    subgraph PHASE3["🟣 Phase 3: Retention & Sparplan Loyalty"]
-        C6["Case 6: Contextual In-App Messaging (IAM) & Home Feed Banners"]
-        C7["Case 7: Automated BISON Sparplan (DCA) Retention Engine"]
+    subgraph PHASE3["🟣 Phase 3: Retention & Sparplans"]
+        C6["Case 6: In-App Messages<br/>Feed Banners"]
+        C7["Case 7: Sparplan Engine<br/>Automated DCA Loyalty"]
     end
 
-    subgraph PHASE4["⚡ Phase 4: Engagement, Volatility & Monetization"]
-        C8["Case 8: Event-Triggered Volatility & Cryptoradar Push"]
-        C9["Case 9: Idle Asset Monetization & Regulated Staking Cross-Sell"]
-        C10["Case 10: Milestone-Based Habit Loops & App Store NPS"]
+    subgraph PHASE4["⚡ Phase 4: Engagement & Staking"]
+        C8["Case 8: Push Alerts<br/>Volatility & Cryptoradar"]
+        C9["Case 9: Regulated Staking<br/>Idle Asset Yield"]
+        C10["Case 10: Habit Loops<br/>Milestones & Micro-NPS"]
     end
 
-    subgraph PHASE5["🟠 Phase 5: Quantitative Models, Testing & Architecture"]
-        C11["Case 11: Quantitative RFM & AUC Segmentation Matrix"]
-        C12["Case 12: Event-Driven Marketing Automation Infrastructure"]
-        C13["Case 13: Cross-Functional Squad Matrix & Pre-Launch QA"]
-        C14["Case 14: Production Braze Liquid & Snowflake SQL Schemas"]
+    subgraph PHASE5["🟠 Phase 5: Quantitative & Architecture"]
+        C11["Case 11: RFM & AUC Matrix<br/>Quantitative Clusters"]
+        C12["Case 12: Event Infrastructure<br/>Idempotency Engine"]
+        C13["Case 13: Squad Matrix<br/>Pre-Launch QA Checklist"]
+        C14["Case 14: Production SQL<br/>Braze Liquid Schemas"]
     end
 
     PHASE1 --> PHASE2 --> PHASE3 --> PHASE4 --> PHASE5
