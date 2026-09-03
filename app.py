@@ -69,6 +69,7 @@ st.markdown("""
 
 
 
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -328,6 +329,7 @@ st.sidebar.markdown("""
 
 
 
+
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:6px 10px; font-size:0.75rem; color:#475569; line-height:1.4; margin-bottom:8px;">
 <strong>Lifecycle Flow:</strong><br>
 🟢 Onboarding ➔ 🔵 Activation ➔ 🟣 Retention ➔ ⚡ Monetization
@@ -348,6 +350,7 @@ nav_choice = st.sidebar.radio(
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
+
 
 
 
@@ -440,6 +443,7 @@ if nav_choice == NAV_MODULES[0]:
 
 
 
+
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:12px 16px; margin-bottom:14px; font-size:0.84rem; color:#334155; line-height:1.55;">
 <strong>📌 A Respectful Note on Data & Target Benchmarks:</strong><br>
 Out of deep respect for proprietary data, all figures shown in this blueprint represent <strong>simulated industry benchmarks</strong> modeled on retail FinTech and subscription app cohort standards. They serve as positive, aspirational North Stars to illustrate what is possible when great engineering and regulatory trust meet empathetic customer communication.
@@ -448,6 +452,7 @@ Out of deep respect for proprietary data, all figures shown in this blueprint re
 """, unsafe_allow_html=True)
 
     st.markdown("""
+
 
 
 
@@ -526,6 +531,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
 
 
 
+
 <div class="exec-card">
 <div class="exec-card-lbl" style="min-height:34px;">30-Day Retail<br>Trading Volume</div>
 <div class="exec-card-val">€148.4M</div>
@@ -535,6 +541,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
 """, unsafe_allow_html=True)
     with col2:
         st.markdown("""
+
 
 
 
@@ -602,6 +609,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
 
 
 
+
 <div class="exec-card">
 <div class="exec-card-lbl" style="min-height:34px;">12-Month Sparplan<br>Customer Retention</div>
 <div class="exec-card-val">59.2%</div>
@@ -611,6 +619,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
 """, unsafe_allow_html=True)
     with col4:
         st.markdown("""
+
 
 
 
@@ -678,6 +687,7 @@ Built with deep appreciation for <strong>Boerse Stuttgart Group's 160-year herit
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; margin: 1.2rem 0; box-shadow:0 2px 4px rgba(0,0,0,0.02);">
 <strong style="color:#0f172a; font-size:0.95rem;">The Three Strategic Pillars (Zero Criticism, Pure Value):</strong>
 <ul style="margin:8px 0 10px 0; padding-left:20px; font-size:0.87rem; color:#334155; line-height:1.6;">
@@ -696,6 +706,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
     with col_left:
         st.markdown("#### ⚡ Through-Funnel Onboarding Conversion (Per 10,000 Signups)")
         st.markdown("""
+
 
 
 
@@ -826,6 +837,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
 
 
 
+
 <div class="funnel-card">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
 <div>
@@ -850,6 +862,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
     with col_right:
         st.markdown("#### 🪙 Assets Under Custody (AUC) Asset Mix & Segmentation")
         st.markdown("""
+
 
 
 
@@ -978,6 +991,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
 
 
 
+
 <div class="funnel-card">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
 <strong style="color:#0f172a; font-size:0.88rem;">{a['name']}</strong>
@@ -999,6 +1013,7 @@ Explore the detailed quantitative funnel breakdown, lifecycle segmentation logic
 # ==========================================
 elif nav_choice == NAV_MODULES[1]:
     st.markdown("""
+
 
 
 
@@ -1104,6 +1119,7 @@ elif nav_choice == NAV_MODULES[1]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 <strong style="color:#0284c7; font-size:0.88rem;">🎯 The 4 A/B Testable Hypotheses I Am Evaluating:</strong>
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:6px; font-size:0.8rem; color:#334155;">
@@ -1161,6 +1177,7 @@ elif nav_choice == NAV_MODULES[1]:
 
 
 
+
 <div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
 🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
 </div>
@@ -1169,6 +1186,7 @@ elif nav_choice == NAV_MODULES[1]:
     col_k1, col_k2, col_k3 = st.columns(3)
     with col_k1:
         st.markdown("""
+
 
 
 
@@ -1266,6 +1284,7 @@ elif nav_choice == NAV_MODULES[1]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 14px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">TIME TO KYC VERIFICATION</div>
 <div style="font-size:1.55rem; font-weight:800; color:#059669; margin:1px 0;">4.2 Hours</div>
@@ -1275,6 +1294,7 @@ elif nav_choice == NAV_MODULES[1]:
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -1377,6 +1397,7 @@ elif nav_choice == NAV_MODULES[1]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:space-between;">
 <div>
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #f1f5f9;">
@@ -1410,6 +1431,7 @@ Your BISON Team
         
     with col2:
         st.markdown("""
+
 
 
 
@@ -1533,6 +1555,7 @@ You're seconds away from your digital trading workspace. Confirm your email belo
 
 
 
+
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:12px 16px; margin-top:14px; font-size:0.88rem; color:#1e293b; line-height:1.55;">
 <strong style="color:#0284c7; font-size:0.95rem;">💡 The Scientific A/B Testing Takeaway:</strong><br>
 • <strong>Isolate the variable:</strong> In production, I would recommend testing the Subject Line first, then testing the CTA copy and market card to isolate which lever drives the biggest lift.<br>
@@ -1544,6 +1567,7 @@ You're seconds away from your digital trading workspace. Confirm your email belo
 
 elif nav_choice == NAV_MODULES[2]:
     st.markdown("""
+
 
 
 
@@ -1643,6 +1667,7 @@ elif nav_choice == NAV_MODULES[2]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,0.02);">
 <strong style="color:#0284c7; font-size:0.88rem;">🎯 The 3 A/B Testable Hypotheses for Video-Ident:</strong>
 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:6px; font-size:0.8rem; color:#334155;">
@@ -1697,6 +1722,7 @@ elif nav_choice == NAV_MODULES[2]:
 
 
 
+
 <div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
 🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
 </div>
@@ -1706,6 +1732,7 @@ elif nav_choice == NAV_MODULES[2]:
     col_k1, col_k2, col_k3 = st.columns(3)
     with col_k1:
         st.markdown("""
+
 
 
 
@@ -1801,6 +1828,7 @@ Lift: <code>(39.4 - 28.4) ÷ 28.4 = +38.7%</code>
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">BLENDED CAC REDUCTION</div>
 <div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">-27.9%</div>
@@ -1813,6 +1841,7 @@ Lift: <code>(39.4 - 28.4) ÷ 28.4 = +38.7%</code>
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -1913,6 +1942,7 @@ Two-Proportion Z-Test ($N=1,000$, $p < 0.05$)
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:space-between;">
 <div>
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #f1f5f9;">
@@ -1943,6 +1973,7 @@ You've just become part of our community and are now able to use the best crypto
         
     with col2:
         st.markdown("""
+
 
 
 
@@ -2059,6 +2090,7 @@ elif nav_choice == NAV_MODULES[3]:
 
 
 
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.2rem 1.6rem; color: #ffffff; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 4px;">
 <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #03</span>
@@ -2076,6 +2108,7 @@ elif nav_choice == NAV_MODULES[3]:
     
     # 3 Hypotheses Grid Bar
     st.markdown("""
+
 
 
 
@@ -2163,6 +2196,7 @@ elif nav_choice == NAV_MODULES[3]:
 
 
 
+
 <div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
 🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
 </div>
@@ -2172,6 +2206,7 @@ elif nav_choice == NAV_MODULES[3]:
     col_k1, col_k2, col_k3 = st.columns(3)
     with col_k1:
         st.markdown("""
+
 
 
 
@@ -2259,6 +2294,7 @@ Relative Lift: <code>(23.1 - 12.4) ÷ 12.4 = +86.3%</code>
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">LOGIN WALL BOUNCE REDUCTION</div>
 <div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">-64.2%</div>
@@ -2271,6 +2307,7 @@ Relative Lift: <code>(23.1 - 12.4) ÷ 12.4 = +86.3%</code>
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -2326,6 +2363,7 @@ Two-Proportion Z-Test ($N=1,000$, $p < 0.05$)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
+
 
 
 
@@ -2437,6 +2475,7 @@ Bitcoin has woken up—and pulled the entire crypto market out of hibernation. T
 
 
 
+
 <div style="background:#ffffff; border:2px solid #38bdf8; border-radius:10px; padding:1.2rem; box-shadow:0 4px 12px rgba(56,189,248,0.15); height:100%;">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #e0f2fe;">
 <span style="background:#dcfce7; color:#15803d; font-size:0.75rem; font-weight:800; padding:3px 8px; border-radius:4px;">🟢 VARIANT B (A/B GROWTH HYPOTHESIS)</span>
@@ -2474,6 +2513,7 @@ Bitcoin has woken up—and pulled the entire crypto market out of hibernation. T
             btn_color = "#7c3aed"
             
         st.markdown(f"""
+
 
 
 
@@ -2568,6 +2608,7 @@ elif nav_choice == NAV_MODULES[4]:
 
 
 
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.3rem 1.6rem; color: #ffffff; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
 <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #04</span>
@@ -2585,6 +2626,7 @@ elif nav_choice == NAV_MODULES[4]:
     
     # 3 Clean Hypotheses Bar
     st.markdown("""
+
 
 
 
@@ -2668,6 +2710,7 @@ elif nav_choice == NAV_MODULES[4]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #0284c7; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">QUIZ ENGAGEMENT RATE</div>
 <div style="font-size:1.5rem; font-weight:800; color:#0284c7; margin:1px 0;">74.2%</div>
@@ -2714,6 +2757,7 @@ elif nav_choice == NAV_MODULES[4]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
 <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">7-DAY FIRST-TRADE LIFT</div>
 <div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">+52.4%</div>
@@ -2726,6 +2770,7 @@ elif nav_choice == NAV_MODULES[4]:
 """, unsafe_allow_html=True)
     with col_k3:
         st.markdown("""
+
 
 
 
@@ -2866,6 +2911,7 @@ elif nav_choice == NAV_MODULES[4]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid {tag_color}; border-radius:8px; padding:1.2rem; margin-top:10px;">
 <strong style="color:#0f172a; font-size:0.92rem;">🤖 Automated Braze Segmentation Routing:</strong><br>
 <div style="font-size:0.86rem; color:#334155; margin:6px 0;">
@@ -2884,6 +2930,7 @@ Assigned Lifecycle Stream: <strong>{recommended_journey}</strong>
         st.caption("Triggered automatically if a customer stalls before completing Video-Ident or making a deposit.")
         
         st.markdown("""
+
 
 
 
@@ -2943,6 +2990,7 @@ Assigned Lifecycle Stream: <strong>{recommended_journey}</strong>
 
 elif nav_choice == NAV_MODULES[5]:
     st.markdown("""
+
 
 
 
@@ -3061,6 +3109,7 @@ elif nav_choice == NAV_MODULES[5]:
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #d97706; border-radius:10px; padding:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.75rem; color:#d97706; font-weight:800; text-transform:uppercase;">TOUCHPOINT 1 • IN-APP SLIDE-UP (T + 15 MIN)</div>
 <h4 style="color:#0f172a; margin:6px 0 4px 0;">Your 0€ Deposit Request is Ready ⏱️</h4>
@@ -3076,6 +3125,7 @@ DE89 3704 0044 0532 0130 00 (Copy)
 """, unsafe_allow_html=True)
     with c2:
         st.markdown("""
+
 
 
 
@@ -3191,6 +3241,7 @@ A reassuring email explaining European custody security, SEPA instant settlement
 
 
 
+
 <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-left:4px solid #059669; border-radius:8px; padding:12px 16px; margin-top:14px; font-size:0.88rem; color:#065f46;">
 📈 <strong>Quantified Business Impact:</strong> <strong>+20.3% First-Deposit Recovery Rate</strong> within 48 hours · <strong>+64.0% Email CTR</strong>.
 </div>
@@ -3203,296 +3254,167 @@ A reassuring email explaining European custody security, SEPA instant settlement
 # MODULE 6: STAGE 5 - RETENTION & TRUST CASE (1M USERS) - RETENTION & TRUST CASE (1M USERS)
 # ==========================================
 elif nav_choice == NAV_MODULES[6]:
-    st.markdown("### 📱 Case 6: Multichannel Contextual In-App Messaging (IAM) & Home Feed Banners Suite")
-    
     st.markdown("""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="expl-box-green">
-<strong style="color:#059669; font-size:1rem;">💡 Why In-App Messages (IAM) Deliver the Highest Conversion:</strong><br>
-Unlike emails (which get lost in inboxes) or push notifications (which require opt-in permissions), <strong>In-App Messages have a 100% delivery rate</strong> because they appear while the user is actively using the app. They guide the user to the exact next lifecycle milestone with zero friction.
+<div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
+<span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #6</span>
+<span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">In-App Product Experience & Native Nudges</span>
 </div>
-
+<div style="font-size:1.6rem; font-weight:800; color:#ffffff; margin-bottom:0.25rem;">
+📱 Contextual In-App Messaging (IAM) & Home Feed Banners Suite
+</div>
+<p style="font-size:0.9rem; color:#cbd5e1; line-height:1.55; margin:0;">
+Capitalizing on high-intent user moments: Triggering <strong>native, zero-friction In-App Messages (IAM)</strong> during active app sessions to convert one-time deposit dopamine into recurring Sparplans and security upgrades.
+</p>
+</div>
 """, unsafe_allow_html=True)
+
+    col_i1, col_i2, col_i3 = st.columns(3)
+    with col_i1:
+        st.markdown("""
+
+<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #0284c7; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+<div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">1. 100% Reach (Zero Friction)</div>
+<div style="font-size:0.76rem; color:#475569; line-height:1.45;">
+Unlike emails (spam folders) or push (permission gates), In-App Messages achieve <strong>100% impression delivery</strong> because they trigger while the user is actively engaged inside BISON.
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    with col_i2:
+        st.markdown("""
+
+<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #16a34a; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+<div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">2. Peak Dopamine Timing</div>
+<div style="font-size:0.76rem; color:#475569; line-height:1.45;">
+Triggering the upsell modal at the exact millisecond a <strong>€100 first deposit succeeds</strong> captures peak customer intent before excitement decays.
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    with col_i3:
+        st.markdown("""
+
+<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #8b5cf6; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+<div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">3. Native 1-Click Routing</div>
+<div style="font-size:0.76rem; color:#475569; line-height:1.45;">
+Directly pre-populates the Sparplan setup flow with the user's exact deposit amount, eliminating manual form-filling and password re-prompts.
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.markdown("---")
+    st.markdown("##### 🔬 Interactive In-App Message (IAM) Format Suite")
     
     iam_scenario = st.selectbox(
-        "Select In-App Message (IAM) Campaign Format:",
+        "Select In-App Message (IAM) Campaign Format to Preview:",
         [
             "🎉 Format A: Full-Screen Modal — Post-Deposit Sparplan Upsell",
-            "🛡️ Format B: Sticky Bottom Slide-Up — Biometric FaceID Activation",
+            "🛡️ Format B: Sticky Bottom Slide-Up — Biometric FaceID / 2FA Activation",
             "🪙 Format C: Contextual Balance Card — Idle Cash Yield Nudge"
         ]
     )
     
-    if "Format A" in iam_scenario:
-        st.markdown("""
+    col_preview, col_metrics = st.columns([1.3, 1])
+    
+    with col_preview:
+        if "Format A" in iam_scenario:
+            st.markdown("""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; border-radius:14px; padding:2rem; max-width:550px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
-<div style="font-size:2.8rem; margin-bottom:0.4rem;">🎉 💶 📈</div>
-<h3 style="color:#38bdf8; margin:0 0 6px 0;">First Deposit of €100 Successful!</h3>
-<p style="color:#cbd5e1; font-size:0.9rem; line-height:1.5; margin:0 0 16px 0;">
+<div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#ffffff; border-radius:14px; padding:1.8rem; max-width:520px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin:0 auto;">
+<div style="font-size:2.4rem; margin-bottom:0.3rem;">🎉 💶 📈</div>
+<h3 style="color:#38bdf8; margin:0 0 6px 0; font-size:1.15rem;">First Deposit of €100 Successful!</h3>
+<p style="color:#cbd5e1; font-size:0.84rem; line-height:1.5; margin:0 0 14px 0;">
 Your funds are ready for trading. Would you like to automate this €100 deposit every month to build wealth stress-free?
 </p>
-<div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.84rem; text-align:left;">
-<strong>✅ Key Benefit:</strong> 0€ fees on automated Sparplans • Pause or adjust anytime with 1 click.
+<div style="background:rgba(56,189,248,0.1); border:1px solid #0284c7; border-radius:8px; padding:10px; font-size:0.76rem; color:#bae6fd; margin-bottom:14px; text-align:left;">
+✅ <strong>Key Benefit:</strong> 0€ fees on automated Sparplans &bull; Pause or adjust anytime with 1 click.
 </div>
-<div style="display:flex; gap:10px; justify-content:center;">
-<span style="background:#0284c7; color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:0.9rem; cursor:pointer;">Activate as Monthly Sparplan &rarr;</span>
+<div style="background:#0284c7; color:#ffffff; font-weight:800; padding:10px 18px; border-radius:6px; font-size:0.86rem; display:block; margin-bottom:8px; cursor:pointer;">
+Activate as Monthly Sparplan &rarr;
 </div>
-<div style="margin-top:10px; font-size:0.75rem; color:#94a3b8; cursor:pointer;">No thanks, keep as one-time deposit</div>
+<div style="color:#94a3b8; font-size:0.75rem; text-decoration:underline; cursor:pointer;">
+No thanks, keep as one-time deposit
 </div>
-
+</div>
 """, unsafe_allow_html=True)
-        st.success("📈 **Quantified Impact:** +31.4% Direct Conversion from First Deposit into Recurring Monthly Sparplan.")
-        
-    elif "Format B" in iam_scenario:
-        st.markdown("""
+            impact_cvr = "+31.4%"
+            impact_sub = "Direct Conversion to Recurring Monthly Sparplan"
+            impact_sec = "Zero Friction Setup"
+            impact_sec_sub = "Pre-populates €100 amount in checkout"
+            
+        elif "Format B" in iam_scenario:
+            st.markdown("""
 
+<div style="background:#ffffff; border:1.5px solid #cbd5e1; border-top:4px solid #16a34a; border-radius:12px; padding:1.4rem; max-width:520px; box-shadow:0 8px 20px rgba(0,0,0,0.08); margin:0 auto;">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<span style="background:#ecfdf5; color:#166534; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">SECURITY UPGRADE</span>
+<span style="font-size:0.7rem; color:#64748b;">Trigger: 2nd App Open</span>
+</div>
+<div style="font-size:0.98rem; font-weight:800; color:#0f172a; margin-bottom:4px;">🛡️ Secure Your Account with FaceID</div>
+<p style="font-size:0.82rem; color:#334155; line-height:1.45; margin:0 0 12px 0;">
+Protect your crypto holdings with biometric hardware security. Log in in 0.5s with zero password fatigue.
+</p>
+<div style="background:#16a34a; color:#ffffff; font-weight:700; font-size:0.84rem; padding:8px 16px; border-radius:6px; display:inline-block;">
+Enable FaceID in 1 Tap &rarr;
+</div>
+<div style="font-size:0.7rem; color:#16a34a; font-family:monospace; margin-top:8px;">Deep-link: bison://settings/security?auth=biometric</div>
+</div>
+""", unsafe_allow_html=True)
+            impact_cvr = "+68.2%"
+            impact_sub = "Biometric Security Adoption Rate"
+            impact_sec = "-84% Login Friction"
+            impact_sec_sub = "Eliminates forgotten password support tickets"
+            
+        else:
+            st.markdown("""
 
+<div style="background:#ffffff; border:1.5px solid #cbd5e1; border-top:4px solid #7c3aed; border-radius:12px; padding:1.4rem; max-width:520px; box-shadow:0 8px 20px rgba(0,0,0,0.08); margin:0 auto;">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<span style="background:#faf5ff; color:#7c3aed; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:4px;">HOME FEED CONTEXTUAL CARD</span>
+<span style="font-size:0.7rem; color:#64748b;">Trigger: Idle Cash > €50 for 7 Days</span>
+</div>
+<div style="font-size:0.98rem; font-weight:800; color:#0f172a; margin-bottom:4px;">🪙 Put Your Idle Cash to Work</div>
+<p style="font-size:0.82rem; color:#334155; line-height:1.45; margin:0 0 12px 0;">
+You have €240 in uninvested cash. Set up a €25 Sparplan or explore 3.4% Ethereum staking with Boerse Stuttgart Group.
+</p>
+<div style="background:#7c3aed; color:#ffffff; font-weight:700; font-size:0.84rem; padding:8px 16px; border-radius:6px; display:inline-block;">
+Explore Staking & Sparplan &rarr;
+</div>
+<div style="font-size:0.7rem; color:#7c3aed; font-family:monospace; margin-top:8px;">Deep-link: bison://earn/overview</div>
+</div>
+""", unsafe_allow_html=True)
+            impact_cvr = "+24.6%"
+            impact_sub = "Idle Cash Monetization Conversion"
+            impact_sec = "+€180/yr"
+            impact_sec_sub = "Incremental AUC Activated per User"
 
+    with col_metrics:
+        st.markdown(f"""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
-<div style="display:flex; justify-content:space-between; align-items:flex-start;">
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; height:100%;">
+<div style="font-size:0.75rem; font-weight:800; color:#64748b; text-transform:uppercase; margin-bottom:8px;">📈 PROJECTED IAM IMPACT</div>
+<div style="margin-bottom:10px;">
+<div style="font-size:1.3rem; font-weight:800; color:#0284c7;">{impact_cvr}</div>
+<div style="font-size:0.75rem; color:#475569;">{impact_sub}</div>
+</div>
+<div style="margin-bottom:10px;">
+<div style="font-size:1.3rem; font-weight:800; color:#16a34a;">{impact_sec}</div>
+<div style="font-size:0.75rem; color:#475569;">{impact_sec_sub}</div>
+</div>
 <div>
-<span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:700;">SECURITY & CONVENIENCE</span>
-<h4 style="color:#0f172a; margin:6px 0 4px 0;">Enable FaceID / Biometric Login? 🛡️</h4>
-<p style="color:#475569; font-size:0.88rem; line-height:1.5; margin:0;">
-Log in securely in 0.5 seconds without typing passwords.
-</p>
-</div>
-<div style="font-size:2rem;">🔐</div>
-</div>
-<div style="margin-top:14px; display:flex; gap:8px;">
-<span style="background:#059669; color:#fff; padding:8px 18px; border-radius:6px; font-weight:700; font-size:0.85rem;">Enable 1-Click Biometrics &rarr;</span>
-<span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:6px; font-weight:600; font-size:0.85rem;">Maybe Later</span>
+<div style="font-size:1.3rem; font-weight:800; color:#7c3aed;">100% Reach</div>
+<div style="font-size:0.75rem; color:#475569;">Zero push opt-in or email deliverability barriers</div>
 </div>
 </div>
-
 """, unsafe_allow_html=True)
-        st.success("📈 **Quantified Impact:** Reduces authentication friction and increases 30-day App Open Frequency by +42.0%.")
-        
-    else:
-        st.markdown("""
 
+    st.success("🎯 **Strategic Impact:** Captures high-intent user attention during active app sessions, driving immediate action without external channel drop-off.")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:1.4rem; max-width:550px; box-shadow:0 8px 20px rgba(0,0,0,0.06); margin:0 auto;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-<strong style="color:#0284c7; font-size:0.95rem;">🪙 Put Your Idle EUR Cash to Work</strong>
-<span style="background:#0284c7; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.72rem; font-weight:800;">3.2% P.A.</span>
-</div>
-<p style="color:#0f172a; font-size:0.88rem; line-height:1.5; margin:0 0 12px 0;">
-You have <strong>€850 in uninvested cash</strong>. Activate daily interest rewards (3.2% p.a.) or set an automated limit order to buy market dips.
-</p>
-<div style="display:flex; gap:8px;">
-<span style="background:#0284c7; color:#fff; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Activate Yield (3.2% p.a.) &rarr;</span>
-<span style="background:#ffffff; color:#0284c7; border:1px solid #bae6fd; padding:8px 16px; border-radius:6px; font-weight:700; font-size:0.85rem;">Set Limit Order</span>
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-        st.success("📈 **Quantified Impact:** +24.6% Deployment of Idle Cash Reserves into Active Trading and Yield.")
-
-
-# ==========================================
-# MODULE 8: STAGE 7 - SPARPLAN LTV COHORT MODEL - SPARPLAN LTV COHORT MODEL
-# ==========================================
 elif nav_choice == NAV_MODULES[7]:
     st.markdown("""
+
 
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
@@ -3512,6 +3434,7 @@ Transforming volatile day-traders into multi-year accumulators: Aligning automat
     with col_s1:
         st.markdown("""
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #ef4444; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">1. The Trading Fatigue Problem</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3523,6 +3446,7 @@ Manual spot traders suffer emotional burnout during sideways or bear markets. Wi
     with col_s2:
         st.markdown("""
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #0284c7; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">2. The Payday Habit Hook</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3533,6 +3457,7 @@ I propose triggering automated lifecycle nudges on the <strong>1st of each month
 
     with col_s3:
         st.markdown("""
+
 
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #16a34a; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">3. Compounding AUC Growth</div>
@@ -3547,6 +3472,7 @@ Automated Sparplan users achieve <strong>59.2% 12-month retention (2.6x higher)<
     col_c1, col_c2 = st.columns(2)
     with col_c1:
         st.markdown("""
+
 
 <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:1.2rem; height:100%; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
@@ -3566,6 +3492,7 @@ Set Up 1-Click Sparplan &rarr;
 
     with col_c2:
         st.markdown("""
+
 
 <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #16a34a; border-radius:10px; padding:1.2rem; height:100%; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
@@ -3621,6 +3548,7 @@ elif nav_choice == NAV_MODULES[8]:
     st.markdown("""
 
 
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
 <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #8</span>
@@ -3640,6 +3568,7 @@ Solving the <strong>Push Fatigue Paradox</strong> in crypto trading: Pairing <st
         st.markdown("""
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #0284c7; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">1. The Fatigue Risk</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3652,6 +3581,7 @@ Push notifications are the #1 driver of crypto trading volume, but spamming aler
         st.markdown("""
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #16a34a; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">2. BaFin Factual Framing</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3662,6 +3592,7 @@ I propose replacing hype copy ("Buy now!", "To the moon!") with objective instit
 
     with col_g3:
         st.markdown("""
+
 
 
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #8b5cf6; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
@@ -3723,6 +3654,7 @@ Enforcing strict <strong>Quiet Hours (22:00 &ndash; 08:00 CET)</strong> and a ma
         st.markdown(f"""
 
 
+
 <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:12px; padding:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
 <div style="display:flex; align-items:center; gap:6px;">
@@ -3743,6 +3675,7 @@ Enforcing strict <strong>Quiet Hours (22:00 &ndash; 08:00 CET)</strong> and a ma
 
     with col_metrics:
         st.markdown(f"""
+
 
 
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; height:100%;">
@@ -3769,6 +3702,7 @@ elif nav_choice == NAV_MODULES[9]:
 
 
 
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
 <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #9</span>
@@ -3789,6 +3723,7 @@ Overcoming user inertia on idle custody assets: Translating abstract staking per
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #0284c7; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">1. The Inertia Problem</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3802,6 +3737,7 @@ Over 65% of crypto holders leave proof-of-stake assets (ETH, SOL) sitting idle a
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #059669; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">2. Concrete EUR Translation</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3812,6 +3748,7 @@ Instead of abstract APYs (e.g. "3.4% p.a."), our CRM triggers calculate the exac
 
     with col_strat3:
         st.markdown("""
+
 
 
 
@@ -3857,6 +3794,7 @@ Highlighting Boerse Stuttgart Digital Custody GmbH regulatory oversight eliminat
 
 
 
+
 <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #059669; border-radius:10px; padding:1.3rem; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
 <span style="background:#ecfdf5; color:#059669; font-size:0.72rem; font-weight:800; padding:3px 8px; border-radius:4px;">IN-APP SMART NUDGE ({coin_short})</span>
@@ -3887,6 +3825,7 @@ Activate {coin_short} Staking in 1 Click &rarr;
 
 
 
+
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; height:100%;">
 <div style="font-size:0.75rem; font-weight:800; color:#64748b; text-transform:uppercase; margin-bottom:8px;">📈 PROJECTED BUSINESS IMPACT</div>
 <div style="margin-bottom:10px;">
@@ -3912,6 +3851,7 @@ elif nav_choice == NAV_MODULES[10]:
 
 
 
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
 <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #10</span>
@@ -3933,6 +3873,7 @@ Transforming passive crypto investors into disciplined accumulators: Leveraging 
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #0284c7; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">1. The Goal-Gradient Effect</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3947,6 +3888,7 @@ Behavioral economics proves users increase engagement as they approach a visible
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #8b5cf6; border-radius:8px; padding:12px; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
 <div style="font-size:0.8rem; font-weight:800; color:#0f172a; margin-bottom:4px;">2. Relative Social Proof</div>
 <div style="font-size:0.76rem; color:#475569; line-height:1.45;">
@@ -3957,6 +3899,7 @@ Informing users that crossing €1,000 places them in the <em>Top 25% of BISON a
 
     with col_psy3:
         st.markdown("""
+
 
 
 
@@ -4018,6 +3961,7 @@ Every milestone celebration includes a 1-click CTA to increase monthly DCA (+€
 
 
 
+
 <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:1.4rem; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
 <span style="background:#e0f2fe; color:#0369a1; font-size:0.72rem; font-weight:800; padding:3px 8px; border-radius:4px;">{badge_title}</span>
@@ -4034,6 +3978,7 @@ Every milestone celebration includes a 1-click CTA to increase monthly DCA (+€
 
     with col_metric:
         st.markdown("""
+
 
 
 
@@ -4059,6 +4004,7 @@ Every milestone celebration includes a 1-click CTA to increase monthly DCA (+€
 
 elif nav_choice == NAV_MODULES[11]:
     st.markdown("""
+
 
 
 
@@ -4183,6 +4129,7 @@ How I combine <strong>Statistical A/B Testing</strong>, <strong>LTV/CAC Unit Eco
 
 
 
+
 <div style="background:#f0f9ff; border:1px solid #bae6fd; border-left:4px solid #0284c7; border-radius:8px; padding:14px 18px; margin-bottom:14px; line-height:1.55;">
 <strong style="color:#0284c7; font-size:1rem;">💡 Clear Definitions of CRM Terms (Simple English):</strong>
 <ul style="margin:6px 0 0 0; padding-left:20px; font-size:0.88rem; color:#0f172a;">
@@ -4245,6 +4192,7 @@ How I combine <strong>Statistical A/B Testing</strong>, <strong>LTV/CAC Unit Eco
             channel_mix = "Re-Engagement Win-Back Email + Volatility Wake-Up Push"
             
         st.markdown(f"""
+
 
 
 
@@ -4446,6 +4394,7 @@ How I combine <strong>Statistical A/B Testing</strong>, <strong>LTV/CAC Unit Eco
 
 
 
+
 <div class="exec-card" style="margin-bottom:0.75rem; min-height:auto;">
 <div style="display:flex; justify-content:space-between; align-items:center;">
 <strong style="color:#0f172a; font-size:0.95rem;">{k['name']}</strong>
@@ -4491,6 +4440,7 @@ elif nav_choice == NAV_MODULES[12]:
 
 
 
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
 <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #12</span>
@@ -4508,6 +4458,7 @@ Eliminating the <strong>"Duplicate Push Storm"</strong> during rapid market vola
     col_prob, col_sol = st.columns(2)
     with col_prob:
         st.markdown("""
+
 
 
 
@@ -4533,6 +4484,7 @@ When Bitcoin drops -8% in 15 minutes, BISON triggers a volatility push to 500,00
 
 
 
+
 <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:1.2rem; height:100%; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
 <div style="font-size:0.85rem; font-weight:800; color:#166534; margin-bottom:6px;">
 🛡️ The Engineering Fix: Exact-Once Idempotency
@@ -4549,6 +4501,7 @@ If the state is already <code>DISPATCHED</code>, the message is instantly skippe
     st.markdown("##### 📐 Event-Driven Dispatch Pipeline (Kafka &rarr; Redis Lock &rarr; Braze API)")
     
     st.markdown("""
+
 
 
 
@@ -4610,6 +4563,7 @@ If the state is already <code>DISPATCHED</code>, the message is instantly skippe
         st.metric("Final Delivered Count", f"{total_users:,}", delta="Zero Duplicates", delta_color="normal")
         
     st.markdown(f"""
+
 
 
 
@@ -4683,6 +4637,7 @@ elif nav_choice == NAV_MODULES[14]:
 
 
 
+
 <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
 <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">CASE STUDY #14</span>
@@ -4712,6 +4667,7 @@ Explore the technical foundations of modern CRM: <strong>2026 BrazeAI Agentic Ca
 
 
 
+
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #8b5cf6; border-radius:8px; padding:12px 16px; margin-bottom:14px; font-size:0.88rem; color:#1e293b; line-height:1.55;">
 <strong style="color:#7c3aed; font-size:0.95rem;"> The 2026 Shift: Segment-Level Rules &rarr; Message-Level Agentic Generation</strong><br>
 Instead of hardcoding hundreds of static Liquid if/else statements, the <strong>BrazeAI Agent Step</strong> sits directly inside the Canvas journey. It evaluates real-time customer context (wallet balance, holding duration, market volatility) and generates a 1:1 message at send time.<br>
@@ -4720,6 +4676,7 @@ Instead of hardcoding hundreds of static Liquid if/else statements, the <strong>
 """, unsafe_allow_html=True)
 
         st.markdown("""
+
 
 
 
@@ -4892,6 +4849,7 @@ Quiet hours: ON
 
 
 
+
 <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.04); height:100%;">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #f1f5f9;">
 <span style="background:#f1f5f9; color:#475569; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">50% PATH A: CLASSIC BRAZE LIQUID PUSH</span>
@@ -4910,6 +4868,7 @@ Quiet hours: ON
 
         with col_b:
             st.markdown(f"""
+
 
 
 
@@ -4938,6 +4897,7 @@ Quiet hours: ON
 
     with tab_liquid:
         st.markdown("""
+
 
 
 
