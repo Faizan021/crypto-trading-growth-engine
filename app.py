@@ -2271,6 +2271,32 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 <span style="color:#94a3b8;">Dropped at: {{ context.drop_timestamp | time_zone: 'Europe/Berlin' | date: '%H:%M' }} CET</span>
 </div>""", unsafe_allow_html=True)
 
+            st.markdown("<div style='margin-top:1.5rem; margin-bottom:0.8rem; border-top:1px solid #e2e8f0;'></div>", unsafe_allow_html=True)
+            st.markdown("###### 📱 Multi-Step Persistence Proof & Defensive Liquid (`abort_message`)")
+            
+            col_p1, col_p2 = st.columns(2)
+            with col_p1:
+                st.image("assets/braze_step12_push_step1.png", caption="Step 1 Push: Templating Entry Property (Dr. Martens Combat Boots)", use_container_width=True)
+            with col_p2:
+                st.image("assets/braze_step12_push_step2.png", caption="Step 2 Follow-Up Push: Exact Same Entry Property Persists Days Later", use_container_width=True)
+            
+            st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #059669; border-radius:10px; padding:16px; margin-top:12px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🛡️ Production Engineering Rules: Persistence & Message Abort Safeguards</div>
+<span style="background:#ecfdf5; color:#059669; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #a7f3d0;">Enterprise Best Practice</span>
+</div>
+<div style="font-size:0.78rem; color:#334155; line-height:1.6;">
+• <strong>End-to-End Persistence:</strong> As demonstrated in the official Braze push composer screenshots above, the entry property (<code>{{context.${product_name}}}</code> or legacy <code>{{canvas_entry_properties.${product_name}}}</code>) remains stored in memory across both Step 1 and Step 2 without requiring duplicate backend database lookups. Maximum payload size is <strong>50 KB</strong>.<br>
+• <strong>Defensive Liquid Safeguard (<code>abort_message</code>):</strong> If an app payload fails to pass the drop-off step or product name, sending a notification with an awkward empty gap (e.g. <em>"Still interested in the [ ]?"</em>) damages brand perception. We enforce strict defensive abort logic:<br>
+<div style="background:#0f172a; border-radius:6px; padding:8px 12px; margin:6px 0; color:#e2e8f0; font-family:monospace; font-size:0.74rem; line-height:1.5;">
+<span style="color:#f43f5e;">{% if</span> context.step_name == <span style="color:#e2e8f0;">blank</span> <span style="color:#f43f5e;">%}</span><br>
+&nbsp;&nbsp;<span style="color:#38bdf8;">{% abort_message() %}</span><br>
+<span style="color:#f43f5e;">{% endif %}</span>
+</div>
+When triggered, Braze <strong>silently suppresses delivery</strong> for that individual user, ensuring that zero malformed pushes ever reach BISON customers.
+</div>
+</div>""", unsafe_allow_html=True)
+
         else: # Step 5
             st.markdown("##### 📊 Step 5: A/B Split Test & Analytics Scorecard")
             c_s8, c_s9, c_s10 = st.columns(3)
