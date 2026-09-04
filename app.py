@@ -2052,11 +2052,25 @@ Welcome to your institutional-grade trading account. Your workspace is 1 step aw
 
 
     st.markdown("---")
-    st.markdown("### 🗺️ Production Braze Canvas Architecture: Automated KYC Recovery")
-    st.caption("Step-by-step visual implementation of this exact KYC drop-off journey inside Braze Canvas:")
+    st.markdown("""
+<div style="background: linear-gradient(135deg, #0284c7 0%, #0f172a 100%); border: 1.5px solid #38bdf8; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin: 1.5rem 0 1.2rem 0; box-shadow: 0 6px 20px rgba(2,132,199,0.25);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px; flex-wrap:wrap; gap:8px;">
+  <span style="background:rgba(56,189,248,0.25); color:#38bdf8; border:1px solid #0284c7; padding:3px 10px; border-radius:4px; font-size:0.75rem; font-weight:800; letter-spacing:0.04em;">
+    🗺️ HOW WE BUILD THIS IN BRAZE CANVAS
+  </span>
+  <span style="font-size:0.78rem; color:#cbd5e1; font-weight:600;">Action-Based Onboarding & BaFin Compliance Blueprint</span>
+</div>
+<div style="font-size:1.55rem; font-weight:800; color:#ffffff; margin-bottom:0.35rem;">
+  Production Braze Canvas: Automated KYC Drop-off Recovery
+</div>
+<p style="font-size:0.9rem; color:#e0f2fe; line-height:1.5; margin:0;">
+Step-by-step visual walkthrough demonstrating how this exact journey is engineered in the <strong>official Braze Canvas builder</strong>: from <strong>3-day conversion deadlines</strong> and <strong>action-based event triggers</strong> to <strong>German Quiet Hours (10PM - 8AM)</strong> and <strong>statistically isolated holdout groups</strong>.
+</p>
+</div>
+""", unsafe_allow_html=True)
 
     kyc_b_step = st.radio(
-        "Select Braze Canvas Configuration Step:",
+        "Navigate Braze Canvas Configuration Steps:",
         [
             "1. Basics & 3-Day Conversion Goal",
             "2. Action-Based Trigger & Volume Caps",
