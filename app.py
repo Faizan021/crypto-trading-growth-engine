@@ -2074,14 +2074,15 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 </div>
 """, unsafe_allow_html=True)
 
-        b_tab1, b_tab2, b_tab3, b_tab4, b_tab5, b_tab6, b_tab7 = st.tabs([
+        b_tab1, b_tab2, b_tab3, b_tab4, b_tab5, b_tab6, b_tab7, b_tab8 = st.tabs([
             "1️⃣ Basics & Conversion Goal",
             "2️⃣ Action Triggers & Exit Rules",
             "3️⃣ German Quiet Hours & Reach",
             "4️⃣ Journey Flow & Channels",
             "5️⃣ Content Cards In-App Engine",
-            "6️⃣ Liquid & Context Persistence",
-            "7️⃣ A/B Testing & Scorecard"
+            "6️⃣ In-App Messaging (IAM) & Priority",
+            "7️⃣ Liquid & Context Persistence",
+            "8️⃣ A/B Testing & Scorecard"
         ])
 
         with b_tab1:
@@ -2326,7 +2327,59 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
                 st.image("assets/braze_cc_step4_analytics.png", caption="Braze Console: Content Cards Step Analytics (Impressions, Dismissals & Conversions)", use_container_width=True)
 
         with b_tab6:
-            st.markdown("##### 🧠 Step 6: Liquid Personalization & Context Persistence Architecture")
+            st.markdown("##### 💬 Step 6: In-App Messaging (IAM), Priority Sorter & Trigger Architecture")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">💬 What is happening in this step & Why it matters:</strong><br>
+• <strong>Session-Triggered Delivery:</strong> In-App Messages (IAM) display only when a customer actively opens the BISON app and starts a session. This captures 100% focused attention at the moment of highest user intent.<br>
+• <strong>Message Expiration (3-Day Step Window):</strong> Configured as <code>3 Days after step availability</code>. The message sits waiting for 72 hours; if the user never opens the app, it expires automatically to prevent displaying obsolete verification alerts.<br>
+• <strong>In-App Message Priority Sorter:</strong> When multiple IAMs qualify at the same time (e.g. KYC Identity Modal vs. General Marketing Banner), Braze allows explicit drag-and-drop prioritization. Regulated KYC verification is set to <strong>Priority #1</strong>.<br>
+• <strong>Technical Nuance (Feature Exceptions):</strong> Braze does not apply Quiet Hours, Rate Limiting, or Intelligent Timing to IAMs because messages are strictly user-initiated upon starting an app session.
+</div>""", unsafe_allow_html=True)
+            
+            c_iam1, c_iam2 = st.columns(2)
+            with c_iam1:
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase;">⏱️ IAM Expiration Controls</div>
+<span style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px;">Step 6.1</span>
+</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+• <strong>Expiration Type:</strong> Duration after step is available<br>
+• <strong>Step Duration:</strong> <code>3 Days (72 Hours)</code><br>
+• <strong>Single Impression:</strong> Displays once upon session start
+</div>
+</div>""", unsafe_allow_html=True)
+                st.image("assets/braze_iam_step1_expiration.png", caption="Braze Console: Message Controls ➔ Expiration (3 Days Duration)", use_container_width=True)
+            with c_iam2:
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #8b5cf6; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase;">🔢 Priority Sorter Architecture</div>
+<span style="background:#f3e8ff; color:#7e22ce; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px;">Step 6.2</span>
+</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+• <strong>Conflict Resolution:</strong> Resolves simultaneous triggers<br>
+• <strong>BISON Priority #1:</strong> <code>KYC Identity Verification Modal</code><br>
+• <strong>BISON Priority #2:</strong> <code>Welcome & Market Overview</code>
+</div>
+</div>""", unsafe_allow_html=True)
+                st.image("assets/braze_iam_step2_priority.png", caption="Braze Console: Set In-App Message Message Step Priority Sorter", use_container_width=True)
+
+            st.markdown("<div style='margin-top:1.2rem; margin-bottom:0.8rem; border-top:1px solid #e2e8f0;'></div>", unsafe_allow_html=True)
+            
+            st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #f59e0b; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase;">⚠️ In-App Message Feature Exceptions</div>
+<span style="background:#fef3c7; color:#d97706; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px;">Technical Rule</span>
+</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+• <strong>Not Applicable to IAM:</strong> Intelligent Timing, Rate Limiting, Frequency Capping, Quiet Hours.<br>
+• <strong>Engineering Rationale:</strong> Because in-app messages require the user to actively launch the app, delivery is controlled by active session start rather than background push scheduling.
+</div>
+</div>""", unsafe_allow_html=True)
+            st.image("assets/braze_iam_step3_triggers.png", caption="Braze Console: Trigger Actions & Feature Exceptions Banner", use_container_width=True)
+
+        with b_tab7:
+            st.markdown("##### 🧠 Step 7: Liquid Personalization & Context Persistence Architecture")
             st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #6366f1; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
 <strong style="color:#0f172a; font-size:0.88rem;">🧠 What is happening in this step & Why it matters:</strong><br>
 • <strong>Canvas Context Persistence (<code>{{context}}</code>):</strong> Data passed at entry (e.g. <code>step_name: 'document_scan'</code>) is stored in memory for the <em>entire</em> journey, allowing Step 1, Step 2, and Step 3 messages to reference it without re-querying backend databases.<br>
@@ -2391,8 +2444,8 @@ When triggered, Braze <strong>silently suppresses delivery</strong> for that ind
 </div>
 </div>""", unsafe_allow_html=True)
 
-        with b_tab7:
-            st.markdown("##### 📊 Step 7: A/B Split Test & Analytics Scorecard")
+        with b_tab8:
+            st.markdown("##### 📊 Step 8: A/B Split Test & Analytics Scorecard")
             st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #059669; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
 <strong style="color:#0f172a; font-size:0.88rem;">📊 What is happening in this step & Why it matters:</strong><br>
 • <strong>A/B Delay & Incentive Experiment:</strong> Variant A (35%) tests 1-day urgency + regulatory deadline copy. Variant B (35%) tests 3-day delay + €15 first-trade reward bonus.<br>
