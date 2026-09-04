@@ -2085,6 +2085,12 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 
         with b_tab1:
             st.markdown("##### 📝 Step 1: Canvas Details & Primary Conversion Event")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">🎯 What is happening in this step & Why it matters:</strong><br>
+• <strong>Naming & Multi-Team Governance:</strong> We name the Canvas <code>BISON_KYC_Verification_Recovery_v2</code> and tag it with <code>Onboarding</code>, <code>KYC</code>, <code>Compliance</code>, and <code>Retention</code> so compliance and CRM teams can monitor it in a shared enterprise workspace.<br>
+• <strong>Primary Conversion Event:</strong> We designate custom event <code>kyc_verification_completed</code> as the ultimate success metric.<br>
+• <strong>Strict 3-Day Attribution Window:</strong> Users must complete verification within 72 hours of entering the Canvas for Braze to record a conversion. This prevents claiming credit for users who verify months later organically, ensuring mathematically sound incrementality data.
+</div>""", unsafe_allow_html=True)
             c_s1, c_s2 = st.columns(2)
             with c_s1:
                 st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
@@ -2115,6 +2121,12 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 
         with b_tab2:
             st.markdown("##### ⚡ Step 2: Action-Based Triggers, Entry Volume Caps & Exit Criteria")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">⚡ What is happening in this step & Why it matters:</strong><br>
+• <strong>Real-Time Action-Based Trigger:</strong> Unlike scheduled batch blasts, this Canvas triggers the exact second the user abandons ID verification (custom event <code>kyc_step_dropped</code>). Real-time recovery reaches users while BISON is still top-of-mind.<br>
+• <strong>500,000 Entrance Volume Cap:</strong> A technical circuit breaker that prevents server surges from overwhelming partner video verification agents at IDnow.<br>
+• <strong>Immediate Exit Criteria (Exception Events):</strong> If a user completes verification (<code>kyc_verification_completed</code>) or places their first trade (<code>first_trade_executed</code>), Braze <strong>instantly ejects them from the Canvas</strong>. All pending downstream reminder pushes and emails are canceled immediately so verified users are never spammed!
+</div>""", unsafe_allow_html=True)
             col_b1, col_b2 = st.columns(2)
             with col_b1:
                 st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
@@ -2183,6 +2195,11 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 
         with b_tab3:
             st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Reachable Audience")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #6366f1; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">🌙 What is happening in this step & Why it matters:</strong><br>
+• <strong>German Local Quiet Hours (10:00 PM – 8:00 AM):</strong> BaFin compliance and German banking etiquette. Never disturb users with financial verification requests late at night! Braze suppresses night sends and defers dispatch to <strong>8:01 AM local German time (Europe/Berlin)</strong>.<br>
+• <strong>Reachable Audience Audit:</strong> Braze checks channel reachability across Push (68.4%) and Email (98.2%). If push notifications are disabled on a user's device, the Canvas automatically routes them to the Email fallback channel with a direct IDnow deep-link.
+</div>""", unsafe_allow_html=True)
             c_s3, c_s4 = st.columns(2)
             with c_s3:
                 st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #6366f1; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
@@ -2213,6 +2230,12 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 
         with b_tab4:
             st.markdown("##### 🗺️ Step 4: Step Delays, Action Paths & Omnichannel Dispatch")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">🗺️ What is happening in this step & Why it matters:</strong><br>
+• <strong>4-Hour Organic Grace Period:</strong> We do not send messages immediately upon drop-off. A 4-hour delay gives users time to find their ID card and complete verification on their own, saving communication fatigue.<br>
+• <strong>Action Paths Decision Split (24-Hour Window):</strong> Braze evaluates user actions. If they verified &rarr; exit Canvas. If still unverified &rarr; advance to omnichannel reminder sequence.<br>
+• <strong>Omnichannel Orchestration:</strong> Coordinated dispatch across native iOS/Android Push, in-app Content Cards on the BISON home screen, and rich emails with direct biometric deep-links.
+</div>""", unsafe_allow_html=True)
             c_s5, c_s6, c_s7 = st.columns(3)
             with c_s5:
                 st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
@@ -2235,6 +2258,12 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 
         with b_tab5:
             st.markdown("##### 🧠 Step 5: Liquid Personalization & Context Persistence Architecture")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #6366f1; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">🧠 What is happening in this step & Why it matters:</strong><br>
+• <strong>Canvas Context Persistence (<code>{{context}}</code>):</strong> Data passed at entry (e.g. <code>step_name: 'document_scan'</code>) is stored in memory for the <em>entire</em> journey, allowing Step 1, Step 2, and Step 3 messages to reference it without re-querying backend databases.<br>
+• <strong>UTC Timezone Normalization:</strong> Braze stores event timestamps in UTC. We use Liquid filter <code>| time_zone: 'Europe/Berlin'</code> to ensure German users see their exact local drop-off time.<br>
+• <strong>Defensive Liquid Safeguard (<code>abort_message</code>):</strong> If an event property arrives blank, Braze silently cancels that specific notification so customers never see embarrassing broken messages.
+</div>""", unsafe_allow_html=True)
             c_flow1, c_flow2 = st.columns([1.1, 1.9])
             with c_flow1:
                 st.image("assets/braze_step11_action_paths_flow.png", caption="Braze Canvas Architecture: Action Paths (1-Day Window) ➔ Delay ➔ Message Step", use_container_width=True)
@@ -2295,6 +2324,12 @@ When triggered, Braze <strong>silently suppresses delivery</strong> for that ind
 
         with b_tab6:
             st.markdown("##### 📊 Step 6: A/B Split Test & Analytics Scorecard")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #059669; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">📊 What is happening in this step & Why it matters:</strong><br>
+• <strong>A/B Delay & Incentive Experiment:</strong> Variant A (35%) tests 1-day urgency + regulatory deadline copy. Variant B (35%) tests 3-day delay + €15 first-trade reward bonus.<br>
+• <strong>30% Statistically Isolated Holdout Group:</strong> Receives zero marketing communications. This provides the unmessaged baseline needed to isolate true incremental lift.<br>
+• <strong>Statistically Significant Win:</strong> The Canvas lifted KYC verification throughput from 28.4% (holdout) to <strong>39.4% (Variant A)</strong>—a <strong>+38.7% relative conversion lift</strong> ($p < 0.01$) that reduced blended customer acquisition costs (CAC) by -27.9%.
+</div>""", unsafe_allow_html=True)
             c_s8, c_s9, c_s10 = st.columns(3)
             with c_s8:
                 st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
