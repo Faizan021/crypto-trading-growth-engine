@@ -2236,6 +2236,41 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 </div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step12_channels.png", caption="Braze Canvas Step: Omnichannel Channel Palette", use_container_width=True)
 
+            st.markdown("<div style='margin-top:1.5rem; margin-bottom:0.8rem; border-top:1px solid #e2e8f0;'></div>", unsafe_allow_html=True)
+            st.markdown("###### 🧠 Advanced Braze Architecture: Canvas Flow & Context vs. Event Properties")
+            
+            c_flow1, c_flow2 = st.columns([1.1, 1.9])
+            with c_flow1:
+                st.image("assets/braze_step11_action_paths_flow.png", caption="Braze Canvas Architecture: Action Paths (1-Day Window) ➔ Delay ➔ Message Step", use_container_width=True)
+            with c_flow2:
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #6366f1; border-radius:10px; padding:16px; margin-bottom:12px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">Braze Technical Spec: Context vs. Event Properties</div>
+<span style="background:#ede9fe; color:#6366f1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #ddd6fe;">Liquid Engineering</span>
+</div>
+<div style="font-size:0.78rem; color:#334155; line-height:1.6;">
+<strong>1. Canvas Context Variables (<code>{{context.${property}}}</code>):</strong><br>
+• <strong>Persistence:</strong> Available to <em>all</em> Message steps for the entire Canvas duration.<br>
+• <strong>Payload Scope:</strong> Captures trigger data from Canvas entry (e.g. <code>kyc_step_dropped</code>) such as <code>step_name</code>, <code>idnow_ident_id</code>, and timestamps.<br>
+• <strong>UTC Timezone Normalization:</strong> Braze normalizes entry timestamps to UTC. To display European local time, always apply a Liquid timezone filter:<br>
+<code style="color:#0284c7;">{{ context.drop_timestamp | time_zone: 'Europe/Berlin' | date: '%H:%M CET' }}</code><br><br>
+<strong>2. Event Properties (<code>{{event_properties.${property}}}</code>):</strong><br>
+• <strong>Step Scope:</strong> Captured from actions performed <em>inside</em> an <strong>Action Paths</strong> step.<br>
+• <strong>Limitation:</strong> Can <em>only</em> be referenced in the <strong>first Message step</strong> directly downstream (non-Everyone Else path). Cannot be reused in subsequent steps.
+</div>
+</div>""", unsafe_allow_html=True)
+                st.markdown("""<div style="background:#0f172a; border:1px solid #334155; border-radius:8px; padding:14px; color:#e2e8f0; font-family:monospace; font-size:0.75rem; line-height:1.6;">
+<div style="color:#94a3b8; font-weight:700; margin-bottom:6px; border-bottom:1px solid #334155; padding-bottom:4px;">⚡ Production Liquid Personalization in BISON Push:</div>
+<span style="color:#f43f5e;">{% if</span> context.step_name == <span style="color:#38bdf8;">'document_scan'</span> <span style="color:#f43f5e;">%}</span><br>
+&nbsp;&nbsp;📸 Complete your ID photo to start trading Bitcoin!<br>
+<span style="color:#f43f5e;">{% elsif</span> context.step_name == <span style="color:#38bdf8;">'idnow_liveness'</span> <span style="color:#f43f5e;">%}</span><br>
+&nbsp;&nbsp;👤 Re-open your 2-minute video verification with IDnow<br>
+<span style="color:#f43f5e;">{% else %}</span><br>
+&nbsp;&nbsp;⚡ Your BISON crypto account is 1 step away from activation<br>
+<span style="color:#f43f5e;">{% endif %}</span><br>
+<span style="color:#94a3b8;">Dropped at: {{ context.drop_timestamp | time_zone: 'Europe/Berlin' | date: '%H:%M' }} CET</span>
+</div>""", unsafe_allow_html=True)
+
         else: # Step 5
             st.markdown("##### 📊 Step 5: A/B Split Test & Analytics Scorecard")
             c_s8, c_s9, c_s10 = st.columns(3)
