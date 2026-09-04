@@ -1679,477 +1679,482 @@ elif nav_choice == NAV_MODULES[2]:
 
 """, unsafe_allow_html=True)
     
-    # Top 3 KPI Scorecard Strip with Formulas
-    st.markdown("""
+    # Case 2 Tabs: Strategy & Hypotheses vs. Braze Canvas Blueprint
+    c2_tab1, c2_tab2 = st.tabs([
+        "🔬 Strategy, Copy Hypotheses & Statistical Z-Test",
+        "🗺️ Braze Canvas Engineering (5-Step Production Setup)"
+    ])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
-🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
-</div>
-
-""", unsafe_allow_html=True)
+    with c2_tab1:
+        # Top 3 KPI Scorecard Strip with Formulas
+        st.markdown("""
     
-    col_k1, col_k2, col_k3 = st.columns(3)
-    with col_k1:
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #0284c7; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
-<div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">KYC THROUGHPUT CONVERSION</div>
-<div style="font-size:1.5rem; font-weight:800; color:#0284c7; margin:1px 0;">39.4%</div>
-<div style="font-size:0.74rem; color:#059669; font-weight:600;">+38.7% Relative Lift (vs. 28.4% Baseline)</div>
-<div style="margin-top:6px; padding-top:5px; border-top:1px dashed #e2e8f0; font-size:0.68rem; color:#64748b; line-height:1.3;">
-📐 <strong>Formula:</strong> <code>(Verified Users ÷ KYC Starters) × 100</code><br>
-Lift: <code>(39.4 - 28.4) ÷ 28.4 = +38.7%</code>
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-    with col_k2:
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
-<div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">BLENDED CAC REDUCTION</div>
-<div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">-27.9%</div>
-<div style="font-size:0.74rem; color:#059669; font-weight:600;">Recovers Paid Acquisition Spend</div>
-<div style="margin-top:6px; padding-top:5px; border-top:1px dashed #e2e8f0; font-size:0.68rem; color:#64748b; line-height:1.3;">
-📐 <strong>Impact:</strong> More verified users per €1k marketing spend reduces cost per activated account.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-    with col_k3:
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #7c3aed; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
-<div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">STATISTICAL SIGNIFICANCE</div>
-<div style="font-size:1.5rem; font-weight:800; color:#7c3aed; margin:1px 0;">99.8% Conf.</div>
-<div style="font-size:0.74rem; color:#7c3aed; font-weight:600;">z = 3.12, p = 0.0018 (Verified Z-Test)</div>
-<div style="margin-top:6px; padding-top:5px; border-top:1px dashed #e2e8f0; font-size:0.68rem; color:#64748b; line-height:1.3;">
-📐 <strong>Automated Test:</strong><br>
-Two-Proportion Z-Test ($N=1,000$, $p < 0.05$)
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-        
-    st.markdown("<br>", unsafe_allow_html=True)
     
-    # Side-by-Side Email Client Comparison
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:space-between;">
-<div>
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #f1f5f9;">
-<span style="background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">🏛️ CONTROL A (BISON'S LIVE BASELINE)</span>
-<span style="font-size:0.75rem; color:#64748b;">28.4% KYC</span>
-</div>
-
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:8px 12px; margin-bottom:12px; font-size:0.8rem; color:#475569; line-height:1.4;">
-<strong>Subject:</strong> <code>Welcome to BISON 👋</code><br>
-<strong>Preheader:</strong> <code>When it comes to trading, we are a partner you can rely on...</code>
-</div>
-
-<div style="color:#334155; font-size:0.88rem; line-height:1.6; padding:0 4px;">
-Hi,<br><br>
-You've just become part of our community and are now able to use the best crypto app in Germany! When it comes to trading, our exchange backed platform is a partner you can rely on. Our goal is to make trading as simple as possible for you. There's no need for a wallet, securities account, or paperwork.<br><br>
-<div style="text-align:center; margin:14px 0;">
-<span style="background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; padding:8px 22px; border-radius:4px; font-weight:600; font-size:0.84rem; display:inline-block;">Verify now</span>
-</div>
-</div>
-</div>
-
-<div style="background:#fef2f2; border:1px solid #fecaca; border-radius:6px; padding:10px 12px; margin-top:14px; font-size:0.8rem; color:#991b1b; line-height:1.45;">
-ℹ️ <strong>The Psychological Hurdle:</strong> <em>"Verify now"</em> sounds like paperwork. Users delay opening the video call because they don't know how long it takes or what documents they need.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div style="font-size:0.75rem; font-weight:800; color:#0284c7; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:6px;">
+    🎯 Primary KPIs Monitored in Production (Benchmark Simulation):
+    </div>
+    
+    """, unsafe_allow_html=True)
         
-    with col2:
+        col_k1, col_k2, col_k3 = st.columns(3)
+        with col_k1:
+            st.markdown("""
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #0284c7; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+    <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">KYC THROUGHPUT CONVERSION</div>
+    <div style="font-size:1.5rem; font-weight:800; color:#0284c7; margin:1px 0;">39.4%</div>
+    <div style="font-size:0.74rem; color:#059669; font-weight:600;">+38.7% Relative Lift (vs. 28.4% Baseline)</div>
+    <div style="margin-top:6px; padding-top:5px; border-top:1px dashed #e2e8f0; font-size:0.68rem; color:#64748b; line-height:1.3;">
+    📐 <strong>Formula:</strong> <code>(Verified Users ÷ KYC Starters) × 100</code><br>
+    Lift: <code>(39.4 - 28.4) ÷ 28.4 = +38.7%</code>
+    </div>
+    </div>
+    
+    """, unsafe_allow_html=True)
+        with col_k2:
+            st.markdown("""
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #059669; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+    <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">BLENDED CAC REDUCTION</div>
+    <div style="font-size:1.5rem; font-weight:800; color:#059669; margin:1px 0;">-27.9%</div>
+    <div style="font-size:0.74rem; color:#059669; font-weight:600;">Recovers Paid Acquisition Spend</div>
+    <div style="margin-top:6px; padding-top:5px; border-top:1px dashed #e2e8f0; font-size:0.68rem; color:#64748b; line-height:1.3;">
+    📐 <strong>Impact:</strong> More verified users per €1k marketing spend reduces cost per activated account.
+    </div>
+    </div>
+    
+    """, unsafe_allow_html=True)
+        with col_k3:
+            st.markdown("""
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:4px solid #7c3aed; border-radius:8px; padding:10px 12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+    <div style="font-size:0.72rem; color:#64748b; font-weight:700; text-transform:uppercase;">STATISTICAL SIGNIFICANCE</div>
+    <div style="font-size:1.5rem; font-weight:800; color:#7c3aed; margin:1px 0;">99.8% Conf.</div>
+    <div style="font-size:0.74rem; color:#7c3aed; font-weight:600;">z = 3.12, p = 0.0018 (Verified Z-Test)</div>
+    <div style="margin-top:6px; padding-top:5px; border-top:1px dashed #e2e8f0; font-size:0.68rem; color:#64748b; line-height:1.3;">
+    📐 <strong>Automated Test:</strong><br>
+    Two-Proportion Z-Test ($N=1,000$, $p < 0.05$)
+    </div>
+    </div>
+    
+    """, unsafe_allow_html=True)
+            
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Side-by-Side Email Client Comparison
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("""
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #f1f5f9;">
+    <span style="background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; font-size:0.75rem; font-weight:700; padding:3px 8px; border-radius:4px;">🏛️ CONTROL A (BISON'S LIVE BASELINE)</span>
+    <span style="font-size:0.75rem; color:#64748b;">28.4% KYC</span>
+    </div>
+    
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:8px 12px; margin-bottom:12px; font-size:0.8rem; color:#475569; line-height:1.4;">
+    <strong>Subject:</strong> <code>Welcome to BISON 👋</code><br>
+    <strong>Preheader:</strong> <code>When it comes to trading, we are a partner you can rely on...</code>
+    </div>
+    
+    <div style="color:#334155; font-size:0.88rem; line-height:1.6; padding:0 4px;">
+    Hi,<br><br>
+    You've just become part of our community and are now able to use the best crypto app in Germany! When it comes to trading, our exchange backed platform is a partner you can rely on. Our goal is to make trading as simple as possible for you. There's no need for a wallet, securities account, or paperwork.<br><br>
+    <div style="text-align:center; margin:14px 0;">
+    <span style="background:#f1f5f9; color:#475569; border:1px solid #cbd5e1; padding:8px 22px; border-radius:4px; font-weight:600; font-size:0.84rem; display:inline-block;">Verify now</span>
+    </div>
+    </div>
+    </div>
+    
+    <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:6px; padding:10px 12px; margin-top:14px; font-size:0.8rem; color:#991b1b; line-height:1.45;">
+    ℹ️ <strong>The Psychological Hurdle:</strong> <em>"Verify now"</em> sounds like paperwork. Users delay opening the video call because they don't know how long it takes or what documents they need.
+    </div>
+    </div>
+    
+    """, unsafe_allow_html=True)
+            
+        with col2:
+            st.markdown("""
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div style="background:#ffffff; border:2px solid #38bdf8; border-radius:10px; padding:1.2rem; box-shadow:0 4px 12px rgba(56,189,248,0.15); height:100%; display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #e0f2fe;">
+    <span style="background:#dcfce7; color:#15803d; font-size:0.75rem; font-weight:800; padding:3px 8px; border-radius:4px;">🟢 CHALLENGER VARIANT B (3-MIN CHECKLIST)</span>
+    <span style="background:#0284c7; color:#fff; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">PROJECTED TARGET (+38.7%)</span>
+    </div>
+    
+    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:8px 12px; margin-bottom:12px; font-size:0.8rem; color:#0369a1; line-height:1.4;">
+    <strong>Subject:</strong> <code>Unlock your trading account in 3 minutes ⏱️ (Step 1 ready)</code><br>
+    <strong>Preheader:</strong> <code>ID card ready? 2-min Video-Ident • Insured German custody</code>
+    </div>
+    
+    <div style="color:#0f172a; font-size:0.88rem; line-height:1.6; padding:0 4px;">
+    Hi [First Name],<br><br>
+    Welcome to your institutional-grade trading account. Your workspace is 1 step away from activation:<br><br>
+    
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:3px solid #0284c7; border-radius:6px; padding:10px 12px; font-size:0.82rem; line-height:1.5;">
+    • <strong>Step 1:</strong> Have your German ID card or passport ready (1 min)<br>
+    • <strong>Step 2:</strong> Quick 2-minute Video-Ident call with IDnow agent<br>
+    • <strong>Step 3:</strong> Instant account ready for first trade (0€ deposit fee)
+    </div><br>
+    
+    <div style="text-align:center; margin:10px 0;">
+    <span style="background:#0284c7; color:#ffffff; padding:10px 24px; border-radius:6px; font-weight:700; font-size:0.88rem; display:inline-block; box-shadow:0 2px 6px rgba(2,132,199,0.3);">Start 2-Minute Video-Ident &rarr;</span>
+    </div>
+    </div>
+    </div>
+    
+    <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:10px 12px; margin-top:14px; font-size:0.8rem; color:#065f46; line-height:1.45;">
+    🎯 <strong>Test Findings:</strong> Clear timebox expectations remove anxiety. Users know it takes only 120 seconds, pushing verification completion to <strong>39.4%</strong>.
+    </div>
+    </div>
+    
+    """, unsafe_allow_html=True)
+    
+    
+    with c2_tab2:
         st.markdown("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="background:#ffffff; border:2px solid #38bdf8; border-radius:10px; padding:1.2rem; box-shadow:0 4px 12px rgba(56,189,248,0.15); height:100%; display:flex; flex-direction:column; justify-content:space-between;">
-<div>
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #e0f2fe;">
-<span style="background:#dcfce7; color:#15803d; font-size:0.75rem; font-weight:800; padding:3px 8px; border-radius:4px;">🟢 CHALLENGER VARIANT B (3-MIN CHECKLIST)</span>
-<span style="background:#0284c7; color:#fff; font-size:0.72rem; font-weight:700; padding:2px 6px; border-radius:4px;">PROJECTED TARGET (+38.7%)</span>
+<div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 1.2rem 1.6rem; color: #ffffff; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 4px; flex-wrap:wrap; gap:8px;">
+  <span class="badge-reg" style="background:rgba(56,189,248,0.2); color:#38bdf8; border-color:#0284c7;">BRAZE CANVAS BLUEPRINT</span>
+  <span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">Action-Based Onboarding & BaFin Compliance</span>
 </div>
-
-<div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:8px 12px; margin-bottom:12px; font-size:0.8rem; color:#0369a1; line-height:1.4;">
-<strong>Subject:</strong> <code>Unlock your trading account in 3 minutes ⏱️ (Step 1 ready)</code><br>
-<strong>Preheader:</strong> <code>ID card ready? 2-min Video-Ident • Insured German custody</code>
+<div style="font-size:1.55rem; font-weight:800; color:#ffffff; margin-bottom:0.2rem;">
+  🗺️ Production Braze Canvas: Automated KYC Drop-off Recovery
 </div>
-
-<div style="color:#0f172a; font-size:0.88rem; line-height:1.6; padding:0 4px;">
-Hi [First Name],<br><br>
-Welcome to your institutional-grade trading account. Your workspace is 1 step away from activation:<br><br>
-
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:3px solid #0284c7; border-radius:6px; padding:10px 12px; font-size:0.82rem; line-height:1.5;">
-• <strong>Step 1:</strong> Have your German ID card or passport ready (1 min)<br>
-• <strong>Step 2:</strong> Quick 2-minute Video-Ident call with IDnow agent<br>
-• <strong>Step 3:</strong> Instant account ready for first trade (0€ deposit fee)
-</div><br>
-
-<div style="text-align:center; margin:10px 0;">
-<span style="background:#0284c7; color:#ffffff; padding:10px 24px; border-radius:6px; font-weight:700; font-size:0.88rem; display:inline-block; box-shadow:0 2px 6px rgba(2,132,199,0.3);">Start 2-Minute Video-Ident &rarr;</span>
-</div>
-</div>
-</div>
-
-<div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:10px 12px; margin-top:14px; font-size:0.8rem; color:#065f46; line-height:1.45;">
-🎯 <strong>Test Findings:</strong> Clear timebox expectations remove anxiety. Users know it takes only 120 seconds, pushing verification completion to <strong>39.4%</strong>.
-</div>
-</div>
-
-""", unsafe_allow_html=True)
-
-
-    st.markdown("---")
-    st.markdown("""
-<div style="background: linear-gradient(135deg, #0284c7 0%, #0f172a 100%); border: 1.5px solid #38bdf8; border-radius: 12px; padding: 1.4rem 1.8rem; color: #ffffff; margin: 1.5rem 0 1.2rem 0; box-shadow: 0 6px 20px rgba(2,132,199,0.25);">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px; flex-wrap:wrap; gap:8px;">
-  <span style="background:rgba(56,189,248,0.25); color:#38bdf8; border:1px solid #0284c7; padding:3px 10px; border-radius:4px; font-size:0.75rem; font-weight:800; letter-spacing:0.04em;">
-    🗺️ HOW WE BUILD THIS IN BRAZE CANVAS
-  </span>
-  <span style="font-size:0.78rem; color:#cbd5e1; font-weight:600;">Action-Based Onboarding & BaFin Compliance Blueprint</span>
-</div>
-<div style="font-size:1.55rem; font-weight:800; color:#ffffff; margin-bottom:0.35rem;">
-  Production Braze Canvas: Automated KYC Drop-off Recovery
-</div>
-<p style="font-size:0.9rem; color:#e0f2fe; line-height:1.5; margin:0;">
+<p style="font-size:0.88rem; color:#cbd5e1; line-height:1.5; margin:0;">
 Step-by-step visual walkthrough demonstrating how this exact journey is engineered in the <strong>official Braze Canvas builder</strong>: from <strong>3-day conversion deadlines</strong> and <strong>action-based event triggers</strong> to <strong>German Quiet Hours (10PM - 8AM)</strong> and <strong>statistically isolated holdout groups</strong>.
 </p>
 </div>
 """, unsafe_allow_html=True)
 
-    kyc_b_step = st.radio(
-        "Navigate Braze Canvas Configuration Steps:",
-        [
-            "1. Basics & 3-Day Conversion Goal",
-            "2. Action-Based Trigger & Volume Caps",
-            "3. German Quiet Hours (10PM - 8AM) & Reach",
-            "4. Canvas Journey Flow & Multi-Channel Dispatch",
-            "5. A/B Split Test & Analytics Scorecard"
-        ],
-        horizontal=True
-    )
-
-    if "1. Basics" in kyc_b_step:
-        st.markdown("##### 📝 Step 1: Canvas Details & Primary Conversion Event")
-        st.markdown("""
-        - **Canvas Name:** `BISON_KYC_Verification_Recovery_v2`
-        - **Primary Conversion Event:** `kyc_verification_completed` with a **3-day conversion deadline**. If a user completes their ID verification within 3 days, Braze records an incremental conversion.
-        """)
-        c_k1, c_k2 = st.columns(2)
-        with c_k1:
-            st.image("assets/braze_step1_basics.png", caption="Canvas Setup: Naming, Team & Categorization Tags", use_container_width=True)
-        with c_k2:
-            st.image("assets/braze_step2_conversion.png", caption="Primary Conversion Event: 3-Day Window for KYC Completion", use_container_width=True)
-
-    elif "2. Action-Based" in kyc_b_step:
-        st.markdown("##### ⚡ Step 2: Action-Based Trigger & Safety Volume Limits")
-        st.markdown("""
-        - **Trigger:** **Action-Based**. When a user registers but drops off at the ID step, they enter the Canvas in real-time.
-        - **Entry Controls:** Re-entry is disabled (onboarding runs once). Max entrance volume is capped at **500,000 users** to prevent overwhelming IDnow video-ident operators.
-        - **User QA:** We test specific user IDs with User Lookup before going live.
-        """)
-        c_k3, c_k4, c_k5 = st.columns(3)
-        with c_k3:
-            st.image("assets/braze_step3_entry_schedule.png", caption="Action-Based Trigger on Custom Event", use_container_width=True)
-        with c_k4:
-            st.image("assets/braze_step5_entry_controls.png", caption="Entry Controls & 500,000 Volume Cap", use_container_width=True)
-        with c_k5:
-            st.image("assets/braze_step4_user_lookup.png", caption="QA Verification via User Lookup", use_container_width=True)
-
-    elif "3. German Quiet Hours" in kyc_b_step:
-        st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Reachable Audience")
-        st.markdown("""
-        - **Quiet Hours:** Never disturb users with financial verification requests late at night! Messages triggered between **10:00 PM and 8:00 AM (German time)** are held and dispatched at **8:01 AM**.
-        - **Reachable Audience:** Real-time breakdown of reachable users across iOS Push, Android Push, and Email before launch.
-        """)
-        c_k6, c_k7 = st.columns(2)
-        with c_k6:
-            st.image("assets/braze_step7_quiet_hours.png", caption="Quiet Hours: Suppress Night Sends & Send at Next Available Time", use_container_width=True)
-        with c_k7:
-            st.image("assets/braze_step6_target_population.png", caption="Target Population Reachability Audit", use_container_width=True)
-
-    elif "4. Canvas Journey Flow" in kyc_b_step:
-        st.markdown("##### 🗺️ Step 4: Step Delays, Action Paths & Omnichannel Dispatch")
-        st.markdown("""
-        - **Delay Step:** Wait 4 hours after signup to give users time to complete verification organically.
-        - **Action Paths (Evaluation Window: 1 day):** If verified &rarr; exit Canvas. If still unverified &rarr; trigger reminder.
-        - **Multi-Channel Dispatch:** Native iOS Push, Android Push, Content Cards, and Email with deep-links straight back to the ID verification screen.
-        """)
-        c_k8, c_k9, c_k10 = st.columns(3)
-        with c_k8:
-            st.image("assets/braze_step10_delay.png", caption="Delay Step: Timing Duration & Cadence", use_container_width=True)
-        with c_k9:
-            st.image("assets/braze_step11_action_paths.png", caption="Action Paths: 1-Day Evaluation Window", use_container_width=True)
-        with c_k10:
-            st.image("assets/braze_step12_channels.png", caption="Omnichannel Channel Selection Palette", use_container_width=True)
-
-    else: # Step 5
-        st.markdown("##### 📊 Step 5: A/B Split Test & Analytics Scorecard")
-        st.markdown("""
-        - **A/B Split Test:** Testing 1-day vs 3-day delays against a **30% Control Group (Holdout)** to isolate true incremental lift.
-        - **Analytics Scorecard:** Real-time visibility into Messages Sent, Total Entries, and Conversion Rates ($p < 0.01$).
-        """)
-        c_k11, c_k12, c_k13 = st.columns(3)
-        with c_k11:
-            st.image("assets/braze_step9_variant_ab.png", caption="A/B Split Test: Delay Variant Testing", use_container_width=True)
-        with c_k12:
-            st.image("assets/braze_step13_control_group.png", caption="30% Control Group (Holdout)", use_container_width=True)
-        with c_k13:
-            st.image("assets/braze_step14_analytics.png", caption="Analytics Scorecard: Entries, Sends & Conversion Lift", use_container_width=True)
-
-
+        kyc_b_step = st.radio(
+            "Navigate Braze Canvas Configuration Steps:",
+            [
+                "1. Basics & 3-Day Conversion Goal",
+                "2. Action-Based Trigger & Volume Caps",
+                "3. German Quiet Hours (10PM - 8AM) & Reach",
+                "4. Canvas Journey Flow & Multi-Channel Dispatch",
+                "5. A/B Split Test & Analytics Scorecard"
+            ],
+            horizontal=True
+        )
+    
+        if "1. Basics" in kyc_b_step:
+            st.markdown("##### 📝 Step 1: Canvas Details & Primary Conversion Event")
+            st.markdown("""
+            - **Canvas Name:** `BISON_KYC_Verification_Recovery_v2`
+            - **Primary Conversion Event:** `kyc_verification_completed` with a **3-day conversion deadline**. If a user completes their ID verification within 3 days, Braze records an incremental conversion.
+            """)
+            c_k1, c_k2 = st.columns(2)
+            with c_k1:
+                st.image("assets/braze_step1_basics.png", caption="Canvas Setup: Naming, Team & Categorization Tags", use_container_width=True)
+            with c_k2:
+                st.image("assets/braze_step2_conversion.png", caption="Primary Conversion Event: 3-Day Window for KYC Completion", use_container_width=True)
+    
+        elif "2. Action-Based" in kyc_b_step:
+            st.markdown("##### ⚡ Step 2: Action-Based Trigger & Safety Volume Limits")
+            st.markdown("""
+            - **Trigger:** **Action-Based**. When a user registers but drops off at the ID step, they enter the Canvas in real-time.
+            - **Entry Controls:** Re-entry is disabled (onboarding runs once). Max entrance volume is capped at **500,000 users** to prevent overwhelming IDnow video-ident operators.
+            - **User QA:** We test specific user IDs with User Lookup before going live.
+            """)
+            c_k3, c_k4, c_k5 = st.columns(3)
+            with c_k3:
+                st.image("assets/braze_step3_entry_schedule.png", caption="Action-Based Trigger on Custom Event", use_container_width=True)
+            with c_k4:
+                st.image("assets/braze_step5_entry_controls.png", caption="Entry Controls & 500,000 Volume Cap", use_container_width=True)
+            with c_k5:
+                st.image("assets/braze_step4_user_lookup.png", caption="QA Verification via User Lookup", use_container_width=True)
+    
+        elif "3. German Quiet Hours" in kyc_b_step:
+            st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Reachable Audience")
+            st.markdown("""
+            - **Quiet Hours:** Never disturb users with financial verification requests late at night! Messages triggered between **10:00 PM and 8:00 AM (German time)** are held and dispatched at **8:01 AM**.
+            - **Reachable Audience:** Real-time breakdown of reachable users across iOS Push, Android Push, and Email before launch.
+            """)
+            c_k6, c_k7 = st.columns(2)
+            with c_k6:
+                st.image("assets/braze_step7_quiet_hours.png", caption="Quiet Hours: Suppress Night Sends & Send at Next Available Time", use_container_width=True)
+            with c_k7:
+                st.image("assets/braze_step6_target_population.png", caption="Target Population Reachability Audit", use_container_width=True)
+    
+        elif "4. Canvas Journey Flow" in kyc_b_step:
+            st.markdown("##### 🗺️ Step 4: Step Delays, Action Paths & Omnichannel Dispatch")
+            st.markdown("""
+            - **Delay Step:** Wait 4 hours after signup to give users time to complete verification organically.
+            - **Action Paths (Evaluation Window: 1 day):** If verified &rarr; exit Canvas. If still unverified &rarr; trigger reminder.
+            - **Multi-Channel Dispatch:** Native iOS Push, Android Push, Content Cards, and Email with deep-links straight back to the ID verification screen.
+            """)
+            c_k8, c_k9, c_k10 = st.columns(3)
+            with c_k8:
+                st.image("assets/braze_step10_delay.png", caption="Delay Step: Timing Duration & Cadence", use_container_width=True)
+            with c_k9:
+                st.image("assets/braze_step11_action_paths.png", caption="Action Paths: 1-Day Evaluation Window", use_container_width=True)
+            with c_k10:
+                st.image("assets/braze_step12_channels.png", caption="Omnichannel Channel Selection Palette", use_container_width=True)
+    
+        else: # Step 5
+            st.markdown("##### 📊 Step 5: A/B Split Test & Analytics Scorecard")
+            st.markdown("""
+            - **A/B Split Test:** Testing 1-day vs 3-day delays against a **30% Control Group (Holdout)** to isolate true incremental lift.
+            - **Analytics Scorecard:** Real-time visibility into Messages Sent, Total Entries, and Conversion Rates ($p < 0.01$).
+            """)
+            c_k11, c_k12, c_k13 = st.columns(3)
+            with c_k11:
+                st.image("assets/braze_step9_variant_ab.png", caption="A/B Split Test: Delay Variant Testing", use_container_width=True)
+            with c_k12:
+                st.image("assets/braze_step13_control_group.png", caption="30% Control Group (Holdout)", use_container_width=True)
+            with c_k13:
+                st.image("assets/braze_step14_analytics.png", caption="Analytics Scorecard: Entries, Sends & Conversion Lift", use_container_width=True)
+    
+    
 elif nav_choice == NAV_MODULES[3]:
     st.markdown("""
 
