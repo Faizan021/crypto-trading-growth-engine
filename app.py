@@ -2074,13 +2074,14 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
 </div>
 """, unsafe_allow_html=True)
 
-        b_tab1, b_tab2, b_tab3, b_tab4, b_tab5, b_tab6 = st.tabs([
+        b_tab1, b_tab2, b_tab3, b_tab4, b_tab5, b_tab6, b_tab7 = st.tabs([
             "1️⃣ Basics & Conversion Goal",
             "2️⃣ Action Triggers & Exit Rules",
             "3️⃣ German Quiet Hours & Reach",
             "4️⃣ Journey Flow & Channels",
-            "5️⃣ Liquid & Context Persistence",
-            "6️⃣ A/B Testing & Scorecard"
+            "5️⃣ Content Cards In-App Engine",
+            "6️⃣ Liquid & Context Persistence",
+            "7️⃣ A/B Testing & Scorecard"
         ])
 
         with b_tab1:
@@ -2257,7 +2258,75 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
                 st.image("assets/braze_step12_channels.png", caption="Braze Canvas Step: Omnichannel Channel Palette", use_container_width=True)
 
         with b_tab5:
-            st.markdown("##### 🧠 Step 5: Liquid Personalization & Context Persistence Architecture")
+            st.markdown("##### 💳 Step 5: Content Cards In-App Engine, Feed Expiration & Automatic Removal")
+            st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #8b5cf6; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
+<strong style="color:#0f172a; font-size:0.88rem;">💳 What is happening in this step & Why it matters:</strong><br>
+• <strong>The "Persistent In-App Inbox" Strategy:</strong> Push notifications are easily swiped away, and ~31.6% of users have push disabled. To prevent drop-offs, Braze injects a persistent Content Card onto the BISON home screen feed so unverified users see an actionable reminder every time they open the app.<br>
+• <strong>Automatic Removal Events:</strong> When a user completes verification (event <code>kyc_verification_completed</code>), Braze <strong>automatically deletes the Content Card from their feed</strong> on the next app refresh. Verified customers never see outdated reminders!<br>
+• <strong>Expiration (Time in Feed & Max 30-Day TTL):</strong> Cards are configured with a relative expiration (e.g. 3 days). If unverified, the card automatically disappears so the user's feed stays clean. Braze enforces a maximum 30-day Time-To-Live (TTL).<br>
+• <strong>Step Reporting & Analytics:</strong> Content Cards provide deep engagement analytics tracking <strong>Unique Daily Impressions</strong> (3.7M), Total Dismissals, and direct primary conversion rate (<strong>32.91%</strong>).
+</div>""", unsafe_allow_html=True)
+            
+            c_cc1, c_cc2 = st.columns(2)
+            with c_cc1:
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #8b5cf6; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase;">📱 Content Card Channel & Type</div>
+<span style="background:#f3e8ff; color:#7e22ce; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px;">Step 5.1</span>
+</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+• <strong>Channel:</strong> Content Cards (In-App Feed Banner)<br>
+• <strong>Card Type:</strong> <code>Classic (Text & optional image)</code><br>
+• <strong>Feed Placement:</strong> BISON Crypto Portfolio Home Feed
+</div>
+</div>""", unsafe_allow_html=True)
+                st.image("assets/braze_cc_step1_channel.png", caption="Braze Console: Messaging Channels ➔ Content Cards (Classic Card Type)", use_container_width=True)
+            with c_cc2:
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase;">⏱️ Feed Expiration (Time in Feed)</div>
+<span style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px;">Step 5.2</span>
+</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+• <strong>Relative Expiration:</strong> <code>Remove after 3 days in feed</code><br>
+• <strong>Platform Limit:</strong> Max 30-day TTL (Time-To-Live)<br>
+• <strong>Behavior:</strong> Purged on next app sync if unverified
+</div>
+</div>""", unsafe_allow_html=True)
+                st.image("assets/braze_cc_step2_expiration.png", caption="Braze Console: Relative Expiration (Time in Feed & 30-Day TTL)", use_container_width=True)
+
+            st.markdown("<div style='margin-top:1.2rem; margin-bottom:0.8rem; border-top:1px solid #e2e8f0;'></div>", unsafe_allow_html=True)
+            
+            c_cc3, c_cc4 = st.columns(2)
+            with c_cc3:
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #ef4444; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase;">🗑️ Automatic Removal Event Rule</div>
+<span style="background:#fee2e2; color:#b91c1c; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px;">Step 5.3</span>
+</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+• <strong>Removal Event:</strong> Custom Event <code>kyc_verification_completed</code><br>
+• <strong>Execution:</strong> Real-time feed purge upon IDnow approval<br>
+• <strong>Result:</strong> Verified users never see an obsolete banner!
+</div>
+</div>""", unsafe_allow_html=True)
+                st.image("assets/braze_cc_step3_removal.png", caption="Braze Console: Automatic Removal Event on Custom Event (kyc_verification_completed)", use_container_width=True)
+            with c_cc4:
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase;">📊 Content Card Step Scorecard</div>
+<span style="background:#ecfdf5; color:#059669; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px;">Step 5.4</span>
+</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+• <strong>Unique Daily Impressions:</strong> <code>3,709,930</code><br>
+• <strong>Primary Conversion Rate:</strong> <code>32.91%</code> (1.45M conversions)<br>
+• <strong>Total Dismissals Tracked:</strong> <code>927,048</code> (Direct fatigue tracking)
+</div>
+</div>""", unsafe_allow_html=True)
+                st.image("assets/braze_cc_step4_analytics.png", caption="Braze Console: Content Cards Step Analytics (Impressions, Dismissals & Conversions)", use_container_width=True)
+
+        with b_tab6:
+            st.markdown("##### 🧠 Step 6: Liquid Personalization & Context Persistence Architecture")
             st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #6366f1; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
 <strong style="color:#0f172a; font-size:0.88rem;">🧠 What is happening in this step & Why it matters:</strong><br>
 • <strong>Canvas Context Persistence (<code>{{context}}</code>):</strong> Data passed at entry (e.g. <code>step_name: 'document_scan'</code>) is stored in memory for the <em>entire</em> journey, allowing Step 1, Step 2, and Step 3 messages to reference it without re-querying backend databases.<br>
@@ -2322,8 +2391,8 @@ When triggered, Braze <strong>silently suppresses delivery</strong> for that ind
 </div>
 </div>""", unsafe_allow_html=True)
 
-        with b_tab6:
-            st.markdown("##### 📊 Step 6: A/B Split Test & Analytics Scorecard")
+        with b_tab7:
+            st.markdown("##### 📊 Step 7: A/B Split Test & Analytics Scorecard")
             st.markdown("""<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #059669; border-radius:8px; padding:14px 18px; margin-bottom:16px; font-size:0.82rem; color:#334155; line-height:1.6;">
 <strong style="color:#0f172a; font-size:0.88rem;">📊 What is happening in this step & Why it matters:</strong><br>
 • <strong>A/B Delay & Incentive Experiment:</strong> Variant A (35%) tests 1-day urgency + regulatory deadline copy. Variant B (35%) tests 3-day delay + €15 first-trade reward bonus.<br>
