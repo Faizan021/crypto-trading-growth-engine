@@ -2051,6 +2051,91 @@ Welcome to your institutional-grade trading account. Your workspace is 1 step aw
 """, unsafe_allow_html=True)
 
 
+    st.markdown("---")
+    st.markdown("### 🗺️ Production Braze Canvas Architecture: Automated KYC Recovery")
+    st.caption("Step-by-step visual implementation of this exact KYC drop-off journey inside Braze Canvas:")
+
+    kyc_b_step = st.radio(
+        "Select Braze Canvas Configuration Step:",
+        [
+            "1. Basics & 3-Day Conversion Goal",
+            "2. Action-Based Trigger & Volume Caps",
+            "3. German Quiet Hours (10PM - 8AM) & Reach",
+            "4. Canvas Journey Flow & Multi-Channel Dispatch",
+            "5. A/B Split Test & Analytics Scorecard"
+        ],
+        horizontal=True
+    )
+
+    if "1. Basics" in kyc_b_step:
+        st.markdown("##### 📝 Step 1: Canvas Details & Primary Conversion Event")
+        st.markdown("""
+        - **Canvas Name:** `BISON_KYC_Verification_Recovery_v2`
+        - **Primary Conversion Event:** `kyc_verification_completed` with a **3-day conversion deadline**. If a user completes their ID verification within 3 days, Braze records an incremental conversion.
+        """)
+        c_k1, c_k2 = st.columns(2)
+        with c_k1:
+            st.image("assets/braze_step1_basics.png", caption="Canvas Setup: Naming, Team & Categorization Tags", use_container_width=True)
+        with c_k2:
+            st.image("assets/braze_step2_conversion.png", caption="Primary Conversion Event: 3-Day Window for KYC Completion", use_container_width=True)
+
+    elif "2. Action-Based" in kyc_b_step:
+        st.markdown("##### ⚡ Step 2: Action-Based Trigger & Safety Volume Limits")
+        st.markdown("""
+        - **Trigger:** **Action-Based**. When a user registers but drops off at the ID step, they enter the Canvas in real-time.
+        - **Entry Controls:** Re-entry is disabled (onboarding runs once). Max entrance volume is capped at **500,000 users** to prevent overwhelming IDnow video-ident operators.
+        - **User QA:** We test specific user IDs with User Lookup before going live.
+        """)
+        c_k3, c_k4, c_k5 = st.columns(3)
+        with c_k3:
+            st.image("assets/braze_step3_entry_schedule.png", caption="Action-Based Trigger on Custom Event", use_container_width=True)
+        with c_k4:
+            st.image("assets/braze_step5_entry_controls.png", caption="Entry Controls & 500,000 Volume Cap", use_container_width=True)
+        with c_k5:
+            st.image("assets/braze_step4_user_lookup.png", caption="QA Verification via User Lookup", use_container_width=True)
+
+    elif "3. German Quiet Hours" in kyc_b_step:
+        st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Reachable Audience")
+        st.markdown("""
+        - **Quiet Hours:** Never disturb users with financial verification requests late at night! Messages triggered between **10:00 PM and 8:00 AM (German time)** are held and dispatched at **8:01 AM**.
+        - **Reachable Audience:** Real-time breakdown of reachable users across iOS Push, Android Push, and Email before launch.
+        """)
+        c_k6, c_k7 = st.columns(2)
+        with c_k6:
+            st.image("assets/braze_step7_quiet_hours.png", caption="Quiet Hours: Suppress Night Sends & Send at Next Available Time", use_container_width=True)
+        with c_k7:
+            st.image("assets/braze_step6_target_population.png", caption="Target Population Reachability Audit", use_container_width=True)
+
+    elif "4. Canvas Journey Flow" in kyc_b_step:
+        st.markdown("##### 🗺️ Step 4: Step Delays, Action Paths & Omnichannel Dispatch")
+        st.markdown("""
+        - **Delay Step:** Wait 4 hours after signup to give users time to complete verification organically.
+        - **Action Paths (Evaluation Window: 1 day):** If verified &rarr; exit Canvas. If still unverified &rarr; trigger reminder.
+        - **Multi-Channel Dispatch:** Native iOS Push, Android Push, Content Cards, and Email with deep-links straight back to the ID verification screen.
+        """)
+        c_k8, c_k9, c_k10 = st.columns(3)
+        with c_k8:
+            st.image("assets/braze_step10_delay.png", caption="Delay Step: Timing Duration & Cadence", use_container_width=True)
+        with c_k9:
+            st.image("assets/braze_step11_action_paths.png", caption="Action Paths: 1-Day Evaluation Window", use_container_width=True)
+        with c_k10:
+            st.image("assets/braze_step12_channels.png", caption="Omnichannel Channel Selection Palette", use_container_width=True)
+
+    else: # Step 5
+        st.markdown("##### 📊 Step 5: A/B Split Test & Analytics Scorecard")
+        st.markdown("""
+        - **A/B Split Test:** Testing 1-day vs 3-day delays against a **30% Control Group (Holdout)** to isolate true incremental lift.
+        - **Analytics Scorecard:** Real-time visibility into Messages Sent, Total Entries, and Conversion Rates ($p < 0.01$).
+        """)
+        c_k11, c_k12, c_k13 = st.columns(3)
+        with c_k11:
+            st.image("assets/braze_step9_variant_ab.png", caption="A/B Split Test: Delay Variant Testing", use_container_width=True)
+        with c_k12:
+            st.image("assets/braze_step13_control_group.png", caption="30% Control Group (Holdout)", use_container_width=True)
+        with c_k13:
+            st.image("assets/braze_step14_analytics.png", caption="Analytics Scorecard: Entries, Sends & Conversion Lift", use_container_width=True)
+
+
 elif nav_choice == NAV_MODULES[3]:
     st.markdown("""
 
