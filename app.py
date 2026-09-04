@@ -2090,225 +2090,175 @@ Step-by-step visual walkthrough demonstrating how this exact journey is engineer
             st.markdown("##### 📝 Step 1: Canvas Details & Primary Conversion Event")
             c_s1, c_s2 = st.columns(2)
             with c_s1:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                    <div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🏷️ Canvas Naming & Team Ownership</div>
-                    <span style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #bae6fd;">Step 1.1</span>
-                  </div>
-                  <div style="font-size:0.78rem; color:#334155; line-height:1.6;">
-                    • <strong>Canvas Name:</strong> <code>BISON_KYC_Verification_Recovery_v2</code><br>
-                    • <strong>Description:</strong> Automated drop-off recovery workflow for unverified registrants.<br>
-                    • <strong>Categorization Tags:</strong> <code>Onboarding</code>, <code>KYC</code>, <code>Compliance</code>, <code>Retention</code>
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🏷️ Canvas Naming & Team Ownership</div>
+<span style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #bae6fd;">Step 1.1</span>
+</div>
+<div style="font-size:0.78rem; color:#334155; line-height:1.6;">
+• <strong>Canvas Name:</strong> <code>BISON_KYC_Verification_Recovery_v2</code><br>
+• <strong>Description:</strong> Automated drop-off recovery workflow for unverified registrants.<br>
+• <strong>Categorization Tags:</strong> <code>Onboarding</code>, <code>KYC</code>, <code>Compliance</code>, <code>Retention</code>
+</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step1_basics.png", caption="Braze Console Architecture: Canvas Basics, Naming & Tagging", use_container_width=True)
             with c_s2:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                    <div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🎯 Primary Conversion Event Definition</div>
-                    <span style="background:#ecfdf5; color:#059669; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #a7f3d0;">Step 1.2</span>
-                  </div>
-                  <div style="font-size:0.78rem; color:#334155; line-height:1.6;">
-                    • <strong>Primary Conversion Event:</strong> <code>kyc_verification_completed</code><br>
-                    • <strong>Attribution Window:</strong> <code>3 Days</code> (Strict conversion deadline)<br>
-                    • <strong>Secondary Conversion Goal:</strong> <code>first_deposit_confirmed</code> within 7 days
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🎯 Primary Conversion Event Definition</div>
+<span style="background:#ecfdf5; color:#059669; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #a7f3d0;">Step 1.2</span>
+</div>
+<div style="font-size:0.78rem; color:#334155; line-height:1.6;">
+• <strong>Primary Conversion Event:</strong> <code>kyc_verification_completed</code><br>
+• <strong>Attribution Window:</strong> <code>3 Days</code> (Strict conversion deadline)<br>
+• <strong>Secondary Conversion Goal:</strong> <code>first_deposit_confirmed</code> within 7 days
+</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step2_conversion.png", caption="Braze Console Architecture: Primary Conversion Event & Attribution Window", use_container_width=True)
-    
+
         elif "2. Action-Based" in kyc_b_step:
             st.markdown("##### ⚡ Step 2: Action-Based Triggers, Entry Volume Caps & Exit Criteria")
             col_b1, col_b2 = st.columns(2)
             with col_b1:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                    <div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">
-                      🎯 Entry Schedule: Action-Based Options
-                    </div>
-                    <span style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #bae6fd;">Braze Trigger Spec</span>
-                  </div>
-                  
-                  <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:12px;">
-                    <div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">ENTRY TYPE:</div>
-                    <div style="display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap;">
-                      <span style="background:#ffffff; border:1px solid #cbd5e1; color:#94a3b8; font-size:0.74rem; padding:4px 10px; border-radius:6px;">⚪ Scheduled</span>
-                      <span style="background:#eff6ff; border:2px solid #0284c7; color:#0284c7; font-size:0.74rem; font-weight:700; padding:4px 10px; border-radius:6px;">🔘 Action-Based (Real-Time)</span>
-                      <span style="background:#ffffff; border:1px solid #cbd5e1; color:#94a3b8; font-size:0.74rem; padding:4px 10px; border-radius:6px;">⚪ API-Triggered</span>
-                    </div>
-                    
-                    <div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">TRIGGER ACTION:</div>
-                    <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; font-family:monospace; font-size:0.82rem; color:#0f172a; display:flex; justify-content:space-between; align-items:center;">
-                      <span>Perform Custom Event: <strong style="color:#0284c7;">kyc_step_dropped</strong></span>
-                      <span style="color:#64748b; font-size:0.7rem;">▾</span>
-                    </div>
-                    <div style="margin-top:6px; font-size:0.72rem; color:#475569;">
-                      🔍 <strong>Event Property Filter:</strong> <code>step_name IN ['document_scan', 'idnow_liveness']</code>
-                    </div>
-                  </div>
-                  
-                  <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px;">
-                    <div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">ENTRY & RE-ENTRY CONTROLS:</div>
-                    <div style="font-size:0.75rem; color:#334155; line-height:1.5;">
-                      ✅ <strong>Allow users to re-enter:</strong> <code>Unchecked (False)</code> &mdash; Prevents duplicate loops.<br>
-                      🛡️ <strong>Maximum entrance volume:</strong> <code>500,000 entries</code> &mdash; Circuit breaker protects IDnow partner queue.
-                    </div>
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🎯 Entry Schedule: Action-Based Options</div>
+<span style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #bae6fd;">Braze Trigger Spec</span>
+</div>
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:12px;">
+<div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">ENTRY TYPE:</div>
+<div style="display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap;">
+<span style="background:#ffffff; border:1px solid #cbd5e1; color:#94a3b8; font-size:0.74rem; padding:4px 10px; border-radius:6px;">⚪ Scheduled</span>
+<span style="background:#eff6ff; border:2px solid #0284c7; color:#0284c7; font-size:0.74rem; font-weight:700; padding:4px 10px; border-radius:6px;">🔘 Action-Based (Real-Time)</span>
+<span style="background:#ffffff; border:1px solid #cbd5e1; color:#94a3b8; font-size:0.74rem; padding:4px 10px; border-radius:6px;">⚪ API-Triggered</span>
+</div>
+<div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">TRIGGER ACTION:</div>
+<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; font-family:monospace; font-size:0.82rem; color:#0f172a; display:flex; justify-content:space-between; align-items:center;">
+<span>Perform Custom Event: <strong style="color:#0284c7;">kyc_step_dropped</strong></span>
+<span style="color:#64748b; font-size:0.7rem;">▾</span>
+</div>
+<div style="margin-top:6px; font-size:0.72rem; color:#475569;">
+🔍 <strong>Event Property Filter:</strong> <code>step_name IN ['document_scan', 'idnow_liveness']</code>
+</div>
+</div>
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px;">
+<div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">ENTRY & RE-ENTRY CONTROLS:</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">
+✅ <strong>Allow users to re-enter:</strong> <code>Unchecked (False)</code> &mdash; Prevents duplicate loops.<br>
+🛡️ <strong>Maximum entrance volume:</strong> <code>500,000 entries</code> &mdash; Circuit breaker protects IDnow partner queue.
+</div>
+</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step3_entry_schedule.png", caption="Braze Console Architecture: Action-Based Trigger Setup", use_container_width=True)
                 st.image("assets/braze_step5_entry_controls.png", caption="Braze Console Architecture: Volume Caps & Re-Entry Protection", use_container_width=True)
 
             with col_b2:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                    <div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">
-                      🚪 Exit Criteria: Exception Events & Segments
-                    </div>
-                    <span style="background:#ecfdf5; color:#059669; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #a7f3d0;">Braze Exit Engine</span>
-                  </div>
-                  
-                  <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:12px;">
-                    <div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:6px;">EXCEPTIONS (IMMEDIATE CANCELATION):</div>
-                    
-                    <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; font-family:monospace; font-size:0.82rem; color:#0f172a; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center;">
-                      <span>Perform Custom Event: <strong style="color:#059669;">kyc_verification_completed</strong></span>
-                      <span style="color:#059669; font-size:0.75rem;">✓ Primary Exit</span>
-                    </div>
-                    
-                    <div style="text-align:center; font-size:0.7rem; font-weight:800; color:#64748b; margin:2px 0;">OR</div>
-                    
-                    <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; font-family:monospace; font-size:0.82rem; color:#0f172a; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center;">
-                      <span>Perform Custom Event: <strong style="color:#7c3aed;">first_trade_executed</strong></span>
-                      <span style="color:#7c3aed; font-size:0.75rem;">✓ Full Activation Exit</span>
-                    </div>
-                    
-                    <div style="margin-top:8px; font-size:0.72rem; color:#475569; line-height:1.4;">
-                      ⚡ <strong>Braze Exit Behavior:</strong> Users who complete KYC or trade are instantly ejected from Canvas. All downstream scheduled reminder pushes & emails are suppressed immediately.
-                    </div>
-                  </div>
-                  
-                  <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px;">
-                    <div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">AUDIENCE SEGMENT CRITERIA:</div>
-                    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-                      <span style="background:#1e1b4b; color:#c7d2fe; font-size:0.72rem; font-weight:600; padding:3px 10px; border-radius:14px;">BISON KYC Incomplete ✕</span>
-                      <span style="background:#0f172a; color:#94a3b8; font-size:0.72rem; font-weight:600; padding:3px 10px; border-radius:14px;">Country: Germany / Austria ✕</span>
-                    </div>
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🚪 Exit Criteria: Exception Events & Segments</div>
+<span style="background:#ecfdf5; color:#059669; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #a7f3d0;">Braze Exit Engine</span>
+</div>
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:12px;">
+<div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:6px;">EXCEPTIONS (IMMEDIATE CANCELATION):</div>
+<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; font-family:monospace; font-size:0.82rem; color:#0f172a; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center;">
+<span>Perform Custom Event: <strong style="color:#059669;">kyc_verification_completed</strong></span>
+<span style="color:#059669; font-size:0.75rem;">✓ Primary Exit</span>
+</div>
+<div style="text-align:center; font-size:0.7rem; font-weight:800; color:#64748b; margin:2px 0;">OR</div>
+<div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; font-family:monospace; font-size:0.82rem; color:#0f172a; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center;">
+<span>Perform Custom Event: <strong style="color:#7c3aed;">first_trade_executed</strong></span>
+<span style="color:#7c3aed; font-size:0.75rem;">✓ Full Activation Exit</span>
+</div>
+<div style="margin-top:8px; font-size:0.72rem; color:#475569; line-height:1.4;">
+⚡ <strong>Braze Exit Behavior:</strong> Users who complete KYC or trade are instantly ejected from Canvas. All downstream scheduled reminder pushes & emails are suppressed immediately.
+</div>
+</div>
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px;">
+<div style="font-size:0.75rem; color:#64748b; font-weight:700; margin-bottom:4px;">AUDIENCE SEGMENT CRITERIA:</div>
+<div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+<span style="background:#1e1b4b; color:#c7d2fe; font-size:0.72rem; font-weight:600; padding:3px 10px; border-radius:14px;">BISON KYC Incomplete ✕</span>
+<span style="background:#0f172a; color:#94a3b8; font-size:0.72rem; font-weight:600; padding:3px 10px; border-radius:14px;">Country: Germany / Austria ✕</span>
+</div>
+</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step5_exit_criteria.png", caption="Braze Console Architecture: Exit Criteria & Exception Event Rules", use_container_width=True)
                 st.image("assets/braze_step4_user_lookup.png", caption="Braze Console Architecture: User Lookup & QA Validation", use_container_width=True)
-    
+
         elif "3. German Quiet Hours" in kyc_b_step:
             st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Reachable Audience")
             c_s3, c_s4 = st.columns(2)
             with c_s3:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #6366f1; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                    <div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🌙 Local German Quiet Hours Protection</div>
-                    <span style="background:#ede9fe; color:#6366f1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #ddd6fe;">Compliance Rule</span>
-                  </div>
-                  <div style="font-size:0.78rem; color:#334155; line-height:1.6;">
-                    • <strong>Quiet Hours Window:</strong> <code>10:00 PM – 8:00 AM</code> (Europe/Berlin local time)<br>
-                    • <strong>Suppression Action:</strong> <code>Send at next available time (08:01 AM)</code><br>
-                    • <strong>Rationale:</strong> Prevents disturbing users late at night with financial verification requests and protects push permission opt-in rates.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #6366f1; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🌙 Local German Quiet Hours Protection</div>
+<span style="background:#ede9fe; color:#6366f1; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #ddd6fe;">Compliance Rule</span>
+</div>
+<div style="font-size:0.78rem; color:#334155; line-height:1.6;">
+• <strong>Quiet Hours Window:</strong> <code>10:00 PM – 8:00 AM</code> (Europe/Berlin local time)<br>
+• <strong>Suppression Action:</strong> <code>Send at next available time (08:01 AM)</code><br>
+• <strong>Rationale:</strong> Prevents disturbing users late at night with financial verification requests and protects push permission opt-in rates.
+</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step7_quiet_hours.png", caption="Braze Console Architecture: Quiet Hours Window & Deferred Delivery", use_container_width=True)
             with c_s4:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #f59e0b; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                    <div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">📱 Target Population Reachability Audit</div>
-                    <span style="background:#fef3c7; color:#d97706; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #fde68a;">Channel Audit</span>
-                  </div>
-                  <div style="font-size:0.78rem; color:#334155; line-height:1.6;">
-                    • <strong>Push Notification Reachable:</strong> <code>68.4%</code> of target cohort<br>
-                    • <strong>Email Reachable:</strong> <code>98.2%</code> (Double Opt-In confirmed)<br>
-                    • <strong>Fallback Strategy:</strong> When push is disabled, dispatch Email with direct IDnow deep-link.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #f59e0b; border-radius:10px; padding:16px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">📱 Target Population Reachability Audit</div>
+<span style="background:#fef3c7; color:#d97706; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #fde68a;">Channel Audit</span>
+</div>
+<div style="font-size:0.78rem; color:#334155; line-height:1.6;">
+• <strong>Push Notification Reachable:</strong> <code>68.4%</code> of target cohort<br>
+• <strong>Email Reachable:</strong> <code>98.2%</code> (Double Opt-In confirmed)<br>
+• <strong>Fallback Strategy:</strong> When push is disabled, dispatch Email with direct IDnow deep-link.
+</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step6_target_population.png", caption="Braze Console Architecture: Reachable Audience by Channel", use_container_width=True)
-    
+
         elif "4. Canvas Journey Flow" in kyc_b_step:
             st.markdown("##### 🗺️ Step 4: Step Delays, Action Paths & Omnichannel Dispatch")
             c_s5, c_s6, c_s7 = st.columns(3)
             with c_s5:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">⏱️ 4-Hour Organic Delay</div>
-                  <div style="font-size:0.75rem; color:#334155; line-height:1.5;">
-                    Allows users 4 hours after initial drop-off to complete KYC organically before triggering automated nudges.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">⏱️ 4-Hour Organic Delay</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">Allows users 4 hours after initial drop-off to complete KYC organically before triggering automated nudges.</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step10_delay.png", caption="Braze Canvas Step: 4-Hour Delay Duration", use_container_width=True)
             with c_s6:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">🔀 Action Paths Branching</div>
-                  <div style="font-size:0.75rem; color:#334155; line-height:1.5;">
-                    1-Day Evaluation Window: If <code>kyc_verification_completed</code> occurs, exit. If unverified, proceed to reminder.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">🔀 Action Paths Branching</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">1-Day Evaluation Window: If <code>kyc_verification_completed</code> occurs, exit. If unverified, proceed to reminder.</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step11_action_paths.png", caption="Braze Canvas Step: Action Paths Decision Node", use_container_width=True)
             with c_s7:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #8b5cf6; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">📲 Omnichannel Dispatch</div>
-                  <div style="font-size:0.75rem; color:#334155; line-height:1.5;">
-                    Synchronized dispatch across Push, Content Cards (in-feed banner), and rich email with direct app deep-links.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #8b5cf6; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">📲 Omnichannel Dispatch</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">Synchronized dispatch across Push, Content Cards (in-feed banner), and rich email with direct app deep-links.</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step12_channels.png", caption="Braze Canvas Step: Omnichannel Channel Palette", use_container_width=True)
-    
+
         else: # Step 5
             st.markdown("##### 📊 Step 5: A/B Split Test & Analytics Scorecard")
             c_s8, c_s9, c_s10 = st.columns(3)
             with c_s8:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">⚖️ A/B Split Test Allocation</div>
-                  <div style="font-size:0.75rem; color:#334155; line-height:1.5;">
-                    <strong>Variant A (35%):</strong> 1-Day Delay + Regulatory Deadline.<br>
-                    <strong>Variant B (35%):</strong> 3-Day Delay + €15 Reward Bonus.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">⚖️ A/B Split Test Allocation</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;"><strong>Variant A (35%):</strong> 1-Day Delay + Regulatory Deadline.<br><strong>Variant B (35%):</strong> 3-Day Delay + €15 Reward Bonus.</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step9_variant_ab.png", caption="Braze Canvas Step: Variant Allocation (A/B Test)", use_container_width=True)
             with c_s9:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #ef4444; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">🛑 30% Holdout Control Group</div>
-                  <div style="font-size:0.75rem; color:#334155; line-height:1.5;">
-                    Users receive zero marketing touches. Statistically isolates pure incremental lift generated by Braze.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #ef4444; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">🛑 30% Holdout Control Group</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">Users receive zero marketing touches. Statistically isolates pure incremental lift generated by Braze.</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step13_control_group.png", caption="Braze Canvas Step: Statistically Isolated Holdout Group", use_container_width=True)
             with c_s10:
-                st.markdown("""
-                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                  <div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">📈 Production Analytics Scorecard</div>
-                  <div style="font-size:0.75rem; color:#334155; line-height:1.5;">
-                    Tracks real-time messages sent, open rates, completion throughput (39.4% vs 28.4%), and statistical significance.
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #10b981; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+<div style="font-size:0.82rem; font-weight:800; color:#1e293b; text-transform:uppercase; margin-bottom:6px;">📈 Production Analytics Scorecard</div>
+<div style="font-size:0.75rem; color:#334155; line-height:1.5;">Tracks real-time messages sent, open rates, completion throughput (39.4% vs 28.4%), and statistical significance.</div>
+</div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step14_analytics.png", caption="Braze Canvas Step: Real-Time Analytics Scorecard", use_container_width=True)
-        
-    
+
+
 elif nav_choice == NAV_MODULES[3]:
     st.markdown("""
 
